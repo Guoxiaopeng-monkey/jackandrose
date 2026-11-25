@@ -8,6 +8,8 @@ This file can be re-written at any time.
   <head>
   {% comment %}Loads Shogun Analytics. Removing this will disrupt analytics data collection.{% endcomment %}
   <script type="text/javascript" async src="https://na.shgcdn3.com/pixel-collector.js"></script>
+    <meta name="trustpilot-one-time-domain-verification-id" content="aa2d1347-efe4-4525-abe2-389b57c3feeb"/>
+  
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -245,7 +247,6 @@ This file can be re-written at any time.
     {% render 'shogun-head' %}
     
 
- 
     <style>
       .visually-hidden {
         position: absolute;
@@ -259,7 +260,13 @@ This file can be re-written at any time.
         border: 0;
       }
     </style>
-  {% include 'pagefly-app-header' %}</head>
+  {% include 'pagefly-app-header' %}
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+
+  <!-- BBQBI Chat Widget -->
+  <link rel="stylesheet" href="https://bbqbi.com/widget/chat-widget.css">
+  <script src="https://bbqbi.com/widget/chat-widget.umd.js"></script>
+  </head>
   <body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if request.path == '/challenge' %} template-challange{% endif %}" data-button_style="{{ settings.button_style }}" data-edges="{{ settings.roundness }}" data-type_header_capitalize="{{ settings.type_header_capitalize }}" data-swatch_style="{{ settings.swatch_style }}" data-grid-style="{{ settings.product_grid_style }}">
     {% include 'shogun-content-handler' %}
 
@@ -353,7 +360,19 @@ This file can be re-written at any time.
       script.type = 'text/javascript';
       document.head.appendChild(script);
     </script>
-
+<script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new VueChatWidget({
+          channel: 'JC-US',
+          position: 'bottom-4',
+          color: '#1890ff',
+          label: 'JC-US',
+          icon: 'jc-iocn.jpg',
+          baseUrl: 'https://bbqbi.com/widget/',
+          chatUrl: 'https://bbqbi.com/oneisallwebchat/chat/chat.html'
+        });
+      });
+    </script>
     <style type="text/css">
       body, html {
         width: 100% !important;
