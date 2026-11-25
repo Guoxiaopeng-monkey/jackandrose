@@ -1,0 +1,359 @@
+<style>
+  #shopify-section-{{ section.id }}.spk-sticky-bar{
+    width: 100%;
+    background-color: {{ section.settings.background }};
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.1);
+  }
+  .spk-sticky-bar .spk-container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding:0;
+  }
+  .spk-sticky-bar.spk-section{
+    max-width:100%;
+  }
+  .spk-section .spk-sticky-bar-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .sticky-product-card{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap:12px;
+  }
+  .sticky-product-card__info{
+    display: flex;
+    gap:12px;
+    max-width: 50vw;
+    width: 100%;
+    flex-grow: 1;
+  }
+  .spk-sticky-card-content{
+    flex-grow: 1;
+    text-align: left;
+  }
+  .sticky-product-card__title_mobile,
+  .sticky-product-card__title{
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .sticky-product-card__title_mobile{
+    display:none;
+  }
+
+  .spk-sticky-card-image{
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .spk-sticky-bar-content .grid-product__price .grid-product__price--original{
+    color:rgba(0, 0, 0, 0.6);
+  }
+  .spk-sticky-bar-content .spk-sticky-card-atc-btn{
+    display: block;
+    border-radius:999px;
+    width: max-content;
+  }
+</style>
+<style>
+  @media (max-width: 767.98px) {
+    #shopify-section-{{ section.id }}.spk-sticky-bar{
+      width: 100%;
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+    }
+    .spk-section .spk-container{
+      margin: 0 auto;
+    }
+    .spk-section .spk-sticky-bar-content{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 16px var(--pageWidthPadding);
+      gap:12px;
+    }
+    .sticky-product-card{
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .sticky-product-card__info{
+      max-width: 100%;
+    }
+    .spk-sticky-card-content{
+      flex-grow: 1;
+      text-align: left;
+    }
+
+    .spk-sticky-bar-content form{
+      width:100%;
+    }
+    .sticky-product-card__title{
+      display:none;
+    }
+    .sticky-product-card__title_mobile{
+      display: -webkit-box;
+    }
+    .spk-sticky-bar-content .spk-sticky-card-atc-btn{
+      display: block;
+      border-radius:999px;
+      width: 100%;
+      font-size: 16px;
+      padding:8px auto;
+    }
+  }
+</style>
+{% comment %} selecter {% endcomment %}
+<style>
+  .custom-select-wrapper {
+    background: white;
+    cursor: pointer;
+    position: relative;
+    text-align: left;
+    position: relative;
+    user-select: none;
+  }
+
+  .custom-select-options {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    padding: 16px 10px;
+    z-index: 9999;
+    height: auto;
+  }
+
+  .custom-option {
+    padding: 10px 12px;
+    cursor: pointer;
+  }
+
+  .custom-option:hover {
+    background-color: rgba(244, 124, 32, 0.2);
+    border-radius: 8px;
+  }
+
+  .custom-select-display {
+    display: flex;
+    align-items: center;
+  }
+
+  .custom-select-arrow {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    margin-left: 10px;
+    font-size: 12px;
+    transition: transform 0.2s ease;
+    transform-origin: center;
+  }
+
+  @media (max-width: 767.98px) {
+    .custom-select-wrapper {
+      border-radius: 8px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .custom-select-options {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      padding: 16px 10px;
+      z-index: 9999;
+      height: auto;
+    }
+
+    .custom-option {
+      padding: 10px 12px;
+      cursor: pointer;
+    }
+    .custom-select-display {
+      padding: 14px 10px;
+    }
+    .custom-select-label {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .custom-select-arrow {
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      line-height: 1rem;
+      margin-left: 10px;
+      font-size: 12px;
+      transition: transform 0.2s ease;
+      transform-origin: center;
+    }
+  }
+</style>
+
+<div class="spk-container">
+  <div class="spk-sticky-bar-content">
+    {% assign product = section.settings.products | first %}
+    {% liquid
+      assign on_sale = false
+      if product.compare_at_price > product.price
+        assign on_sale = true
+      endif
+    %}
+    <div
+      class="sticky-product-card"
+      data-p_id="{{ product.selected_or_first_available_variant.id }}"
+    >
+      <div class="sticky-product-card__info">
+        <div class="spk-sticky-card-image">
+          {% render 'image-element', img: product.featured_image, sizeVariable: '60px', lazy: true %}
+        </div>
+        <div class="spk-sticky-card-content">
+          <custom-select id="productSelect" class="sticky-product-card__title">
+            {% for product_item in section.settings.products %}
+              <div data-value="{{product_item.selected_or_first_available_variant.id}}">{{ product_item.title }}</div>
+            {% endfor %}
+          </custom-select>
+          <div class="sticky-product-card__title_mobile sticky-product-card-titlelabel ">{{ product.title }}</div>
+          <div class="grid-product__price">
+            {%- if product.price_varies -%}
+              <span class="grid-product__price--current">
+                {%- render 'price-varies',
+                  price: product.price_min,
+                  shop: shop,
+                  superscript_decimals: settings.superscript_decimals
+                -%}
+              </span>
+            {%- else -%}
+              {%- if on_sale -%}
+                <span class="visually-hidden">{{ 'labels.sale_price' | t }}</span>
+              {%- endif -%}
+              <span class="grid-product__price--current">
+                {%- render 'price',
+                  price: product.price,
+                  shop: shop,
+                  superscript_decimals: settings.superscript_decimals
+                -%}
+              </span>
+            {%- endif -%}
+            {%- if on_sale -%}
+              <span class="visually-hidden">{{ 'labels.regular_price' | t }}</span>
+              <span class="grid-product__price--original">
+                {%- render 'price',
+                  price: product.compare_at_price,
+                  shop: shop,
+                  superscript_decimals: settings.superscript_decimals
+                -%}
+              </span>
+            {%- endif -%}
+
+            {%- assign product_variant = product.selected_or_first_available_variant -%}
+            {%- if product_variant.unit_price_measurement -%}
+              <div class="product__unit-price">
+                {%- capture unit_price_base_unit -%}
+                    {%- if product_variant.unit_price_measurement -%}
+                      {%- if product_variant.unit_price_measurement.reference_value != 1 -%}
+                        {{ product_variant.unit_price_measurement.reference_value }}
+                      {%- endif -%}
+                      {{ product_variant.unit_price_measurement.reference_unit }}
+                    {%- endif -%}
+                  {%- endcapture -%}
+
+                {{ product_variant.unit_price | money }}/{{ unit_price_base_unit }}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </div>
+    <custom-select id="productSelect_m" class="sticky-product-card__title_mobile">
+      {% for product_item in section.settings.products %}
+        <div data-value="{{product_item.selected_or_first_available_variant.id}}">{{ product_item.title }}</div>
+      {% endfor %}
+    </custom-select>
+
+    <form method="post" action="/cart/add">
+      {% assign first_product = section.settings.products | first %}
+      {% assign first_variant = first_product.variants | first %}
+      <input type="hidden" name="id" id="sticky-variant-id" value="{{ first_variant.id }}">
+      <button type="submit" class="spk-sticky-card-atc-btn btn btn--full add-to-cart">Add to cart</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const stickyProducts = {{ section.settings.products | json }};
+    const dropdown = document.getElementById("productSelect");
+    const dropdownM = document.getElementById("productSelect_m");
+    const img = document.querySelector(".spk-sticky-card-image  img");
+    const title =  document.querySelector(".sticky-product-card-titlelabel");
+    const current_price = document.querySelector(".spk-sticky-card-content .grid-product__price--current");
+    const original_price = document.querySelector(".spk-sticky-card-content .grid-product__price--original");
+    const variantInput = document.getElementById("sticky-variant-id");
+
+    const changeUpdateDom = (event)=>{
+      const selectedValue = event.detail.value;
+      const selectedProduct = stickyProducts.find(product => product.variants[0].id == selectedValue);
+      if (selectedProduct) {
+        img.srcset = selectedProduct.featured_image;
+        if(title){
+          title.innerHTML = selectedProduct.title;
+        }
+        current_price.innerHTML =  theme.Currency.formatMoney(selectedProduct.price, theme.settings.moneyFormat);
+        original_price.innerHTML = selectedProduct.compare_at_price>selectedProduct.price?  theme.Currency.formatMoney(selectedProduct.compare_at_price , theme.settings.moneyFormat):"";
+        variantInput.value = selectedProduct.variants[0].id;
+      }
+    }
+    dropdownM.addEventListener("option-changed", function (event) {
+      changeUpdateDom(event)
+    });
+
+    dropdown.addEventListener("option-changed", function (event) {
+      changeUpdateDom(event)
+    });
+
+  });
+</script>
+
+{% schema %}
+{
+  "name": "SPK Stickkey ATC Bar",
+  "class": "spk-sticky-bar spk-section",
+  "limit": 1,
+  "settings": [
+    {
+      "label": "Background Color",
+      "type": "color",
+      "default": "#fff",
+      "id": "background"
+    },
+    {
+      "type": "product_list",
+      "label": "Products",
+      "id": "products",
+      "limit": 5
+    }
+  ],
+  "presets": [
+    {
+      "name": "SPK Stickkey ATC Bar"
+    }
+  ]
+}
+{% endschema %}

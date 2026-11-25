@@ -1,0 +1,392 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner_z7rirW": {
+      "type": "banner",
+      "settings": {
+        "img": "shopify://shop_images/1_1019e92b-07a7-47a4-b6bd-dad0c3a0bdee.png",
+        "img_m": "shopify://shop_images/2_d47f5885-f6c7-4a9a-87ea-a9469e0446bd.png",
+        "hide": false,
+        "overlayer": 1,
+        "title": "Bundle & Saving",
+        "text": "More value, less cost",
+        "btn": "",
+        "link": "",
+        "btn_style": "main"
+      }
+    },
+    "page_collecitons_4dDpNR": {
+      "type": "page-collecitons",
+      "blocks": {
+        "collection_gtfdwK": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundle-save-feeding-hydration-set",
+            "title": "Feeding & Hydration Set"
+          }
+        },
+        "collection_zM9fzc": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundle-save-grooming-hydration-set",
+            "title": "Grooming & Hydration Set"
+          }
+        },
+        "collection_aCaMLw": {
+          "type": "collection",
+          "settings": {
+            "collection": "double-fountain-pack",
+            "title": "Customer-Favorite Combos"
+          }
+        },
+        "collection_Kc7ADB": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundle-save-ultimate-pet-care-set",
+            "title": "Ultimate Pet Care Set"
+          }
+        },
+        "collection_KJg7Qn": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundle-save-grooming-air-care-set",
+            "title": "Add-On Ready Sets"
+          }
+        }
+      },
+      "block_order": [
+        "collection_gtfdwK",
+        "collection_zM9fzc",
+        "collection_aCaMLw",
+        "collection_Kc7ADB",
+        "collection_KJg7Qn"
+      ],
+      "disabled": true,
+      "settings": {
+        "display_title_type": "bundles",
+        "display_special_attr": true
+      }
+    },
+    "spk_nav_image_6cQCtd": {
+      "type": "spk-nav-image",
+      "blocks": {
+        "item_Lg6QR7": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/LM2_Pet_Grooming_Vacuum_Grooming_Brush_Deshedding_Brush_Replacement_Set.jpg",
+            "title": "Stock Up & Save",
+            "link": "A"
+          }
+        },
+        "item_MYQWKr": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/oneisall-2l-cat-water-fountain-7l-pet-water-fountain-set-854279.png",
+            "title": "Customer-Favorite Combos",
+            "link": "C"
+          }
+        },
+        "item_ihDm7a": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/oneisall-35l-cat-feeder-with-app-35l-cordless-water-fountain-set-221917.png",
+            "title": "Feeding & Hydration Set",
+            "link": "F"
+          }
+        },
+        "item_MqUA7E": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/oneisall-bm3-3l-dog-grooming-vacuum-kit-7l-dog-water-fountain-set-957807.jpg",
+            "title": "Grooming & Hydration Set",
+            "link": "G"
+          }
+        },
+        "item_YU3bWA": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/oneisall-lm2-pet-grooming-vacuum-kit-2l-cat-water-fountain-35l-automatic-cat-feeder-set-947580.png",
+            "title": "Ultimate Pet Care Set",
+            "link": "U"
+          }
+        }
+      },
+      "block_order": [
+        "item_Lg6QR7",
+        "item_MYQWKr",
+        "item_ihDm7a",
+        "item_MqUA7E",
+        "item_YU3bWA"
+      ],
+      "name": "SPX Nav Image",
+      "settings": {
+        "text_color": "#000000"
+      }
+    },
+    "dealpage_two_FYeV6e": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_jAVcrU": {
+          "type": "collection",
+          "settings": {
+            "collection": "double-fountain-pack",
+            "text": "Customer-Favorite Combos",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_jAVcrU"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Customer-Favorite Combos",
+        "subtitle": "",
+        "target_id": "C",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "bundles",
+        "display_special_attr": true,
+        "padding_pc": "80px 0",
+        "padding_m": "60px 0"
+      }
+    },
+    "dealpage_two_4tFwAH": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_4KdQrT": {
+          "type": "collection",
+          "settings": {
+            "collection": "hydrate-longer-with-8-extra-filters",
+            "text": "Longer-lasting hydration",
+            "subtitle": ""
+          }
+        },
+        "collection_MhB96P": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundle-save-grooming-air-care-set",
+            "text": "Effortless Grooming Upgrade",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_4KdQrT",
+        "collection_MhB96P"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Stock Up & Save",
+        "subtitle": "",
+        "target_id": "A",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "bundles",
+        "display_special_attr": true,
+        "padding_pc": "80px 0",
+        "padding_m": "60px 0"
+      }
+    },
+    "dealpage_two_7cKP6q": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_LDUeUX": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundle-save-feeding-hydration-set",
+            "text": "Feeding & Hydration Set",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_LDUeUX"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Feeding & Hydration Set",
+        "subtitle": "",
+        "target_id": "F",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "bundles",
+        "display_special_attr": true,
+        "padding_pc": "80px 0",
+        "padding_m": "00px 0"
+      }
+    },
+    "dealpage_two_mzBLjb": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_fDwtW3": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundle-save-grooming-hydration-set",
+            "text": "Grooming & Hydration Set",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_fDwtW3"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Feeding & Hydration Set",
+        "subtitle": "",
+        "target_id": "G",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "bundles",
+        "display_special_attr": true,
+        "padding_pc": "80px 0",
+        "padding_m": "60px 0"
+      }
+    },
+    "dealpage_two_qgN3DU": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_gegm8y": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundle-save-ultimate-pet-care-set",
+            "text": "Ultimate Pet Care Set",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_gegm8y"
+      ],
+      "disabled": true,
+      "name": "Collection list",
+      "settings": {
+        "title": "Ultimate Pet Care Set",
+        "subtitle": "",
+        "target_id": "U",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "bundles",
+        "display_special_attr": true,
+        "padding_pc": "80px 0",
+        "padding_m": "60px 0"
+      }
+    },
+    "faqs_ijrNcG": {
+      "type": "faqs",
+      "blocks": {
+        "tab_content_JmK8jh": {
+          "type": "tab_content",
+          "settings": {
+            "question": "How Large Is The Dog Vacuum Dustbin?",
+            "text": "<p>Oneisall Dog Vacuum offers large dustbin capacities ranging from 1.5 to 3l. </p><p>A small dog (like a Shih Tzu or Chihuahua) may produce 0.5 to 1 L of loose hair after a full grooming session.</p><p>Medium and large breeds with thick coats (like Golden Retrievers or German Shepherds) can produce 1 to 3 L of hair</p><p>The large bin is suited for grooming multiple pets or a larger pet.</p>"
+          }
+        },
+        "tab_content_c6HcW7": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Is The Pet Water Fountain Easy To Assemble?",
+            "text": "<p>Yes. Most pet water fountains are easy to assemble and designed to be user-friendly. The process usually involves a few simple steps and can be done in minutes. </p><p>Here's a basic outline of what to expect:</p><ul><li>Put filter cotton into the filter box</li><li>Assemble the pump</li><li>Fill the tank with water</li><li>Put on the cover drinking tray and insert the faucet</li></ul>"
+          }
+        },
+        "tab_content_Rpa4Mk": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Can I Use A Cat Water Fountain For Both Cats And Dogs?",
+            "text": "<p>Yes, many cat water fountains are designed to accommodate both cats and dogs. Choose a cat water fountain for your pet's size and breed. Larger dogs may require a pet drinking fountain with a higher water capacity.</p>"
+          }
+        },
+        "tab_content_3rqzKM": {
+          "type": "tab_content",
+          "settings": {
+            "question": "What Should I Look For When Choosing An Automatic Feeder For Cats?",
+            "text": "<p>To set the timer on an automatic feeder for cats, follow these 5 steps:</p><p>1. Open the feeder’s control panel or app (depending on the model).</p><p>2. Set the desired meal times using the built-in timer or mobile app.</p><p>3. Adjust the portion size for each meal.</p><p>4. Ensure the automatic feeder for cats is loaded with food, then activate the timer.</p><p>5. Check the user manual for specific instructions, as each model may vary slightly.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_JmK8jh",
+        "tab_content_c6HcW7",
+        "tab_content_Rpa4Mk",
+        "tab_content_3rqzKM"
+      ],
+      "settings": {
+        "id": "faqs",
+        "title": "FAQs",
+        "align": "center",
+        "align_m": "center",
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    },
+    "icons_fRC7QE": {
+      "type": "icons",
+      "blocks": {
+        "icon_RXgQdm": {
+          "type": "icon",
+          "settings": {
+            "liquid": "1",
+            "title": "Fast & Free Shipping",
+            "text": ""
+          }
+        },
+        "icon_3tpCEf": {
+          "type": "icon",
+          "settings": {
+            "liquid": "2",
+            "title": "Product Tax Incl.",
+            "text": ""
+          }
+        },
+        "icon_DDAWJJ": {
+          "type": "icon",
+          "settings": {
+            "liquid": "3",
+            "title": "24-Month Warranty",
+            "text": ""
+          }
+        },
+        "icon_6gJPeq": {
+          "type": "icon",
+          "settings": {
+            "liquid": "4",
+            "title": "30-Day Money Back",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_RXgQdm",
+        "icon_3tpCEf",
+        "icon_DDAWJJ",
+        "icon_6gJPeq"
+      ],
+      "settings": {
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    }
+  },
+  "order": [
+    "banner_z7rirW",
+    "page_collecitons_4dDpNR",
+    "spk_nav_image_6cQCtd",
+    "dealpage_two_FYeV6e",
+    "dealpage_two_4tFwAH",
+    "dealpage_two_7cKP6q",
+    "dealpage_two_mzBLjb",
+    "dealpage_two_qgN3DU",
+    "faqs_ijrNcG",
+    "icons_fRC7QE"
+  ]
+}

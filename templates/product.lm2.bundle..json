@@ -1,0 +1,422 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "custom_Vnjkec": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "<p><b>Black Friday Sale, Save </b> <span style=\"color:#FF6A00\n\">25 $</span>. Automatic discount .</br>Offer ends on December 2nd.</p>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "quantity_selector_cjPKAN": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description_M7JAy9": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "checkmark",
+            "text": "30 Days Worry-Free Returns"
+          }
+        },
+        "sales_point2": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "truck",
+            "text": "Free Shipping in The US"
+          }
+        },
+        "sales_point3": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "shield",
+            "text": "100% Secure Payments"
+          }
+        },
+        "sales_point4": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "package",
+            "text": "Ships Within 24 hours"
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "share_eTMqpL": {
+          "type": "share",
+          "settings": {}
+        },
+        "complementary_products_xhNrFb": {
+          "type": "complementary_products",
+          "settings": {
+            "product_complementary_heading": "Frequently Bought Together",
+            "complementary_count": 2,
+            "per_slide": 2,
+            "control_type": "dots",
+            "image_style": "default"
+          }
+        },
+        "custom_zdd7gw": {
+          "type": "custom",
+          "settings": {
+            "code": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n</script>"
+          }
+        }
+      },
+      "block_order": [
+        "custom_Vnjkec",
+        "variant_picker",
+        "quantity_selector_cjPKAN",
+        "price",
+        "buy_buttons",
+        "description_M7JAy9",
+        "sales_point",
+        "sales_point2",
+        "sales_point3",
+        "sales_point4",
+        "inventory_status",
+        "share_eTMqpL",
+        "complementary_products_xhNrFb",
+        "custom_zdd7gw"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_container_size": "medium",
+        "product_image_size": "natural",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "slideshow_image_btAQ3V": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_X7mfrW": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/2_e7d35d1a-5988-44d3-8bff-2c82eecbe78b.webp",
+            "image_mobile": "shopify://shop_images/lm2-pet-grooming-vacuum-m.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_X7mfrW"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "advanced_content_6jWMWa": {
+      "type": "advanced-content",
+      "blocks": {
+        "image_Q66yNK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/10001_72482b1b-6933-4837-b5df-d90bce4ae005.gif",
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "liquid_gtaRmT": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2 style=\"text-align: center;\">Grooming Brush</h2><p style=\"text-align: center;\">The grooming brush and the deshedding tool gently remove loose hair and making pet hair shiny and smooth while eliminating tangles.</p>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_Q66yNK",
+        "liquid_gtaRmT"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "advanced_content_mjwrWh": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_yiMCVz": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2 style=\"text-align: center;\">Pet Grooming Kit</h2><p style=\"text-align: center;\">Electric clipper, dog paw trimmer and dog nail grinder provides excellent cutting. Give your pet a best grooming experience.</p>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "image_eTCzRW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/cede451c174020f7c8f2be7a6ae89349.gif",
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_yiMCVz",
+        "image_eTCzRW"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "advanced_content_fB7HpT": {
+      "type": "advanced-content",
+      "blocks": {
+        "image_PhBfAe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/7bdb4ee32037d0d6dd60defe3c2dfbe3_4bf9bca9-6b31-4afb-ba95-1c3913a74180.jpg",
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "liquid_9CjCtP": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2 style=\"text-align: center;\">Package List</h2>\n<ul>\n<li>1 x Vacuum</li>\n<li>1 x Clipper</li>\n<li>1 x Paw Trimmer</li>\n<li>1 x Nail Grinder Head</li>\n<li>2 x Shedding Brush</li>\n<li>2 x Cleaning Brush</li>\n<li>1 x Storage Bag</li>\n<li>1 x Storage Board</li>\n<li>1 x Charging Cable & Small Brush</li>\n<li>1 x Hose</li>\n<li>6 x Guide Comb</li></ul>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_PhBfAe",
+        "liquid_9CjCtP"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "slideshow_image_zPMyFe": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_MyWdnc": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/LM2_d11c3c2a-8817-4910-9431-6b8d1ea12d35.jpg",
+            "image_mobile": "shopify://shop_images/LM2_6c308d1f-e8ef-4999-8bb9-496f3bbd4e55.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_MyWdnc"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "faq_mjc8ce": {
+      "type": "faq",
+      "blocks": {
+        "question_7pyDew": {
+          "type": "question",
+          "settings": {
+            "title": "How loud is the pet vacuum grooming kit?",
+            "text": "<p>The noise of our pet grooming kits is less than 60db, it is a relatively soft sound level, similar to a calm office environment, or a low-volume televisionwhich which not scare pets.</p>"
+          }
+        },
+        "question_jCm9WG": {
+          "type": "question",
+          "settings": {
+            "title": "How often do hepa filters need to be replaced?",
+            "text": "<p>We recommend cleaning the lint in the dust cup after each use of the machine. If used frequently, it is recommended that the filter be replaced every six months.</p>"
+          }
+        },
+        "question_PFPCQz": {
+          "type": "question",
+          "settings": {
+            "title": "Does the it work on cats?",
+            "text": "<p>Yes! It works on dogs and cats alike...even more!</p>"
+          }
+        },
+        "question_U6FQja": {
+          "type": "question",
+          "settings": {
+            "title": "Does it attachments work on all types of coats?",
+            "text": "<p>It is designed for all any medium to long-haired coats.</p>"
+          }
+        },
+        "question_zNyzh4": {
+          "type": "question",
+          "settings": {
+            "title": "Is the pet vacuum grooming kit manageable for someone with little grooming experience?",
+            "text": "<p>Yes, it's user-friendly, with simple attachments that make it easy for beginners to achieve professional-looking results at home.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_7pyDew",
+        "question_jCm9WG",
+        "question_PFPCQz",
+        "question_U6FQja",
+        "question_zNyzh4"
+      ],
+      "settings": {
+        "title": "FAQs",
+        "heading_size": "h1",
+        "brochure_title": "",
+        "brochure_link": "",
+        "heading_position": "left"
+      }
+    },
+    "171524248506ebf0c3": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "blocks": {
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": true
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "settings": {
+            "title": "Shipping information",
+            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
+            "page": ""
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+            "title": "Ask a question",
+            "phone": false
+          }
+        }
+      },
+      "block_order": [
+        "description",
+        "tab",
+        "contact"
+      ],
+      "disabled": true,
+      "settings": {
+        "max_width": false
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 5,
+        "products_per_row": 5
+      }
+    },
+    "more-products-vendor": {
+      "type": "more-products-vendor",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "more-products-collection": {
+      "type": "more-products-collection",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {}
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "2"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_image_btAQ3V",
+    "advanced_content_6jWMWa",
+    "advanced_content_mjwrWh",
+    "advanced_content_fB7HpT",
+    "slideshow_image_zPMyFe",
+    "faq_mjc8ce",
+    "171524248506ebf0c3",
+    "sub",
+    "recommendations",
+    "more-products-vendor",
+    "more-products-collection",
+    "recently-viewed",
+    "collection-return"
+  ]
+}

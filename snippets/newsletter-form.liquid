@@ -1,0 +1,78 @@
+{% comment %}
+  /**
+    /**
+     * @param {string} section_id - The section ID
+     * @param {string} snippet_context - The context of the snippet
+     * @param {object} customer - The customer object
+     */
+  */
+{% endcomment %}
+{% assign type_arry = types | split:',' %}
+
+{%- assign newsletter_form_id = 'newsletter-' | append: section_id -%}
+{% form 'customer', id: newsletter_form_id %}
+  {%- if form.posted_successfully? -%}
+    <div class="note note--success">
+      {{ 'info.newsletter_success' | t }}
+    </div>
+  {%- endif -%}
+  {%- if form.errors and form.context == snippet_context -%}
+    {{ form.errors | default_errors }}
+  {%- endif -%}
+
+  {%- unless form.posted_successfully? -%}
+    <label for="Email-{{ section_id }}" class="visually-hidden">{{ 'actions.enter_email' | t }}</label>
+    <label for="newsletter-form-submit-{{ section_id }}" class="visually-hidden">{{ 'actions.subscribe' | t }}</label>
+    {% if types != blank %}
+      <input type="hidden" name="contact[tags]" value="{{ type_arry | first }}">
+      {% else %}
+      <input type="hidden" name="contact[tags]" value="prospect,newsletter">
+    {% endif %}
+    <input type="hidden" name="contact[context]" value="{{ snippet_context }}">
+
+    {% if type_title != blank or types != blank %}
+        <input type="email" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{{ 'actions.enter_email' | t }}" name="contact[email]" id="Email-{{ section_id }}" class="input-group-field newsletter__input" autocorrect="off" autocapitalize="off" required>
+        {% if type_title != blank %}
+          <div class="type_heading">{{ type_title }}</div>
+        {% endif %}
+        {% if types != blank %}
+          <div class="type_selectbox">
+            <div class="active">
+              <span>{{ type_arry | first }}</span>
+              <svg xmlns="http://www.w3.org/2000/svg"  aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewbox="0 0 28 16"><path fill="none" stroke="#000" stroke-width="2" d="m1.57 1.59 12.76 12.77L27.1 1.59"></path></svg>
+            </div>
+            <div class="type_select_inner" style="display:none;">
+              {% for type_item in type_arry %}
+                <div class="{% if forloop.first %}selected{% endif %}">{{ type_item }}</div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+        <button type="submit" id="newsletter-form-submit-{{ section_id }}" class="btn" name="commit" aria-label="{{ 'actions.subscribe' | t }}">
+          <span class="form__submit--large">
+            {% if subscribe != blank %}
+              {{ subscribe }}
+              {% else %}
+            {{ 'actions.subscribe' | t }}
+            {% endif %}
+          </span>
+          <span class="form__submit--small">
+            {% render 'icon', name: 'arrow-right' %}
+          </span>
+        </button>
+    {% else %}
+      <div class="input-group newsletter__input-group">
+        <input type="email" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{{ 'actions.enter_email' | t }}" name="contact[email]" id="Email-{{ section_id }}" class="input-group-field newsletter__input" autocorrect="off" autocapitalize="off" required>
+        <div class="input-group-btn">
+          <button type="submit" id="newsletter-form-submit-{{ section_id }}" class="btn" name="commit" aria-label="{{ 'actions.subscribe' | t }}">
+            <span class="form__submit--large">{{ 'actions.subscribe' | t }}</span>
+            <span class="form__submit--small">
+              {% render 'icon', name: 'arrow-right' %}
+            </span>
+          </button>
+        </div>
+      </div>
+    {% endif %}
+    
+  {%- endunless -%}
+{% endform %}

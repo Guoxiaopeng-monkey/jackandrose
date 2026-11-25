@@ -1,0 +1,81 @@
+{% comment %}
+  /**
+   * param {object} block - block object
+   * @param {object} pages - pages object
+   * @param {string} social_instagram_link - instagram link
+   * @param {string} social_facebook_link - facebook link
+   * @param {string} social_twitter_link - twitter link
+   * @param {string} social_youtube_link - youtube link
+   * @param {string} social_pinterest_link - pinterest link
+   * @param {string} social_linkedin_link - linkedin link
+   * @param {string} social_snapchat_link - snapchat link
+   * @param {string} social_vimeo_link - vimeo link
+   * @param {string} social_tiktok_link - tiktok link
+   * @param {string} social_tumblr_link - tumblr link
+   * @param {string} blocks_heading_size - heading size for title in blocks
+   */
+{% endcomment %}
+
+<div class="footer__mobile-section">
+  <div class="footer__blocks--mobile">
+    <div class="footer__block--mobile">
+         <div class="social-media-footer">
+             {% render 'social-icons',
+          additional_classes: 'footer__social',
+          social_instagram_link: social_instagram_link,
+          social_facebook_link: social_facebook_link,
+          social_twitter_link: social_twitter_link,
+          social_youtube_link: social_youtube_link,
+          social_pinterest_link: social_pinterest_link,
+          social_linkedin_link: social_linkedin_link,
+          social_snapchat_link: social_snapchat_link,
+          social_vimeo_link: social_vimeo_link,
+          social_tiktok_link: social_tiktok_link,
+          social_tumblr_link: social_tumblr_link
+        %}
+        </div>
+      <h2 class="footer__title {% if blocks_heading_size %}{{ blocks_heading_size }}{% endif %}" style="display:none;">
+        {{ 'actions.subscribe' | t }}
+      </h2>
+         {%- assign newsletter_form_id = 'newsletter-' | append: section_id -%}
+{% form 'customer', id: newsletter_form_id %}
+  {%- if form.posted_successfully? -%}
+    <div class="note note--success">
+      {{ 'info.newsletter_success' | t }}
+    </div>
+  {%- endif -%}
+  {%- if form.errors and form.context == snippet_context -%}
+    {{ form.errors | default_errors }}
+  {%- endif -%}
+
+  {%- unless form.posted_successfully? -%}
+    <label for="Email-{{ section_id }}" class="visually-hidden">{{ 'actions.enter_email' | t }}</label>
+    <label for="newsletter-form-submit-{{ section_id }}" class="visually-hidden">{{ 'actions.subscribe' | t }}</label>
+    <input type="hidden" name="contact[tags]" value="prospect,newsletter">
+    <input type="hidden" name="contact[context]" value="{{ snippet_context }}">
+    <div class="input-group newsletter__input-group">
+      <input type="email" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{{ 'actions.enter_email' | t }}" name="contact[email]" id="Email-{{ section_id }}" class="input-group-field newsletter__input" autocorrect="off" autocapitalize="off" required>
+      <div class="input-group-btn">
+        <button type="submit" id="newsletter-form-submit-{{ section_id }}" class="btn" name="commit" aria-label="{{ 'actions.subscribe' | t }}">
+      <span class="form__submit--small">
+           <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 2.15413V2C16 0.895431 15.1046 0 14 0H2C0.982995 0 0.143285 0.759088 0.0165402 1.74159L8.08683 5.23802C8.34047 5.34791 8.62828 5.34791 8.88192 5.23802L16 2.15413ZM16 3.24395L9.27946 6.1556C8.77218 6.37538 8.19657 6.37538 7.68929 6.1556L0 2.82424V10C0 11.1046 0.895431 12 2 12H14C15.1046 12 16 11.1046 16 10V3.24395Z" fill="white"/>
+</svg>
+        </span>
+          <span class="form__submit--large">
+           {{ 'actions.subscribe' | t }}
+          </span>
+    
+        </button>
+      </div>
+    </div>
+  {%- endunless -%}
+{% endform %}
+    
+    <p>{{ section.settings.newsletter_richtext }}</p>
+      
+  
+    </div>
+  
+  </div>
+</div>

@@ -1,0 +1,607 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_hipB83": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_dp4hRV": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/back-to-schoo-sale_6e197bc2-4db3-4d7d-a5bd-687ea079d16e.png",
+            "image_mobile": "shopify://shop_images/back-to-schoo-sale-m_68a0d305-1a3c-4cdd-b731-f09ec9290555.png",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "hero_dp4hRV"
+      ],
+      "settings": {
+        "full_width": true,
+        "desktop_size": 0,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "main": {
+      "type": "main-page-full-width",
+      "disabled": true,
+      "settings": {}
+    },
+    "rich_text_qFW3Ht": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_NkpyAi": {
+          "type": "heading",
+          "settings": {
+            "title": "Save More with Our Bundles",
+            "heading_size": "h0"
+          }
+        },
+        "text_HzLNAA": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>The ultimate pet grooming package, everything you need in one kit!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NkpyAi",
+        "text_HzLNAA"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "text_columns_DUrG8B": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_YGX68A": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/lm2-and-blade-hepa.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "LM2 Grooming Vacuum Kit with Blade & Sponge Filter",
+            "text": "<ul><li>All-in-one care for your single pet</li><li>Max 10000Pa suction power</li><li>Low vibration and &lt;60dB noise range</li><li>1PCS detachable blade</li><li>1PCS sponge filter and a HEPA</li></ul><p><strong>$115.00</strong></p>",
+            "align_text": "center",
+            "button_label": "Shop Now",
+            "button_link": "https://oneisall.com/products/lm2-pet-grooming-kit-with-replacement-blade-and-sponge-filter"
+          }
+        },
+        "text_block_Ac3Wx3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/lm2-and-blades.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "LM2 Grooming Vacuum Kit with 3 Blades",
+            "text": "<ul><li>Designed for multi-pets and thick fur</li><li>Max 10000Pa suction power</li><li>Low vibration and &lt;60dB noise range</li><li>Easy-to-empty 1.5L large dustbin</li><li>3PCS detachable blades</li></ul><p><strong>$119.99</strong></p>",
+            "align_text": "center",
+            "button_label": "Shop Now",
+            "button_link": "https://oneisall.com/products/lm2-grooming-vacuum-kit-with-3-replacement-blade"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_YGX68A",
+        "text_block_Ac3Wx3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h3",
+        "align_text": "left",
+        "divider": false,
+        "color_scheme": "none"
+      }
+    },
+    "text_columns_cQUxdR": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_cAtD7D": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/lm2-and-hepa.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "LM2 Grooming Vacuum Kit with 3 Sponge Filter & HEPA",
+            "text": "<ul><li>Perfect for multi-pet homes with heavy shedding</li><li>Max 10000Pa suction power</li><li>Low vibration and &lt;60dB noise range</li><li>Easy-to-empty 1.5L large dustbin</li><li>3PCS sponge filter & HEPA</li></ul><p><strong>$119.99</strong></p>",
+            "align_text": "center",
+            "button_label": "Shop Now",
+            "button_link": "https://oneisall.com/products/lm2-grooming-vacuum-kit-with-3-sponge-filter-hepa"
+          }
+        },
+        "text_block_hrNmDt": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/lm2-and-water-fountain_08b29281-fc8c-4786-9aa1-2afbcf492de5.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "LM2 Dog Grooming Vacuum and Dog Water Fountain 7L",
+            "text": "<ul><li>Single pet essentials, clean fur & fresh water</li><li>Max 10000Pa suction power</li><li>Low vibration and &lt;60dB noise range</li><li>Easy-to-empty 1.5L large dustbin</li><li>304 stainless steel 7L water fountain</li></ul><p><strong>$149.98</strong></p>",
+            "align_text": "center",
+            "button_label": "Shop Now",
+            "button_link": "https://oneisall.com/products/lm2-dog-grooming-vacuum-and-dog-water-fountain-7l"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_cAtD7D",
+        "text_block_hrNmDt"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h3",
+        "align_text": "left",
+        "divider": false,
+        "color_scheme": "none"
+      }
+    },
+    "rich_text_rGYYNa": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_3hmtgM": {
+          "type": "heading",
+          "settings": {
+            "title": "Top-Selling Grooming Kit",
+            "heading_size": "h0"
+          }
+        },
+        "text_kFXHPH": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>All-in-one pet care: drying, trimming, and vacuuming</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3hmtgM",
+        "text_kFXHPH"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "slideshow_image_hgChUf": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_3cFjmU": {
+          "type": "image",
+          "settings": {
+            "link": "shopify://products/cozy-c1-dog-grooming-vacuum",
+            "image": "shopify://shop_images/cozy-c1-pet-grooming-vacuum-kit.png",
+            "image_mobile": "shopify://shop_images/cozy-c1-pet-grooming-vacuum-kit-m.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_3cFjmU"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "rich_text_RiDYtJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_6n4gLp": {
+          "type": "heading",
+          "settings": {
+            "title": "Perfect Pet Feeder & Fountain Combo",
+            "heading_size": "h0"
+          }
+        },
+        "text_m8kgLd": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Feeding made easy, ideal for both single and multi-pet households!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6n4gLp",
+        "text_m8kgLd"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "featured_product_bUtNgH": {
+      "type": "featured-product",
+      "blocks": {
+        "price_Ba4NPb": {
+          "type": "price",
+          "settings": {}
+        },
+        "description_NNkNeG": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "variant_picker_fXCDTe": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "buy_buttons_C4cgxT": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        }
+      },
+      "block_order": [
+        "price_Ba4NPb",
+        "description_NNkNeG",
+        "variant_picker_fXCDTe",
+        "buy_buttons_C4cgxT"
+      ],
+      "settings": {
+        "featured_product": "5l-automatic-food-dispenser-and-7l-pet-water-fountain",
+        "divider": false,
+        "sku_enable": false,
+        "image_position": "left",
+        "image_container_size": "medium",
+        "product_image_size": "square",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "featured_product_DKeNhd": {
+      "type": "featured-product",
+      "blocks": {
+        "price_etAfwc": {
+          "type": "price",
+          "settings": {}
+        },
+        "description_mtGGLC": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "variant_picker_Yz9nDP": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "buy_buttons_WaPXwE": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        }
+      },
+      "block_order": [
+        "price_etAfwc",
+        "description_mtGGLC",
+        "variant_picker_Yz9nDP",
+        "buy_buttons_WaPXwE"
+      ],
+      "settings": {
+        "featured_product": "automatic-pet-feeder-and-2l-cat-water-fountain",
+        "divider": false,
+        "sku_enable": false,
+        "image_position": "right",
+        "image_container_size": "medium",
+        "product_image_size": "square",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "text_columns_CN3CU7": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_AkLb3j": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/reflective-dog-leash-black-new_78277f3d-c810-4f7d-97fc-bcc00db19492.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Reflective Dog Leash",
+            "text": "<ul><li>Double-sided reflective</li><li>Cushioned padded handle</li><li>Upgraded D-ring</li><li>Durable 360°metal clasp</li><li>Easily adjustable for various lengths</li></ul><p><strong>$9.99</strong></p>",
+            "align_text": "center",
+            "button_label": "Shop Now",
+            "button_link": "https://oneisall.com/products/reflective-dog-leash"
+          }
+        },
+        "text_block_CRrfji": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/1-dog-poop-bags-green-new_759e4047-2dc3-46b7-929f-1c5a5da8f46c.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Dog Poop Bags 18 Rolls",
+            "text": "<ul><li>100% leak proof</li><li>Super strong & tear-resistant</li><li>Dog-walking essential</li><li>Environmental protection</li><li>Easy-to-use</li></ul><p><strong>$18.99</strong></p>",
+            "align_text": "center",
+            "button_label": "Shop Now",
+            "button_link": "https://oneisall.com/products/dog-poop-bags-18-rolls"
+          }
+        },
+        "text_block_UwzRRE": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/1-dog-waste-bags-new_992a2b54-76b7-47b6-97f7-274c7d7d03a4.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Dog Waste Bags 20 Rolls",
+            "text": "<ul><li>Fits standard poop bad dispensers</li><li>Easily tear off, super strong</li><li>Really tough, supports up to 3kg</li><li>Compostable materials</li><li>Breaks down in about 90 days</li></ul><p><strong>$19.99</strong></p>",
+            "align_text": "center",
+            "button_label": "Shop Now",
+            "button_link": "https://oneisall.com/products/dog-waste-bags-20-rolls"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_AkLb3j",
+        "text_block_CRrfji",
+        "text_block_UwzRRE"
+      ],
+      "settings": {
+        "title": "Pet Care Must-Haves",
+        "heading_size": "h3",
+        "align_text": "left",
+        "divider": false,
+        "color_scheme": "none"
+      }
+    },
+    "rich_text_V3tptV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KcWxnY": {
+          "type": "heading",
+          "settings": {
+            "title": "As Seen On",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_KcWxnY"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "custom_logo_slider_rnXh6X": {
+      "type": "custom-logo-slider",
+      "blocks": {
+        "image_RmcftV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/FOX_NEWS_c8c12c5b-350a-48af-9534-5c375fe8edcf.png",
+            "title": ""
+          }
+        },
+        "image_Nc9ARn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/yahoo_f23062cb-fbb1-4adb-b1a1-4f8dcf57321b.png",
+            "title": ""
+          }
+        },
+        "image_a6zdBe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/People_95caa458-2c82-42fc-8be2-c28c11b09184.png",
+            "title": ""
+          }
+        },
+        "image_hMLbQU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LIFE-Style.png",
+            "title": ""
+          }
+        },
+        "image_U7jKii": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/NEW-YORK-POST.png",
+            "title": ""
+          }
+        },
+        "image_gd6km8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ET_8930cebf-077d-4f4e-bd16-a89fd6c358df.png",
+            "title": ""
+          }
+        },
+        "image_JbBNPE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Daily_f71f6731-4861-46cf-92fb-08e9b6fcef9c.png",
+            "title": ""
+          }
+        },
+        "image_8hgenb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DAILY-NEWS.png",
+            "title": ""
+          }
+        },
+        "image_r3C9HG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/AP_4f393673-0321-4604-8a2a-81fd6f73992e.png",
+            "title": ""
+          }
+        },
+        "image_fbbzh4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OK_30629e3c-ad90-4b6f-8dd0-96ae55a0c67b.png",
+            "title": ""
+          }
+        },
+        "image_9NH8hQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/PageSix_2ca59fa9-1566-4090-a474-0bc424a7bf74.png",
+            "title": ""
+          }
+        },
+        "image_TcCcPX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Us_8a7d4f67-fc01-48c8-a011-bdc596bd85ff.png",
+            "title": ""
+          }
+        },
+        "image_Pie7Vg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/trumb.png",
+            "title": ""
+          }
+        },
+        "image_iW6eMJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/TIME-stamped.png",
+            "title": ""
+          }
+        },
+        "image_NtR733": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/XOXO_b26e4db0-e4d0-45a0-9828-3ad6cc315251.png",
+            "title": ""
+          }
+        },
+        "image_mbVbRp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Aol_d3539e1d-8e84-4b7d-bd5b-b34e37063d03.png",
+            "title": ""
+          }
+        },
+        "image_jz6iew": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ilovecat.png",
+            "title": ""
+          }
+        },
+        "image_4QQBiW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DogTime_e154c81d-7fe5-4fea-bcf6-42096314eae0.png",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_RmcftV",
+        "image_Nc9ARn",
+        "image_a6zdBe",
+        "image_hMLbQU",
+        "image_U7jKii",
+        "image_gd6km8",
+        "image_JbBNPE",
+        "image_8hgenb",
+        "image_r3C9HG",
+        "image_fbbzh4",
+        "image_9NH8hQ",
+        "image_TcCcPX",
+        "image_Pie7Vg",
+        "image_iW6eMJ",
+        "image_NtR733",
+        "image_mbVbRp",
+        "image_jz6iew",
+        "image_4QQBiW"
+      ],
+      "settings": {
+        "title": "",
+        "white_bg": false
+      }
+    }
+  },
+  "order": [
+    "slideshow_hipB83",
+    "main",
+    "rich_text_qFW3Ht",
+    "text_columns_DUrG8B",
+    "text_columns_cQUxdR",
+    "rich_text_rGYYNa",
+    "slideshow_image_hgChUf",
+    "rich_text_RiDYtJ",
+    "featured_product_bUtNgH",
+    "featured_product_DKeNhd",
+    "text_columns_CN3CU7",
+    "rich_text_V3tptV",
+    "custom_logo_slider_rnXh6X"
+  ]
+}

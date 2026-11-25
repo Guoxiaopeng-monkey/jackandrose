@@ -1,0 +1,162 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner_z7rirW": {
+      "type": "banner",
+      "settings": {
+        "img": "shopify://shop_images/2_7ac19031-5115-4aa1-8996-7e73609959fe.png",
+        "img_m": "shopify://shop_images/3_7006e6dc-2117-4a6f-98f7-19edd6dd3b74.png",
+        "hide": false,
+        "overlayer": 1,
+        "title": "Grooming & Hydration",
+        "text": "Less mess. More freshness.",
+        "btn": "",
+        "link": "",
+        "btn_style": "main"
+      }
+    },
+    "rich_text_ibKdTn": {
+      "type": "rich-text",
+      "blocks": {
+        "text_bb88J7": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Tackle shedding and keep your furry buddy refreshed — save more when you bundle a grooming kit with a smart water fountain.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_bb88J7"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "none",
+        "section_visibility": "always",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "page_collecitons_8GQVGa": {
+      "type": "page-collecitons",
+      "blocks": {
+        "collection_Cyh7bg": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundle-save-grooming-hydration-set",
+            "title": "Grooming & Hydration"
+          }
+        }
+      },
+      "block_order": [
+        "collection_Cyh7bg"
+      ],
+      "settings": {
+        "display_title_type": "bundles",
+        "display_special_attr": true
+      }
+    },
+    "faqs_ijrNcG": {
+      "type": "faqs",
+      "blocks": {
+        "tab_content_JmK8jh": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Why bundle a grooming kit and a water fountain?",
+            "text": "<p>Regular grooming reduces shedding and keeps your home clean, while filtered water supports your pet’s health. </p>"
+          }
+        },
+        "tab_content_c6HcW7": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Is this bundle good for homes with more than one pet?",
+            "text": "<p>Yes! Our vacuum kits are powerful enough for multiple pets, and the included water fountains come in sizes perfect for sharing.</p>"
+          }
+        },
+        "tab_content_Rpa4Mk": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Is this bundle easy to use for older adults?",
+            "text": "<p>Yes. The grooming kit features ergonomic controls and one-handed use, while the water fountain is easy to refill and clean—perfect for pet parents of all ages.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_JmK8jh",
+        "tab_content_c6HcW7",
+        "tab_content_Rpa4Mk"
+      ],
+      "settings": {
+        "id": "faqs",
+        "title": "FAQs",
+        "align": "center",
+        "align_m": "center",
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    },
+    "icons_fRC7QE": {
+      "type": "icons",
+      "blocks": {
+        "icon_RXgQdm": {
+          "type": "icon",
+          "settings": {
+            "liquid": "1",
+            "title": "Fast & Free Shipping",
+            "text": ""
+          }
+        },
+        "icon_3tpCEf": {
+          "type": "icon",
+          "settings": {
+            "liquid": "2",
+            "title": "Product Tax Incl.",
+            "text": ""
+          }
+        },
+        "icon_DDAWJJ": {
+          "type": "icon",
+          "settings": {
+            "liquid": "3",
+            "title": "24-Month Warranty",
+            "text": ""
+          }
+        },
+        "icon_6gJPeq": {
+          "type": "icon",
+          "settings": {
+            "liquid": "4",
+            "title": "30-Day Money Back",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_RXgQdm",
+        "icon_3tpCEf",
+        "icon_DDAWJJ",
+        "icon_6gJPeq"
+      ],
+      "settings": {
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    }
+  },
+  "order": [
+    "banner_z7rirW",
+    "rich_text_ibKdTn",
+    "page_collecitons_8GQVGa",
+    "faqs_ijrNcG",
+    "icons_fRC7QE"
+  ]
+}

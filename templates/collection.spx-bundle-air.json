@@ -1,0 +1,171 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner_z7rirW": {
+      "type": "banner",
+      "settings": {
+        "img": "shopify://shop_images/2_7ac19031-5115-4aa1-8996-7e73609959fe.png",
+        "img_m": "shopify://shop_images/3_7006e6dc-2117-4a6f-98f7-19edd6dd3b74.png",
+        "hide": false,
+        "overlayer": 1,
+        "title": "",
+        "text": "",
+        "btn": "",
+        "link": "",
+        "btn_style": "main"
+      }
+    },
+    "rich_text_ibKdTn": {
+      "type": "rich-text",
+      "blocks": {
+        "text_bb88J7": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Keep Grooming, without the Interruptions.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_bb88J7"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "none",
+        "section_visibility": "always",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "page_collecitons_8GQVGa": {
+      "type": "page-collecitons",
+      "blocks": {
+        "collection_Cyh7bg": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundle-save-grooming-air-care-set",
+            "title": "Add-On Ready Sets"
+          }
+        },
+        "collection_irh7V8": {
+          "type": "collection",
+          "settings": {
+            "collection": "hydrate-longer-with-8-extra-filters",
+            "title": "Stay Fresh Longer"
+          }
+        }
+      },
+      "block_order": [
+        "collection_Cyh7bg",
+        "collection_irh7V8"
+      ],
+      "settings": {
+        "display_title_type": "bundles",
+        "display_special_attr": true
+      }
+    },
+    "faqs_ijrNcG": {
+      "type": "faqs",
+      "blocks": {
+        "tab_content_JmK8jh": {
+          "type": "tab_content",
+          "settings": {
+            "question": "How often should I change the clipper head or blades?",
+            "text": "<p>We recommend replacing blades every 3–6 months, depending on coat type and usage.</p>"
+          }
+        },
+        "tab_content_c6HcW7": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Do the replacement blades match my original kit?",
+            "text": "<p>Yes! All extra clipper heads and filters in the bundle are fully compatible with the included grooming kit.</p>"
+          }
+        },
+        "tab_content_Rpa4Mk": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Is this bundle necessary if I already have the grooming kit?",
+            "text": "<p>If you groom frequently or have multiple pets, having spare blades and filters ensures consistent results and reduces downtime.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_JmK8jh",
+        "tab_content_c6HcW7",
+        "tab_content_Rpa4Mk"
+      ],
+      "settings": {
+        "id": "faqs",
+        "title": "FAQs",
+        "align": "center",
+        "align_m": "center",
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    },
+    "icons_fRC7QE": {
+      "type": "icons",
+      "blocks": {
+        "icon_RXgQdm": {
+          "type": "icon",
+          "settings": {
+            "liquid": "1",
+            "title": "Fast & Free Shipping",
+            "text": ""
+          }
+        },
+        "icon_3tpCEf": {
+          "type": "icon",
+          "settings": {
+            "liquid": "2",
+            "title": "Product Tax Incl.",
+            "text": ""
+          }
+        },
+        "icon_DDAWJJ": {
+          "type": "icon",
+          "settings": {
+            "liquid": "3",
+            "title": "24-Month Warranty",
+            "text": ""
+          }
+        },
+        "icon_6gJPeq": {
+          "type": "icon",
+          "settings": {
+            "liquid": "4",
+            "title": "30-Day Money Back",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_RXgQdm",
+        "icon_3tpCEf",
+        "icon_DDAWJJ",
+        "icon_6gJPeq"
+      ],
+      "settings": {
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    }
+  },
+  "order": [
+    "banner_z7rirW",
+    "rich_text_ibKdTn",
+    "page_collecitons_8GQVGa",
+    "faqs_ijrNcG",
+    "icons_fRC7QE"
+  ]
+}

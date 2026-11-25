@@ -1,0 +1,771 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner_z7rirW": {
+      "type": "banner",
+      "settings": {
+        "img": "shopify://shop_images/1_6374bfb6-6c99-4add-828e-3bcb647ec306.png",
+        "img_m": "shopify://shop_images/fcbe1b93-24c6-4002-a32b-01732f6ac59a._SL850_FMjpg.jpg",
+        "hide": false,
+        "overlayer": 1,
+        "title": "More than grooming",
+        "text": "It’s comfort, cleanliness, and care in one kit.",
+        "btn": "",
+        "link": "",
+        "btn_style": "2"
+      }
+    },
+    "coupons_list_ktRekj": {
+      "type": "coupons-list",
+      "blocks": {
+        "coupon_rTJA8M": {
+          "type": "coupon",
+          "settings": {
+            "title": "$6 OFF $99.99",
+            "code": "MEGASALE6",
+            "description": "",
+            "end_date": "2025-06-30",
+            "status": "sufficient",
+            "status_text": "",
+            "button_text": ""
+          }
+        },
+        "coupon_NzBNpK": {
+          "type": "coupon",
+          "settings": {
+            "title": "$15 OFF $199.99",
+            "code": "MEGASALE15",
+            "description": "",
+            "end_date": "2025-06-30",
+            "status": "sufficient",
+            "status_text": "",
+            "button_text": ""
+          }
+        },
+        "coupon_BLEcjm": {
+          "type": "coupon",
+          "settings": {
+            "title": "$40 OFF $399.99",
+            "code": "MEGASALE15",
+            "description": "",
+            "end_date": "2025-06-30",
+            "status": "sufficient",
+            "status_text": "",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "coupon_rTJA8M",
+        "coupon_NzBNpK",
+        "coupon_BLEcjm"
+      ],
+      "disabled": true,
+      "name": "Coupons List",
+      "settings": {
+        "title": "Sitewide Coupons",
+        "subtitle": "Auto-applied at checkout",
+        "title_alignment": "left",
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "spk_nav_image_gn88zz": {
+      "type": "spk-nav-image",
+      "blocks": {
+        "item_VjVCfA": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/7_57ce0571-c3e2-4287-ad4d-3a40797c4923.png",
+            "title": "For Large Dogs",
+            "link": "large_dogs"
+          }
+        },
+        "item_XtMQGP": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/8_8d6a09dc-89d6-4cb7-a257-d67e978d23b8.png",
+            "title": "For Cat & Small Dogs",
+            "link": "cat_samll_dog"
+          }
+        },
+        "item_X6jA8q": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/oneisall-comfy-l1-cordless-pet-grooming-vacuum-kit-895067.png",
+            "title": "Cordless Grooming",
+            "link": "grooming"
+          }
+        },
+        "item_BHx4Tb": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/oneisall-bm3-3l-dog-grooming-vacuum-kit-7l-dog-water-fountain-set-957807.jpg",
+            "title": "Grooming & Drinking Set",
+            "link": "drinking_set"
+          }
+        },
+        "item_Rgcxar": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/oneisall-lm2-pet-grooming-vacuum-blade-replacement-144051.png",
+            "title": "Accessories",
+            "link": "accessories"
+          }
+        }
+      },
+      "block_order": [
+        "item_VjVCfA",
+        "item_XtMQGP",
+        "item_X6jA8q",
+        "item_BHx4Tb",
+        "item_Rgcxar"
+      ],
+      "name": "SPX Nav Image",
+      "settings": {
+        "text_color": "#000000"
+      }
+    },
+    "custom_image_slider_CdiRtn": {
+      "type": "custom-image-slider",
+      "blocks": {
+        "image_CgnyLb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GIF_306a6ad0-0bff-4d2c-8055-371bd9460ee5.gif",
+            "title": "Grooming",
+            "url": ""
+          }
+        },
+        "image_rKtM6C": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2f2d8e8f4499996c0783c29105f105e5_096af735-bca0-40d0-8770-e40d6dd57123.gif",
+            "title": "Vacuum",
+            "url": ""
+          }
+        },
+        "image_tii6UV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GIF_315fbf18-5ded-49be-b84e-14f829d13b94.gif",
+            "title": "Dryer",
+            "url": ""
+          }
+        },
+        "image_nqTFBg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_14f77b03-0037-4886-8ee7-1d9077d2e895.png",
+            "title": "Strong Suction",
+            "url": ""
+          }
+        },
+        "image_9qqYVy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/10_61faf7d3-bf4f-422f-a65e-7e1945630376.png",
+            "title": "Pet Friendly Design",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_CgnyLb",
+        "image_rKtM6C",
+        "image_tii6UV",
+        "image_nqTFBg",
+        "image_9qqYVy"
+      ],
+      "disabled": true,
+      "name": "Custom event slider",
+      "settings": {
+        "title": "",
+        "white_bg": true,
+        "button_label": ""
+      }
+    },
+    "dealpage_two_N33nJM": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_FTKPwf": {
+          "type": "collection",
+          "settings": {
+            "collection": "large-dog-grooming-vacuum",
+            "text": "",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_FTKPwf"
+      ],
+      "custom_css": [
+        ".product-section-title {font-size: calc(var(--typeHeaderSize) * 0.85);}",
+        "@media (max-width: 767.98px) {.product-section-title {font-size: calc(var(--typeHeaderSize) * 0.63); }}"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "For Large Dogs",
+        "subtitle": "",
+        "target_id": "large_dogs",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "collection",
+        "display_special_attr": true,
+        "padding_pc": "50px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "dealpage_two_T4UVdh": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_MjFyaU": {
+          "type": "collection",
+          "settings": {
+            "collection": "small-dogs-cats-grooming-vacuum",
+            "text": "",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_MjFyaU"
+      ],
+      "custom_css": [
+        ".product-section-title {font-size: calc(var(--typeHeaderSize) * 0.85);}",
+        "@media (max-width: 767.98px) {.product-section-title {font-size: calc(var(--typeHeaderSize) * 0.63); }}"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "For Cat & Small Dogs",
+        "subtitle": "",
+        "target_id": "cat_samll_dog",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "collection",
+        "display_special_attr": true,
+        "padding_pc": "50px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "dealpage_two_cTtcDA": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_7YQXMx": {
+          "type": "collection",
+          "settings": {
+            "collection": "cordless-grooming-vacuum",
+            "text": "",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_7YQXMx"
+      ],
+      "custom_css": [
+        ".product-section-title {font-size: calc(var(--typeHeaderSize) * 0.85);}",
+        "@media (max-width: 767.98px) {.product-section-title {font-size: calc(var(--typeHeaderSize) * 0.63); }}"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Cordless Grooming",
+        "subtitle": "",
+        "target_id": "grooming",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "collection",
+        "display_special_attr": true,
+        "padding_pc": "50px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "dealpage_two_cVY7kL": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_FayNg7": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundle-save-grooming-hydration-set",
+            "text": "",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_FayNg7"
+      ],
+      "custom_css": [
+        ".product-section-title {font-size: calc(var(--typeHeaderSize) * 0.85);}",
+        "@media (max-width: 767.98px) {.product-section-title {font-size: calc(var(--typeHeaderSize) * 0.63); }}"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Grooming & Drinking Set",
+        "subtitle": "",
+        "target_id": "drinking_set",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "collection",
+        "display_special_attr": true,
+        "padding_pc": "50px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "testimonials_w8RPiC": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_ULLBbK": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Paid for itself after the first use. If you have one or more dogs you take to the groomer stop doing that and buy this. It was SUPER easy to use and it did not freak out my dogs. Best thing since sliced bread.</p>",
+            "author": "Michele Praytor",
+            "author_info": "May 15, 2025"
+          }
+        },
+        "testimonial_xJtPeN": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>This vacuum is without a doubt the best purchase I have ever made.  I have a Border Collie and Belgian Malinois and they shed like crazy.  This little vacuum has made my life so much easier!  I have never written a review before but just needed to let you know how great your product is.  </p>",
+            "author": "Suzanne Templet",
+            "author_info": "Jul 12, 2025"
+          }
+        },
+        "testimonial_hUNMEg": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>I got my one is all 7 in 1 . My cocker spaniel is usually very anxious with any equipment and noises. He is not bothered by this equipment and it has great suctioning, I have trimmed his hair on the feet, face, and head and it worked perfectly and no mess due to the vacuum. </p>",
+            "author": "Cindy",
+            "author_info": "Dec 14, 2024"
+          }
+        },
+        "testimonial_tnetaB": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>I used this on my Shih Tzu  abd I'm soooo pleased with the job it did. I was done in no time and my dog(Max) was relaxed the entire time. Best if all, clean up was practically nil. My husband and I are very happy. What a great investment.</p>",
+            "author": "Eva M Sanchez",
+            "author_info": "Sep 08, 2024"
+          }
+        },
+        "testimonial_QLHn9x": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>This is Awesome!! I have 3 Shihtzus that I have been home grooming and the hair gets everywhere, this clipper vacuum works just like it’s advertised I trimmed 2 out of the 3 yesterday and it captured the hair just as advertised. The clipper attachments are great aswell. The noise level is low as well it didn’t scare my babies</p>",
+            "author": "CG",
+            "author_info": "Dec 13, 2023"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_ULLBbK",
+        "testimonial_xJtPeN",
+        "testimonial_hUNMEg",
+        "testimonial_tnetaB",
+        "testimonial_QLHn9x"
+      ],
+      "name": "t:labels.testimonials",
+      "settings": {
+        "title": "Pet Lovers Have Spoken",
+        "align_text": "center",
+        "round_images": false,
+        "color_scheme": "none"
+      }
+    },
+    "dealpage_two_dCHgU6": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_7bRkpr": {
+          "type": "collection",
+          "settings": {
+            "collection": "accessories-for-lm2",
+            "text": "LM2",
+            "subtitle": ""
+          }
+        },
+        "collection_Gq66Fr": {
+          "type": "collection",
+          "settings": {
+            "collection": "accessories-for-cozy-c1",
+            "text": "Cozy C1",
+            "subtitle": ""
+          }
+        },
+        "collection_VKe4Db": {
+          "type": "collection",
+          "settings": {
+            "collection": "accessories-for-bm3",
+            "text": "BM3",
+            "subtitle": ""
+          }
+        },
+        "collection_zkTjCy": {
+          "type": "collection",
+          "settings": {
+            "collection": "grooming-accessories",
+            "text": "ALL",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_7bRkpr",
+        "collection_Gq66Fr",
+        "collection_VKe4Db",
+        "collection_zkTjCy"
+      ],
+      "custom_css": [
+        ".product-section-title {font-size: calc(var(--typeHeaderSize) * 0.85);}",
+        "@media (max-width: 767.98px) {.product-section-title {font-size: calc(var(--typeHeaderSize) * 0.63); }}"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Accessories",
+        "subtitle": "",
+        "target_id": "accessories",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "collection",
+        "display_special_attr": true,
+        "padding_pc": "50px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "page_collecitons_4dDpNR": {
+      "type": "page-collecitons",
+      "blocks": {
+        "collection_HBDMgr": {
+          "type": "collection",
+          "settings": {
+            "collection": "large-dog-grooming-vacuum",
+            "image": "shopify://shop_images/7_57ce0571-c3e2-4287-ad4d-3a40797c4923.png",
+            "title": "For Large Dogs"
+          }
+        },
+        "collection_7Lgdhr": {
+          "type": "collection",
+          "settings": {
+            "collection": "small-dogs-cats-grooming-vacuum",
+            "image": "shopify://shop_images/8_8d6a09dc-89d6-4cb7-a257-d67e978d23b8.png",
+            "title": "For Cat & Small Dogs"
+          }
+        },
+        "collection_zT9fCY": {
+          "type": "collection",
+          "settings": {
+            "collection": "cordless-grooming-vacuum",
+            "title": "Cordless Grooming"
+          }
+        },
+        "collection_kCc3Xz": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundle-save-grooming-hydration-set",
+            "title": "Grooming & Drinking Set"
+          }
+        },
+        "collection_bXWWDf": {
+          "type": "collection",
+          "settings": {
+            "collection": "grooming-accessories",
+            "image": "shopify://shop_images/9_6952dcbf-8feb-4119-9b92-743ba29c9bb0.png",
+            "title": "Accessories"
+          }
+        }
+      },
+      "block_order": [
+        "collection_HBDMgr",
+        "collection_7Lgdhr",
+        "collection_zT9fCY",
+        "collection_kCc3Xz",
+        "collection_bXWWDf"
+      ],
+      "disabled": true,
+      "settings": {
+        "display_title_type": "collection",
+        "display_special_attr": true
+      }
+    },
+    "dealpage_two_VpHMpB": {
+      "type": "dealpage-two",
+      "name": "Collection list",
+      "settings": {
+        "title": "Loved in their lives",
+        "subtitle": "",
+        "target_id": "",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "default",
+        "display_special_attr": false,
+        "padding_pc": "0px 0",
+        "padding_m": "0px 0"
+      }
+    },
+    "1753757157bcf9012e": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "faqs_ijrNcG": {
+      "type": "faqs",
+      "blocks": {
+        "tab_content_JmK8jh": {
+          "type": "tab_content",
+          "settings": {
+            "question": "What is a pet grooming vacuum and how does it work?",
+            "text": "<p>It's an all-in-one grooming tool that trims, brushes, and vacuums pet hair into a built-in dustbin—keeping your home clean and fur-free.<br/></p>"
+          }
+        },
+        "tab_content_c6HcW7": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Is this suitable for both dogs and cats?",
+            "text": "<p>Yes, all our models are safe and effective for dogs and cats of various breeds and coat types.</p>"
+          }
+        },
+        "tab_content_HEnXQP": {
+          "type": "tab_content",
+          "settings": {
+            "question": "What’s the difference between each model?",
+            "text": "<p>✔ LM2 is our best value all-rounder.<br/>✔ Cozy C1 adds a built-in drying function.<br/>✔ BM3 offers extra suction and a large XL dustbin—perfect for big shedders.<br/>✔ LM5C is ultra-quiet for sensitive pets.</p>"
+          }
+        },
+        "tab_content_Rpa4Mk": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Are Dog Vacuums Safe For Use on Wet Fur?",
+            "text": "<p>No, most dog vacuums are designed for dry fur only, as wet fur can clog the vacuum or damage its internal components. If your dog’s fur is wet, it’s best to dry them off first before using dog vacuums. Check the product specifications to see if your model has a wet/dry option.</p>"
+          }
+        },
+        "tab_content_Mrbdx4": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Will this scare my pet?",
+            "text": "<p>Most pets adjust quickly. Our devices are designed to be quieter than traditional vacuum cleaners or hairdryers.</p>"
+          }
+        },
+        "tab_content_nUbBLR": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Is grooming at home safe for my pet?",
+            "text": "<p>Yes. Our grooming kits are designed for safe, gentle use with guards, length settings, and pet-safe materials.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_JmK8jh",
+        "tab_content_c6HcW7",
+        "tab_content_HEnXQP",
+        "tab_content_Rpa4Mk",
+        "tab_content_Mrbdx4",
+        "tab_content_nUbBLR"
+      ],
+      "settings": {
+        "id": "faqs",
+        "title": "FAQs",
+        "align": "left",
+        "align_m": "left",
+        "padding_pc": "50px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "advanced_accordion_4hagtB": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_qEzf3B": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "image_width": 10,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "1. Keeps Coats Healthy & Shiny",
+            "text": "<p>Gently removes loose hair and dirt for a smooth, radiant coat.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_FfWM9T": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "image_width": 10,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "2. Improves Hygiene & Reduces Odor",
+            "text": "<p>Cleans away dander and debris to keep your home fresh.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_jQ9BbH": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "image_width": 10,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "3. Helps Spot Fleas & Skin Issues Early",
+            "text": "<p>Close grooming helps catch fleas or skin problems sooner.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ebnG8d": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "image_width": 10,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "4. Removes Tangles & Prevents Mats",
+            "text": "<p>Eases out knots to avoid painful mats</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_qFP4aY": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "image_width": 10,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "5. Makes Grooming a Bonding Experience",
+            "text": "<p>Quiet, gentle grooming strengthens your connection.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_pBCFt7": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "image_width": 10,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "6. Save on Soaring Grooming Costs",
+            "text": "<p>Skip costly salon trips—groom at home and save.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "link_block_R3UC3c": {
+          "type": "link_block",
+          "settings": {
+            "link_label": "• About Pet Grooming Vacuum",
+            "link": "shopify://pages/pet-grooming-vacuum",
+            "show_arrow": true
+          }
+        },
+        "html_block_ELYCDa": {
+          "type": "html_block",
+          "settings": {
+            "html": "<p><strong>• Keeps Coats Healthy &amp; Shiny:</strong> Gently removes loose hair and dirt for a smooth, radiant coat.</p>\n<p><strong>• Improves Hygiene &amp; Reduces Odor:</strong> Cleans away dander and debris to keep your home fresh.</p>\n<p><strong>• Helps Spot Fleas &amp; Skin Issues Early:</strong> Close grooming helps catch fleas or skin problems sooner.</p>\n<p><strong>• Removes Tangles &amp; Prevents Mats:</strong> Eases out knots to avoid painful mats.</p>\n<p><strong>• Makes Grooming a Bonding Experience:</strong> Quiet, gentle grooming strengthens your connection.</p>\n<p><strong>• Save on Soaring Grooming Costs:</strong> Skip costly salon trips—groom at home and save.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_qEzf3B",
+        "text_block_FfWM9T",
+        "text_block_jQ9BbH",
+        "text_block_ebnG8d",
+        "text_block_qFP4aY",
+        "text_block_pBCFt7",
+        "link_block_R3UC3c",
+        "html_block_ELYCDa"
+      ],
+      "custom_css": [
+        "{max-width: 1360px; margin: 0 auto;}"
+      ],
+      "name": "Advanced accordion",
+      "settings": {
+        "title": "Transform Your Pet's Grooming Routine",
+        "per_row": 1,
+        "two_per_row_mobile": false,
+        "opened": true,
+        "disabled": true
+      }
+    },
+    "icons_fRC7QE": {
+      "type": "icons",
+      "blocks": {
+        "icon_RXgQdm": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Fast & Free Shipping",
+            "text": ""
+          }
+        },
+        "icon_3tpCEf": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Hassle-Free Warranty",
+            "text": ""
+          }
+        },
+        "icon_DDAWJJ": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "24-Month Warranty",
+            "text": ""
+          }
+        },
+        "icon_6gJPeq": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "30-Day Money Back",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_RXgQdm",
+        "icon_3tpCEf",
+        "icon_DDAWJJ",
+        "icon_6gJPeq"
+      ],
+      "settings": {
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    }
+  },
+  "order": [
+    "banner_z7rirW",
+    "coupons_list_ktRekj",
+    "spk_nav_image_gn88zz",
+    "custom_image_slider_CdiRtn",
+    "dealpage_two_N33nJM",
+    "dealpage_two_T4UVdh",
+    "dealpage_two_cTtcDA",
+    "dealpage_two_cVY7kL",
+    "dealpage_two_dCHgU6",
+    "page_collecitons_4dDpNR",
+    "dealpage_two_VpHMpB",
+    "1753757157bcf9012e",
+    "faqs_ijrNcG",
+    "testimonials_w8RPiC",
+    "advanced_accordion_4hagtB",
+    "icons_fRC7QE"
+  ]
+}

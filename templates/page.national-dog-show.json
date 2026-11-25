@@ -1,0 +1,889 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_hipB83": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_dp4hRV": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/National_Dog_Show_Banner-_PC.jpg",
+            "image_mobile": "shopify://shop_images/National_Dog_Show_Banner-_Mobile.jpg",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "hero_dp4hRV"
+      ],
+      "settings": {
+        "full_width": true,
+        "desktop_size": 0,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "main": {
+      "type": "main-page-full-width",
+      "disabled": true,
+      "settings": {}
+    },
+    "advanced_content_fthabT": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_3CWMey": {
+          "type": "liquid",
+          "settings": {
+            "code": "<style>\n.content-wrapper {\n  background: rgba(255, 255, 255, 0.4);\n  padding: 25px;\n  border: 2px solid #f7f3e6;\n  border-radius: 20px;\n  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);\n}\n@media (min-width: 990px) {\n  .content-wrapper {\n    padding: 40px 100px;\n  }\n}\n</style>\n<div class=\"return-top\" style=\"display: flex;\">\n  <svg aria-hidden=\"true\" focusable=\"false\" role=\"presentation\" class=\"icon icon-caret\" viewBox=\"0 0 10 6\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z\" fill=\"currentColor\">\n</path></svg>\n</div>\n<style>\n.return-top {\n    background: #171717 none repeat scroll 0 0;\n    bottom: 85px;\n    right: 10px;\n    color: #FFF;\n    display: inline-block;\n    align-items: center;\n    font-size: 28px;\n    height: 45px;\n    width: 45px;\n    border-radius: 50%;\n    line-height: 30px;\n    overflow: hidden;\n    position: fixed;\n    text-align: center;\n    cursor: pointer;\n    transition: all .3s ease 0s;\n    z-index: 99;\n}\n.return-top svg {\n    height: 0.8rem;\n    margin: 0 auto;\n    transform: rotate(180deg);\n}\n</style>\n<script>\n    $(window).scroll(function () {\n    var height = $(\"header\").height();\n    if ($(this).scrollTop() >= height) {\n        $('.return-top').fadeIn(500);\n    } else {\n        $('.return-top').fadeOut(500);\n    }\n  });\n  $('.return-top').click(function () {\n    $('body,html').animate({\n        scrollTop: 0\n    }, 500);\n  });\n</script>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_3CWMey"
+      ],
+      "custom_css": [
+        ".custom__item {margin: 0; height: 0;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "space_around": false
+      }
+    },
+    "rich_text_qFW3Ht": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_NkpyAi": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "heading_size": "h0"
+          }
+        },
+        "text_HzLNAA": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>We are thrilled to announce our sponsorship of the <strong>National Dog Show</strong>, </p><p>a prestigious event celebrating the incredible bond between humans and their canine companions.<br/><br/>At Oneisall, we believe that <strong>every dog is a champion</strong> in the eyes of its owner, deserving of recognition and love. </p><p>Through this event, we aim to highlight that each pup is a winner and deserves the best care possible.<br/><br/>Oneisall is dedicated to providing <strong>a champion-level grooming experience</strong> for every dog, ensuring they look and feel their best.<br/><br/>Join us in celebrating our furry friends and the joy they bring to our lives!</p>"
+          }
+        },
+        "liquid_yKx9Wt": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "code": "<div style=\"text-align: left;\">\n    <p>We are thrilled to announce our sponsorship of the National Dog Show, a prestigious event celebrating the incredible bond between humans and their canine companions. At Oneisall, we believe that every dog is a champion in the eyes of its owner, deserving of recognition and love. Through this event, we aim to highlight that each pup is a winner and deserves the best care possible.</p>\n    <p>Oneisall is dedicated to providing a champion-level grooming experience for every dog, ensuring they look and feel their best. Join us in celebrating our furry friends and the joy they bring to our lives!</p>\n</div>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NkpyAi",
+        "text_HzLNAA",
+        "liquid_yKx9Wt"
+      ],
+      "custom_css": [],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "2",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "advanced_content_fjJLNq": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_HEDLCw": {
+          "type": "liquid",
+          "settings": {
+            "code": "<style>\n.gUmbDa,.gjNMyZ,.iHhoXn,.iHhoXn .media,.iHhoXn .pf-video-wrapper{position:relative}.iHhoXn svg path,.iLMcRj path,.jrUWva[disabled]{pointer-events:none}.htdnki{--pf-sample-color:#5d6b82;--pf-border-color:#d1d5db}.iHhoXn{max-width:100%;overflow:hidden}.iHhoXn video{display:flex;height:auto;border-radius:inherit}.iHhoXn svg{position:absolute;top:calc(50% - 32px);left:calc(50% - 32px);z-index:2}.iHhoXn .pf-lazy-html-video{margin:0 auto}.iHhoXn .media{display:block}.iLMcRj{height:28px;width:auto;fill:currentColor;vertical-align:middle;box-sizing:content-box!important;pointer-events:auto}.fHJoao{max-width:100%;display:inline-block;height:auto}.fHJoao [data-href]{cursor:pointer}.gUmbDa:empty{display:initial}.gjNMyZ{padding:20px 0}.jrUWva{border:none;outline:0;line-height:1;padding:14.5px 20px;vertical-align:bottom}.jrUWva[disabled]{opacity:.7}.jrUWva svg{margin-right:5px}@media all{.__pf.__pf_NbaKtuqC .pf-9_{width:100%;height:auto}.__pf.__pf_NbaKtuqC .pf-10_{font-family:Poppins}.__pf.__pf_NbaKtuqC .pf-11_{width:100%;object-fit:cover;object-position:center center;height:auto}.__pf.__pf_NbaKtuqC .pf-12_{display:table;margin-right:auto;margin-left:auto;margin-top:50px;background-color:#f5a623;border-radius:20px}.__pf.__pf_NbaKtuqC .pf-13_{height:16px}}@media (min-width:1024.5px) and (max-width:1199.4999px){.__pf.__pf_NbaKtuqC .pf-9_{width:100%}}@media (min-width:767.5px) and (max-width:1024.4999px){.__pf.__pf_NbaKtuqC .pf-9_{width:100%}}@media (max-width:767.4999px){.__pf.__pf_NbaKtuqC .pf-9_{width:100%}}\n\n.__pf .pf-r, .__pf .pf-r-eh>.pf-c {\n    display: flex; gap:20px;\n}\n\n.__pf.__pf_NbaKtuqC .pf-12_ {\n    display: table;\n    margin-right: auto;\n    margin-left: auto;\n    margin-top: 50px;\n    background-color: #f5a623;\n    border-radius: 20px;\n    padding: 12px 20px;\n    margin: 20px auto;\n    font-size: 16px;\n    line-height: 16px;\n    letter-spacing: 0;\n   color:#fff;\n}\n.__pf.__pf_NbaKtuqC .pf-13_ {\n    height: 16px;\n\twidth: auto;\n    fill: #fff;\n    vertical-align: middle;\n    box-sizing: content-box !important;\n    pointer-events: auto;\n}\n.iHhoXn svg {\n   display:none;\n    position: absolute;\n    top: calc(50% - 32px);\n    left: calc(50% - 32px);\n    z-index: 2;\n}\n@media(min-width:990px){\n#shopify-section-template--18569599877366__advanced_content_fjJLNq{margin-bottom:-70px;}\n.__pf .pf-r > div{\n width:50%;\n}\n}\n@media(max-width:768px){\n#shopify-section-template--18590759747830__pf-77cd1685{\n margin:-30px 0 -50px;\n}\n.__pf .pf-r, .__pf .pf-r-eh>.pf-c {\nflex-direction:column;\n}\n.sc-dhKdPU .pf-c:last-child{display:none;}\n}\n</style>\n<script>\n\twindow.__pageflyProducts = window.__pageflyProducts || {};\n\twindow.__pageflyProducts[\"8185234391286\"] = {\n\t\tid: 8185234391286,\n\t\thandle: \"cozy-c1-dog-grooming-vacuum\",\n\t\ttitle: \"Cozy C1 - Oneisall Dog Grooming Vacuum Kit for Shedding Drying Trimming\",\n\t\ttype: \"Pet Grooming Vacuum\",\n\t\turl: \"\\/products\\/cozy-c1-dog-grooming-vacuum\",\n\t\tvendor: \"oneisall\",\n\t\tvariants: [{\"id\":45453189972214,\"title\":\"Default Title\",\"option1\":\"Default Title\",\"option2\":null,\"option3\":null,\"sku\":\"CW16015-Z\",\"requires_shipping\":true,\"taxable\":false,\"featured_image\":null,\"available\":true,\"name\":\"Cozy C1 - Oneisall Dog Grooming Vacuum Kit for Shedding Drying Trimming\",\"public_title\":null,\"options\":[\"Default Title\"],\"price\":14999,\"weight\":5171,\"compare_at_price\":16499,\"inventory_management\":\"shopify\",\"barcode\":\"CW16015-Z\",\"requires_selling_plan\":false,\"selling_plan_allocations\":[],\"quantity_rule\":{\"min\":1,\"max\":null,\"increment\":1}}],\n\t\toptions: [\"Title\"],\n\t\tmedia: [{\"alt\":null,\"id\":33838698823926,\"position\":1,\"preview_image\":{\"aspect_ratio\":0.813,\"height\":1600,\"width\":1300,\"src\":\"https:\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/0655\\/6716\\/2614\\/files\\/cozy-c1-dog-grooming-vacuum-kit.png?v=1722069347\"},\"aspect_ratio\":0.813,\"height\":1600,\"media_type\":\"image\",\"src\":\"https:\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/0655\\/6716\\/2614\\/files\\/cozy-c1-dog-grooming-vacuum-kit.png?v=1722069347\",\"width\":1300},{\"alt\":null,\"id\":33999717335286,\"position\":2,\"preview_image\":{\"aspect_ratio\":0.797,\"height\":1550,\"width\":1235,\"src\":\"https:\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/0655\\/6716\\/2614\\/files\\/cozy-c1-dog-vacuum-dryer.png?v=1724384086\"},\"aspect_ratio\":0.797,\"height\":1550,\"media_type\":\"image\",\"src\":\"https:\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/0655\\/6716\\/2614\\/files\\/cozy-c1-dog-vacuum-dryer.png?v=1724384086\",\"width\":1235},{\"alt\":null,\"id\":33999718318326,\"position\":3,\"preview_image\":{\"aspect_ratio\":0.797,\"height\":1550,\"width\":1235,\"src\":\"https:\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/0655\\/6716\\/2614\\/files\\/cozy-c1-keep-shedding-under-control.png?v=1724384093\"},\"aspect_ratio\":0.797,\"height\":1550,\"media_type\":\"image\",\"src\":\"https:\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/0655\\/6716\\/2614\\/files\\/cozy-c1-keep-shedding-under-control.png?v=1724384093\",\"width\":1235},{\"alt\":null,\"id\":33999718285558,\"position\":4,\"preview_image\":{\"aspect_ratio\":0.797,\"height\":1550,\"width\":1235,\"src\":\"https:\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/0655\\/6716\\/2614\\/files\\/cozy-c1-dog-grooming-vacuum-kit_d63df3fb-213b-452f-902d-5e0e8611d557.png?v=1724384093\"},\"aspect_ratio\":0.797,\"height\":1550,\"media_type\":\"image\",\"src\":\"https:\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/0655\\/6716\\/2614\\/files\\/cozy-c1-dog-grooming-vacuum-kit_d63df3fb-213b-452f-902d-5e0e8611d557.png?v=1724384093\",\"width\":1235},{\"alt\":null,\"id\":33999718154486,\"position\":5,\"preview_image\":{\"aspect_ratio\":0.797,\"height\":1550,\"width\":1235,\"src\":\"https:\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/0655\\/6716\\/2614\\/files\\/cozy-c1-drying-time-in-half.png?v=1724384093\"},\"aspect_ratio\":0.797,\"height\":1550,\"media_type\":\"image\",\"src\":\"https:\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/0655\\/6716\\/2614\\/files\\/cozy-c1-drying-time-in-half.png?v=1724384093\",\"width\":1235},{\"alt\":null,\"id\":33999718023414,\"position\":6,\"preview_image\":{\"aspect_ratio\":0.797,\"height\":1550,\"width\":1235,\"src\":\"https:\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/0655\\/6716\\/2614\\/files\\/cozy-c1-blades.png?v=1724384092\"},\"aspect_ratio\":0.797,\"height\":1550,\"media_type\":\"image\",\"src\":\"https:\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/0655\\/6716\\/2614\\/files\\/cozy-c1-blades.png?v=1724384092\",\"width\":1235}],\n\t\thas_only_default_variant: true,\n\t\toptions_with_values: [{\"name\":\"Title\",\"position\":1,\"values\":[\"Default Title\"]}],\n\t\tselected_variant: null,\n\t\tselected_or_first_available_variant: {\"id\":45453189972214,\"title\":\"Default Title\",\"option1\":\"Default Title\",\"option2\":null,\"option3\":null,\"sku\":\"CW16015-Z\",\"requires_shipping\":true,\"taxable\":false,\"featured_image\":null,\"available\":true,\"name\":\"Cozy C1 - Oneisall Dog Grooming Vacuum Kit for Shedding Drying Trimming\",\"public_title\":null,\"options\":[\"Default Title\"],\"price\":14999,\"weight\":5171,\"compare_at_price\":16499,\"inventory_management\":\"shopify\",\"barcode\":\"CW16015-Z\",\"requires_selling_plan\":false,\"selling_plan_allocations\":[],\"quantity_rule\":{\"min\":1,\"max\":null,\"increment\":1}},\n\t\ttags: [\"all\",\"Vacuum\"],\n\t\ttemplate_suffix: \"cozy-c1\",\n\t\tfeatured_image: \"\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/0655\\/6716\\/2614\\/files\\/cozy-c1-dog-grooming-vacuum-kit.png?v=1722069347\",\n\t\tfeatured_media: {\"alt\":null,\"id\":33838698823926,\"position\":1,\"preview_image\":{\"aspect_ratio\":0.813,\"height\":1600,\"width\":1300,\"src\":\"https:\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/0655\\/6716\\/2614\\/files\\/cozy-c1-dog-grooming-vacuum-kit.png?v=1722069347\"},\"aspect_ratio\":0.813,\"height\":1600,\"media_type\":\"image\",\"src\":\"https:\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/0655\\/6716\\/2614\\/files\\/cozy-c1-dog-grooming-vacuum-kit.png?v=1722069347\",\"width\":1300},\n\t\timages: [\"\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/0655\\/6716\\/2614\\/files\\/cozy-c1-dog-grooming-vacuum-kit.png?v=1722069347\",\"\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/0655\\/6716\\/2614\\/files\\/cozy-c1-dog-vacuum-dryer.png?v=1724384086\",\"\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/0655\\/6716\\/2614\\/files\\/cozy-c1-keep-shedding-under-control.png?v=1724384093\",\"\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/0655\\/6716\\/2614\\/files\\/cozy-c1-dog-grooming-vacuum-kit_d63df3fb-213b-452f-902d-5e0e8611d557.png?v=1724384093\",\"\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/0655\\/6716\\/2614\\/files\\/cozy-c1-drying-time-in-half.png?v=1724384093\",\"\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/0655\\/6716\\/2614\\/files\\/cozy-c1-blades.png?v=1724384092\"],\n\t\tquantity: [\"45453189972214:634\"]\n\t};\n\t</script>\n<div id=\"shopify-section-template--18590759747830__pf-77cd1685\" class=\"shopify-section\">\n <div class=\"sc-hknPuZ htdnki __pf __pf_NbaKtuqC\" id=\"__pf\"><div data-pf-type=\"Body\" class=\"sc-iXzffn fKDkmQ pf-4_\"><div data-pf-type=\"Layout\" class=\"sc-dPZUdm fHeoaT pf-5_\"><div data-section-id=\"pf-1b7d\" data-pf-type=\"Section\" class=\"sc-dxcExB gjNMyZ pf-6_ pf-color-scheme-1\"><div style=\"--cw:1170px\" class=\"sc-kqGpvY OSjcf\"><div class=\"sc-dhKdPU hjOBND pf-7_ pf-r pf-r-eh\" style=\"--s-xs:15px\" data-pf-type=\"Row\"><div class=\"pf-c\" style=\"--c-xs:12;--c-sm:6;--c-md:6;--c-lg:6\"><div data-pf-type=\"Column\" class=\"sc-lnPyOc gUmbDa pf-8_\"><div data-pf-type=\"HTML.Video2\" class=\"sc-ihgokY iHhoXn pf-9_\"><div class=\"pf-lazy-html-video pf-video-wrapper\" style=\"height:0px;padding-bottom:177.77777777777777%\"><video data-autoplay=\"true\" data-lazyloading=\"lazy\" width=\"100%\" class=\"pf-media-video\" type=\"video/mp4\" loop=\"\" muted=\"\" playsinline=\"\" autoplay=\"\" controlslist=\"nodownload\" disablepictureinpicture=\"\" src=\"https://cdn.shopify.com/videos/c/o/v/99b1a9d11e4b463c8d039e6be2f97976.mp4\"></video><svg class=\"pf-play-button pf-visibility-hidden\" width=\"64\" height=\"64\" viewBox=\"0 0 48 48\"><path d=\"M24.0003 47.8334C37.1631 47.8334 47.8337 37.1629 47.8337 24.0001C47.8337 10.8373 37.1631 0.166748 24.0003 0.166748C10.8375 0.166748 0.166992 10.8373 0.166992 24.0001C0.166992 37.1629 10.8375 47.8334 24.0003 47.8334Z\" fill=\"rgb(193, 193, 193, .61)\"></path><path d=\"M19.667 32.6668V15.3335L32.667 24.0002L19.667 32.6668Z\" fill=\"#fff\"></path></svg></div></div></div></div><div class=\"pf-c\" style=\"--c-xs:12;--c-sm:6;--c-md:6;--c-lg:6\"><div data-href=\"/products/cozy-c1-dog-grooming-vacuum\" data-target=\"_self\" data-pf-type=\"Column\" class=\"sc-lnPyOc gUmbDa pf-10_\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0655/6716/2614/files/oneisall-poster-day_of_the_dog-new.jpg?v=1727697742\" style=\"max-width:100%;\">\n </div></div></div></div></div></div></div></div>\n\t<script>\n    !function(){\n      window.__pagefly_page_setting__ = {\"pageTitle\":\"Dog of the Day Cozy C1\",\"pageType\":\"page\",\"pageId\":\"77cd1685-a460-471f-b060-c12dff37a607\",\"lazyLoad\":true,\"forceByPassGoogleLightHouse\":false,\"imageLazyLoad\":true,\"nativeImageLazyLoad\":true,\"useThemeJQ\":false,\"trackingIDs\":[]};\n      window.__pagefly_setting__&&(window.__pagefly_setting2__=window.__pagefly_setting__),window.__pagefly_setting__={\"baseURL\":\"https://apps.pagefly.io\",\"analyticsURL\":\"https://analytics.pagefly.io\",\"isBackend\":false,\"cdnURL\":\"https://cdn.pagefly.io\",\"pageflyVersion\":\"4.15.9\",\"shopDomain\":\"oneisall-1471.myshopify.com\",\"elementData\":{\"pf-12_\":{\"iconPos\":\"left\",\"id\":\"18018697-ea9a-47a0-83d8-7c108f36f625\",\"_type\":\"ProductATC2\"}},\"shopifyProxyPath\":\"/a/pf_preview\"},window.__pagefly_setting2__&&(window.__pagefly_setting__=function _(d,b){let c={...d||{}};for(let a of Object.keys(b))b[a]instanceof Object&&(Array.isArray(b[a])&&c[a]?Object.assign(b[a],[...b[a],...c[a]]):Object.assign(b[a],_(c[a],b[a])));return Object.assign(c||{},b),c}(__pagefly_setting2__,__pagefly_setting__),delete window.__pagefly_setting2__),window.__pagefly_setting__.moneyFormat=\"${{amount}}\"}();\n    </script><script src=\"https://cdn.pagefly.io/pagefly/4.15.9/core/helper.js\" defer=\"\"></script>\n</div>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_HEDLCw"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "rich_text_YNwqMh": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ryNmia": {
+          "type": "heading",
+          "settings": {
+            "title": "Champion Dog Spotlight Photo Contest",
+            "heading_size": "h0"
+          }
+        },
+        "text_rxV8Mg": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "enlarge_text": true,
+            "text": ""
+          }
+        },
+        "liquid_EHpmFU": {
+          "type": "liquid",
+          "settings": {
+            "code": "<iframe height=\"700\" width=\"100%\" src=\"https://app.viralsweep.com/contest/full/bbf499-193878?framed=1\" frameborder=\"0\">Not Supported</iframe>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ryNmia",
+        "text_rxV8Mg",
+        "liquid_EHpmFU"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "1",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "rich_text_YcqMLV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_tncgxb": {
+          "type": "heading",
+          "settings": {
+            "title": "Competition Rules",
+            "heading_size": "h2"
+          }
+        },
+        "text_Bzjmpj": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<ul><li><strong>Submit Your Photo</strong>: Share a picture of your dog showcasing their unique champion traits! Each contestant can upload one photo, along with a brief description highlighting what makes your dog a “champion” (e.g., “Food Champion,” “Sleep Champion,” “Mischief Champion,” etc.).</li></ul><p></p><ul><li><strong>Vote and Interact</strong>: Explore all the amazing dog photos submitted by others and vote for your favorites! The dog that receives the most votes will be crowned “Champion Dog” and win exciting prizes!</li></ul><p></p><ul><li><strong>Contest Dates</strong>: The contest runs from <strong>November 9 to November 20</strong>. Don’t miss your chance to participate and celebrate your furry champion!</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tncgxb",
+        "text_Bzjmpj"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": false,
+        "color_scheme": "2",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "rich_text_3c9wn8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KRyHrk": {
+          "type": "heading",
+          "settings": {
+            "title": "Prizes for Winning Pets",
+            "heading_size": "h0"
+          }
+        },
+        "text_rJyN6a": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Compete for the title of the Shining Star to win prizes and a 20% off coupon!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_KRyHrk",
+        "text_rJyN6a"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "2",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "rich_text_RnCUik": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cxnnmV": {
+          "type": "heading",
+          "settings": {
+            "title": "Champion Dog Spotlight",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cxnnmV"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "2",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "advanced_content_eiYc7W": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_3xrwY4": {
+          "type": "liquid",
+          "settings": {
+            "code": "<script type=\"text/javascript\">\nvar vs_embed_width = \"100%\";\n</script>\n<div id=\"vsscript_193878_663143\"></div><script async type=\"text/javascript\" src=\"https://app.viralsweep.com/vsa-embed-bbf499-193878.js?sid=193878_663143\"></script>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "liquid_RKViAQ": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "code": "<iframe height=\"700\" width=\"100%\" src=\"https://app.viralsweep.com/contest/widget/c5b57b-190626?framed=1\" frameborder=\"0\">Not Supported</iframe>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_3xrwY4",
+        "liquid_RKViAQ"
+      ],
+      "custom_css": [
+        ".index-section {padding: 20px 0;}"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "slideshow_image_PrK6km": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_rcdmB9": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/National_Dog_Show_Prize-_PC.jpg",
+            "image_mobile": "shopify://shop_images/National_Dog_Show_Prize-_Mobile.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_rcdmB9"
+      ],
+      "custom_css": [
+        ".index-section {padding: 20px 0;}"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "rich_text_87Fqgp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_NdmATA": {
+          "type": "heading",
+          "settings": {
+            "title": "Star Products for Your Star Dog",
+            "heading_size": "h0"
+          }
+        },
+        "text_UmKhPp": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Don’t forget to use the code: COZY30 for $30 off Cozy C1；<br/>12% OFF code : DOG12 for 7L water fountain and DTJ001 clipper</p>"
+          }
+        },
+        "liquid_iKyJT7": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div>\n    Don’t forget to use the code: \n    <span style=\"font-weight: bold;\">DOGSHOW15</span>\n    <span onclick=\"copyToClipboard('DOGSHOW15')\" style=\"cursor: pointer; margin-left: 5px;\">\n        <svg\n            xmlns=\"http://www.w3.org/2000/svg\"\n            width=\"24\"\n            height=\"24\"\n            viewBox=\"0 0 24 24\"\n            fill=\"none\"\n            title=\"Click to copy code\"\n        >\n            <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4.5 8.5C4.5 12.1667 4.5 15.8333 4.5 19.5C8.16667 19.5 11.8333 19.5 15.5 19.5V8.5C11.8333 8.5 8.16667 8.5 4.5 8.5ZM5 7C3.89543 7 3 7.89543 3 9V19C3 20.1046 3.89543 21 5 21H15C16.1046 21 17 20.1046 17 19V9C17 7.89543 16.1046 7 15 7H5Z\" fill=\"currentColor\"/>\n            <path d=\"M8.5 6V4.5H19.5V15.5H18.0001V17H19C20.1046 17 21 16.1046 21 15V5C21 3.89543 20.1046 3 19 3H9C7.89543 3 7 3.89543 7 5V6H8.5Z\" fill=\"currentColor\"/>\n        </svg>\n    </span>\n    for Extra 15% Off!\n</div>\n\n<script>\nfunction copyToClipboard(text) {\n    navigator.clipboard.writeText(text).then(function() {\n        alert('Copied: ' + text);\n    }, function(err) {\n        console.error('Could not copy text: ', err);\n    });\n}\n</script>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NdmATA",
+        "text_UmKhPp",
+        "liquid_iKyJT7"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.index-section {padding: 0; }}"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "1",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "text_columns_T4d8fK": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_HefTGQ": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/cozy-c1-dog-grooming-vacuum-kit.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Cozy C1 Pet Grooming Vacuum",
+            "text": "<p>The Best Grooming Kits to Make Your Dog a Star Every Day!</p><p><strong>$127.49</strong></p>",
+            "align_text": "center",
+            "button_label": "Shop Now",
+            "button_link": "shopify://products/cozy-c1-dog-grooming-vacuum"
+          }
+        },
+        "text_block_MjULQV": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/7L_Water_Fountain.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "7L Automatic Pet Water Fountain",
+            "text": "<p>A Healthy, Never-ending Fountain for Your Shiny Furry Star.</p><p><strong>$42.49</strong></p>",
+            "align_text": "center",
+            "button_label": "Shop Now",
+            "button_link": "shopify://products/dog-water-fountain-7l"
+          }
+        },
+        "text_block_JyxHYk": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/DTJ001_Dog_Clipper.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "DTJ001 Dog Clipper",
+            "text": "<p></p><p></p><p></p><p>Unique design, good for thick coat, low noise design ≤50db won't scare your dog.</p><p><strong>$42.99</strong></p>",
+            "align_text": "center",
+            "button_label": "Shop Now",
+            "button_link": "shopify://products/dtj001-dog-clipper-for-thick-coat"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_HefTGQ",
+        "text_block_MjULQV",
+        "text_block_JyxHYk"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "align_text": "left",
+        "divider": false,
+        "color_scheme": "2"
+      }
+    },
+    "featured_video_fkqcL3": {
+      "type": "featured-video",
+      "custom_css": [
+        ".index-section {margin: 0 auto;}"
+      ],
+      "settings": {
+        "title": "",
+        "video_url": "https://www.youtube.com/watch?v=HPl7PsM80v4",
+        "divider": false
+      }
+    },
+    "rich_text_TeaAB7": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_6NBcEL": {
+          "type": "heading",
+          "settings": {
+            "title": "Star Pups on Display",
+            "heading_size": "h0"
+          }
+        },
+        "text_Tdb7Pk": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6NBcEL",
+        "text_Tdb7Pk"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "1",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "custom_logo_slider_rnXh6X": {
+      "type": "custom-logo-slider",
+      "blocks": {
+        "image_RmcftV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/FOX_NEWS_c8c12c5b-350a-48af-9534-5c375fe8edcf.png",
+            "title": ""
+          }
+        },
+        "image_Nc9ARn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/yahoo_f23062cb-fbb1-4adb-b1a1-4f8dcf57321b.png",
+            "title": ""
+          }
+        },
+        "image_a6zdBe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/People_95caa458-2c82-42fc-8be2-c28c11b09184.png",
+            "title": ""
+          }
+        },
+        "image_hMLbQU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LIFE-Style.png",
+            "title": ""
+          }
+        },
+        "image_U7jKii": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/NEW-YORK-POST.png",
+            "title": ""
+          }
+        },
+        "image_gd6km8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ET_8930cebf-077d-4f4e-bd16-a89fd6c358df.png",
+            "title": ""
+          }
+        },
+        "image_JbBNPE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Daily_f71f6731-4861-46cf-92fb-08e9b6fcef9c.png",
+            "title": ""
+          }
+        },
+        "image_8hgenb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DAILY-NEWS.png",
+            "title": ""
+          }
+        },
+        "image_r3C9HG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/AP_4f393673-0321-4604-8a2a-81fd6f73992e.png",
+            "title": ""
+          }
+        },
+        "image_fbbzh4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OK_30629e3c-ad90-4b6f-8dd0-96ae55a0c67b.png",
+            "title": ""
+          }
+        },
+        "image_9NH8hQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/PageSix_2ca59fa9-1566-4090-a474-0bc424a7bf74.png",
+            "title": ""
+          }
+        },
+        "image_TcCcPX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Us_8a7d4f67-fc01-48c8-a011-bdc596bd85ff.png",
+            "title": ""
+          }
+        },
+        "image_Pie7Vg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/trumb.png",
+            "title": ""
+          }
+        },
+        "image_iW6eMJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/TIME-stamped.png",
+            "title": ""
+          }
+        },
+        "image_NtR733": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/XOXO_b26e4db0-e4d0-45a0-9828-3ad6cc315251.png",
+            "title": ""
+          }
+        },
+        "image_mbVbRp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Aol_d3539e1d-8e84-4b7d-bd5b-b34e37063d03.png",
+            "title": ""
+          }
+        },
+        "image_jz6iew": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ilovecat.png",
+            "title": ""
+          }
+        },
+        "image_4QQBiW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DogTime_e154c81d-7fe5-4fea-bcf6-42096314eae0.png",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_RmcftV",
+        "image_Nc9ARn",
+        "image_a6zdBe",
+        "image_hMLbQU",
+        "image_U7jKii",
+        "image_gd6km8",
+        "image_JbBNPE",
+        "image_8hgenb",
+        "image_r3C9HG",
+        "image_fbbzh4",
+        "image_9NH8hQ",
+        "image_TcCcPX",
+        "image_Pie7Vg",
+        "image_iW6eMJ",
+        "image_NtR733",
+        "image_mbVbRp",
+        "image_jz6iew",
+        "image_4QQBiW"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "white_bg": false
+      }
+    },
+    "text_columns_zqjMwR": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_eFzF9g": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Dog_of_the_Day_event_photo.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_VJdUVz": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Dog_of_the_Day_event_photo_2.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_nh6w64": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Dog_of_the_Day_event_photo_3.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_iUrUHq": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Dog_of_the_Day_event_photo_11.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_KEf6rV": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Dog_of_the_Day_event_photo_4.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_Epa84q": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Dog_of_the_Day_event_photo_12.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_nt3kPq": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Dog_of_the_Day_event_photo_5.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_CNGQHa": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Dog_of_the_Day_event_photo_7.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_qyF3KQ": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Dog_of_the_Day_event_photo_6.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_yWVqmX": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Dog_of_the_Day_event_photo_9.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_yiNNPP": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Dog_of_the_Day_event_photo_8.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_EjtByL": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Dog_of_the_Day_event_photo_10.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_eFzF9g",
+        "text_block_VJdUVz",
+        "text_block_nh6w64",
+        "text_block_iUrUHq",
+        "text_block_KEf6rV",
+        "text_block_Epa84q",
+        "text_block_nt3kPq",
+        "text_block_CNGQHa",
+        "text_block_qyF3KQ",
+        "text_block_yWVqmX",
+        "text_block_yiNNPP",
+        "text_block_EjtByL"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Oneisall at Dog of the Day Event",
+        "heading_size": "h2",
+        "align_text": "left",
+        "divider": false,
+        "color_scheme": "2"
+      }
+    },
+    "text_columns_6UH64D": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_QNQbrN": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Fast_Free_Shipping.png",
+            "image_mask": "none",
+            "image_width": 70,
+            "title": "Fast & Free Shipping",
+            "text": "<p>Price includes shipping, free shipping in the US.</p>",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ENJbTw": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Extended_2-Year_Warranty.png",
+            "image_mask": "none",
+            "image_width": 70,
+            "title": "Extended 2-Year Warranty",
+            "text": "<p>Become member to enjoy extra warranty services.</p>",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_dPtt9d": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/30_Day_Hassle-Free_Return.png",
+            "image_mask": "none",
+            "image_width": 70,
+            "title": "30 Day Hassle-Free Return",
+            "text": "<p>Free returns guaranteed if not satisfied.</p>",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_QNQbrN",
+        "text_block_ENJbTw",
+        "text_block_dPtt9d"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "align_text": "center",
+        "divider": false,
+        "color_scheme": "3"
+      }
+    }
+  },
+  "order": [
+    "slideshow_hipB83",
+    "main",
+    "advanced_content_fthabT",
+    "rich_text_qFW3Ht",
+    "advanced_content_fjJLNq",
+    "rich_text_YNwqMh",
+    "rich_text_YcqMLV",
+    "rich_text_3c9wn8",
+    "rich_text_RnCUik",
+    "advanced_content_eiYc7W",
+    "slideshow_image_PrK6km",
+    "rich_text_87Fqgp",
+    "text_columns_T4d8fK",
+    "featured_video_fkqcL3",
+    "rich_text_TeaAB7",
+    "custom_logo_slider_rnXh6X",
+    "text_columns_zqjMwR",
+    "text_columns_6UH64D"
+  ]
+}

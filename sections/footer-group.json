@@ -1,0 +1,156 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "t:labels.footer_group",
+  "sections": {
+    "footer-promotions": {
+      "type": "footer-promotions",
+      "blocks": {
+        "footer-promotions-0": {
+          "type": "promotion",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "title": "Site-wide promotion",
+            "heading_size": "h3",
+            "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.</p>",
+            "button_label": "Optional button",
+            "button_link": "",
+            "color_scheme": "1"
+          }
+        },
+        "footer-promotions-1": {
+          "type": "promotion",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "title": "Site-wide promotion",
+            "heading_size": "h3",
+            "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.</p>",
+            "button_label": "Optional button",
+            "button_link": "",
+            "color_scheme": "3"
+          }
+        },
+        "footer-promotions-2": {
+          "type": "promotion",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "title": "Site-wide promotion",
+            "heading_size": "h3",
+            "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.</p>",
+            "button_label": "Optional button",
+            "button_link": "",
+            "color_scheme": "2"
+          }
+        }
+      },
+      "block_order": [
+        "footer-promotions-0",
+        "footer-promotions-1",
+        "footer-promotions-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "hide_homepage": false
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-0": {
+          "type": "menu",
+          "settings": {
+            "title": "Menu",
+            "menu": "main-menu-1",
+            "enable_account_link": false
+          }
+        },
+        "menu_ANG8Dd": {
+          "type": "menu",
+          "settings": {
+            "title": "Support",
+            "menu": "support",
+            "enable_account_link": false
+          }
+        },
+        "menu_L3xzq4": {
+          "type": "menu",
+          "settings": {
+            "title": "",
+            "menu": "explore",
+            "enable_account_link": false
+          }
+        },
+        "menu_nVbCgU": {
+          "type": "menu",
+          "settings": {
+            "title": "",
+            "menu": "",
+            "enable_account_link": false
+          }
+        },
+        "menu_xmVpJN": {
+          "type": "menu",
+          "disabled": true,
+          "settings": {
+            "title": "Be a  Partner",
+            "menu": "",
+            "enable_account_link": false
+          }
+        },
+        "richtext_xYqeY6": {
+          "type": "richtext",
+          "settings": {
+            "title": "Contact",
+            "info": "<p>Phone:+1 (866) 695-7865（US)<br/>Mon-Fri 8am-5pm(PST)</p>"
+          }
+        },
+        "footer-1": {
+          "type": "contact",
+          "settings": {
+            "info": "<p>Subscribe today and get 10% off your first purchase</p>",
+            "phone": "",
+            "contact": "contact",
+            "chat": "",
+            "enable_social": false
+          }
+        }
+      },
+      "block_order": [
+        "footer-0",
+        "menu_ANG8Dd",
+        "menu_L3xzq4",
+        "menu_nVbCgU",
+        "menu_xmVpJN",
+        "richtext_xYqeY6",
+        "footer-1"
+      ],
+      "custom_css": [],
+      "settings": {
+        "show_newsletter": false,
+        "newsletter_richtext": "<p>Subscribe today and get 10% off your first purchase</p>",
+        "info": "<p>(1)877-522-8578</p><p><a href=\"https://oneisall.com/pages/contact-us\">Email us</a></p>",
+        "return_top": "Return to the Top",
+        "footer_main_menu": true,
+        "show_copyright": true,
+        "copyright_text": "",
+        "policies_menu": "",
+        "show_wave": false
+      }
+    }
+  },
+  "order": [
+    "footer-promotions",
+    "footer"
+  ]
+}

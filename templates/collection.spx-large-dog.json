@@ -1,0 +1,162 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "background_image_mbmaEE": {
+      "type": "background-image",
+      "disabled": true,
+      "settings": {}
+    },
+    "banner_z7rirW": {
+      "type": "banner",
+      "settings": {
+        "img": "shopify://shop_images/11_c499e6ec-f8a0-4309-8210-cf60ee6dacec.png",
+        "img_m": "shopify://shop_images/12_56a5f150-40be-4a72-9e33-0e1f2f548a49.png",
+        "hide": false,
+        "overlayer": 1,
+        "title": "Large Dogs",
+        "text": "Tailored for big paws",
+        "btn": "",
+        "link": "",
+        "btn_style": "main"
+      }
+    },
+    "page_collecitons_4dDpNR": {
+      "type": "page-collecitons",
+      "blocks": {
+        "collection_JBjXAD": {
+          "type": "collection",
+          "settings": {
+            "collection": "large-dog-grooming-vacuum",
+            "title": "Grooming Vacuum"
+          }
+        },
+        "collection_p96kQn": {
+          "type": "collection",
+          "settings": {
+            "collection": "large-dog-fountain",
+            "image": "shopify://shop_images/oneisall-7l-dog-water-fountain-with-visual-water-level-for-large-dogs-636518.png",
+            "title": "Water Fountain"
+          }
+        },
+        "collection_gmNWPa": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundle-saving-for-large-dog",
+            "title": "Bundle & Save"
+          }
+        }
+      },
+      "block_order": [
+        "collection_JBjXAD",
+        "collection_p96kQn",
+        "collection_gmNWPa"
+      ],
+      "settings": {
+        "display_title_type": "collection",
+        "display_special_attr": true
+      }
+    },
+    "faqs_ijrNcG": {
+      "type": "faqs",
+      "blocks": {
+        "tab_content_JmK8jh": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Place your question or heading here",
+            "text": "<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        },
+        "tab_content_c6HcW7": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Place your question or heading here",
+            "text": "<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        },
+        "tab_content_Rpa4Mk": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Place your question or heading here",
+            "text": "<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_JmK8jh",
+        "tab_content_c6HcW7",
+        "tab_content_Rpa4Mk"
+      ],
+      "disabled": true,
+      "settings": {
+        "id": "faqs",
+        "title": "FAQs",
+        "align": "center",
+        "align_m": "center",
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    },
+    "icons_fRC7QE": {
+      "type": "icons",
+      "blocks": {
+        "icon_RXgQdm": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Fast & Free Shipping",
+            "text": ""
+          }
+        },
+        "icon_3tpCEf": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Product Tax Incl.",
+            "text": ""
+          }
+        },
+        "icon_DDAWJJ": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "24-Month Warranty",
+            "text": ""
+          }
+        },
+        "icon_6gJPeq": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "30-Day Money Back",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_RXgQdm",
+        "icon_3tpCEf",
+        "icon_DDAWJJ",
+        "icon_6gJPeq"
+      ],
+      "settings": {
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    }
+  },
+  "order": [
+    "background_image_mbmaEE",
+    "banner_z7rirW",
+    "page_collecitons_4dDpNR",
+    "faqs_ijrNcG",
+    "icons_fRC7QE"
+  ]
+}

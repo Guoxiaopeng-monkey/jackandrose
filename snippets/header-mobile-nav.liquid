@@ -1,0 +1,596 @@
+
+    {% liquid
+      assign chevron_icon = 'chevron-down'
+    %}
+
+<div class="slide-nav__wrapper overlay" data-level="1">
+  <div class="mobile_nav__header">
+    <span> MENU </span>
+    <svg xmlns="http://www.w3.org/2000/svg"  aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewbox="0 0 64 64"><path d="m19 17.61 27.12 27.13m0-27.13L19 44.74" style="stroke-miterlimit:10"></path></svg>
+  </div>
+  <ul class="slide-nav e_slide-nav">
+    {%- for link in main_menu.links -%}
+      {%- liquid
+        assign link_index = forloop.index
+        assign child_list_handle = link.title | handleize | append: link_index
+        assign have_image = false
+        assign is_product_menu = false
+
+        # First check if this is a product/collection menu
+        if link.links.size > 0
+          assign first_child = link.links | first
+          # Check product and collection links separately
+          if first_child.url contains '/products/'
+            assign is_product_menu = true
+            assign is_megamenu = true
+          elsif first_child.url contains '/collections/'
+            assign is_product_menu = true
+            assign is_megamenu = true
+          endif
+        endif
+
+
+         # 遍历有无应用mega的一级菜单
+       assign custom_mega = false
+       for block in section.blocks
+        if block.settings.target_link == link.title
+         assign custom_mega = true
+        endif
+       endfor
+         
+      -%}
+
+      {% if custom_mega %}
+        <li class="slide-nav__item custom_mega">
+          <button type="button"
+            class="slide-nav__button js-toggle-submenu"
+            data-target="tier-2-{{ child_list_handle }}"
+            >
+            <span class="slide-nav__link">
+              <span>{{ link.title }}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16"><path fill="none" stroke="#000" stroke-width="2" d="m1.57 1.59 12.76 12.77L27.1 1.59"></path></svg>
+              
+              <span class="icon__fallback-text visually-hidden">{{ 'actions.expand_submenu' | t }}</span>
+            </span>
+          </button>
+
+            <ul class="slide-nav__dropdown" data-parent="tier-2-{{ child_list_handle }}" data-level="2" style="display:none;">
+               {% assign mega_blocks = section.blocks | where: 'type','mega' %}
+               {% for block in mega_blocks %}
+                  {% if block.settings.target_link == link.title %}
+                    <li class="slide-nav__mega_item">
+                       <div data-group="{{ block.settings.target_link | append:is_first | handle }}" class="group_name-item ">
+                         {{ block.settings.group_name }}
+                         <span>
+                           <a href="{{ block.settings.link }}">
+                             View More
+                           </a>
+                           <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16"><path fill="none" stroke="#000" stroke-width="2" d="m1.57 1.59 12.76 12.77L27.1 1.59"></path></svg>
+                         </span>
+                       </div>
+                        <div class="" style="display:none;    background: #fafafa;">
+                          {% if block.settings.product_list != blank %}
+                             <div class="slide-nav__grid">
+                              {%- for product in block.settings.product_list -%}
+                                <div class="slide-nav__grid-item">
+                                  <a href="{{ product.url }}" class="slide-nav__grid-link">
+                                    <div class="slide-nav__grid-image">
+                                        {% render 'image-element', img: product.featured_image, sizeVariable: '200px', lazy: true %}
+                                      {% for tag in product.tags %}
+                                           {% if tag contains 'TAG_' %}
+                                             <div class="e_product_badge_new" style="color:{{ settings.product_new_color }}; background: url({{ settings.product_new_bg | img_url:"master" }}) no-repeat center;background-size: contain;">
+                                               {{ tag | remove:'TAG_' }}
+                                             </div>
+                                             {% break %}
+                                            {%endif%}
+                                         {% endfor %}
+                                    </div>
+                                    <div class="slide-nav__grid-text">
+                                      {% if product.metafields.custom.subtitle.value != blank %}
+                                         <span class="slide-nav__grid-subtitle">{{ product.metafields.custom.subtitle.value }}</span>
+                                       {% endif %}
+                                      <p class="slide-nav__grid-title">{{ product.metafields.custom.nav_product_title| default:product.title }}</p>
+                                    </div>
+                                  </a>
+                                </div>
+                              {%- endfor -%}
+                             </div>
+                          {% endif %}
+                         {% if block.settings.bottom_menu.links != blank %}
+                          <div class="group_menu">
+                              {% for menu_link in block.settings.bottom_menu.links %}
+                                <a href="{{ menu_link.url }}" class="group_menu_link">
+                                  {{ menu_link.title }} {% render 'icon', name: 'chevron-right' %}
+                                </a>
+                              {% endfor %}
+                          </div>
+                          {% endif %}
+                         {% if block.settings.btn != blank %}
+                           <div class="group_btn_wrap">
+                            <a href="{{ block.settings.link }}" class="group_btn">{{ block.settings.btn }}{% render 'icon', name: 'chevron-right' %}</a>
+                           </div>
+                          {% endif %}
+                        </div>
+                    </li>
+                  {% endif %}
+               {% endfor%}
+            </ul>
+      </li>
+      {% else %}
+      <li class="slide-nav__item">
+        {%- if link.levels > 0 -%}
+          <button type="button"
+            class="slide-nav__button js-toggle-submenu"
+            data-target="tier-2-{{ child_list_handle }}"
+            {% if link.active or link.child_active %}data-active="true"{% endif %}>
+            <span class="slide-nav__link">
+              <span>{{ link.title }}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16"><path fill="none" stroke="#000" stroke-width="2" d="m1.57 1.59 12.76 12.77L27.1 1.59"></path></svg>
+              <span class="icon__fallback-text visually-hidden">{{ 'actions.expand_submenu' | t }}</span>
+            </span>
+          </button>
+
+          {%- if is_product_menu -%}
+            <ul class="slide-nav__dropdown" data-parent="tier-2-{{ child_list_handle }}" data-level="2" style="display:none;">
+
+              <div class="slide-nav__grid">
+                {%- for menu_link in link.links -%}
+                  {%- liquid
+                    assign is_collection = false
+                    assign collection = nil
+                    assign product = nil
+                    
+                    if menu_link.url contains '/collections/'
+                      assign is_collection = true
+                      assign collection_handle = menu_link.url | split: '/collections/' | last
+                      assign collection = collections[collection_handle]
+                    else
+                      assign product_handle = menu_link.url | split: '/products/' | last
+                      assign product = all_products[product_handle]
+                    endif
+                  -%}
+                  
+                  <div class="slide-nav__grid-item">
+                    <a href="{{ menu_link.url }}" class="slide-nav__grid-link">
+                      <div class="slide-nav__grid-image">
+                        {% if is_collection and collection != blank %}
+                          {% if collection.metafields.custom.cover_image != blank %}
+                            <img src="{{ collection.metafields.custom.cover_image | image_url:width:160 }}" loading="lazy">
+                          {% elsif collection.image != blank %}
+                            {% render 'image-element', img: collection.image, sizeVariable: '160px', lazy: true %}
+                          {% endif %}
+                        {% elsif product != blank %}
+                          {% if product.metafields.custom.cover_image %}
+                            <img src="{{ product.metafields.custom.cover_image | image_url:width:160 }}" loading="lazy">
+                          {% else %}
+                            {% render 'image-element', img: product.featured_image, sizeVariable: '160px', lazy: true %}
+                          {% endif %}
+                        {% endif %}
+                      </div>
+                      <div class="slide-nav__grid-text">
+                        <p class="slide-nav__grid-title">{{ menu_link.title }}</p>
+                        {% if product.metafields.custom.subtitle != blank %}
+                          <!-- <p class="slide-nav__grid-subtitle">{{ product.metafields.custom.subtitle }}</p> -->
+                        {% endif %}
+                      </div>
+                    </a>
+                  </div>
+                {%- endfor -%}
+              </div>
+            </ul>
+          {%- else -%}
+            <ul class="slide-nav__dropdown" data-parent="tier-2-{{ child_list_handle }}" data-level="2" style="display:none;">
+              {%- for childlink in link.links -%}
+                <li class="slide-nav__item">
+                  <a href="{{ childlink.url }}" class="slide-nav__link e_slide-nav__link__level2">
+                    <span>{{ childlink.title }}</span>
+                  </a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+        {%- else -%}
+          <a href="{{ link.url }}" class="slide-nav__link">
+            <span>{{ link.title }}</span>
+          </a>
+        {%- endif -%}
+      </li>
+      {% endif %}
+    {%- endfor -%}
+  </ul>
+</div>
+
+{% comment %}
+<div class="slide-nav__wrapper overlay" data-level="1">
+  <ul class="slide-nav">
+    {%- for link in main_menu.links -%}
+      {%- liquid
+        assign link_index = forloop.index
+        assign child_list_handle = link.title | handleize | append: link_index
+        assign have_image = false
+        assign is_product_menu = false
+
+        # First check if this is a product/collection menu
+        if link.links.size > 0
+    assign first_child = link.links | first
+    # Check product and collection links separately
+    if first_child.url contains '/products/'
+      assign is_product_menu = true
+      assign is_megamenu = true
+    elsif first_child.url contains '/collections/'
+      assign is_product_menu = true
+      assign is_megamenu = true
+    endif
+        endif
+      -%}
+
+      <li class="slide-nav__item">
+        {%- if link.levels > 0 -%}
+          <button type="button"
+            class="slide-nav__button js-toggle-submenu"
+            data-target="tier-2-{{ child_list_handle }}"
+            {% if link.active or link.child_active %}data-active="true"{% endif %}>
+            <span class="slide-nav__link">
+              <span>{{ link.title }}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16"><path fill="none" stroke="#000" stroke-width="2" d="m1.57 1.59 12.76 12.77L27.1 1.59"></path></svg>
+              <span class="icon__fallback-text visually-hidden">{{ 'actions.expand_submenu' | t }}</span>
+            </span>
+          </button>
+
+          {%- if is_product_menu -%}
+            <ul class="slide-nav__dropdown" data-parent="tier-2-{{ child_list_handle }}" data-level="2">
+              <li class="slide-nav__item">
+                <button type="button" class="slide-nav__button js-toggle-submenu">
+                  <span class="slide-nav__link slide-nav__link--back">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16"><path fill="none" stroke="#000" stroke-width="2" d="m1.57 1.59 12.76 12.77L27.1 1.59"></path></svg>
+                    <span>{{ link.title }}</span>
+                  </span>
+                </button>
+              </li>
+
+              <div class="slide-nav__grid">
+                {%- for menu_link in link.links -%}
+                  {%- liquid
+                    assign is_collection = false
+                    assign collection = nil
+                    assign product = nil
+                    
+                    if menu_link.url contains '/collections/'
+                      assign is_collection = true
+                      assign collection_handle = menu_link.url | split: '/collections/' | last
+                      assign collection = collections[collection_handle]
+                    else
+                      assign product_handle = menu_link.url | split: '/products/' | last
+                      assign product = all_products[product_handle]
+                    endif
+                  -%}
+                  
+                  <div class="slide-nav__grid-item">
+                    <a href="{{ menu_link.url }}" class="slide-nav__grid-link">
+                      <div class="slide-nav__grid-image">
+                        {% if is_collection and collection != blank %}
+                          {% if collection.metafields.custom.cover_image != blank %}
+                            <img src="{{ collection.metafields.custom.cover_image | image_url:width:160 }}" loading="lazy">
+                          {% elsif collection.image != blank %}
+                            {% render 'image-element', img: collection.image, sizeVariable: '160px', lazy: true %}
+                          {% endif %}
+                        {% elsif product != blank %}
+                          {% if product.metafields.custom.cover_image %}
+                            <img src="{{ product.metafields.custom.cover_image | image_url:width:160 }}" loading="lazy">
+                          {% else %}
+                            {% render 'image-element', img: product.featured_image, sizeVariable: '160px', lazy: true %}
+                          {% endif %}
+                        {% endif %}
+                      </div>
+                      <div class="slide-nav__grid-text">
+                        <p class="slide-nav__grid-title">{{ menu_link.title }}</p>
+                        {% if product.metafields.custom.subtitle != blank %}
+                          <p class="slide-nav__grid-subtitle">{{ product.metafields.custom.subtitle }}</p>
+                        {% endif %}
+                      </div>
+                    </a>
+                  </div>
+                {%- endfor -%}
+              </div>
+            </ul>
+          {%- else -%}
+            <ul class="slide-nav__dropdown" data-parent="tier-2-{{ child_list_handle }}" data-level="2">
+              <li class="slide-nav__item">
+                <button type="button" class="slide-nav__button js-toggle-submenu">
+                  <span class="slide-nav__link slide-nav__link--back">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16"><path fill="none" stroke="#000" stroke-width="2" d="m1.57 1.59 12.76 12.77L27.1 1.59"></path></svg>
+                    <span>{{ link.title }}</span>
+                  </span>
+                </button>
+              </li>
+              {%- for childlink in link.links -%}
+                <li class="slide-nav__item">
+                  <a href="{{ childlink.url }}" class="slide-nav__link">
+                    <span>{{ childlink.title }}</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16"><path fill="none" stroke="#000" stroke-width="2" d="m1.57 1.59 12.76 12.77L27.1 1.59"></path></svg>
+                  </a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+        {%- else -%}
+          <a href="{{ link.url }}" class="slide-nav__link">
+            <span>{{ link.title }}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16"><path fill="none" stroke="#000" stroke-width="2" d="m1.57 1.59 12.76 12.77L27.1 1.59"></path></svg>
+          </a>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>
+"@archetype-themes/scripts/modules/mobile-nav": "{{ 'mobile-nav.js' | asset_url }}", import-map.liquid
+{% endcomment %}
+
+<script>
+  $('button[aria-controls="MobileNav"]').on('click',function(){
+    $(this).addClass('is-acitve');
+    $('#MobileNav').addClass('is-acitve');
+  })
+  $('.mobile_nav__header svg').on('click',function(){
+    $('button[aria-controls="MobileNav"]').removeClass('is-acitve');
+    $('#MobileNav').removeClass('is-acitve');
+    
+  })
+  $(".e_slide-nav .slide-nav__item button.js-toggle-submenu").on('click',function(){
+    $(this).toggleClass('is-acitve');
+    $(this).next().slideToggle();
+  })
+  $(".e_slide-nav .group_name-item").on('click',function(){
+    $(this).toggleClass('is-acitve');
+    $(this).next().slideToggle();
+  })
+</script>
+
+{% style %}
+  #MobileNav{
+    display: block;
+    height: 100vh;
+    --z-index-header-drawers-mobile: 9;
+    padding: 0 0 20px;
+        opacity: 0;
+  }
+  #MobileNav.is-acitve{
+    transform: translateY(0);
+        opacity: 1;
+  }
+  #MobileNav .slide-nav__wrapper:after{
+    display:none;
+  }
+  .mobile_nav__header{
+    padding:12px 16px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.64px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .mobile_nav__header svg{
+    width:24px;
+    height:24px;
+  }
+  .e_slide-nav .slide-nav__link{
+    padding:12px 21px 12px 16px;
+  }
+  .e_slide-nav .slide-nav__button{
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.10);
+  }
+  .e_slide-nav{
+    border-top: 0.5px solid rgba(0, 0, 0, 0.10);
+    
+  }
+  .e_slide-nav button.js-toggle-submenu svg{
+    margin:0;
+    width: 14px;
+    height: 14px;
+        stroke-width: 3px;
+  }
+  .e_slide-nav button.js-toggle-submenu.is-acitve svg{
+        transform: rotate(180deg);
+  }
+  .e_slide-nav .slide-nav__dropdown{
+    opacity:1;
+    display:block;
+    visibility:unset;
+    position:unset;
+  }
+  .e_slide-nav .slide-nav__grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 16px;
+    padding: 20px 16px;
+    text-align: center;
+  }
+  .e_slide-nav .slide-nav__grid-image {
+    position:relative;
+  }
+  .custom_mega .e_product_badge_new {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    z-index: 3;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1;
+    /* background: url(//oneisall.com/cdn/shop/files/Vector_87e12308-2918-4e3c-a674-f52ae10848fa_60x.png?v=1736302222) no-repeat center;
+    background-size: contain; */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4px;
+  }
+  .e_slide-nav .slide-nav__grid-image img{
+    border-radius: 16px;
+    display:block;
+    overflow:hidden;
+    width:100%;
+    height:100%;
+      aspect-ratio: 1;
+    object-fit: cover;
+  }
+  .e_slide-nav>li>a {
+    font-weight: 400;
+    padding: 15px 21px 15px 16px!important;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.10);
+    
+}
+  .e_slide-nav .slide-nav__grid-text {
+    margin-top:12px;
+  }
+  .e_slide-nav .slide-nav__grid-subtitle {
+    margin-bottom:4px;
+    font-size: 14px;
+  }
+  .e_slide-nav .slide-nav__grid-title {
+    color: #000;
+    margin-top:4px;
+    text-align: center;
+    font-size: 12px;
+    font-weight:400;
+    font-style: normal;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .e_slide-nav .e_slide-nav__link__level2{
+    padding:12px 16px 12px 26px;
+    font-weight: 500;
+    color:#00000099;
+  }
+  .e_slide-nav .slide-nav__mega_item{
+    margin:0;
+  }
+  .e_slide-nav .group_name-item{
+    padding:14px 21px 14px 30px ;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.10);
+    color: #00000099;
+    font-weight: 500;
+  }
+  .e_slide-nav .slide-nav__dropdown>li:first-child .group_name-item {
+    /* border-top: 0.5px solid rgba(0, 0, 0, 0.10); */
+    
+  }
+  .e_slide-nav .slide-nav__mega_item .group_name-item a{
+    color: #00000099;
+    font-weight: 500;
+    margin-right:16px;
+  }
+  .e_slide-nav .slide-nav__mega_item .group_name-item:not(.is-acitve) a{
+    display:none;
+  }
+  
+  .e_slide-nav .group_name-item svg{
+    width: 14px;
+    height: 14px;
+  }
+  .e_slide-nav button.js-toggle-submenu svg path,
+  .e_slide-nav .group_name-item svg path{
+        stroke-width: 3px;
+  }
+  .e_slide-nav .group_name-item.is-acitve{
+    color:#F47C20;
+  }
+  .e_slide-nav .group_name-item.is-acitve svg{
+        transform: rotate(180deg);
+  }
+  .e_slide-nav .group_menu {
+    padding: 10px 16px 20px;
+  }
+  .e_slide-nav .group_menu .group_menu_link {
+    color: rgba(0, 0, 0, 0.80);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom:8px;
+    margin-right: 8px;
+    display: inline-block;
+  }
+  .e_slide-nav .group_menu .group_menu_link svg{
+    width: 8px;
+    height: 8px;
+  }
+  .e_slide-nav .group_btn_wrap{
+    padding: 0px 16px 20px;
+  }
+  .e_slide-nav .group_btn{
+   display:flex;
+        justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+  background: #000;
+    color:#fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4; 
+    padding:8px;
+    min-height:44px;
+    gap:4px;
+  }
+  .e_slide-nav .group_btn svg{
+    width: 12px;
+    height: 12px;
+  }
+  .e_slide-nav .slide-nav__item:first-child{
+    padding-top:0;
+  }
+/* .slide-nav__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 15px;
+}
+
+.slide-nav__grid-item {
+  width: 100%;
+}
+
+.slide-nav__grid-link {
+  display: block;
+  text-decoration: none;
+}
+
+.slide-nav__grid-image {
+  aspect-ratio: 1;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.slide-nav__grid-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-nav__grid-text {
+  text-align: center;
+  padding: 5px;
+}
+
+.slide-nav__grid-title {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.slide-nav__grid-subtitle {
+  font-size: 12px;
+  color: #666;
+} */
+{% endstyle %}

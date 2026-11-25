@@ -1,0 +1,168 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "background_image_mbmaEE": {
+      "type": "background-image",
+      "disabled": true,
+      "settings": {}
+    },
+    "banner_z7rirW": {
+      "type": "banner",
+      "settings": {
+        "img": "shopify://shop_images/11_168b6446-066c-48e5-a4a7-e8786c095a06.png",
+        "img_m": "shopify://shop_images/12_6abb8bc1-4940-4dd6-a232-216a2f7ed0ca.png",
+        "hide": false,
+        "overlayer": 1,
+        "title": "Grooming Kits for Large Dogs",
+        "text": "Tackle thick coats, heavy shedding, and grooming stress with ease.",
+        "btn": "",
+        "link": "",
+        "btn_style": "main"
+      }
+    },
+    "rich_text_fcbjba": {
+      "type": "rich-text",
+      "blocks": {
+        "text_MM49Wq": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>These kits are built for thick fur, strong shedding, and no-mess cleanup—ideal for large breeds and multi-dog homes.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_MM49Wq"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "none",
+        "section_visibility": "always",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "page_collecitons_4dDpNR": {
+      "type": "page-collecitons",
+      "blocks": {
+        "collection_JBjXAD": {
+          "type": "collection",
+          "settings": {
+            "collection": "large-dog-grooming-vacuum",
+            "title": "Large Dog Grooming Vacuum Kit"
+          }
+        }
+      },
+      "block_order": [
+        "collection_JBjXAD"
+      ],
+      "settings": {
+        "display_title_type": "collection",
+        "display_special_attr": false
+      }
+    },
+    "faqs_ijrNcG": {
+      "type": "faqs",
+      "blocks": {
+        "tab_content_JmK8jh": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Is the clipper strong enough for thick coats?",
+            "text": "<p>Yes. Our wide-body blade is designed to handle thick or double-layered fur without pulling or overheating.</p>"
+          }
+        },
+        "tab_content_c6HcW7": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Will the vacuum be too loud for my dog?",
+            "text": "<p>No worries—our kits are quieter than traditional vacuums and tested with noise-sensitive breeds.</p>"
+          }
+        },
+        "tab_content_Rpa4Mk": {
+          "type": "tab_content",
+          "settings": {
+            "question": "How often should I groom my large dog?",
+            "text": "<p>Most large breeds benefit from brushing 1–2 times a week, and trimming every 3–6 weeks.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_JmK8jh",
+        "tab_content_c6HcW7",
+        "tab_content_Rpa4Mk"
+      ],
+      "settings": {
+        "id": "faqs",
+        "title": "FAQs",
+        "align": "center",
+        "align_m": "center",
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    },
+    "icons_fRC7QE": {
+      "type": "icons",
+      "blocks": {
+        "icon_RXgQdm": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Fast & Free Shipping",
+            "text": ""
+          }
+        },
+        "icon_3tpCEf": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Product Tax Incl.",
+            "text": ""
+          }
+        },
+        "icon_DDAWJJ": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "24-Month Warranty",
+            "text": ""
+          }
+        },
+        "icon_6gJPeq": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "30-Day Money Back",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_RXgQdm",
+        "icon_3tpCEf",
+        "icon_DDAWJJ",
+        "icon_6gJPeq"
+      ],
+      "settings": {
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    }
+  },
+  "order": [
+    "background_image_mbmaEE",
+    "banner_z7rirW",
+    "rich_text_fcbjba",
+    "page_collecitons_4dDpNR",
+    "faqs_ijrNcG",
+    "icons_fRC7QE"
+  ]
+}

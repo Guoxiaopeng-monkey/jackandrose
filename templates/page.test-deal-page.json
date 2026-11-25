@@ -1,0 +1,722 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {}
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        "h1 {text-align: center;}"
+      ],
+      "settings": {}
+    },
+    "background_image_myAmbg": {
+      "type": "background-image",
+      "settings": {
+        "bg": "shopify://shop_images/Frame_1000007308_2.jpg",
+        "bg_m": "shopify://shop_images/Mask_group_1.png"
+      }
+    },
+    "banner_EPBdEF": {
+      "type": "banner",
+      "disabled": true,
+      "settings": {
+        "img": "shopify://shop_images/1_10fa66b8-6600-48fe-9a8d-dde28cf728bc.png",
+        "img_m": "shopify://shop_images/2_ac9a3f3d-342d-41c5-a412-619ecb5f6741.png",
+        "hide": false,
+        "overlayer": 1,
+        "title": "",
+        "text": "",
+        "btn": "",
+        "link": "",
+        "btn_style": "1"
+      }
+    },
+    "banner_KA6JTg": {
+      "type": "banner",
+      "settings": {
+        "img": "shopify://shop_images/1920_320.png",
+        "img_m": "shopify://shop_images/375_320.png",
+        "hide": false,
+        "overlayer": 1,
+        "title": "",
+        "text": "",
+        "btn": "",
+        "link": "",
+        "btn_style": "1"
+      }
+    },
+    "spk_nav_gGWqaY": {
+      "type": "spk-nav",
+      "blocks": {
+        "item_deqfcN": {
+          "type": "item",
+          "settings": {
+            "title": "Shedding Season",
+            "link": "ONE"
+          }
+        },
+        "item_HkeMnQ": {
+          "type": "item",
+          "settings": {
+            "title": "Fresh Water",
+            "link": "DIY"
+          }
+        },
+        "item_7ppHD7": {
+          "type": "item",
+          "settings": {
+            "title": "Clearance",
+            "link": "Outdoor"
+          }
+        },
+        "item_jczmdC": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "title": "Keep It Fresh",
+            "link": "accessories"
+          }
+        },
+        "item_rKX4YJ": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "title": "Stock Up & Save",
+            "link": "shopify-section-template--19337449832694__dealpage_two_AKabEx"
+          }
+        },
+        "item_6XX7Uh": {
+          "type": "item",
+          "settings": {
+            "title": "FAQs",
+            "link": "shopify-section-template--19337449832694__faqs_aCwjAq"
+          }
+        },
+        "item_rXFh6F": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "title": "Extra Coupons",
+            "link": "shopify-section-template--19337449832694__coupons_list_Y3K36B"
+          }
+        },
+        "item_dRGt6K": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "title": "Vacuum Grooming",
+            "link": "shopify-section-template--19337449832694__dealpage_two_cDCytg"
+          }
+        },
+        "item_9yrDgH": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "title": "Daily Essentials",
+            "link": "shopify-section-template--19337449832694__featured_collections_nNn3PG"
+          }
+        }
+      },
+      "block_order": [
+        "item_deqfcN",
+        "item_HkeMnQ",
+        "item_7ppHD7",
+        "item_jczmdC",
+        "item_rKX4YJ",
+        "item_6XX7Uh",
+        "item_rXFh6F",
+        "item_dRGt6K",
+        "item_9yrDgH"
+      ],
+      "disabled": true,
+      "settings": {
+        "bg": "#ffffff",
+        "background_gradient": "linear-gradient(90deg, rgba(0, 177, 210, 1), rgba(255, 239, 117, 1) 52%, rgba(255, 106, 0, 1) 100%)",
+        "text-color": "#000000",
+        "use_text_button": true
+      }
+    },
+    "countdown_Jfd3Af": {
+      "type": "countdown",
+      "blocks": {
+        "content_VFLGg9": {
+          "type": "content",
+          "settings": {
+            "heading": "Treat Your Pet, Prime Style",
+            "heading_size": "h2",
+            "text": "<p>Up to 50% OFF on Top Pet Essentials<br/>Grooming kits, feeders, fountains & more. Don’t miss out!</p>",
+            "content_alignment": "center"
+          }
+        },
+        "timer_YBDbXK": {
+          "type": "timer",
+          "settings": {
+            "year": "2025",
+            "month": "01",
+            "day": "11",
+            "hour": "23",
+            "minute": "59",
+            "hide_timer": false,
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_VFLGg9",
+        "timer_YBDbXK"
+      ],
+      "disabled": true,
+      "name": "t:labels.countdown",
+      "settings": {
+        "layout": "banner",
+        "full_width": false,
+        "color_scheme": "none",
+        "blur_image": false,
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "advanced_content_Wm7Bfk": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_dQnmQr": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "code": "<div style=\"background: linear-gradient(90deg, #3CC49F 0%, #F8B43D 100%); color: #000; padding: 28px 16px; border-radius: 16px; margin-bottom: 24px; font-family: 'Segoe UI', 'Arial', sans-serif; text-align: center; max-width: 1200px; margin-left: auto; margin-right: auto;\">\n  <div style=\"max-width: 900px; margin: 0 auto;\">\n    <h2 style=\"font-size: 26px; font-weight: 700; margin-bottom: 10px;\">\n      Oneisall Labor Day Sale\n    </h2>\n    <p style=\"font-size: 18px; line-height: 1.5; margin-bottom: 10px;\">\n      1. Save up to 43% on top picks.\n    </p><p style=\"font-size: 18px; line-height: 1.5; margin-bottom: 10px;\"> 2. Grab 15% Off Any 2 Water Fountains& Feeders.\n    </p>\n    <p style=\"font-size: 14px; opacity: 0.9; margin: 0;\">\n </p><p style=\"font-size: 18px; line-height: 1.5; margin-bottom: 10px;\"> 3.Stress-Free Walks Begin at Just $9.99.\n    </p>\n    <p style=\"font-size: 14px; opacity: 0.9; margin: 0;\">\n      *Limited time only!\n    </p>\n  </div>\n</div>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "liquid_CzHxdD": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "code": "<div style=\"background: linear-gradient(90deg, #3CC49F 0%, #F8B43D 100%); color: #000; padding: 28px 16px; border-radius: 16px; margin-bottom: 24px; font-family: 'Segoe UI', 'Arial', sans-serif; text-align: center; max-width: 1200px; margin-left: auto; margin-right: auto;\">\n  <div style=\"max-width: 900px; margin: 0 auto;\">\n    <h2 style=\"font-size: 26px; font-weight: 700; margin-bottom: 10px;\">\n      Early Fall Deals\n    </h2>\n    <p style=\"font-size: 18px; line-height: 1.5; margin-bottom: 10px;\">\n      Cozy up this fall! Save up to 46% on grooming essentials, water fountains, and feeders.\n    </p><p style=\"font-size: 18px; line-height: 1.5; margin-bottom: 10px;\"> Tailored for your pets’ needs.\n    </p>\n    <p style=\"font-size: 14px; opacity: 0.9; margin: 0;\">\n </p><p style=\"font-size: 18px; line-height: 1.5; margin-bottom: 10px;\"> Limited-time autumn specials – shop now!\n    </p>\n    <p style=\"font-size: 14px; opacity: 0.9; margin: 0;\">\n  \n  \n  </div>\n</div>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_dQnmQr",
+        "liquid_CzHxdD"
+      ],
+      "disabled": true,
+      "name": "t:labels.custom_content",
+      "settings": {
+        "full_width": true,
+        "space_around": true
+      }
+    },
+    "rich_text_DEcUAy": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7WcAdk": {
+          "type": "heading",
+          "settings": {
+            "title": "Big Deals for Every Tail",
+            "heading_size": "h2"
+          }
+        },
+        "text_7wTLth": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Save up to 43% on top picks for cats, dogs & homes with more than one.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_7WcAdk",
+        "text_7wTLth"
+      ],
+      "disabled": true,
+      "name": "t:labels.rich_text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "section_visibility": "always",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "text_columns_xhmKKA": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_bA6htz": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/1.LM2_f3e371a0-471a-4410-920f-1881f13149a2.jpg",
+            "mobile_image": "shopify://shop_images/1.LM2_f3e371a0-471a-4410-920f-1881f13149a2.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "LM2 Pet Grooming Vacuum Kit",
+            "text": "<p>Full grooming from nails to coat, other ordinary kits can’t match</p>",
+            "align_text": "center",
+            "button_label": "Learn More",
+            "button_link": "shopify://products/lm2-dog-grooming-vacuum"
+          }
+        },
+        "text_block_3NH9TY": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/2.C1_64f1e7be-10cb-473e-96ab-17e239c3b360.jpg",
+            "mobile_image": "shopify://shop_images/2.C1_64f1e7be-10cb-473e-96ab-17e239c3b360.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Cozy C1 Pet Grooming Vacuum & Dryer Kit",
+            "text": "<p>All-in-One Pet Grooming, Trimming & Blow-Dry Kit for a Clean Home</p>",
+            "align_text": "center",
+            "button_label": "Learn More",
+            "button_link": "shopify://products/cozy-c1-dog-grooming-vacuum"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_bA6htz",
+        "text_block_3NH9TY"
+      ],
+      "custom_css": [],
+      "name": "t:labels.text_columns_with",
+      "settings": {
+        "title": "Bond While You Groom",
+        "heading_size": "h3",
+        "align_text": "left",
+        "divider": false,
+        "two_column_mobile": false,
+        "color_scheme": "none"
+      }
+    },
+    "dealpage_one_LL6wT8": {
+      "type": "dealpage-one",
+      "settings": {
+        "title": "Explore More",
+        "title_position": "title-left",
+        "title_position_mb": "md:title-left",
+        "collection": "promotion-vacuum",
+        "display_title_type": "discount",
+        "display_special_attr": true,
+        "padding_pc": "60px 0 80px",
+        "padding_m": "00px 0"
+      }
+    },
+    "text_columns_BAxKxk": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_xXKwbJ": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/3._3.5L.jpg",
+            "mobile_image": "shopify://shop_images/3._3.5L.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": " 3.5L Cordless Pet Water Fountain ",
+            "text": "<p>Fresh, Healthy Water Anytime – For Happy, Hydrated Pets<br/></p>",
+            "align_text": "center",
+            "button_label": "Learn More",
+            "button_link": "shopify://products/oneisall-3-5l-cordless-smart-cat-water-fountain-stainless-steel"
+          }
+        },
+        "text_block_8H6pnJ": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/4.7L.jpg",
+            "mobile_image": "shopify://shop_images/4.7L.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "7L Pet Water Fountain",
+            "text": "<p>Large capacity with clear water level<br/></p>",
+            "align_text": "center",
+            "button_label": "Learn More",
+            "button_link": "shopify://products/oneisall-7l-dog-water-fountain-with-visual-water-level-for-large-dogs"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_xXKwbJ",
+        "text_block_8H6pnJ"
+      ],
+      "name": "t:labels.text_columns_with",
+      "settings": {
+        "title": "Hydration Pets Love",
+        "heading_size": "h3",
+        "align_text": "left",
+        "divider": false,
+        "two_column_mobile": false,
+        "color_scheme": "none"
+      }
+    },
+    "dealpage_one_PAUwky": {
+      "type": "dealpage-one",
+      "settings": {
+        "title": "Other Sizes",
+        "title_position": "title-left",
+        "title_position_mb": "md:title-left",
+        "collection": "promotion-fountain",
+        "display_title_type": "discount",
+        "display_special_attr": true,
+        "padding_pc": "60px 0 80px",
+        "padding_m": "30px 0"
+      }
+    },
+    "text_columns_gw7hEL": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_c8yWtG": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/5.BM3.jpg",
+            "mobile_image": "shopify://shop_images/5.BM3.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "BM3 Pet Grooming Vacuum Kit & Extra Blades",
+            "text": "<p>Large capacity with clear water level<br/></p>",
+            "align_text": "center",
+            "button_label": "Learn More",
+            "button_link": "shopify://products/bm3-dog-grooming-vacuum-with-3l-dustbin"
+          }
+        },
+        "text_block_3edJLA": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/6.3.5L_3.5Lapp.jpg",
+            "mobile_image": "shopify://shop_images/6.3.5L_3.5Lapp.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "One Happy Pet",
+            "text": "<p>Smart Feeding & Fresh Water, Hassle-Free</p>",
+            "align_text": "center",
+            "button_label": "Learn More",
+            "button_link": "shopify://products/oneisall-3-5l-cat-feeder-with-app-3-5l-cordless-water-fountain-set-1"
+          }
+        },
+        "text_block_UNqDaG": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/7.7L_5L_app.jpg",
+            "mobile_image": "shopify://shop_images/7.7L_5L_app.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Multiple Pets, One Easy Solution",
+            "text": "<p>Healthy Hydration & Easy Feeding for Everyone</p>",
+            "align_text": "center",
+            "button_label": "Learn More",
+            "button_link": "shopify://products/5l-automatic-food-dispenser-and-7l-pet-water-fountain"
+          }
+        },
+        "text_block_XV4fjR": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/8.2L_7L.jpg",
+            "mobile_image": "shopify://shop_images/8.2L_7L.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Perfect Pair for Every Pet",
+            "text": "<p>Keep All Pets Hydrated, Big or Small</p>",
+            "align_text": "center",
+            "button_label": "Learn More",
+            "button_link": "shopify://products/oneisall-2l-cat-water-fountain-7l-dog-water-fountain-set"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_c8yWtG",
+        "text_block_3edJLA",
+        "text_block_UNqDaG",
+        "text_block_XV4fjR"
+      ],
+      "name": "t:labels.text_columns_with",
+      "settings": {
+        "title": "Bundles That Save Big",
+        "heading_size": "h3",
+        "align_text": "left",
+        "divider": false,
+        "two_column_mobile": false,
+        "color_scheme": "none"
+      }
+    },
+    "dealpage_two_dzGNKW": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_dbKc9Q": {
+          "type": "collection",
+          "settings": {
+            "collection": "promotion-other",
+            "text": "",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_dbKc9Q"
+      ],
+      "settings": {
+        "title": "Deals Pets Will Love",
+        "subtitle": "",
+        "target_id": "",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "discount",
+        "display_special_attr": true,
+        "padding_pc": "80px",
+        "padding_m": "60px 0"
+      }
+    },
+    "faqs_aCwjAq": {
+      "type": "faqs",
+      "blocks": {
+        "tab_content_Ctm3C8": {
+          "type": "tab_content",
+          "disabled": true,
+          "settings": {
+            "question": "What does “25% Off the Second Fountain” mean?",
+            "text": "<p>Buy any two fountains and get <strong>25% off</strong> the second one — discount applies automatically at checkout.</p>"
+          }
+        },
+        "tab_content_HL8Yhc": {
+          "type": "tab_content",
+          "disabled": true,
+          "settings": {
+            "question": "Can I mix different fountain models?",
+            "text": "<p>Yes, you can choose the same or different models.</p>"
+          }
+        },
+        "tab_content_Vq4A6e": {
+          "type": "tab_content",
+          "disabled": true,
+          "settings": {
+            "question": "Do I have to buy both in the same order?",
+            "text": "<p>Yes, the offer is valid only when purchasing two fountains in one order.</p>"
+          }
+        },
+        "tab_content_nPxan6": {
+          "type": "tab_content",
+          "disabled": true,
+          "settings": {
+            "question": "Why buy the Grooming Kit this September?",
+            "text": "<p>It’s shedding season — keep fur under control and save on grooming costs.</p>"
+          }
+        },
+        "tab_content_R4j9TX": {
+          "type": "tab_content",
+          "disabled": true,
+          "settings": {
+            "question": "How is this different from regular clippers?",
+            "text": "<p>The built-in vacuum collects loose fur directly, reducing mess around your home.</p>"
+          }
+        },
+        "tab_content_bdpQ3k": {
+          "type": "tab_content",
+          "settings": {
+            "question": "How long does the Autumn Sale last?",
+            "text": "<p>The sale runs for a limited time only. Discounts of up to <strong>46% off</strong> are available while supplies last – don’t wait too long!</p>"
+          }
+        },
+        "tab_content_KhDkr4": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Do I need a coupon code to get the discount?",
+            "text": "<p>No coupon needed! Discounts are applied automatically at checkout.</p>"
+          }
+        },
+        "tab_content_pDKzPn": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Do products still come with warranty and returns?",
+            "text": "<p>Yes! All sale items come with our 24-month warranty and 30-day money-back guarantee for worry-free shopping.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_Ctm3C8",
+        "tab_content_HL8Yhc",
+        "tab_content_Vq4A6e",
+        "tab_content_nPxan6",
+        "tab_content_R4j9TX",
+        "tab_content_bdpQ3k",
+        "tab_content_KhDkr4",
+        "tab_content_pDKzPn"
+      ],
+      "name": "FAQs",
+      "settings": {
+        "id": "faqs",
+        "title": "FAQs",
+        "align": "left",
+        "align_m": "left",
+        "padding_pc": "80px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "featured_video_nJRJ4L": {
+      "type": "featured-video",
+      "name": "t:labels.video",
+      "settings": {
+        "title": "",
+        "video_url": "https://www.youtube.com/watch?v=0Df7pjWENkM",
+        "divider": false
+      }
+    },
+    "faqs_QATY7q": {
+      "type": "faqs",
+      "name": "FAQs",
+      "settings": {
+        "id": "faqs",
+        "title": "Loved in their lives",
+        "align": "left",
+        "align_m": "left",
+        "padding_pc": "40px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "17579223666d31f545": {
+      "type": "apps",
+      "settings": {
+        "full_width": true,
+        "space_around": false
+      }
+    },
+    "featured_collections_nNn3PG": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_mdfD3T": {
+          "type": "collection",
+          "settings": {
+            "collection": "tailored-picks",
+            "title": "By Pet Type"
+          }
+        },
+        "collection_rQqPet": {
+          "type": "collection",
+          "settings": {
+            "collection": "feeder",
+            "title": ""
+          }
+        },
+        "collection_ehkMjg": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundles-saving",
+            "title": "Value Packs"
+          }
+        },
+        "collection_HAVXQH": {
+          "type": "collection",
+          "settings": {
+            "collection": "water-fountain",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_mdfD3T",
+        "collection_rQqPet",
+        "collection_ehkMjg",
+        "collection_HAVXQH"
+      ],
+      "settings": {
+        "title": "Daily Pet Essentials",
+        "heading_size": "h3",
+        "heading_position": "center",
+        "divider": false
+      }
+    },
+    "icons_fRC7QE": {
+      "type": "icons",
+      "blocks": {
+        "icon_RXgQdm": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Fast & Free Shipping",
+            "text": ""
+          }
+        },
+        "icon_3tpCEf": {
+          "type": "icon",
+          "settings": {
+            "liquid": "2",
+            "title": "Product Tax Incl.",
+            "text": ""
+          }
+        },
+        "icon_DDAWJJ": {
+          "type": "icon",
+          "settings": {
+            "liquid": "3",
+            "title": "24-Month Warranty",
+            "text": ""
+          }
+        },
+        "icon_6gJPeq": {
+          "type": "icon",
+          "settings": {
+            "liquid": "4",
+            "title": "30-Day Money Back",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_RXgQdm",
+        "icon_3tpCEf",
+        "icon_DDAWJJ",
+        "icon_6gJPeq"
+      ],
+      "settings": {
+        "padding_pc": "80px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "settings": {}
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "main",
+    "background_image_myAmbg",
+    "banner_EPBdEF",
+    "banner_KA6JTg",
+    "spk_nav_gGWqaY",
+    "countdown_Jfd3Af",
+    "advanced_content_Wm7Bfk",
+    "rich_text_DEcUAy",
+    "text_columns_xhmKKA",
+    "dealpage_one_LL6wT8",
+    "text_columns_BAxKxk",
+    "dealpage_one_PAUwky",
+    "text_columns_gw7hEL",
+    "dealpage_two_dzGNKW",
+    "faqs_aCwjAq",
+    "featured_video_nJRJ4L",
+    "faqs_QATY7q",
+    "17579223666d31f545",
+    "featured_collections_nNn3PG",
+    "icons_fRC7QE",
+    "shogun-optimizer"
+  ]
+}

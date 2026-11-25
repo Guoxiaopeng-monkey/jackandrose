@@ -1,0 +1,520 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {}
+    },
+    "shogun-above": {
+      "type": "shogun-above",
+      "disabled": true,
+      "settings": {}
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "custom_G6ktbY": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "<p><b>Black Friday Sale,</b> <span style=\"color:#FF6A00\n\">12% off</span>. Automatically apply discounts at checkout.</br>Offer ends on December 2nd.</p>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "quantity_selector_rzT9VA": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "description_M7JAy9": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "checkmark",
+            "text": "30 Days Worry-Free Returns"
+          }
+        },
+        "sales_point2": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "truck",
+            "text": "Free Shipping in The US"
+          }
+        },
+        "sales_point3": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "shield",
+            "text": "100% Secure Payments"
+          }
+        },
+        "sales_point4": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "package",
+            "text": "Ships Within 24 hours"
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "share_eTMqpL": {
+          "type": "share",
+          "settings": {}
+        },
+        "custom_FC9H9M": {
+          "type": "custom",
+          "settings": {
+            "code": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n</script>"
+          }
+        }
+      },
+      "block_order": [
+        "custom_G6ktbY",
+        "variant_picker",
+        "quantity_selector_rzT9VA",
+        "price",
+        "buy_buttons",
+        "description_M7JAy9",
+        "sales_point",
+        "sales_point2",
+        "sales_point3",
+        "sales_point4",
+        "inventory_status",
+        "share_eTMqpL",
+        "custom_FC9H9M"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_container_size": "medium",
+        "product_image_size": "natural",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "custom_content_navigation_YrhWq6": {
+      "type": "custom-content-navigation",
+      "settings": {
+        "colors": "light"
+      }
+    },
+    "promo_grid_wKMTtG": {
+      "type": "promo-grid",
+      "blocks": {
+        "image_PPEfka": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/7L-water-fountain-for-dogs-pc-1.jpg",
+            "image_mobile": "shopify://shop_images/7L-water-fountain-for-dogs-m-1.jpg",
+            "link": "",
+            "width": "100"
+          }
+        },
+        "image_ybLMiW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/7L-water-fountain-for-dogs-pc-2_a1cf6000-6d59-46a6-a899-8b0fb7a52eb3.jpg",
+            "image_mobile": "shopify://shop_images/7L-water-fountain-for-dogs-m-2.jpg",
+            "link": "",
+            "width": "100"
+          }
+        }
+      },
+      "block_order": [
+        "image_PPEfka",
+        "image_ybLMiW"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 0,
+        "space_above": true,
+        "space_below": true,
+        "title_size_multiplier": 1.8,
+        "title_size_multiplier_mobile": 1.3,
+        "desp_size_multiplier": 1.8,
+        "desp_size_multiplier_mobile": 1.3,
+        "btn_size_multiplier": 1.4,
+        "btn_size_multiplier_mobile": 1.4
+      }
+    },
+    "promo_grid_iC4dNr": {
+      "type": "promo-grid",
+      "blocks": {
+        "image_RQ6P7H": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1.5w-pc.jpg",
+            "image_mobile": "shopify://shop_images/1.5w-m.jpg",
+            "link": "",
+            "width": "100"
+          }
+        },
+        "image_9aTJrf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/automatic-power-off-pc.jpg",
+            "image_mobile": "shopify://shop_images/automatic-power-off-m.jpg",
+            "link": "",
+            "width": "100"
+          }
+        }
+      },
+      "block_order": [
+        "image_RQ6P7H",
+        "image_9aTJrf"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": true,
+        "title_size_multiplier": 1.8,
+        "title_size_multiplier_mobile": 1.3,
+        "desp_size_multiplier": 1.8,
+        "desp_size_multiplier_mobile": 1.3,
+        "btn_size_multiplier": 1.4,
+        "btn_size_multiplier_mobile": 1.4
+      }
+    },
+    "promo_grid_wcELGk": {
+      "type": "promo-grid",
+      "blocks": {
+        "image_tcPCra": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/fresh-water-pc.jpg",
+            "image_mobile": "shopify://shop_images/fresh-water-m.jpg",
+            "link": "",
+            "width": "100"
+          }
+        },
+        "image_Ddk99a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/large-water-bowl-pc.jpg",
+            "image_mobile": "shopify://shop_images/large-water-bowl-m_57b19460-bf73-45ce-aee9-b2c0fb7901e1.jpg",
+            "link": "",
+            "width": "100"
+          }
+        }
+      },
+      "block_order": [
+        "image_tcPCra",
+        "image_Ddk99a"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 0,
+        "space_above": true,
+        "space_below": true,
+        "title_size_multiplier": 1.8,
+        "title_size_multiplier_mobile": 1.3,
+        "desp_size_multiplier": 1.8,
+        "desp_size_multiplier_mobile": 1.3,
+        "btn_size_multiplier": 1.4,
+        "btn_size_multiplier_mobile": 1.4
+      }
+    },
+    "promo_grid_TjyA9B": {
+      "type": "promo-grid",
+      "blocks": {
+        "image_E6Dey7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/steel-material-pc.jpg",
+            "image_mobile": "shopify://shop_images/steel-material-m.jpg",
+            "link": "",
+            "width": "100"
+          }
+        },
+        "image_UGg4K3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/304-stainless-pc.jpg",
+            "image_mobile": "shopify://shop_images/304-stainless-m.jpg",
+            "link": "",
+            "width": "100"
+          }
+        },
+        "image_jVhYUp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6-1_314bb98d-59b9-435b-add7-dd1d5c071b52.jpg",
+            "image_mobile": "shopify://shop_images/6-1.jpg",
+            "link": "",
+            "width": "100"
+          }
+        }
+      },
+      "block_order": [
+        "image_E6Dey7",
+        "image_UGg4K3",
+        "image_jVhYUp"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 0,
+        "space_above": false,
+        "space_below": true,
+        "title_size_multiplier": 1.8,
+        "title_size_multiplier_mobile": 1.3,
+        "desp_size_multiplier": 1.8,
+        "desp_size_multiplier_mobile": 1.3,
+        "btn_size_multiplier": 1.4,
+        "btn_size_multiplier_mobile": 1.4
+      }
+    },
+    "product_spec_pjh8iG": {
+      "type": "product-spec",
+      "blocks": {
+        "text_block_hKJQVT": {
+          "type": "text_block",
+          "settings": {
+            "title": "Input",
+            "Content": "100-240V"
+          }
+        },
+        "text_block_gaa4Wk": {
+          "type": "text_block",
+          "settings": {
+            "title": "Output",
+            "Content": "DC5V=1A"
+          }
+        },
+        "text_block_wX8t3N": {
+          "type": "text_block",
+          "settings": {
+            "title": "Weight",
+            "Content": "1.15kg"
+          }
+        },
+        "text_block_nyFBJP": {
+          "type": "text_block",
+          "settings": {
+            "title": "Size",
+            "Content": "31*31*11.6cm"
+          }
+        },
+        "text_block_c4tKgY": {
+          "type": "text_block",
+          "settings": {
+            "title": "Charging cable length",
+            "Content": "1.5m"
+          }
+        },
+        "text_block_TT3BFx": {
+          "type": "text_block",
+          "settings": {
+            "title": "Noise",
+            "Content": "35dB"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_hKJQVT",
+        "text_block_gaa4Wk",
+        "text_block_wX8t3N",
+        "text_block_nyFBJP",
+        "text_block_c4tKgY",
+        "text_block_TT3BFx"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "divider": false
+      }
+    },
+    "faq_E44WaY": {
+      "type": "faq",
+      "blocks": {
+        "question_yRm6gQ": {
+          "type": "question",
+          "settings": {
+            "title": "Is A Water Fountain For Cats Good To Cats?",
+            "text": "<p>Yes, a water fountain for cats can be beneficial to cats. </p><p>Cats are more inclined to drink from flowing water because it mimics natural water sources like streams. The continuous circulation of water in fountains also keeps it fresh and oxygenated, encouraging your cat to drink more, which promotes better hydration and overall health. </p>"
+          }
+        },
+        "question_tXcr8w": {
+          "type": "question",
+          "settings": {
+            "title": "Can I Use Tap Water In My Dog Water Fountain?",
+            "text": "<p>Yes, you can use tap water in a dog water fountain, but it's advisable to use filtered or purified water if possible to reduce mineral deposits and impurities. If you're using tap water, ensure the fountain has a reliable filter to keep the water clean and safe for your dog. Regular cleaning is also essential to prevent build-up from minerals or bacteria.</p>"
+          }
+        },
+        "question_hDVtQF": {
+          "type": "question",
+          "settings": {
+            "title": "How Do I Choose The Safe Dog Water Fountain?",
+            "text": "<p>When choosing a safe dog water fountain for your dog, prioritize non-toxic materials. Ensure ease of cleaning, and consider features like filters, and quiet operation. These factors will help you pick a dispenser that provides your pet with fresh, clean water.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_yRm6gQ",
+        "question_tXcr8w",
+        "question_hDVtQF"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "FAQs",
+        "heading_size": "h2",
+        "brochure_title": "Manual",
+        "brochure_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/7L_Water_Fountain.pdf?v=1709192211",
+        "heading_position": "left"
+      }
+    },
+    "171524248506ebf0c3": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "blocks": {
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": true
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "settings": {
+            "title": "Shipping information",
+            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
+            "page": ""
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+            "title": "Ask a question",
+            "phone": false
+          }
+        }
+      },
+      "block_order": [
+        "description",
+        "tab",
+        "contact"
+      ],
+      "disabled": true,
+      "settings": {
+        "max_width": false
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 5,
+        "products_per_row": 5
+      }
+    },
+    "more-products-vendor": {
+      "type": "more-products-vendor",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "more-products-collection": {
+      "type": "more-products-collection",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {}
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "2"
+      }
+    },
+    "shogun-below": {
+      "type": "shogun-below",
+      "disabled": true,
+      "settings": {}
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "shogun-above",
+    "main",
+    "custom_content_navigation_YrhWq6",
+    "promo_grid_wKMTtG",
+    "promo_grid_iC4dNr",
+    "promo_grid_wcELGk",
+    "promo_grid_TjyA9B",
+    "product_spec_pjh8iG",
+    "faq_E44WaY",
+    "171524248506ebf0c3",
+    "sub",
+    "recommendations",
+    "more-products-vendor",
+    "more-products-collection",
+    "recently-viewed",
+    "collection-return",
+    "shogun-below",
+    "shogun-optimizer"
+  ]
+}

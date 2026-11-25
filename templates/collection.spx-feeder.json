@@ -1,0 +1,471 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner_z7rirW": {
+      "type": "banner",
+      "settings": {
+        "img": "shopify://shop_images/4_4b587a29-66e5-46d8-a70d-12503318a61d.png",
+        "img_m": "shopify://shop_images/4-1-1.png",
+        "hide": false,
+        "overlayer": 1,
+        "title": "Pet Feeder",
+        "text": "Hassle-Free Mealtimes for Furry Friends",
+        "btn": "",
+        "link": "",
+        "btn_style": "main"
+      }
+    },
+    "spk_nav_image_xUJxxk": {
+      "type": "spk-nav-image",
+      "blocks": {
+        "item_GnNbqW": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/oneisall-5l-automatic-cat-feeder-for-two-cats-black-758896.png",
+            "title": "Dual-Bowl Series",
+            "link": "APP"
+          }
+        },
+        "item_rmHJHD": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/oneisall-pf05-3l-automatic-cat-feeder-647593.png",
+            "title": "Single-Bowl Series",
+            "link": "Easy"
+          }
+        },
+        "item_MMzAG6": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/oneisall-35l-automatic-cat-feeder-with-5g-wi-fi-app-control-240725.png",
+            "title": "Travel & Business Trips",
+            "link": "Travel"
+          }
+        },
+        "item_AiGjad": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/oneisall-5l-automatic-cat-feeder-with-app-7l-corded-water-fountain-with-visual-window-set-124797.png",
+            "title": "Value Packs",
+            "link": "Set"
+          }
+        },
+        "item_Xwh46W": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Pet_Dry_Food_Desiccant_Bag.png",
+            "title": "Accessories",
+            "link": "Accessories"
+          }
+        }
+      },
+      "block_order": [
+        "item_GnNbqW",
+        "item_rmHJHD",
+        "item_MMzAG6",
+        "item_AiGjad",
+        "item_Xwh46W"
+      ],
+      "name": "SPX Nav Image",
+      "settings": {
+        "text_color": "#000000"
+      }
+    },
+    "advanced_content_AjQYnM": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_xtLkFR": {
+          "type": "liquid",
+          "settings": {
+            "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <title>Document</title>\n</head>\n<body>\n  <div style=\"background: linear-gradient(90deg, #3CC49F 0%, #F8B43D 100%); color: #000; padding: 28px 16px; border-radius: 16px; margin-bottom: 24px; font-family: 'Segoe UI', 'Arial', sans-serif; text-align: center; max-width: 1200px; margin-left: auto; margin-right: auto;\">\n    <div style=\"max-width: 900px; margin: 0 auto;\">\n      <h2 style=\"font-size: 26px; font-weight: 700; margin-bottom: 10px;\">\n         CatCon Special\n      </h2>\n      <p style=\"font-size: 18px; line-height: 1.5; margin-bottom: 10px;\">\n        Buy any 2 Feeders or Fountains, Get <strong>15% Off</strong> — No code needed!\n      </p>\n      <p style=\"font-size: 14px; opacity: 0.9; margin: 0;\">\n        *Filter sets not included.\n      </p>\n    </div>\n  </div>\n</body>\n</html>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_xtLkFR"
+      ],
+      "disabled": true,
+      "name": "t:labels.custom_content",
+      "settings": {
+        "full_width": true,
+        "space_around": true
+      }
+    },
+    "dealpage_two_gNRX4K": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_9rJXn7": {
+          "type": "collection",
+          "settings": {
+            "collection": "pet-feeder-basic-for-two-cats",
+            "text": "Manual Control",
+            "subtitle": ""
+          }
+        },
+        "collection_LcNHww": {
+          "type": "collection",
+          "settings": {
+            "collection": "app-control-feeder-for-two-cats",
+            "text": "Smart App Control",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_9rJXn7",
+        "collection_LcNHww"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Dual-Bowl Series",
+        "subtitle": "",
+        "target_id": "APP",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "collection",
+        "display_special_attr": false,
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    },
+    "dealpage_two_HNeKAj": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_qrmdD6": {
+          "type": "collection",
+          "settings": {
+            "collection": "app-control-feeder-for-one-cat",
+            "text": "Smart App Control",
+            "subtitle": ""
+          }
+        },
+        "collection_KA9hdp": {
+          "type": "collection",
+          "settings": {
+            "collection": "pet-feeder-for-one-cats",
+            "text": "Manual Control",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_qrmdD6",
+        "collection_KA9hdp"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Single-Bowl Series",
+        "subtitle": "",
+        "target_id": "Easy",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "collection",
+        "display_special_attr": false,
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    },
+    "dealpage_two_UxFrVf": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_neddyA": {
+          "type": "collection",
+          "settings": {
+            "collection": "app-control-feeder-for-one-cat",
+            "text": "For One Pet",
+            "subtitle": ""
+          }
+        },
+        "collection_XXfwmF": {
+          "type": "collection",
+          "settings": {
+            "collection": "app-control-feeder-for-two-cats",
+            "text": "For Multiple Pets",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_neddyA",
+        "collection_XXfwmF"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Feed Anytime, Anywhere",
+        "subtitle": "",
+        "target_id": "Travel",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "collection",
+        "display_special_attr": false,
+        "padding_pc": "80px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "dealpage_two_GF67mL": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_H49aNQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundle-save-feeding-hydration-set",
+            "text": "",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_H49aNQ"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Value Packs",
+        "subtitle": "",
+        "target_id": "Set",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "collection",
+        "display_special_attr": false,
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    },
+    "dealpage_two_cixctP": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_AD9T3T": {
+          "type": "collection",
+          "settings": {
+            "collection": "feeder-accessories",
+            "text": "Accessories",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_AD9T3T"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Accessories",
+        "subtitle": "",
+        "target_id": "Accessories",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "collection",
+        "display_special_attr": false,
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    },
+    "page_collecitons_4dDpNR": {
+      "type": "page-collecitons",
+      "blocks": {
+        "collection_RgLKjL": {
+          "type": "collection",
+          "settings": {
+            "collection": "feeder-app",
+            "title": "Smart APP Control"
+          }
+        },
+        "collection_7TWb9V": {
+          "type": "collection",
+          "settings": {
+            "collection": "feeder-basic",
+            "image": "shopify://shop_images/oneisall-5l-automatic-cat-feeder-for-two-cats-with-5g-wi-fi-app-control-781976.png",
+            "title": "Easy-Setup"
+          }
+        },
+        "collection_YQbELp": {
+          "type": "collection",
+          "settings": {
+            "collection": "feeder-accessories",
+            "title": "Accessories"
+          }
+        }
+      },
+      "block_order": [
+        "collection_RgLKjL",
+        "collection_7TWb9V",
+        "collection_YQbELp"
+      ],
+      "disabled": true,
+      "settings": {
+        "display_title_type": "collection",
+        "display_special_attr": true
+      }
+    },
+    "dealpage_two_inzHQj": {
+      "type": "dealpage-two",
+      "name": "Collection list",
+      "settings": {
+        "title": "Loved in their lives",
+        "subtitle": "",
+        "target_id": "",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "default",
+        "display_special_attr": false,
+        "padding_pc": "00px 0",
+        "padding_m": "00px 0"
+      }
+    },
+    "1753779309a28110a0": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "faqs_ijrNcG": {
+      "type": "faqs",
+      "blocks": {
+        "tab_content_JmK8jh": {
+          "type": "tab_content",
+          "settings": {
+            "question": "How Does An Automatic Cat Feeder Help With My Cat’s Feeding Schedule?",
+            "text": "<p>An automatic cat feeder ensures that your cat gets fed at the same time each day, even if you're not home. You can pre-program feeding times, which helps maintain a consistent schedule and prevent overeating.</p>"
+          }
+        },
+        "tab_content_c6HcW7": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Can automatic cat feeders prevent my cat from overeating?",
+            "text": "<p>Yes, most automatic cat feeders allow you to set specific portion sizes for each meal. This helps control how much your cat eats, reducing the risk of overeating or obesity.</p>"
+          }
+        },
+        "tab_content_Rpa4Mk": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Will The Automatic Pet Feeder Still Feed My Pet During A Power Outage?",
+            "text": "<p>Yes, you can still feed your pet during a power outage by using an automatic pet feeder with a battery backup or feeding them manually. Preparing in advance with fresh batteries or an alternative feeding plan can help ensure your pet stays on schedule and doesn’t miss any meals during an outage.</p>"
+          }
+        },
+        "tab_content_fWkGJG": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Is A Cat Automatic Feeder Safe For My Cat?",
+            "text": "<p>A Cat Automatic feeder is safe for cats as long as you use them properly and ensure they are well-maintained. </p><p>Choose a reliable, tamper-proof model, and monitor your pet's feeding habits to ensure the feeder is dispensing food correctly. Regular checks and cleaning are important to keep your pet’s food fresh and the feeder is functioning correctly.</p>"
+          }
+        },
+        "tab_content_Aa7VPw": {
+          "type": "tab_content",
+          "settings": {
+            "question": "What Should I Look For When Choosing An Automatic Feeder For Cats?",
+            "text": "<p>When selecting an automatic feeder for cats, consider these 5 factors:</p><p>1. Capacity: Choose an automatic feeder for cats with enough space for the amount of food your cat needs.</p><p>2. Portion Control: Look for adjustable portions to manage your cat's diet.</p><p>3. Food Type Compatibility: Make sure it works with dry or wet food depending on your needs.</p><p>4. Ease of Cleaning: Choose an automatic feeder for cats with removable and washable parts.</p><p>5. Features: Look for additional features like a remote control, a camera, or a low-food indicator.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_JmK8jh",
+        "tab_content_c6HcW7",
+        "tab_content_Rpa4Mk",
+        "tab_content_fWkGJG",
+        "tab_content_Aa7VPw"
+      ],
+      "settings": {
+        "id": "faqs",
+        "title": "FAQs",
+        "align": "left",
+        "align_m": "left",
+        "padding_pc": "50px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "advanced_accordion_CBPMgW": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "html_block_gYnLqp": {
+          "type": "html_block",
+          "settings": {
+            "html": "<div>\n  <p><strong>• Customized Feeding:</strong> Tailor your pet's meals with precision, adhering to dietary needs.</p>\n  <p><strong>• Scheduled Feeding:</strong> Maintain a consistent feeding routine, even when you're away.</p>\n  <p><strong>• Portion Control:</strong> Manage portion sizes to prevent overfeeding and promote health.</p>\n  <p><strong>• Remote Access:</strong> Dispense meals remotely via smartphone, offering real-time interaction.</p>\n  <p><strong>• Peace of Mind:</strong> Monitor your pet's meals and eating habits, ensuring their well-being.</p>\n  <p><strong>• Travel Friendly:</strong> Simplify pet care during trips with automated feeding solutions.</p>\n</div>\n<p></p><p>Elevate your pet's dining experience with the convenience and care provided by a smart pet feeder.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "html_block_gYnLqp"
+      ],
+      "name": "Advanced accordion",
+      "settings": {
+        "title": "Unlocking the Advantages of a Smart Pet Feeder",
+        "per_row": 1,
+        "two_per_row_mobile": false,
+        "opened": true,
+        "disabled": false
+      }
+    },
+    "icons_fRC7QE": {
+      "type": "icons",
+      "blocks": {
+        "icon_RXgQdm": {
+          "type": "icon",
+          "settings": {
+            "liquid": "1",
+            "title": "Fast & Free Shipping",
+            "text": ""
+          }
+        },
+        "icon_3tpCEf": {
+          "type": "icon",
+          "settings": {
+            "liquid": "2",
+            "title": "Product Tax Incl.",
+            "text": ""
+          }
+        },
+        "icon_DDAWJJ": {
+          "type": "icon",
+          "settings": {
+            "liquid": "3",
+            "title": "24-Month Warranty",
+            "text": ""
+          }
+        },
+        "icon_6gJPeq": {
+          "type": "icon",
+          "settings": {
+            "liquid": "4",
+            "title": "30-Day Money Back",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_RXgQdm",
+        "icon_3tpCEf",
+        "icon_DDAWJJ",
+        "icon_6gJPeq"
+      ],
+      "settings": {
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    }
+  },
+  "order": [
+    "banner_z7rirW",
+    "spk_nav_image_xUJxxk",
+    "advanced_content_AjQYnM",
+    "dealpage_two_gNRX4K",
+    "dealpage_two_HNeKAj",
+    "dealpage_two_UxFrVf",
+    "dealpage_two_GF67mL",
+    "dealpage_two_cixctP",
+    "page_collecitons_4dDpNR",
+    "dealpage_two_inzHQj",
+    "1753779309a28110a0",
+    "faqs_ijrNcG",
+    "advanced_accordion_CBPMgW",
+    "icons_fRC7QE"
+  ]
+}

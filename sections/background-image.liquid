@@ -1,0 +1,46 @@
+<style>
+  {% if section.settings.bg != blank %}
+  @media (min-width:768px){
+    #PageContainer{
+      background:url({{section.settings.bg | img_url:'master'}}) no-repeat!important;
+      background-size:cover!important;
+      background-attachment: fixed!important;
+    }
+  }
+  {% endif %}
+  {% if section.settings.bg_m != blank %}
+    @media (max-width:767px){
+      #PageContainer{
+        background:url({{section.settings.bg_m | img_url:'master'}}) no-repeat!important;
+        background-size:cover!important;
+        background-attachment: fixed!important;
+      }
+    }
+  {% endif %}
+
+  
+</style>
+
+
+{% schema %}
+  {
+    "name": "Background image",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id":"bg",
+        "label": "Desktop"
+      },
+      {
+        "type": "image_picker",
+        "id":"bg_m",
+        "label": "Mobile"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Background image"
+      }
+    ]
+  }
+{% endschema %}

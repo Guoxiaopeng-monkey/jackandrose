@@ -1,0 +1,208 @@
+<style>
+  #shopify-section-{{ section.id }} .page-width{
+      --page-width:1360px;
+  }
+  .template-index .page-width{
+    max-width: 1360px;
+  }
+  .home-cards {
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
+  .home-cards .wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .home-cards .wrapper .item{
+    border-radius: 48px;
+    overflow: hidden;
+    position: relative;
+  }
+  .home-cards .wrapper .item .content-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .home-cards .item-title{
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-transform: capitalize;
+    margin-bottom: 12px;
+  }
+  .home-cards .item-text{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-transform: capitalize;
+    margin-bottom: 24px;
+  }
+  .home-cards .item-url{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    text-transform: capitalize;
+    display: inline-flex;
+    padding: 8px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+  }
+  .home-cards .item-url:hover{
+    background: #F47C20;
+    color: #fff!important;
+  }
+  .home-cards .wrapper .item1 { grid-column: span 2 / span 2; }
+  .home-cards .wrapper .item2 { grid-row-start: 2; }
+  .home-cards .wrapper .item3 { grid-row-start: 2; }
+  .home-cards .wrapper .item5 { grid-row-start: 3; }
+   @media (max-width: 990px){
+     .home-cards{
+       padding-top: 25px;
+        padding-bottom: 40px;
+     }
+     .home-cards .wrapper{
+       grid-template-columns: repeat(1, 1fr);
+       grid-template-rows: repeat(5, 1fr);
+       gap: 12px;
+     }
+     .home-cards .wrapper .item{
+       border-radius: 24px;
+     }
+    .home-cards .wrapper .item .content-box{
+      padding: 16px;
+    }
+     .home-cards .item-title{
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .home-cards .item-text{
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    .home-cards .item-url{
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      text-transform: capitalize;
+      padding: 6px 12px;
+    }
+     .home-cards .wrapper .item .content-box{
+       justify-content: flex-end;
+     }
+     .home-cards .wrapper .item1 { grid-column: auto; }
+  .home-cards .wrapper .item2 { grid-row-start: auto; }
+  .home-cards .wrapper .item3 { grid-row-start: auto; }
+  .home-cards .wrapper .item5 { grid-row-start: auto; }
+  }
+</style>
+
+
+<div class="page-width">
+  <div class="wrapper">
+    {% for block in section.blocks %}
+      <div class="item item{{ forloop.index }}">
+        {% if block.settings.image != blank %}
+          <picture>
+            <source
+              srcset="{{ block.settings.image_m | img_url:'master' }}"
+              media="(max-width: 990px)"
+            >
+            <img
+              src="{{ block.settings.image | img_url:'master' }}"
+              alt=""
+              loading="lazy"
+              width="100%"
+              height="auto"
+            >
+          </picture>  
+        {% endif %}
+        <div class="content-box">
+          {% if block.settings.title != blank %}
+            <h2 class="item-title" style="color:#fff;">{{ block.settings.title }}</h2>
+          {% endif %}
+          {% if block.settings.text != blank %}
+            <p class="item-text" style="color:#fff;">{{ block.settings.text }}</p>
+          {% endif %}
+          {% if block.settings.btn_text != blank and block.settings.url != blank %}
+            <a class="item-url" href="{{ block.settings.url }}" style="color:#000;">{{ block.settings.btn_text }}</a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Home cards",
+    "class": "home-cards",
+    "max_blocks": 5,
+    "limit": 1,
+    "tag": "section",
+    "disabled_on": {
+      "groups": ["footer","header"]
+    },
+    "settings": [
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_m",
+            "label": "Image mobile"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "turpis sed sagittis "
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text",
+            "default": "Lorem ipsum dolor sit amet consectetur. Nulla dictumst massa natoque pulvinar pellentesque. "
+          },
+          {
+            "type": "text",
+            "id": "btn_text",
+            "label": "Button text",
+            "default": "Learn More"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Button url"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Home cards"
+      }
+    ]
+  }
+{% endschema %}

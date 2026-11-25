@@ -1,0 +1,231 @@
+<div class="images_tab homepage-sections-wrapper--{{ section.settings.colors }}">
+   <div class="wrapper-padded">
+       <div class="page-width-narrow">
+    <div class="ist_title">
+      <h2>{{ section.settings.title }}</h2>
+    </div>
+    <div class="ist_top">
+      <div class="swiper-container">
+              <div class="swiper-wrapper">
+                {%- for block in section.blocks -%}
+                <div class="swiper-slide">
+                  <div class="is_info">
+                    <div class="image-wrap">
+                    <img src="{{ block.settings.image | image_url: width:1400 }}" alt="{{ block.settings.title }}">
+                    </div>
+                  </div>
+                </div>
+                {%- endfor -%}
+              </div>
+      </div>
+ 
+    </div>
+    <div class="ist_middle">
+      <div class="subtitle">
+        {%- for block in section.blocks -%}
+                <p>{{ block.settings.title }}</p>
+                {%- endfor -%}
+      </div>
+    </div>
+    <div class="ist_bottom">
+      <div class="swiper-container">
+              <div class="swiper-wrapper">
+                {%- for block in section.blocks -%}
+                <div class="swiper-slide">
+                  <div class="is_txt">
+                    {{ block.settings.content }}
+                  </div>
+                </div>
+                {%- endfor -%}
+              </div>
+      </div>
+    </div>
+   </div>
+  </div>
+</div>
+<style>
+  
+.ist_top{
+  position:relative;
+}
+  .ist_top img{
+   width:100%; height:auto;
+  }
+.images_tab{
+  text-align:center;
+  padding:60px 0 15px;
+  margin-bottom:50px;
+}
+.images_tab h2{
+  margin:0 0 30px;
+  text-transform: uppercase;
+  font-size:3em;
+}
+.ist_middle .subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px 40px;
+    cursor: pointer;
+    position: relative;
+  max-width:480px;
+  margin:0 auto;
+}
+ 
+.ist_middle .subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.1);
+  left: 0;
+}
+.ist_middle .subtitle p.active::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+}
+.ist_middle .subtitle p {
+    margin: 0;
+   padding-left:1.2rem; padding-right:1.2rem;
+    position: relative;
+  font-size: 22px; font-weight:600; color:#888;
+  line-height:1.3;
+  white-space:nowrap;
+}
+  .ist_middle .subtitle p.active{
+    color:#333;
+  }
+.ist_bottom{
+  max-width:840px;
+  margin:0 auto;
+}
+.ist_bottom .is_txt p{
+  font-size: 20px;
+  line-height:1.6;
+}
+  @media(max-width:768px){
+   .ist_wrapper .wrapper-padded{padding:0;}
+    .ist_middle .subtitle p{font-size:15px;}
+    .ist_bottom .is_txt p{font-size:15px;}
+  }
+</style>
+<script>
+  $(document).ready(function () {
+    var swiperImage = new Swiper('.ist_top .swiper-container', {
+      navigation: {
+        nextEl: '.ist_top .swiper-button-next',
+        prevEl: '.ist_top .swiper-button-prev',
+      },
+       on: {
+        transitionStart: function () {
+          let index = this.activeIndex;
+          $('.images_tab .subtitle p')
+            .eq(index)
+            .addClass('active')
+            .siblings()
+            .removeClass('active');
+          let $offfleft = $('.images_tab .subtitle p').eq(index).offset().left - 15;
+          scrollTooo($offfleft);
+        },
+      },
+    });
+
+    var swiperText = new Swiper('.ist_bottom .swiper-container', {
+       autoHeight: true,
+        on: {
+        transitionStart: function () {
+          let index = this.activeIndex;
+          $('.images_tab .subtitle p')
+            .eq(index)
+            .addClass('active')
+            .siblings()
+            .removeClass('active');
+          let $offfleft = $('.images_tab .subtitle p').eq(index).offset().left - 15;
+          scrollTooo($offfleft);
+        },
+      },
+    });
+
+    swiperImage.controller.control = swiperText;
+    swiperText.controller.control = swiperImage;
+
+    $('.images_tab .subtitle p:first-of-type').addClass('active');
+    $('.images_tab .subtitle p').click(function () {
+      var index = $(this).index();
+      swiperText.slideTo(index, 600, false);
+    });
+function scrollTooo(distence) {
+      document.querySelector('.ist_middle').scrollTo({
+        left: distence,
+        behavior: 'smooth',
+      });
+    }
+  });
+</script>
+{% schema %}
+  {
+    "name": "Custom image tab",
+    "class": "ist_wrapper",
+    "settings": [
+      {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+           {
+		"type": "select",
+		"id": "colors",
+		"label": "Color scheme",
+		"default": "light",
+		"options": [
+			{
+				"value": "light",
+				"label": "Light"
+			},
+			{
+				"value": "accent",
+				"label": "Feature"
+			},
+			{
+				"value": "dark",
+				"label": "Dark"
+			}
+		]
+	  }
+    ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "image"
+        }, 
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }, 
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    }
+  ],
+    "presets": [
+      {
+        "name": "Custom image tab"
+      }
+    ]
+  }
+{% endschema %}

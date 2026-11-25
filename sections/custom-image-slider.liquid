@@ -1,0 +1,277 @@
+{%- style -%}
+  .testimonials-{{ section.id }} {
+    background-color: {{ section.settings.color_background }};
+    color: {{ section.settings.color_text }};
+  }
+{%- endstyle -%}
+
+<div
+  class="image-carousel-section event-slider testimonials-{{ section.id }} text-{{ section.settings.align_text }}"
+  data-section-id="{{ section.id }}"  >
+  {%- if section.settings.title != blank -%}
+     <div class="wrapper-padded">
+      <div class="section-header page-width">
+        <div class="testimonial-stars-row">  
+          <a style="--rating-size:100px;display:flex;justify-content:center;align-items:center; cursor: pointer;color: #000; text-decoration: none;" class="asrv-star-widget" href="#am-reviews-carousel-shadow-container-production">
+            <!-- Star icons go here -->
+          </a>                    
+        </div> 
+        <h2 class="title">{{ section.settings.title | escape }}</h2>
+      </div>
+    </div>
+  {%- endif -%}
+
+  <div class="page-width-full">
+    {%- if section.blocks.size > 0 -%}
+      <div class="slideshow-wrapper swiper-container">
+        <div class="swiper-wrapper" id="Testimonials-{{ section.id }}">
+          {%- for block in section.blocks -%}
+            <div class="swiper-slide testimonials-slide--{{ block.id }}"
+              data-index="{{ forloop.index0 }}"
+              data-aos="row-of-{{ section.blocks.size }}"
+              {{ block.shopify_attributes }}>
+              <div class="testimonials-slider__text">
+              
+                {%- if block.settings.image != blank -%}
+                  <div class="testimonail-image{% if section.settings.round_images %} testimonail-image--round{% endif %}">
+                    <div class="image-wrap">
+                       {% if block.settings.url != blank %}  <a href="{{ block.settings.url }}" class="link"> {% endif %}
+                      {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                      <img class="lazyload" src="{{ block.settings.image | image_url: width: 300 }}" alt="{{ block.settings.image.alt }}">
+                  {% if block.settings.url != blank %} </a>{% endif %} 
+                      <noscript>
+                        <img class="lazyloaded" src="{{ block.settings.image | image_url: width:300 }}" alt="{{ block.settings.image.alt }}">
+                      </noscript>
+                    </div>
+                   
+                  </div>
+                {%- endif -%}
+                <div class="rb_bottom">
+                  {%- if block.settings.title != blank -%}
+                   <h3>  {% if block.settings.url != blank %}  <a href="{{ block.settings.url }}" class="link"> {% endif %}{{ block.settings.title }}  {% if block.settings.url != blank %} </a>{% endif %} </h3>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{%- style -%}
+  .images_list{
+      padding-top: 80px;
+    }
+  .event-slider h2{  margin-bottom:-10px;}
+  {%- if section.settings.white_bg -%}
+    .image-carousel-section { background: #FFFFFF; }
+  {%- else -%}
+    .image-carousel-section { background: #F1EEE7; }
+  {%- endif -%}
+
+  .slideshow-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  .images_list .wrapper-padded{
+    padding: 0;
+  }
+  .images_list h2.title{
+    margin: 0;
+    text-align: left;
+    color: #000;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.4;
+    text-transform: capitalize;
+  }
+  .images_list .section-header{
+    margin-bottom: 40px;
+  }
+  .swiper-wrapper {
+    display: flex;
+    transition: transform 0.25s ease-in-out;
+    width: 100%;
+       -webkit-transition-timing-function: linear;  
+        -moz-transition-timing-function: linear;
+        -ms-transition-timing-function: linear;
+        -o-transition-timing-function: linear;
+        transition-timing-function: linear;
+  }
+  .swiper-slide {
+    width: auto; /* Allow the slides to be sized by content */
+    flex-shrink: 0;
+  }
+
+  .testimonail-image {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .event-slider  .testimonail-image{
+    position:relative; border-radius:6px;
+  }
+  .event-slider .testimonail-image{
+    overflow: hidden;
+  }
+   .event-slider .swiper-slide:hover  .marquee-hover-content{
+    opacity:1;
+   }
+  .rb_bottom h3{
+    text-align:center; 
+    margin:0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    text-transform: capitalize;
+  }
+  .rb_bottom h3 a{
+    color: #000;
+  }
+  .event-slider .btn{
+     font-size:calc(var(--typeBaseSize) * {{ section.settings.btn_size_multiplier }}); 
+  } 
+  .images_list .rb_bottom{
+    padding: 16px 0 0;
+  }
+  @media(max-width:990px){
+    .images_list{
+      padding-top: 40px;
+    }
+    .images_list .section-header{
+      margin-bottom: 24px;
+    }
+    .images_list h2.title{
+      margin: 0;
+      text-align: left;
+      color: #0D0D0D;
+      font-size: 20px;
+      text-transform: capitalize;
+    }
+    .images_list .rb_bottom{
+      padding: 12px 0 0;
+    }
+    .rb_bottom h3{
+      font-size:14px; 
+      line-height:20px;
+    }
+     .event-slider .btn{
+      font-size:calc(var(--typeBaseSize) * {{ section.settings.btn_size_multiplier_mobile }}); 
+     } 
+ }
+{%- endstyle -%}
+
+ 
+ <script>
+ $(document).ready(function() {
+    var sectionId = "{{ section.id }}";
+    var $swiperContainer = $('.testimonials-' + sectionId + ' .swiper-container');
+    var swiper = new Swiper($swiperContainer[0], {
+        spaceBetween: 0,
+        loop: true,
+        autoplay: {
+            delay: 0,  
+            disableOnInteraction: false,
+        },
+        speed: 5000,  
+        slidesPerView: '5',  
+        loopedSlides: 20,  
+        freeMode: false,  
+        allowTouchMove: true,  
+        centeredSlides: false,  
+        resistance: false,  
+        cssMode: false, 
+        loopAdditionalSlides: 30,  
+        navigation: {
+            nextEl: '.testimonials-' + sectionId + ' .swiper-button-next',
+            prevEl: '.testimonials-' + sectionId + ' .swiper-button-prev',
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 2.2,
+                spaceBetween: 0,
+            },
+            769: {
+                slidesPerView: 5,
+                spaceBetween: 0,
+            }
+        }
+    });
+
+});
+</script>
+
+ 
+
+{% schema %}
+{
+  "name": "Custom event slider",
+  "class": "images_list",
+  "max_blocks": 20,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "checkbox",
+      "id": "white_bg",
+      "label": "White Background?",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom event slider",
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

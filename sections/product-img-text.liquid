@@ -1,0 +1,472 @@
+{% assign sid = section.id %}
+<style>
+    #shopify-section-{{ sid }} {
+      margin: {{section.settings.padding_pc}};
+    }
+    #shopify-section-{{ sid }} .page-width{
+      --page-width:1360px;
+    }
+    #shopify-section-{{ sid }} .piwt_item {
+      display: flex;
+      align-items: center;
+      margin-bottom:20px;
+      background:{{ section.settings.bg_color |default: '#efefef'  }};
+      border-radius: 48px;
+      overflow:hidden;
+    }
+    #shopify-section-{{ sid }} .piwt_wrapper>div:last-child {
+      margin-bottom:0;
+    }
+    #shopify-section-{{ sid }} .piwt_item.revese{
+      flex-direction: row-reverse;
+    }
+    #shopify-section-{{ sid }} .piwt_item>div {
+      width:50%;
+    }
+    #shopify-section-{{ sid }} .piwt_item:not(.block_style)>div.piwt-item-left {
+      border-radius: 48px;
+      overflow:hidden;
+    }
+    #shopify-section-{{ sid }} .piwt_item>div.piwt-item-left img{
+      width:100%;
+    }
+    #shopify-section-{{ sid }} .piwt_item>div.piwt-item-right {
+      padding:0 90px;
+      text-align:left;
+    }
+    #shopify-section-{{ sid }} .piwt_item .text1{
+      color: #0D0D0D;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+    #shopify-section-{{ sid }} .piwt_item .text2{
+      color: rgba(13, 13, 13, 0.80);
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.4;
+      margin-top:12px;
+    }
+    #shopify-section-{{ sid }} .piwt_item .text2 span{
+      color:#F47C20;
+    }
+    #shopify-section-{{ sid }} .piwt_item.block_style{
+      border-radius: 48px;    overflow: hidden;
+    }
+    #shopify-section-{{ sid }} .piwt_item.block_style .piwt-item-right>div{
+      color: #fff;
+    }
+  @media (max-width:1280px){
+    #shopify-section-{{ sid }} .piwt_item>div.piwt-item-right {
+      padding:0 60px;
+    }
+  }
+  @media (max-width:959px){
+    #shopify-section-{{ sid }} {
+        margin: {{section.settings.padding_m}};
+    }
+    #shopify-section-{{ sid }} .piwt_item {
+      flex-direction: column;
+      gap:24px;
+      border-radius: 24px;
+    }
+    #shopify-section-{{ sid }} .piwt_wrapper>div:last-child {
+      margin-bottom:0;
+    }
+    #shopify-section-{{ sid }} .piwt_item.revese{
+      flex-direction: column;
+    }
+    #shopify-section-{{ sid }} .piwt_item>div {
+      width:100%;
+    }
+    #shopify-section-{{ sid }} .piwt_item:not(.block_style)>div.piwt-item-left {
+      border-radius: 24px;
+    }
+    #shopify-section-{{ sid }} .piwt_item>div.piwt-item-right {
+      padding: 10px 16px;
+    }
+    #shopify-section-{{ sid }} .piwt_item .text1{
+      font-size: 20px;
+    }
+    #shopify-section-{{ sid }} .piwt_item .text2{
+      font-size: 14px;
+    }
+    #shopify-section-{{ sid }} .piwt_item.block_style{
+      border-radius: 24px;
+    }
+    #shopify-section-{{ sid }} .piwt_item.block_style .piwt-item-right{
+      padding: 20px 20px 40px;
+    }
+  }
+    #shopify-section-{{ sid }} .piwt_item-full{
+      display: flex;
+      width:100%;
+      gap:20px;
+      border-radius: 48px;
+      background:{{ section.settings.bg_color |default: '#efefef'  }};
+      flex-direction: column;
+      overflow:hidden;
+      align-items: flex-start;
+      margin-bottom:20px;
+      font-size:20px;
+    }
+    .piwt-item-full-content{
+      padding:  20px 40px;
+    }
+    #shopify-section-{{ sid }} .piwt_item-full.revese{
+      flex-direction: column-reverse;
+    }
+
+    .piwt_wrapper .title{
+      font-size: 36px;
+      font-weight:500;
+    }
+    .piwt_wrapper .desc>span{
+      color: #F47C20;
+    }
+    @media (max-width:767px){
+      #shopify-section-{{ sid }} .piwt_item-full{
+        gap:24px;
+        border-radius: 24px;
+        font-size:14px;
+      }
+      .piwt_wrapper .title{
+        font-size: 20px;
+      }
+      .piwt-item-full-content{
+        padding:  10px 16px;
+      }
+    }
+</style>
+<style>
+  .prouct-image-with-text{
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 100%;
+  }
+  @media (max-width:767.98px){
+    #shopify-section-{{ sid }} .piwt_item>div.piwt-item-right {
+      padding: 0 16px;
+    } 
+    .prouct-image-with-text{
+      background-position-y: 95%;
+      background-size: 50%;
+    }
+  }
+</style>
+<div class="prouct-image-with-text" id="Prouct-image-with-text">
+  <div class="page-width" id="{{ section.settings.target_id }}">
+    <div class="piwt_wrapper">
+      {% for block in section.blocks %}
+        {% assign bs = block.settings %}
+        {% case block.type %}
+          {% when 'block' %}
+            <div class="piwt_item {% if bs.revese %} revese{% endif %}">
+              <div class="piwt-item-left">
+                {% liquid
+                  assign pc_image = bs.img
+                  assign mobile_image = bs.img_m
+                  assign alt = bs.img.alt
+                %}
+                <picture>
+                  <source
+                    srcset="{{ mobile_image | img_url: '750x' }}"
+                    media="(max-width: 375px)"
+                  >
+                  <source
+                    srcset="{{ mobile_image | img_url: '1536x' }}"
+                    media="(max-width: 768px)"
+                  >
+                  <source
+                    srcset="{{ pc_image | img_url: '2160x' }}"
+                    media="(max-width: 1080px)"
+                  >
+                  <source
+                    srcset="{{ pc_image | img_url: '2400x' }}"
+                    media="(max-width: 1200px)"
+                  >
+                  <source
+                    srcset="{{ pc_image | img_url: '3840x' }}"
+                    media="(max-width: 1920px)"
+                  >
+                  <img
+                    src="{{ pc_image | img_url: '3840x' }}"
+                    alt="{{ alt }}"
+                    loading="lazy"
+                    width="auto"
+                    height="100%"
+                  >
+                </picture>
+              </div>
+              <div class="piwt-item-right">
+                {% if bs.title != blank %}
+                  <div class="text1">{{ bs.title }}</div>
+                {% endif %}
+                {% if bs.text != blank %}
+                  <div class="text2">{{ bs.text | replace: '***', '<span>' | replace: '###', '</span>' }}</div>
+                {% endif %}
+              </div>
+            </div>
+          {% when 'full_block' %}
+            <div class="piwt_item-full {% if bs.revese %} revese{% endif %}">
+              <div class="piwt-item-full-img">
+                {% liquid
+                  assign pc_image = bs.img
+                  assign mobile_image = bs.img_m
+                  assign alt = bs.img.alt
+                %}
+                <picture>
+                  <source
+                    srcset="{{ mobile_image | img_url: '750x' }}"
+                    media="(max-width: 375px)"
+                  >
+                  <source
+                    srcset="{{ mobile_image | img_url: '1536x' }}"
+                    media="(max-width: 768px)"
+                  >
+                  <source
+                    srcset="{{ pc_image | img_url: '2160x' }}"
+                    media="(max-width: 1080px)"
+                  >
+                  <source
+                    srcset="{{ pc_image | img_url: '2400x' }}"
+                    media="(max-width: 1200px)"
+                  >
+                  <source
+                    srcset="{{ pc_image | img_url: '3840x' }}"
+                    media="(max-width: 1920px)"
+                  >
+                  <img
+                    src="{{ pc_image | img_url: '3840x' }}"
+                    alt="{{ alt }}"
+                    loading="lazy"
+                    width="auto"
+                    height="100%"
+                  >
+                </picture>
+              </div>
+              <div class="piwt-item-full-content">
+                {% if bs.title != blank %}
+                  <div class="title">{{ bs.title }}</div>
+                {% endif %}
+                {% if bs.text != blank %}
+                  <div class="desc">{{ bs.text | replace: '***', '<span>' | replace: '###', '</span>' }}</div>
+                {% endif %}
+              </div>
+            </div>
+          {% when 'block_style1' %}
+            <div
+              class="piwt_item block_style {% if bs.revese %} revese{% endif %}"
+              style="background:url({{ bs.bg | img_url:'master' }}) no-repeat center;    background-size: cover;"
+            >
+              <div class="piwt-item-left">
+                {% liquid
+                  assign pc_image = bs.img
+                  assign mobile_image = bs.img_m
+                  assign alt = bs.img.alt
+                %}
+                <picture>
+                  <source
+                    srcset="{{ mobile_image | img_url: '750x' }}"
+                    media="(max-width: 375px)"
+                  >
+                  <source
+                    srcset="{{ mobile_image | img_url: '1536x' }}"
+                    media="(max-width: 768px)"
+                  >
+                  <source
+                    srcset="{{ pc_image | img_url: '2160x' }}"
+                    media="(max-width: 1080px)"
+                  >
+                  <source
+                    srcset="{{ pc_image | img_url: '2400x' }}"
+                    media="(max-width: 1200px)"
+                  >
+                  <source
+                    srcset="{{ pc_image | img_url: '3840x' }}"
+                    media="(max-width: 1920px)"
+                  >
+                  <img
+                    src="{{ pc_image | img_url: '3840x' }}"
+                    alt="{{ alt }}"
+                    loading="lazy"
+                    width="auto"
+                    height="100%"
+                  >
+                </picture>
+              </div>
+              <div class="piwt-item-right">
+                {% if bs.title != blank %}
+                  <div class="text1">{{ bs.title }}</div>
+                {% endif %}
+                {% if bs.text != blank %}
+                  <div class="text2">{{ bs.text | replace: '***', '<span>' | replace: '###', '</span>' }}</div>
+                {% endif %}
+              </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product image with text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "target_id",
+      "label": "Target ID",
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Card Background Color"
+    },
+    {
+      "type": "text",
+      "id": "padding_pc",
+      "label": "Padding (desktop)",
+      "default": "100px 0"
+    },
+    {
+      "type": "text",
+      "id": "padding_m",
+      "label": "Padding (mobile)",
+      "default": "80px 0"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "block",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "revese",
+          "label": "revese"
+        },
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "image (desktop)"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_m",
+          "label": "image (mobile)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Fast & Free Shipping"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Price includes shipping, free ",
+          "info": "文本高亮形式：***Text Text###"
+        }
+      ]
+    },
+    {
+      "type": "block_style1",
+      "name": "block style1",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "revese",
+          "label": "revese"
+        },
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "image (desktop)"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_m",
+          "label": "image (mobile)"
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "bg",
+          "label": "Background"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Fast & Free Shipping"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "full_block",
+      "name": "Full Block",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "revese",
+          "label": "revese"
+        },
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "image (desktop)"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_m",
+          "label": "image (mobile)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Fast & Free Shipping"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Price includes shipping, free ",
+          "info": "文本高亮形式：***Text Text###"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product image width text",
+      "blocks": [
+        {
+          "type": "block"
+        },
+        {
+          "type": "block"
+        },
+        {
+          "type": "block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

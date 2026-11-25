@@ -1,0 +1,766 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "custom_LtCqcj": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "<p><b>Black Friday Sale, Save </b> <span style=\"color:#FF6A00\n\">25 $</span>. Automatically apply discounts at checkout.</br>Offer ends on December 2nd.</p>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "quantity_selector_EhaEKy": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "coupon_zeMLBm": {
+          "type": "coupon",
+          "disabled": true,
+          "settings": {
+            "text1": "///$29###OFF",
+            "text2": "Exclusive code",
+            "text3": "X2N529",
+            "text4": "Copy"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "description_M7JAy9": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "checkmark",
+            "text": "30 Days Worry-Free Returns"
+          }
+        },
+        "sales_point2": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "truck",
+            "text": "Free Shipping in The US"
+          }
+        },
+        "sales_point3": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "shield",
+            "text": "100% Secure Payments"
+          }
+        },
+        "sales_point4": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "package",
+            "text": "Ships Within 24 hours"
+          }
+        },
+        "tab_7cz8hx": {
+          "type": "tab",
+          "settings": {
+            "title": "whats in the box",
+            "content": "<ul><li>X2 Dog Clipper x 1</li><li>N5 Dog Paw Trimmer x 1</li></ul>",
+            "page": ""
+          }
+        },
+        "tab_TLtgrD": {
+          "type": "tab",
+          "settings": {
+            "title": "Shipping & Return& Warranty",
+            "content": "<p>Shipping & Return & Warranty</p><p><strong>Shipping</strong></p><p>Estimate delivery time: within 3-5 business days from the shipment date.</p><p><strong>Returns & Warranty</strong></p><p>We understand that, as a new pet care device, your pet may need a few days to adapt to and enjoy using it. However, if you’re not completely satisfied, we offer a full refund within 30 days of purchase (return shipping not included). <a href=\"https://oneisall.com/pages/return-refund-policy\" target=\"_blank\" title=\"Return & Refund Policy\">See full terms.</a></p>",
+            "page": ""
+          }
+        },
+        "icon_bcG864": {
+          "type": "icon",
+          "settings": {
+            "icon_1": "shopify://shop_images/Frame.png",
+            "text_1": "24-Month- Warranty",
+            "icon_2": "shopify://shop_images/Frame.png",
+            "text_2": "24-Month- Warranty",
+            "icon_3": "shopify://shop_images/Frame.png",
+            "text_3": "24-Month- Warranty"
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "disabled": true,
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "complementary_products_xhNrFb": {
+          "type": "complementary_products",
+          "disabled": true,
+          "settings": {
+            "product_complementary_heading": "Frequently Bought Together",
+            "complementary_count": 3,
+            "per_slide": 3,
+            "control_type": "dots",
+            "image_style": "default"
+          }
+        },
+        "share_eTMqpL": {
+          "type": "share",
+          "disabled": true,
+          "settings": {}
+        },
+        "custom_3bHi9T": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n</script>"
+          }
+        }
+      },
+      "block_order": [
+        "custom_LtCqcj",
+        "variant_picker",
+        "quantity_selector_EhaEKy",
+        "coupon_zeMLBm",
+        "price",
+        "buy_buttons",
+        "description_M7JAy9",
+        "sales_point",
+        "sales_point2",
+        "sales_point3",
+        "sales_point4",
+        "tab_7cz8hx",
+        "tab_TLtgrD",
+        "icon_bcG864",
+        "inventory_status",
+        "complementary_products_xhNrFb",
+        "share_eTMqpL",
+        "custom_3bHi9T"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_container_size": "medium",
+        "product_image_size": "natural",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": true,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "product_location_bar_dNC4pF": {
+      "type": "product-location-bar",
+      "blocks": {
+        "item_XKLGMV": {
+          "type": "item",
+          "settings": {
+            "title": "Overview",
+            "link": "product-scroll-video"
+          }
+        },
+        "item_bNGVkp": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "title": "Specs",
+            "link": "Product-specs"
+          }
+        },
+        "item_RNFQaQ": {
+          "type": "item",
+          "settings": {
+            "title": "Faqs",
+            "link": "faqs"
+          }
+        },
+        "item_nTXYAW": {
+          "type": "item",
+          "settings": {
+            "title": "Reviews",
+            "link": "aftership_reviews_carousel_v2_production"
+          }
+        },
+        "item_7a6hHf": {
+          "type": "item",
+          "settings": {
+            "title": "Recommended",
+            "link": "spx-recommendations"
+          }
+        }
+      },
+      "block_order": [
+        "item_XKLGMV",
+        "item_bNGVkp",
+        "item_RNFQaQ",
+        "item_nTXYAW",
+        "item_7a6hHf"
+      ],
+      "settings": {
+        "bg": "#f47c20",
+        "text-color": "#ffffff",
+        "button_outline": false
+      }
+    },
+    "product_scroll_img_mMNtgT": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/334e5727-41ef-40f0-98ec-07d6d0b887a7.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "img_m": "shopify://shop_images/334e5727-41ef-40f0-98ec-07d6d0b887a7.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_eehHyi": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/b2511871-21c6-4fdf-ab98-c14c6c268a58.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "img_m": "shopify://shop_images/b2511871-21c6-4fdf-ab98-c14c6c268a58.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_6qW9Jf": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/51f8ea6a-5c61-4ed4-848c-f91c9412a183.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "img_m": "shopify://shop_images/51f8ea6a-5c61-4ed4-848c-f91c9412a183.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_Ganfg6": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/f4fa6306-78d2-4926-a930-e2bf6920d23f.__CR0_0_1464_600_PT0_SX1464_V1____1.jpg",
+        "img_m": "shopify://shop_images/f4fa6306-78d2-4926-a930-e2bf6920d23f.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_jnKCw9": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/30cc9387-a646-4005-91f6-da2f1b75e6a4.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "img_m": "shopify://shop_images/30cc9387-a646-4005-91f6-da2f1b75e6a4.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_zKmrnb": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/045c5d2d-1915-404a-aa0c-583837beba15.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "img_m": "shopify://shop_images/045c5d2d-1915-404a-aa0c-583837beba15.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_Ax9yzz": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/00a94701-44c9-4c20-8d8f-e19fa97ff34d.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "img_m": "shopify://shop_images/00a94701-44c9-4c20-8d8f-e19fa97ff34d.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_WiRBPU": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/c8e587fa-acd6-4693-9843-d93a4c423dd3.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "img_m": "shopify://shop_images/c8e587fa-acd6-4693-9843-d93a4c423dd3.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_cmFTza": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/a1ba97b2-aac1-4c8b-b0e4-47368728b997.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "img_m": "shopify://shop_images/a1ba97b2-aac1-4c8b-b0e4-47368728b997.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "scroll_bHe6k4": {
+      "type": "scroll",
+      "blocks": {
+        "block_W3CHxQ": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000006979.png",
+            "color": "#00b1d3",
+            "title": "Small Breeds",
+            "text": "<span>40-60</span>min",
+            "subtext": "Blurams Dome Camera 2k"
+          }
+        },
+        "block_RGr6ze": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000006980.png",
+            "image_m": "shopify://shop_images/Group_1000006980.png",
+            "color": "#f47c20",
+            "title": "Small  to Medium Breeds",
+            "text": "<span>40-60</span>min",
+            "subtext": "Lorem ipsum dolor sit amet consectetur."
+          }
+        },
+        "block_jdaaGU": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000006981.png",
+            "color": "#ffef75",
+            "title": "Medium to Large Breeds",
+            "text": "<span>40-60</span>min",
+            "subtext": "Lorem ipsum dolor sit amet consectetur."
+          }
+        }
+      },
+      "block_order": [
+        "block_W3CHxQ",
+        "block_RGr6ze",
+        "block_jdaaGU"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Fast & Free Shipping",
+        "text": "Price includes shipping, free",
+        "color_bg": "#fef2e9",
+        "circle": "shopify://shop_images/Vector_0ef76de5-5d19-4ba7-bd93-ec7e5340a424.png"
+      }
+    },
+    "product_img_text_8Gjj3B": {
+      "type": "product-img-text",
+      "blocks": {
+        "block_style1_rUYGAN": {
+          "type": "block_style1",
+          "settings": {
+            "revese": true,
+            "img": "shopify://shop_images/oneisall-x2n5-2-in-1-dog-clippers-dog-paw-trimmer-856428.png",
+            "img_m": "shopify://shop_images/oneisall-x2n5-2-in-1-dog-clippers-dog-paw-trimmer-856428.png",
+            "bg": "shopify://shop_images/Group_1000007087.png",
+            "title": "What's in the box",
+            "text": "<ul><li>X2 Dog Clipper x 1</li><li>N5 Dog Paw Trimmer x 1</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "block_style1_rUYGAN"
+      ],
+      "settings": {
+        "bg_color": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_NJRPXH": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/e2b8a2bc-8804-446b-b8a2-af3b4518d474.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "img_m": "shopify://shop_images/e2b8a2bc-8804-446b-b8a2-af3b4518d474.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_comparison_c79bTB": {
+      "type": "product-comparison",
+      "blocks": {
+        "parameter_name_qBt8k6": {
+          "type": "parameter_name",
+          "settings": {
+            "text": "Text Text",
+            "text_1": "Suitable for",
+            "text_2": "Features",
+            "text_3": "Battery Life",
+            "text_4": "Noise Level",
+            "text_5": "Number of Guide Combs",
+            "text_6": "",
+            "text_7": "",
+            "text_8": "",
+            "text_9": "",
+            "text_10": "",
+            "text_11": "",
+            "text_12": "",
+            "text_13": ""
+          }
+        },
+        "parameter_value_F8prCU": {
+          "type": "parameter_value",
+          "settings": {
+            "product": "x2-n5-dog-clippers-and-dog-paw-trimmer",
+            "title": "X2N5 Dog Grooming Kit",
+            "text_1": "Small & Medium Dogs / Cats",
+            "text_2": "Dog Grooming Kit",
+            "text_3": "/",
+            "text_4": "55dB/60dB",
+            "text_5": "/",
+            "text_6": "",
+            "text_7": "",
+            "text_8": "",
+            "text_9": "",
+            "text_10": "",
+            "text_11": "",
+            "text_12": "",
+            "text_13": ""
+          }
+        },
+        "parameter_value_tqexei": {
+          "type": "parameter_value",
+          "settings": {
+            "product": "x2-dog-clipper",
+            "title": "X2 Dog Clipper",
+            "text_1": "Small & Medium Dogs",
+            "text_2": "2 Speeds",
+            "text_3": "Run 3h/Charge 3h",
+            "text_4": "55dB",
+            "text_5": "6",
+            "text_6": "",
+            "text_7": "",
+            "text_8": "",
+            "text_9": "",
+            "text_10": "",
+            "text_11": "",
+            "text_12": "",
+            "text_13": ""
+          }
+        },
+        "parameter_value_Xpkxh4": {
+          "type": "parameter_value",
+          "settings": {
+            "product": "p2-dog-clipper",
+            "title": "P2 Dog Clipper",
+            "text_1": "Small & Medium Dogs",
+            "text_2": "Cordless, Rechargeable",
+            "text_3": "Run 3h/Charge 3h",
+            "text_4": "50dB",
+            "text_5": "6",
+            "text_6": "",
+            "text_7": "",
+            "text_8": "",
+            "text_9": "",
+            "text_10": "",
+            "text_11": "",
+            "text_12": "",
+            "text_13": ""
+          }
+        },
+        "parameter_value_HBB7fP": {
+          "type": "parameter_value",
+          "settings": {
+            "product": "676-dog-clipper",
+            "title": "676 Dog Clipper",
+            "text_1": "Medium & Large Dogs",
+            "text_2": "Waterproof",
+            "text_3": "Run 4h/Charge 3h",
+            "text_4": "55dB",
+            "text_5": "10",
+            "text_6": "",
+            "text_7": "",
+            "text_8": "",
+            "text_9": "",
+            "text_10": "",
+            "text_11": "",
+            "text_12": "",
+            "text_13": ""
+          }
+        }
+      },
+      "block_order": [
+        "parameter_name_qBt8k6",
+        "parameter_value_F8prCU",
+        "parameter_value_tqexei",
+        "parameter_value_Xpkxh4",
+        "parameter_value_HBB7fP"
+      ],
+      "settings": {
+        "bg": "#fefbf8",
+        "title": "Product Comparison",
+        "padding_pc": "15px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_specs_tGpzc9": {
+      "type": "product-specs",
+      "blocks": {
+        "tab_content_BnynBK": {
+          "type": "tab_content",
+          "disabled": true,
+          "settings": {
+            "question": "Basic",
+            "text": "<ul><li>SKU: CW01029</li><li>Weight:1.85 Pounds</li><li>Speeds: 2</li><li>Battery Type: 2000mAh</li><li>Input: 100V-240V~50/60Hz</li><li>USB Connect with Adapter : 5V=1A</li><li>Dimensions: 6.89 x 1.77 x 1.57 iinches</li></ul>"
+          }
+        },
+        "tab_content_pWcnFC": {
+          "type": "tab_content",
+          "disabled": true,
+          "settings": {
+            "question": "Precautions For Use",
+            "text": "<ol><li>Please do not disassemble the product.</li><li>The hair clipper can not be washed. Please keep it away from wet conditions.</li><li>The product can only be cleaned by cloth with little water or mild soap solution.</li><li>Do not charge the product under<br/>environment above 104 °F or below 32°F</li></ol>"
+          }
+        },
+        "tab_content_aGCjzr": {
+          "type": "tab_content",
+          "disabled": true,
+          "settings": {
+            "question": "Manual",
+            "text": "<p><a href=\"https://cdn.shopify.com/s/files/1/0655/6716/2614/files/X2_Pet_Clipper.pdf?v=1709192225\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0655/6716/2614/files/X2_Pet_Clipper.pdf?v=1709192225\">Download</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_BnynBK",
+        "tab_content_pWcnFC",
+        "tab_content_aGCjzr"
+      ],
+      "disabled": true,
+      "settings": {
+        "bg": "#fefbf8",
+        "title": "Product Specs",
+        "padding_pc": "15px 0 60px",
+        "padding_m": "10px 0"
+      }
+    },
+    "faqs_ijrNcG": {
+      "type": "faqs",
+      "blocks": {
+        "tab_content_JmK8jh": {
+          "type": "tab_content",
+          "settings": {
+            "question": "What’s The Difference Between Dog Clippers And Dog Hair Trimmers?",
+            "text": "<p>Dog clippers are designed for full-body grooming and can handle large sections of fur, while dog hair trimmers are typically used for detailed work around sensitive or small areas like the paws, face, and tail.</p>"
+          }
+        },
+        "tab_content_c6HcW7": {
+          "type": "tab_content",
+          "settings": {
+            "question": "How Can I Choose Clippers For Dogs Suitable For Both Indoor And Outdoor Grooming?",
+            "text": "<p>For versatile grooming, choose cordless clippers for dogs with a long battery life. Cordless options are easy to maneuver both indoors and outdoors and allow you to groom without needing an outlet nearby.</p>"
+          }
+        },
+        "tab_content_Rpa4Mk": {
+          "type": "tab_content",
+          "settings": {
+            "question": " Can I Use The Same Clippers For Dogs On Different Dog Breeds?",
+            "text": "<p>Yes, but you may need to adjust the blade size and guide combs on clippers for dogs based on each dog’s coat type and grooming requirements. For example, a thick coat may benefit from a wider, sharper blade, while a thin or fine coat may require a more precise blade for smoother trimming.</p>"
+          }
+        },
+        "tab_content_g67BHQ": {
+          "type": "tab_content",
+          "settings": {
+            "question": " What’s The Main Difference Between Cat Clippers And Dog Clippers",
+            "text": "<p>Cat clippers are generally smaller, quieter, and designed to handle a cat’s finer, more delicate fur. They typically have lower power to prevent cuts on thin skin, unlike dog clippers, which are built for denser coats.</p>"
+          }
+        },
+        "tab_content_mmRmje": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Are There Cordless Cat Hair Clippers Available For Easier Handling?",
+            "text": "<p>Yes, cordless cat hair clippers are widely available and make grooming easier by allowing you to move freely. They’re especially helpful for grooming skittish cats that may not stay still for long.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_JmK8jh",
+        "tab_content_c6HcW7",
+        "tab_content_Rpa4Mk",
+        "tab_content_g67BHQ",
+        "tab_content_mmRmje"
+      ],
+      "settings": {
+        "id": "faqs",
+        "title": "FAQs",
+        "align": "center",
+        "align_m": "center",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "171524248506ebf0c3": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "product_center_slide_xFbKiR": {
+      "type": "product-center-slide",
+      "blocks": {
+        "item_TxLDJz": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/48a9c52d-2f76-48a4-9a66-d442b639e0c9.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+            "img_m": "shopify://shop_images/48a9c52d-2f76-48a4-9a66-d442b639e0c9.__CR0_0_1464_600_PT0_SX1464_V1.jpg"
+          }
+        },
+        "item_AVLwxn": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/f07b3130-0974-4c9e-96a6-9baab7b32edf.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+            "img_m": "shopify://shop_images/f07b3130-0974-4c9e-96a6-9baab7b32edf.__CR0_0_1464_600_PT0_SX1464_V1.jpg"
+          }
+        },
+        "item_XQ7JVa": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/3261793f-146c-40ef-a156-22fa6fef76fb.__CR0_0_1464_600_PT0_SX1464_V1_6ec8a3e8-fc43-4326-a46e-782151561812.jpg",
+            "img_m": "shopify://shop_images/3261793f-146c-40ef-a156-22fa6fef76fb.__CR0_0_1464_600_PT0_SX1464_V1_6ec8a3e8-fc43-4326-a46e-782151561812.jpg"
+          }
+        },
+        "item_LTgmJR": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/208bef71-e309-4727-8a5b-bb5c7a7683b2.__CR0_0_1464_600_PT0_SX1464_V1_9fccfb76-6fd6-4101-8cad-0b59913e3219.jpg",
+            "img_m": "shopify://shop_images/208bef71-e309-4727-8a5b-bb5c7a7683b2.__CR0_0_1464_600_PT0_SX1464_V1_9fccfb76-6fd6-4101-8cad-0b59913e3219.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "item_TxLDJz",
+        "item_AVLwxn",
+        "item_XQ7JVa",
+        "item_LTgmJR"
+      ],
+      "settings": {
+        "bg": "#fefbf8",
+        "align": "center",
+        "align_m": "center",
+        "title": "Why Onesiall",
+        "autoplay": true,
+        "padding_pc": "15px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "spx_recommendations_EAaTNY": {
+      "type": "spx-recommendations",
+      "settings": {
+        "title": "Recommended Purchase",
+        "padding_pc": "60px 0",
+        "padding_m": "20px 0"
+      }
+    },
+    "icons_fRC7QE": {
+      "type": "product-icons",
+      "blocks": {
+        "icon_RXgQdm": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Fast & Free Shipping"
+          }
+        },
+        "icon_3tpCEf": {
+          "type": "icon",
+          "settings": {
+            "liquid": "2",
+            "title": "Product Tax Incl."
+          }
+        },
+        "icon_DDAWJJ": {
+          "type": "icon",
+          "settings": {
+            "liquid": "3",
+            "title": "24-Month Warranty"
+          }
+        },
+        "icon_6gJPeq": {
+          "type": "icon",
+          "settings": {
+            "liquid": "4",
+            "title": "30-Day Money Back"
+          }
+        }
+      },
+      "block_order": [
+        "icon_RXgQdm",
+        "icon_3tpCEf",
+        "icon_DDAWJJ",
+        "icon_6gJPeq"
+      ],
+      "settings": {
+        "padding_pc": "150px 0",
+        "padding_m": "80px 0"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product_location_bar_dNC4pF",
+    "product_scroll_img_mMNtgT",
+    "product_scroll_img_eehHyi",
+    "product_scroll_img_6qW9Jf",
+    "product_scroll_img_Ganfg6",
+    "product_scroll_img_jnKCw9",
+    "product_scroll_img_zKmrnb",
+    "product_scroll_img_Ax9yzz",
+    "product_scroll_img_WiRBPU",
+    "product_scroll_img_cmFTza",
+    "scroll_bHe6k4",
+    "product_img_text_8Gjj3B",
+    "product_scroll_img_NJRPXH",
+    "product_comparison_c79bTB",
+    "product_specs_tGpzc9",
+    "faqs_ijrNcG",
+    "171524248506ebf0c3",
+    "product_center_slide_xFbKiR",
+    "spx_recommendations_EAaTNY",
+    "icons_fRC7QE"
+  ]
+}

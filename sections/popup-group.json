@@ -1,0 +1,75 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "custom.popups",
+  "name": "t:labels.popups",
+  "sections": {
+    "newsletter-popup": {
+      "type": "newsletter-popup",
+      "settings": {
+        "disable_for_account_holders": true,
+        "popup_seconds": 15,
+        "popup_days": 2,
+        "popup_image": "shopify://shop_images/20260522-180428.png",
+        "popup_image_m": "shopify://shop_images/20260522-180428.png",
+        "image_position": "left",
+        "subtitle": "MYSTERY DISCOUNT",
+        "popup_title": "Save 10% off your first purchase",
+        "type_title": "",
+        "type": "",
+        "subscribe": "",
+        "popup_text": "",
+        "color_scheme": "3",
+        "show_social_icons": false,
+        "enable_newsletter": true,
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "email_popup_FzQB9g": {
+      "type": "email-popup",
+      "disabled": true,
+      "name": "subscribe-popup",
+      "settings": {
+        "enabled": true,
+        "day": 7,
+        "delay": 15,
+        "image_pc": "shopify://shop_images/2_2x_91de9f70-c3a6-481c-b006-ed72586210be.jpg",
+        "title": "MYSTERY DISCOUNT",
+        "description": "Save 10% off your first purchase",
+        "button_text": "",
+        "placeholder": "",
+        "tips": "*Cannot be combined with other promo codes.",
+        "footer": ""
+      }
+    },
+    "age-verification-popup": {
+      "type": "age-verification-popup",
+      "disabled": true,
+      "settings": {
+        "enable_test_mode": false,
+        "color_scheme": "none",
+        "blur_image": false,
+        "heading": "Confirm your age",
+        "text": "<p>Are you 18 years old or older?</p>",
+        "decline_button_label": "No I'm not",
+        "approve_button_label": "Yes I am",
+        "decline_heading": "Come back when you're older",
+        "decline_text": "<p>Sorry, the content of this store can't be seen by a younger audience. Come back when you're older.</p>",
+        "return_button_label": "Oops, I entered incorrectly"
+      }
+    }
+  },
+  "order": [
+    "newsletter-popup",
+    "email_popup_FzQB9g",
+    "age-verification-popup"
+  ]
+}

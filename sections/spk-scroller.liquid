@@ -1,0 +1,308 @@
+<style>
+  #shopify-section-{{section.id }}{
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background-color: {{ section.settings.background_color  }};
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+  #shopify-section-{{ section.id }} .spk-section-title{
+    color:{{ section.settings.title_color }};
+  }
+
+  #shopify-section-{{ section.id }}{
+    position: relative;
+  }
+  .spk-section .spk-section-title{
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .spk-section  .spk-container{
+    max-width:1280px;
+    margin: 0 auto;
+  }
+
+  .spk-scroller-tab{
+    position: relative;
+  }
+
+  .scroller-element{
+    position:sticky;
+  }
+
+  .scroller-container{
+    display:grid;
+    grid-template-columns: repeat(12,minmax(0,1fr));
+    gap: 20px;
+    width:100%;
+    position: relative;
+    top: var(--header-height);
+  }
+
+  .scroller-left{
+    grid-column: span  4 / span 12;
+
+  }
+
+  .scroller-left .tab-items{
+    gap:10px;
+    display: flex;
+    flex-direction: column;
+    border-left:2px solid #e1e1e1;
+  }
+  .scroller-tab-item{
+    padding: 15px 0;
+    padding-left:60px;
+    cursor: pointer;
+    border:0px;
+    border-left:2px solid #e1e1e1;
+    margin-left: -2px;
+    text-align: left;
+    font-size: 24px;
+  }
+
+  .scroller-tab-item.active{
+    font-weight: 700;
+    border-left:2px solid #000;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .scroller-right{
+    grid-column: span  8 / span 12;
+  }
+
+  .scroller-right .scroller-item-image{
+    border-radius: 24px;
+    overflow: hidden;
+  }
+
+  .scroller.rounded{
+    border-radius: 24px;
+  }
+
+  .spk-scroller-item{
+    display: none;
+    background-color: #fff;
+    padding: 40px;
+    overflow: hidden;
+    border-radius: 24px;
+  }
+
+  .spk-scroller-item.active{
+    display: block;
+  }
+
+  .spk-scroller-content{
+    margin: 24px 0 16px 0;
+  }
+
+  .spk-scroller-item-content-title{
+    font-size: 28px;
+    margin:24px 0  16px 0;
+  }
+
+  .spk-scroller-tab-m .spk-slider-tab{
+    display: none;
+  }
+  scroll-effect:not([data-ready]) {
+    visibility: hidden;
+  }
+  scroll-effect[data-ready] {
+    visibility: visible;
+  }
+</style>
+<style>
+  @media screen and (max-width: 767px) {
+    .scroller-element {
+      display: none;
+    }
+    .spk-section .spk-section-title {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+    .spk-scroller-tab-m .spk-slider-tab {
+      display: block;
+    }
+  }
+</style>
+
+<div class="spk-scroller-tab spk-container page-width" id="{{ section.settings.target_id }}">
+  <scroll-effect
+    style="top: 0px"
+    class="scroller-element"
+    style="top:var(--header-height)"
+    data-top_padding="{{ section.settings.padding_top }}"
+  >
+    <div class="scroller-container">
+      <div class="scroller-left">
+        {% if section.settings.title %}
+          <h2 class="spk-section-title   {{ section.settings.layout }}">{{ section.settings.title }}</h2>
+        {% endif %}
+        <div class="tab-items">
+          {% for block in section.blocks %}
+            <div class="scroller-tab-item {% if forloop.first %}active{% endif %}">
+              {{ block.settings.title }}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="scroller-right">
+        {% for block in section.blocks %}
+          <div class="spk-scroller-item {% if forloop.first %} active {% endif %} ">
+            <div class="scroller-item-image">
+              {% if block.settings.image_pc %}
+                <picture>
+                  {% if block.settings.image_mobile %}
+                    <source media="(max-width: 767px)" srcset="{{ block.settings.image_mobile.url }}">
+                  {% endif %}
+                  <img
+                    src="{{ block.settings.image_pc | image_url}}"
+                    alt="{{ block.settings.title }}"
+                    alt="{{block.settings.title |  default: shop.name }}"
+                    width="100%"
+                    height="100%"
+                  >
+                </picture>
+              {% else %}
+                {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+              {% endif %}
+            </div>
+            <div class="spk-scroller-content">
+              <h4 class="spk-scroller-item-content-title">{{ block.settings.title }}</h4>
+              <div>{{ block.settings.description }}</div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </scroll-effect>
+  <div class="spk-scroller-tab-m page-width">
+    {% render 'spk-slider-tab', section: section %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "SPK Scroller With Tab",
+  "class": "spk-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "target_id",
+      "label": "Target ID",
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "SPK Scroller With Tab"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout PC",
+      "default": "title-left",
+      "options": [
+        {
+          "value": "title-left",
+          "label": "Title Left"
+        },
+        {
+          "value": "title-center",
+          "label": "Title Center"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#F47C20"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#FEF9F6"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_rounded",
+      "label": "Card Rounded",
+      "default": true
+    },
+
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "default": 60,
+      "min": 0,
+      "max": 120,
+      "step": 10
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "default": 60,
+      "min": 0,
+      "max": 120,
+      "step": 10
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Scroller Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_pc",
+          "label": "Image PC"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Image Mobile"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Tab Text",
+          "default": "Tab Text"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "<p>Description Description Description Description Description Description Description Description  Description</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "SPK Scroller With Tab",
+      "blocks": [
+        {
+          "type": "block"
+        },
+        {
+          "type": "block"
+        },
+        {
+          "type": "block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

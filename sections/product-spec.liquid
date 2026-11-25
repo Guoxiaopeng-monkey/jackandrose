@@ -1,0 +1,126 @@
+<div id="product-spec"> 
+<div class="page-width">
+  {%- if section.settings.title != blank -%}
+    <div class="section-header text-{{ section.settings.align_text }}">
+      <h2>{{ section.settings.title }}</h2>
+    </div>
+  {%- endif -%}
+
+  <div class="spec-list">
+         <ul>
+              {%- for block in section.blocks -%}
+              <li><h4>{{ block.settings.title }}</h4><p>{{ block.settings.Content }}</p></li>
+              {%- endfor -%}
+            </ul>
+           
+ 
+  </div>
+</div>
+</div>
+ <style>
+   .spec-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap:0px;
+    justify-content:space-between;
+}
+  .spec-list ul li {     
+    flex-basis:calc(50% - 50px) ;
+    text-align: left;
+    border-bottom: 1px dashed #e8e8e8;
+    padding:15px 0;
+    margin-bottom:10px;
+}
+  .spec-list ul li h4 {
+    font-size: 18px;   
+    margin-bottom:12px;
+}
+ .spec-list ul li p {
+   color:#666;
+    font-size: 16px;
+}
+@media(max-width:768px){
+  .spec-list ul {
+    gap:12px;
+   }
+    .spec-list ul li {     
+    flex-basis:calc(50% - 12px) ; margin:0; padding-top:8px;
+}
+   .spec-list ul li p{
+      white-space: normal;  
+  word-break: break-all; 
+   }
+    .spec-list ul li h4 {
+    font-size: 16px;  
+}
+}
+ </style>
+ 
+
+{% schema %}
+  {
+    "name": "Product spec",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+       {
+        "type": "select",
+        "id": "align_text",
+        "label": "Alignment",
+        "default": "center",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Centered"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "divider",
+        "label": "Show section divider",
+        "default": false
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text_block",
+        "name": "Column",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "Content",
+            "label": "Content"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product spec",
+        "settings": {
+        }
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,226 @@
+{% render 'section-news-columns',
+  section: section,
+  divider: section.settings.divider,
+  title: section.settings.title,
+  align_text: section.settings.align_text,
+  color_scheme: section.settings.color_scheme,
+  heading_size: section.settings.heading_size,
+%}
+
+{% schema %}
+{
+  "name": "News slider",
+  "class" : "index-section news-slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:labels.heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "t:labels.heading_size",
+      "default": "h2",
+      "options": [
+        {
+          "value": "h0",
+          "label": "t:labels.sizes.extra_large"
+        },
+        {
+          "value": "h1",
+          "label": "t:labels.sizes.large"
+        },
+        {
+          "value": "h2",
+          "label": "t:labels.sizes.medium"
+        },
+        {
+          "value": "h3",
+          "label": "t:labels.sizes.small"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "align_text",
+      "label": "t:labels.alignment",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:labels.alignments.left"
+        },
+        {
+          "value": "center",
+          "label": "t:labels.alignments.centered"
+        },
+        {
+          "value": "right",
+          "label": "t:labels.alignments.right"
+        }
+      ]
+    },
+       {
+                "type": "range",
+                "id": "title_size_multiplier",
+                "min": 0.5,
+                "max": 3,
+                "step": 0.1,
+                "unit": "x",
+                "label": "Heading Size Multiplier for desktop",
+                "info": "based on the base size of heading",
+                "default": 1.2
+              },
+            {
+                "type": "range",
+                "id": "title_size_multiplier_mobile",
+                "min": 0.5,
+                "max": 3,
+                "step": 0.1,
+                "unit": "x",
+                "label": "Heading Size Multiplier size for mobile",
+                "default": 1
+       },
+           {
+                "type": "range",
+                "id": "desp_size_multiplier",
+                "min": 0.5,
+                "max": 3,
+                "step": 0.1,
+                "unit": "x",
+                "label": "Text Size Multiplier for desktop",
+                "info": "based on the base size of heading",
+                "default": 1.2
+              },
+            {
+                "type": "range",
+                "id": "desp_size_multiplier_mobile",
+                "min": 0.5,
+                "max": 3,
+                "step": 0.1,
+                "unit": "x",
+                "label": "Text size Multiplier for mobile",
+                "default": 1
+       },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "t:actions.show_section_divider",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "t:labels.color_scheme",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:labels.none"
+        },
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "t:labels.column",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_image",
+          "label": "t:actions.show_image",
+          "default": true
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:labels.image"
+        },
+          {
+          "type": "image_picker",
+          "id": "media_image",
+          "label": "Media logo"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:labels.heading",
+          "default": "example title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:labels.text",
+          "default": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions.</p>"
+        },
+        {
+          "type": "select",
+          "id": "align_text",
+          "label": "t:labels.alignment",
+          "default": "center",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:labels.alignments.left"
+            },
+            {
+              "value": "center",
+              "label": "t:labels.alignments.centered"
+            },
+            {
+              "value": "right",
+              "label": "t:labels.alignments.right"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "t:labels.button_label",
+          "default": "Optional button"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:labels.link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "News slider",
+      "blocks": [
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": [
+      "custom.popups"
+    ]
+  }
+}
+{% endschema %}

@@ -1,0 +1,244 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "custom_css": [
+        "h1 {text-align: center; color: #291906;}",
+        ".collection-hero__content {align-items: center;}"
+      ],
+      "settings": {
+        "enable": true,
+        "collection_image_enable": false,
+        "parallax": false,
+        "parallax_direction": "left"
+      }
+    },
+    "countdown_gDBQky": {
+      "type": "countdown",
+      "blocks": {
+        "content_rWEefF": {
+          "type": "content",
+          "settings": {
+            "heading": "Buy 2 Get 1 Free",
+            "heading_size": "h2",
+            "text": "<p>Accessories Only! Please purchase 3 or more accessories, 1 accessory will be free.</p>",
+            "content_alignment": "left"
+          }
+        },
+        "timer_AtfkUa": {
+          "type": "timer",
+          "settings": {
+            "year": "2024",
+            "month": "06",
+            "day": "17",
+            "hour": "15",
+            "minute": "00",
+            "hide_timer": false,
+            "text": ""
+          }
+        },
+        "button_bUTpXA": {
+          "type": "button",
+          "settings": {
+            "button_link": "https://oneisall.com/collections/accessories",
+            "button": "Shop Now",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "content_rWEefF",
+        "timer_AtfkUa",
+        "button_bUTpXA"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "banner",
+        "full_width": false,
+        "color_scheme": "none",
+        "blur_image": false,
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "promo-grid": {
+      "type": "promo-grid",
+      "blocks": {
+        "banner": {
+          "type": "banner",
+          "disabled": true,
+          "settings": {
+            "heading": "Buy 2 Get 1",
+            "text": "Fur-care special for pawsome dads! Accessories only!",
+            "link": "https://oneisall.com/collections/accessories?utm_source=activity&utm_medium=promotionbar&utm_campaign=father-s-day",
+            "label": "Shop now",
+            "color_scheme": "1"
+          }
+        }
+      },
+      "block_order": [
+        "banner"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": false,
+        "title_size_multiplier": 1.8,
+        "title_size_multiplier_mobile": 1.3,
+        "desp_size_multiplier": 1.8,
+        "desp_size_multiplier_mobile": 1.3,
+        "btn_size_multiplier": 1.4,
+        "btn_size_multiplier_mobile": 1.4
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "collection_description": {
+          "type": "collection_description",
+          "settings": {}
+        },
+        "subcollections": {
+          "type": "subcollections",
+          "disabled": true,
+          "settings": {}
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "grid_style": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "collection_description",
+        "subcollections",
+        "product_grid"
+      ],
+      "settings": {
+        "enable_sidebar": false,
+        "collapse_filters": false,
+        "enable_color_swatches": false,
+        "enable_swatch_labels": false,
+        "enable_sort": false
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {}
+    },
+    "faq_khMGTE": {
+      "type": "faq",
+      "blocks": {
+        "question_CKpLNQ": {
+          "type": "question",
+          "settings": {
+            "title": "What Are Automatic Pet Feeders, And How Do They Work?",
+            "text": "<p>Automatic pet feeders are devices that allow you to schedule and dispense food for your pet at set times throughout the day. Most feeders use timers or smart technology to release food in measured portions, ensuring your pet is fed regularly, even when you're not at home.</p>"
+          }
+        },
+        "question_MiiTjT": {
+          "type": "question",
+          "settings": {
+            "title": "How Does An Automatic Cat Feeder Help With My Cat’s Feeding Schedule?",
+            "text": "<p>An automatic cat feeder ensures that your cat gets fed at the same time each day, even if you're not home. You can pre-program feeding times, which helps maintain a consistent schedule and prevent overeating.</p>"
+          }
+        },
+        "question_3Ftx7L": {
+          "type": "question",
+          "settings": {
+            "title": "Can Automatic Cat Feeders Prevent My Cat From Overeating?",
+            "text": "<p>Yes, most automatic cat feeders allow you to set specific portion sizes for each meal. This helps control how much your cat eats, reducing the risk of overeating or obesity.</p>"
+          }
+        },
+        "question_rYPUgH": {
+          "type": "question",
+          "settings": {
+            "title": "How Often Should I Clean My Automatic Dog Feeder?",
+            "text": "<p>At least once a week ensure your dog's food remains fresh and safe to eat. However, the cleaning frequency may vary depending on the type of food you use and the number of dogs using the feeder. </p><p>Here's a general guideline:</p><ul><li>For Dry Food Feeders</li></ul><p>Clean the feeder's food tray, hopper, and any removable parts once a week to prevent bacteria, dust, and food residue from accumulating.</p><ul><li>For Wet Food Feeders</li></ul><p>Wet food can spoil quickly, so it's important to clean the feeder after every feeding or at least once a day to prevent bacteria growth and odors.</p><ul><li>Disinfection</li></ul><p>Every month, consider doing a deeper clean by disinfecting the feeder with dog-safe cleaning products to ensure it remains hygienic. Rinse thoroughly to remove any cleaning residue.</p><p>By keeping your automatic dog feeder clean, you help prevent mold, bacteria, or stale food buildup, ensuring your dog enjoys fresh, healthy meals.</p>"
+          }
+        },
+        "question_W4dhBK": {
+          "type": "question",
+          "settings": {
+            "title": "Will The Automatic Pet Feeder Still Feed My Pet During A Power Outage?",
+            "text": "<p>Yes, you can still feed your pet during a power outage by using an automatic pet feeder with a battery backup or feeding them manually. Preparing in advance with fresh batteries or an alternative feeding plan can help ensure your pet stays on schedule and doesn’t miss any meals during an outage.</p>"
+          }
+        },
+        "question_8jtrBX": {
+          "type": "question",
+          "settings": {
+            "title": "Can An Automatic Feeder For Cats Help With Weight Management?",
+            "text": "<p>Yes, an automatic feeder for cats can assist with weight management by dispensing pre-measured portions of food at scheduled times. This helps prevent overfeeding and ensures your cat sticks to a regular feeding routine, which is especially beneficial for cats that need portion control for weight loss or maintenance.</p>"
+          }
+        },
+        "question_ArwFX6": {
+          "type": "question",
+          "settings": {
+            "title": "Is A Cat Automatic Feeder Safe For My Cat?",
+            "text": "<p>A Cat Automatic feeder is safe for cats as long as you use them properly and ensure they are well-maintained. </p><p>Choose a reliable, tamper-proof model, and monitor your pet's feeding habits to ensure the feeder is dispensing food correctly. Regular checks and cleaning are important to keep your pet’s food fresh and the feeder is functioning correctly.</p>"
+          }
+        },
+        "question_DRYB7e": {
+          "type": "question",
+          "settings": {
+            "title": "How Do I Set The Timer On An Automatic Feeder For Cats?",
+            "text": "<p>To set the timer on an automatic feeder for cats, follow these 5 steps:</p><p>1. Open the feeder’s control panel or app (depending on the model).</p><p>2. Set the desired meal times using the built-in timer or mobile app.</p><p>3. Adjust the portion size for each meal.</p><p>4. Ensure the automatic feeder for cats is loaded with food, then activate the timer.</p><p>5. Check the user manual for specific instructions, as each model may vary slightly.</p>"
+          }
+        },
+        "question_rG9qeR": {
+          "type": "question",
+          "settings": {
+            "title": "Can I Control My Automatic Feeder For Cats Remotely?",
+            "text": "<p>Yes, many cat automatic feeders offer remote control features through a mobile app.</p><p>This allows you to monitor feeding times, adjust portions, and even check on your cat if the automatic cat feeder has a camera. An automatic feeder for cats also sends notifications when food runs low or the next feeding is due.</p>"
+          }
+        },
+        "question_RpKr4z": {
+          "type": "question",
+          "settings": {
+            "title": "What Should I Look For When Choosing An Automatic Feeder For Cats?",
+            "text": "<p>When selecting an automatic feeder for cats, consider these 5 factors:</p><p>1. Capacity: Choose an automatic feeder for cats with enough space for the amount of food your cat needs.</p><p>2. Portion Control: Look for adjustable portions to manage your cat's diet.</p><p>3. Food Type Compatibility: Make sure it works with dry or wet food depending on your needs.</p><p>4. Ease of Cleaning: Choose an automatic feeder for cats with removable and washable parts.</p><p>5. Features: Look for additional features like a remote control, a camera, or a low-food indicator.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_CKpLNQ",
+        "question_MiiTjT",
+        "question_3Ftx7L",
+        "question_rYPUgH",
+        "question_W4dhBK",
+        "question_8jtrBX",
+        "question_ArwFX6",
+        "question_DRYB7e",
+        "question_rG9qeR",
+        "question_RpKr4z"
+      ],
+      "settings": {
+        "title": "FAQs",
+        "heading_size": "h1",
+        "brochure_title": "",
+        "brochure_link": "",
+        "heading_position": "center"
+      }
+    }
+  },
+  "order": [
+    "collection-header",
+    "countdown_gDBQky",
+    "promo-grid",
+    "main-collection",
+    "recently-viewed",
+    "faq_khMGTE"
+  ]
+}

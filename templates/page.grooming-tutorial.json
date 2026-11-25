@@ -1,0 +1,139 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {}
+    },
+    "rich_text_t9AAfh": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8XVFrh": {
+          "type": "heading",
+          "settings": {
+            "title": "Pet Grooming Tutorial",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8XVFrh"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "1",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        "h1 {text-align: center;}"
+      ],
+      "settings": {}
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "settings": {}
+    },
+    "rich_text_4JCqT7": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_MWxjPb": {
+          "type": "heading",
+          "settings": {
+            "title": "X2&N5 Clipper Tutorial",
+            "heading_size": "h3"
+          }
+        },
+        "text_LAeTwa": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Whether you’re getting your first pet or just taking pet grooming more seriously, this handy beginner’s guide will help you master essential pet grooming techniques. </p><p>From basic to advanced techniques, prioritize your pet’s comfort and safety with the best practices. Gain clarity and confidence when caring for your furry friend and nurture a deeper, more loving bond today!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MWxjPb",
+        "text_LAeTwa"
+      ],
+      "custom_css": [
+        "h2 {font-size: 26px;}"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "featured_video_3hfEUA": {
+      "type": "featured-video",
+      "settings": {
+        "title": "",
+        "video_url": "https://www.youtube.com/watch?v=MuPASAdaWQE",
+        "divider": false
+      }
+    },
+    "newsletter_GxBpzW": {
+      "type": "newsletter",
+      "blocks": {
+        "title_VJbVf9": {
+          "type": "title",
+          "settings": {
+            "title": "Get 10% off your first purchase",
+            "heading_size": "h2"
+          }
+        },
+        "text_cMdDeP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Subscribe to our newsletter for the latest updates and exclusive offers!</p>"
+          }
+        },
+        "form_E74C7J": {
+          "type": "form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title_VJbVf9",
+        "text_cMdDeP",
+        "form_E74C7J"
+      ],
+      "settings": {
+        "color_scheme": "none",
+        "align_text": "center",
+        "image_width": "33",
+        "image_mask": "none",
+        "image_position": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "rich_text_t9AAfh",
+    "main",
+    "shogun-optimizer",
+    "rich_text_4JCqT7",
+    "featured_video_3hfEUA",
+    "newsletter_GxBpzW"
+  ]
+}

@@ -1,0 +1,594 @@
+{% comment %}
+  /**
+    * @param {object} main_menu - The main menu object
+    * @param {string} nav_position - navigation position
+    * @param {boolean} show_mega_products - show mega products
+    * @param {string} hover_menu - hover menu
+    * @param {boolean} quick_add_enable - whether quick add is enabled
+    * @param {boolean} quick_shop_enable - whether quick shop is enabled
+    * @param {string} product_grid_image_size - the image size to use for the grid item
+    * @param {boolean} product_grid_image_fill - whether the image should fill the grid item
+    * @param {boolean} product_hover_image - whether second image will be shown on hover
+    * @param {boolean} enable_swatches - whether swatches are enabled
+    * @param {boolean} vendor_enable - whether to show the vendor
+    * @param {boolean} product_save_amount - show save amount
+    * @param {string} product_save_type - dollar or percent
+    * @param {boolean} superscript_decimals - whether to superscript decimals
+    * @param {boolean} set_image_breathing_room - whether to set image breathing room
+  */
+{% endcomment %}
+{% comment %}
+  /** Main menu navigation structure */
+{% endcomment %}
+
+{%- liquid
+  unless limit
+    assign limit = main_menu.links.size
+  endunless
+  unless offset
+    assign offset = 0
+  endunless
+-%}
+
+<ul class="site-nav site-navigation site-navigation--{{ nav_position }} medium-down--hide">
+  {%- for link in main_menu.links limit: limit offset: offset -%}
+    {%- liquid
+      assign has_dropdown = false
+      assign is_megamenu = false
+      assign is_product_menu = false
+      
+  # First check if this is a product/collection menu
+  if link.links.size > 0
+    assign first_child = link.links | first
+    # Check product and collection links separately
+    if first_child.url contains '/products/'
+      assign is_product_menu = true
+      assign is_megamenu = true
+    elsif first_child.url contains '/collections/'
+      assign is_product_menu = true
+      assign is_megamenu = true
+    endif
+  endif
+       
+      # Only check for regular dropdowns if it's not a product menu
+      unless is_product_menu
+        if link.levels > 0
+          assign has_dropdown = true
+          if link.levels > 1
+            assign is_megamenu = true
+          endif
+        endif
+      endunless
+
+
+       # 遍历有无应用mega的一级菜单
+       assign custom_mega = false
+       for block in section.blocks
+        if block.settings.target_link == link.title
+         assign custom_mega = true
+        endif
+       endfor
+    
+    -%}
+    
+    {% if custom_mega %}
+      <li class="site-nav__item site-nav__expanded-item site-nav--is-megamenu site-nav--has-dropdown custom_mega">
+          <details
+            id="site-nav-item--{{ forloop.index }}"
+            class="site-nav__details"
+            data-hover="{{ hover_menu }}"
+          >
+          <summary
+            data-link="{{ link.url }}"
+            aria-expanded="false"
+            aria-controls="site-nav-item--{{ forloop.index }}"
+            class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown"
+          >
+            {{ link.title }} {% render 'icon', name: 'chevron-down' %}
+          </summary>
+  
+          <div class="site-nav__dropdown product-menu text-left">
+            <div class="page-width">
+              <div class="site-nav__dropdown-animate product-menu__wrapper">
+                 <div class="custom_mega_wrapper">
+                   <div class="group_name">
+                     {% assign mega_blocks = section.blocks | where: 'type','mega' %}
+                     {% assign is_first = 0 %}
+                     {% for block in mega_blocks %}
+                       {% if block.settings.target_link == link.title %}
+                         {% assign is_first = is_first | plus: 1 %}
+                         <a href="{{ block.settings.link }}" data-group="{{ block.settings.target_link | append:is_first | handle }}" class="group_name-item {{ is_first }} {% if is_first == 1 %}open{% endif %}">{{ block.settings.group_name }}{% render 'icon', name: 'chevron-right' %}</a>
+                       {% endif %}
+                     {% endfor %}
+                   </div>
+                   <div class="group_content">
+                     {% assign is_first = 0 %}
+                     {% for block in mega_blocks %}
+                       {% if block.settings.target_link == link.title %}
+                         {% assign is_first = is_first | plus: 1 %}
+                         <div data-group="{{ block.settings.target_link | append:is_first | handle }}" class="group_content-item {{ is_first }}" {% unless is_first == 1 %}style="display:none;"{% endunless %}>
+                           {% if block.settings.product_list != blank %}
+                             <div class="group_products">
+                               {% for product in block.settings.product_list %}
+                                 <div class="group_products-item">
+                                   <a href="{{ product.url }}">
+                                     <div class="group_products-item__image">
+                                       {% render 'image-element', img: product.featured_image, sizeVariable: '250px', lazy: true %}
+                                       {% for tag in product.tags %}
+                                           {% if tag contains 'TAG_' %}
+                                             <div class="e_product_badge_new" style="color:{{ settings.product_new_color }}; background: url({{ settings.product_new_bg | img_url:"master" }}) no-repeat center;background-size: contain;">
+                                               {{ tag | remove:'TAG_' }}
+                                             </div>
+                                             {% break %}
+                                            {%endif%}
+                                         {% endfor %}
+                                     </div>
+                                     <div class="group_products-item__info">
+                                       {% if product.metafields.custom.subtitle.value != blank %}
+                                         <span class="subtitle">{{ product.metafields.custom.subtitle.value }}</span>
+                                       {% endif %}
+                                         <span class="title">
+                                           {{ product.metafields.custom.nav_product_title| default: product.title }}
+                                         </span>
+                                     </div>
+                                   </a>
+                                 </div>
+                               {% endfor %}
+                             </div>
+                           {% endif %}
+                           {% if block.settings.bottom_menu.links != blank or block.settings.btn != blank %}
+                             <div class="group_content-item__footer">
+                               {% if block.settings.bottom_menu.links != blank %}
+                                <div class="group_menu">
+                                    {% for menu_link in block.settings.bottom_menu.links %}
+                                      <a href="{{ menu_link.url }}" class="group_menu_link">
+                                        {{ menu_link.title }} {% render 'icon', name: 'chevron-right' %}
+                                      </a>
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                               {% if block.settings.btn != blank %}
+                                <a href="{{ block.settings.link }}" class="group_btn">{{ block.settings.btn }}{% render 'icon', name: 'chevron-right' %}</a>
+                                {% endif %}
+                             </div>
+                           {% endif %}
+                         </div>
+                       {% endif %}
+                     {% endfor %}
+                   </div>
+                 </div>
+              </div>
+            </div>
+          </div>
+        
+          </details>
+      </li>
+    {% else %}
+      <li class="site-nav__item site-nav__expanded-item{% if has_dropdown %} site-nav--has-dropdown{% endif %}{% if is_megamenu %} site-nav--is-megamenu{% endif %}{% if is_product_menu %} site-nav--is-product-menu{% endif %}">
+        {% if is_megamenu or has_dropdown %}
+          <details
+            id="site-nav-item--{{ forloop.index }}"
+            class="site-nav__details"
+            data-hover="{{ hover_menu }}"
+          >
+        {% endif %}
+      {% if is_megamenu or has_dropdown %}
+          <summary
+            data-link="{{ link.url }}"
+            aria-expanded="false"
+            aria-controls="site-nav-item--{{ forloop.index }}"
+            class="site-nav__link site-nav__link--underline{% if has_dropdown %} site-nav__link--has-dropdown{% endif %}"
+          >
+            {{ link.title }} {% render 'icon', name: 'chevron-down' %}
+          </summary>
+        {% endif %}
+        {% unless is_megamenu or has_dropdown %}
+          <a
+            href="{{ link.url }}"
+            class="site-nav__link site-nav__link--underline{% if has_dropdown %} site-nav__link--has-dropdown{% endif %}"
+          >
+            {{ link.title }}
+          </a>
+        {% endunless %}
+  
+        {%- if is_product_menu -%}
+          <div class="site-nav__dropdown product-menu text-left">
+            <div class="page-width">
+              <div class="site-nav__dropdown-animate product-menu__wrapper">
+                 <div class="product-menu__grid">
+                    {%- for menu_link in link.links -%}
+                      {%- liquid
+                        assign is_collection = false
+                        assign collection = nil
+                        assign product = nil
+                        
+                        # Check if this is a collection link
+                        if menu_link.url contains '/collections/'
+                          assign is_collection = true
+                          assign collection_handle = menu_link.url | split: '/collections/' | last
+                          assign collection = collections[collection_handle]
+                        else
+                          # Handle product links
+                          assign product_handle = menu_link.url | split: '/products/' | last
+                          assign product = all_products[product_handle]
+                        endif
+                      -%}
+                      
+                      <div class="product-menu__item">
+                        <a href="{{ menu_link.url }}" class="product-menu__link">
+                          <div class="product-menu__image">
+                            {% if is_collection and collection != blank %}
+                             {% if collection.metafields.custom.cover_image != blank %}
+                                    <img src="{{ collection.metafields.custom.cover_image | image_url:width:250 }}">
+                                  {% elsif collection.image != blank %}
+                                    {% render 'image-element', img: collection.image, sizeVariable: '250px', lazy: true %}
+                                  {% endif %}
+                             {% elsif product != blank %}
+                               {% if product.metafields.custom.cover_image %}
+                                    <img src="{{ product.metafields.custom.cover_image | image_url:width:250 }}">
+                              {% else %}
+                              {% render 'image-element',
+                                img: product.featured_image,
+                                sizeVariable: '250px',
+                                lazy: true
+                              %}
+                            {% endif %}
+                            {% endif %}
+                          </div>
+                          <div class="product-menu__details">
+                            <h4 class="product-menu__title">{{ menu_link.title }}</h4>
+                              {% if is_collection and collection != blank %}
+                                     {% if collection.metafields.custom.subtitle != blank %}
+                                     <p class="subtitle">{{ collection.metafields.custom.subtitle }} </p>
+                                    {% endif %}
+                              {% elsif product != blank %}
+                                     {% if product.metafields.custom.subtitle != blank %}
+                                     <p class="subtitle">{{ product.metafields.custom.subtitle }} </p>
+                                    {% endif %}
+                              {% endif %}
+                           
+                          </div>
+                        </a>
+                      </div>
+                    {%- endfor -%}
+                  </div>
+              </div>
+            </div>
+          </div>
+        {%- elsif is_megamenu -%}
+          {%- assign previous_column_type = '' -%}
+          <div class="site-nav__dropdown megamenu text-left">
+            <div class="page-width">
+              <div class="site-nav__dropdown-animate megamenu__wrapper">
+                <div class="megamenu__cols">
+                  <div class="megamenu__col">
+                    {%- for childlink in link.links -%}
+                      {%- liquid
+                        assign create_new_column = false
+                        if childlink.levels > 0 and forloop.index != 1
+                          assign create_new_column = true
+                        endif
+                        if childlink.levels == 0 and previous_column_type == 'full'
+                          assign create_new_column = true
+                        endif
+                      -%}
+  
+                      {%- if create_new_column -%}
+                        </div><div class="megamenu__col">
+                      {%- endif -%}
+  
+                      <div class="megamenu__col-title">
+                        <a href="{{ childlink.url }}" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">{{ childlink.title }}</a>
+                      </div>
+  {% comment %}
+                      {%- liquid
+                        if childlink.levels > 0
+                          assign previous_column_type = 'full'
+                        else
+                          assign previous_column_type = 'single'
+                        endif
+   
+                        assign child_collection = nil
+                        if childlink.url contains routes.collections_url
+                          assign child_collection_handle = childlink.url | remove: routes.collections_url | remove: '/'
+                          assign child_collection = collections[child_collection_handle]
+                        endif
+                      -%}
+  
+                      {%- for grandchildlink in childlink.links -%}
+                        <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link">
+                          {{ grandchildlink.title }}
+                        </a>
+                          
+                      {%- endfor -%}
+       {% endcomment %}
+  {% comment %}
+                      {% if child_collection != blank %}
+                        <div class="megamenu__product-preview">
+                          {% assign preview_product = child_collection.products.first %}
+                          {% if preview_product %}
+                            <div class="megamenu__product-image">
+                              {% render 'image-element',
+                                img: preview_product.featured_image,
+                                sizeVariable: '120px',
+                                lazy: true
+                              %}
+                            </div>
+                            <div class="megamenu__product-info">
+                              <p class="megamenu__product-title">{{ preview_product.title }}</p>
+                           <p class="megamenu__product-price">{{ preview_product.price | money }}</p> 
+                            </div>
+                          {% endif %}
+                        </div>
+                      {% endif %}
+                      {% endcomment %}
+                    {%- endfor -%}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- elsif has_dropdown -%}
+          <div class="site-nav__dropdown">
+            <ul class="site-nav__dropdown-animate site-nav__dropdown-list text-left">
+              {%- for childlink in link.links -%}
+                {%- liquid
+                  assign has_sub_dropdown = false
+                  if childlink.levels > 0
+                    assign has_sub_dropdown = true
+                  endif
+                -%}
+  
+                <li class="{% if has_sub_dropdown %} site-nav__deep-dropdown-trigger{% endif %}">
+                  <a href="{{ childlink.url }}" class="site-nav__dropdown-link site-nav__dropdown-link--second-level{% if has_sub_dropdown %} site-nav__dropdown-link--has-children{% endif %}">
+                    {{ childlink.title | escape }}
+                    {%- if has_sub_dropdown -%}
+                      {% render 'icon', name: 'chevron-down' %}
+                    {%- endif -%}
+                  </a>
+                  {%- if has_sub_dropdown -%}
+                    <ul class="site-nav__deep-dropdown">
+                      {%- for grandchildlink in childlink.links -%}
+                        <li>
+                          <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link">{{ grandchildlink.title | escape }}</a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  {%- endif -%}
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endif -%}
+        {% if is_megamenu or has_dropdown %}
+          </details>
+        {% endif %}
+      </li>
+    {% endif %}
+    
+  {%- endfor -%}
+</ul>
+
+{% style %}
+/* mega */
+  .custom_mega .e_product_badge_new {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    z-index: 3;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1;
+    /* background: url(//oneisall.com/cdn/shop/files/Vector_87e12308-2918-4e3c-a674-f52ae10848fa_60x.png?v=1736302222) no-repeat center;
+    background-size: contain; */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4px;
+  }
+  .custom_mega .product-menu__wrapper{
+    padding:40px 0;
+  }
+  .custom_mega_wrapper{
+    display: flex;
+    gap:40px;
+    grid-template-columns: 200px 1fr;
+  }
+  .custom_mega_wrapper .group_name{
+        width: 200px;
+  }
+  .custom_mega_wrapper .group_name .group_name-item{
+    font-size:14px;
+    color: rgba(0, 0, 0, 0.80);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .custom_mega_wrapper .group_name .group_name-item .icon-chevron-right {
+    width: 11px;
+    height: 11px;
+    color:inherit;
+  }
+  .custom_mega_wrapper .group_name .group_name-item .icon-chevron-right path{
+    stroke-width:1px;
+  }
+  .custom_mega_wrapper .group_name .group_name-item.open{
+    font-weight: 500;
+    color: #F47C20;
+  }
+  .custom_mega_wrapper .group_content{
+    width: calc(100% - 200px - 40px);
+  }
+  .custom_mega_wrapper .group_content .group_products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, calc((100% - 100px)/6));
+    gap:20px;
+  }
+  .custom_mega_wrapper .group_content .group_products-item__info {
+    
+    margin-top: 16px;
+    
+  }
+  .custom_mega_wrapper .group_content .group_products-item__info .subtitle{
+    font-size: 14px;
+        margin-bottom: 6px;
+    display: block;
+    text-align: center;
+        font-weight: 600;
+  }
+  .custom_mega_wrapper .group_content .group_products-item__info .title{
+    font-size: 12px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .custom_mega_wrapper .group_content .group_products-item__image {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+  .custom_mega_wrapper .group_content .group_products-item__image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    aspect-ratio: 1;
+  }
+  .custom_mega_wrapper .group_content .group_content-item__footer{
+    margin-top:30px;
+    display: flex;
+    gap:100px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .custom_mega_wrapper .group_content-item__footer .group_menu{
+    width:max-content;
+    flex-wrap: wrap;
+    display:flex;
+    gap:16px;
+    align-items:center;
+    border-radius: 100px;
+    background: #FEF2E9;
+    padding:10px 40px;
+    font-size:14px;
+    font-weight: 400;
+    line-height: 1.4; 
+  }
+  .header-item--navigation a{
+    color: #000;
+  }
+  .custom_mega_wrapper .group_content-item__footer>a{
+    color: #FFF;
+    background: #000;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding:10px 16px;
+    gap:6px;
+    flex-shrink: 0;
+  }
+  .custom_mega_wrapper .group_content-item__footer .icon-chevron-right {
+    width: 10px;
+    height: 10px;
+    color:inherit;
+  }
+/* mega */
+.product-menu__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  gap: 80px;
+  padding: 40px 0;
+  background: #fff;
+  justify-items:center;
+  justify-content:center;
+}
+
+.product-menu__item {
+  text-align: center;
+}
+
+.product-menu__image {
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.product-menu__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-menu__link:hover .product-menu__image img {
+  transform: scale(1.05);
+}
+
+.product-menu__details {
+  padding: 10px;
+}
+
+.product-menu__title {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333; 
+  font-weight:bold;
+}
+.subtitle{
+  font-size:16px; font-weight:200;
+}
+.product-menu__price {
+  font-size: 14px;
+  color: #666;
+}
+
+.megamenu__products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background: #fff;
+}
+
+.megamenu__product-preview {
+  margin-top: 15px;
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+
+.site-nav__dropdown.product-menu {
+  padding: 0;
+  min-width: 300px;
+  width:100%;
+  left:0; right:0;
+}
+
+.product-menu__wrapper {
+  padding: 15px;
+}
+{% endstyle %}
+
+<script>
+  $(function(){
+    $(".custom_mega_wrapper .group_name .group_name-item").mouseenter(function(){
+      let group = $(this).attr('data-group');
+      $(this).addClass('open').siblings().removeClass('open');
+      $(`.custom_mega_wrapper .group_content .group_content-item[data-group="${group}"]`).show().siblings().hide();
+    });
+  })
+</script>

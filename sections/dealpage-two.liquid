@@ -1,0 +1,367 @@
+{% assign sid = section.id %}
+<style>
+    #shopify-section-{{ sid }} {
+       background:{{section.settings.bg}};
+        {% if section.settings.bg != blank %}
+        padding: {{section.settings.padding_pc}};
+        {% else %}
+        margin: {{section.settings.padding_pc}};
+        {% endif %}
+      overflow:hidden;
+    }
+    #shopify-section-{{ sid }} .page-width{
+      --page-width:1360px;
+    }
+    #shopify-section-{{ sid }} .product-section-info{
+      margin-bottom:24px;
+      text-align: {{ section.settings.text_alignment }};
+    }
+    #shopify-section-{{ sid }} .product-section-title{
+      color: #000;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+    #shopify-section-{{ sid }} .product-section-subtitle{
+      color:#3a3a3a;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+    #shopify-section-{{ sid }} .collection_titles_box {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 16px;
+      overflow-x: auto;
+      justify-content: {{ section.settings.block_title_alignment }};
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    #shopify-section-{{ sid }} .collection_titles_box::-webkit-scrollbar {
+      display: none;
+    }
+    #shopify-section-{{ sid }} .collection_titles_item{
+      color:#000;
+      font-size:16px;
+      padding:8px 16px;
+      border-radius:24px;
+      border:1.5px solid;
+      cursor:pointer;
+      flex-shrink: 0;
+      min-width:200px;
+      text-align:center;
+    }
+    #shopify-section-{{ sid }} .collection_titles_item.active{
+      background:#f47c20;
+      color:#fff;
+      border-color:#f47c20;
+    }
+    #shopify-section-{{ sid }} .collection_products_item {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, calc((100% - 60px) / 4));
+      gap: 40px 20px;
+    }
+    #shopify-section-{{ sid }} .collection_titles_subtitle {
+      margin-bottom: 24px;
+      text-align: {{ section.settings.block_title_alignment | replace: 'flex-start', 'left' | replace: 'center', 'center' }};
+    }
+    #shopify-section-{{ sid }} .collection_titles_subtitle_item {
+      display: none;
+      color: #3a3a3a;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    #shopify-section-{{ sid }} .collection_titles_subtitle_item.active {
+      display: block;
+    }
+  @media (max-width:959px){
+    #shopify-section-{{ sid }} {
+      {% if section.settings.bg != blank %}
+      padding: {{section.settings.padding_m}};
+      {% else %}
+      margin: {{section.settings.padding_m}};
+      {% endif %}
+    }
+    #shopify-section-{{ sid }} .product-section-info{
+      margin-bottom:24px;
+    }
+    #shopify-section-{{ sid }} .product-section-title{
+      font-size: 20px;
+    }
+    #shopify-section-{{ sid }} .product-section-subtitle{
+      font-size: 18px;
+    }
+    #shopify-section-{{ sid }} .collection_titles_box {
+      gap: 16px;
+      margin-bottom:24px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      white-space: nowrap;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+    }
+    #shopify-section-{{ sid }} .collection_titles_box::-webkit-scrollbar {
+      display: none;
+    }
+    #shopify-section-{{ sid }} .collection_titles_subtitle_item {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+    #shopify-section-{{ sid }} .collection_titles_item{
+      font-size:14px;
+      padding: 8px 12px;
+      min-width:120px;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    #shopify-section-{{ sid }} .collection_products_item {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, calc((100% - 12px) / 2));
+      gap:12px;
+    }
+  }
+</style>
+
+<div class="product-deal_two" id="product-deal_two">
+  <div class="page-width">
+    <div class="product-section-info">
+      {% if section.settings.title != blank %}
+        <h2
+          {% if section.settings.target_id != blank %}
+            id="{{ section.settings.target_id }}"
+          {% endif %}
+        >
+          <div class="product-section-title">{{ section.settings.title }}</div>
+        </h2>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <div class="product-section-subtitle">{{ section.settings.subtitle }}</div>
+      {% endif %}
+    </div>
+    {% if section.blocks.size > 1 %}
+      <div class="collection_titles_box">
+        {% for block in section.blocks %}
+          <div
+            class="collection_titles_item {% if forloop.first %}active{% endif %}"
+            data-collection="{{block.settings.collection.title | handle}}"
+          >
+            {{ block.settings.text | default: block.settings.collection.title }}
+          </div>
+        {% endfor %}
+      </div>
+      <div class="collection_titles_subtitle">
+        {% for block in section.blocks %}
+          {% if block.settings.subtitle != blank %}
+            <div
+              class="collection_titles_subtitle_item {% if forloop.first %}active{% endif %}"
+              data-collection="{{block.settings.collection.title | handle}}"
+            >
+              {{ block.settings.subtitle }}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+    <div class="collection_products_box">
+      {% for block in section.blocks %}
+        <div
+          class="collection_products_item"
+          data-collection="{{block.settings.collection.title | handle}}"
+          {% unless forloop.first %}
+            style="display:none;"
+          {% endunless %}
+        >
+          {% for product in block.settings.collection.products %}
+            <div class="cp_item" style="display:flex;">
+              {% render 'e_product-card', product: product, layout: true, collection: block.settings.collection %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  $(function () {
+    $('#shopify-section-{{ sid }} .collection_titles_item').on('click', function () {
+      let el = $(this);
+      let target = el.attr('data-collection');
+      el.addClass('active').siblings().removeClass('active');
+      $(`#shopify-section-{{ sid }} .collection_products_item[data-collection="${target}"]`).show().siblings().hide();
+      $(`#shopify-section-{{ sid }} .collection_titles_subtitle_item[data-collection="${target}"]`)
+        .addClass('active')
+        .siblings()
+        .removeClass('active');
+
+      // 滑动到容器左端（PC端和移动端）
+      const container = $('#shopify-section-{{ sid }} .collection_titles_box')[0];
+      if (container) {
+        // 检查是否需要滚动
+        if (container.scrollWidth > container.clientWidth) {
+          // 计算当前点击元素的位置，让它滑动到容器左端
+          const clickedItem = el[0];
+          const itemLeft = clickedItem.offsetLeft;
+          const containerLeft = container.offsetLeft;
+          const scrollPosition = itemLeft - containerLeft - 20;
+
+          // 使用多种方法确保滑动生效
+          try {
+            // 方法1: 使用scrollTo
+            container.scrollTo({
+              left: scrollPosition,
+              behavior: 'smooth',
+            });
+
+            // 方法2: 备用方案 - 直接设置scrollLeft
+            setTimeout(() => {
+              if (Math.abs(container.scrollLeft - scrollPosition) > 5) {
+                container.scrollLeft = scrollPosition;
+              }
+            }, 100);
+          } catch (error) {
+            console.log('scrollTo failed, using scrollLeft:', error);
+            container.scrollLeft = scrollPosition;
+          }
+        } else {
+          console.log('No scroll needed - content fits in container');
+        }
+      } else {
+        console.log('Container not found');
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Collection list",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Hot Sale"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "target_id",
+      "label": "定位文案",
+      "info": "用于定位到指定位置的标识"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "文本对齐方式",
+      "options": [
+        {
+          "value": "left",
+          "label": "居左"
+        },
+        {
+          "value": "center",
+          "label": "居中"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "block_title_alignment",
+      "label": "分类标题对齐方式",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "居左"
+        },
+        {
+          "value": "center",
+          "label": "居中"
+        }
+      ],
+      "default": "flex-start"
+    },
+    {
+      "type": "select",
+      "id": "display_title_type",
+      "label": "Title type",
+      "options": [
+        { "value": "collection", "label": "Collection" },
+        { "value": "bundles", "label": "Bundles" },
+        { "value": "discount", "label": "Discount" },
+        { "value": "default", "label": "Default" }
+      ],
+      "default": "default"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_special_attr",
+      "label": "Display special attribute",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "text",
+      "id": "padding_pc",
+      "label": "Padding (desktop)",
+      "default": "150px 0"
+    },
+    {
+      "type": "text",
+      "id": "padding_m",
+      "label": "Padding (mobile)",
+      "default": "80px 0"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection list",
+      "blocks": [
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

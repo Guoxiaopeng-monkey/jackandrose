@@ -1,0 +1,369 @@
+{% assign sid = section.id %}
+<style>
+    #shopify-section-{{ sid }} {
+      margin: {{section.settings.padding_pc}};
+    }
+    #shopify-section-{{ sid }} .page-width{
+      --page-width:1360px;
+    }
+    #shopify-section-{{ sid }} .product-section-info{
+      max-width:1000px;
+      margin-bottom:40px;
+    }
+    #shopify-section-{{ sid }} .product-section-title{
+      /* background: linear-gradient(90deg, #F47C20 0%, #FFEF75 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; */
+      color: #F47C20;
+      
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    #shopify-section-{{ sid }} .product-section-text{
+      color: rgba(0, 0, 0, 0.80);
+      font-size: 20px;
+      line-height: 1.4;
+      margin-top:12px;
+    }
+    #shopify-section-{{ sid }} .pcb_blocks-slide{
+      display:flex;
+      gap:80px;
+      margin-top:60px;
+    }
+    #shopify-section-{{ sid }} .pcb_blocks>.pcb_blocks-slide:not(:first-child){
+      margin-top:40px;
+    }
+    #shopify-section-{{ sid }} .first {
+      width:100px;
+      position:relative;
+    }
+    /* #shopify-section-{{ sid }} .first img{
+      max-width:150px;
+    } */
+    #shopify-section-{{ sid }} .second {
+      width:calc(100% - 100px - 80px);
+      position:relative;
+    }
+    #shopify-section-{{ sid }} .pcb_blocks-slide .parameter_heading{
+      color: #000;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.4; 
+    }
+    #shopify-section-{{ sid }} .pcb_blocks-slide .barbox {
+      display:flex;
+      gap:40px;
+      align-items:center;
+      margin-top:12px;
+    }
+    #shopify-section-{{ sid }} .pcb_blocks-slide .barbox .bar{
+      width:0px;
+      height:12px;
+      background:var(--bg);
+      border-radius: 24px;
+      transition:all 0.8s cubic-bezier(0, 0, 0.9, 0.98);
+    }
+    #shopify-section-{{ sid }} .pcb_blocks-slide .barbox .text1{
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.2;
+      background:var(--text_color);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      max-width: calc((100% - 40px)* 0.25);
+    }
+    #shopify-section-{{ sid }} .pcb_blocks-slide .barbox.value_2 .bar{
+      height: 8px;
+    }
+    #shopify-section-{{ sid }} .pcb_blocks-slide .barbox.value_2 .text1{
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.7;
+    }
+    #shopify-section-{{ sid }} .pcb_blocks-slide .text2{
+      color: #000;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.4;
+      margin-top:0px;
+      
+    }
+    #shopify-section-{{ sid }} .pcb_blocks-slide .barbox .bar.active{
+      width:calc(((100% - 40px)*0.75)*(var(--w)/100));
+    }
+  @media (max-width:959px){
+    #shopify-section-{{ sid }} {
+      margin: {{section.settings.padding_m}};
+    }
+    #shopify-section-{{ sid }} .product-section-info{
+      margin-bottom:24px;
+    }
+    #shopify-section-{{ sid }} .product-section-title{
+      font-size: 20px;
+    }
+    #shopify-section-{{ sid }} .product-section-text{
+      font-size: 14px;
+    }
+    #shopify-section-{{ sid }} .pcb_blocks-slide{
+      /* flex-direction: column; */
+      gap:8px;
+      margin-top:40px;
+    }
+    /* #shopify-section-{{ sid }} .first img, */
+    #shopify-section-{{ sid }} .first {
+      width:50px;
+    }
+    #shopify-section-{{ sid }} .second {
+      width:calc(100% - 50px - 8px);
+    }
+    #shopify-section-{{ sid }} .pcb_blocks-slide .parameter_heading{
+      font-size: 18px;
+    }
+    #shopify-section-{{ sid }} .pcb_blocks-slide .barbox {
+      gap:8px;
+      margin-top:16px;
+    }
+    #shopify-section-{{ sid }} .pcb_blocks-slide .barbox.value_2 {
+      margin-top:12px;
+    }
+    #shopify-section-{{ sid }} .pcb_blocks-slide .barbox .bar{
+      height:10px;
+    }
+    #shopify-section-{{ sid }} .pcb_blocks-slide .barbox.value_2 .bar{
+      height:6px;
+    }
+    #shopify-section-{{ sid }} .pcb_blocks-slide .barbox .text1{
+      font-size: 18px;
+      max-width: unset;
+      /* max-width: calc((100% - 8px)* 0.25); */
+    }
+    #shopify-section-{{ sid }} .pcb_blocks-slide .barbox.value_2 .text1{
+      font-size: 16px;
+    }
+    #shopify-section-{{ sid }} .pcb_blocks-slide .barbox .bar.active{
+      width:calc(((100% - 8px)*0.75)*(var(--w)/100));
+    }
+    #shopify-section-{{ sid }} .pcb_blocks-slide .barbox.value_1+.text2{
+      margin-top: 4px;
+    }
+    #shopify-section-{{ sid }} .pcb_blocks-slide .barbox.value_2+.text2{
+      margin-top: 8px;
+    }
+  }
+</style>
+
+<div class="product-compare-bar" id="Product-compare-bar">
+  <div class="page-width">
+    <div class="product-section-info">
+      {% if section.settings.title != blank %}
+        <div class="product-section-title">{{ section.settings.title }}</div>
+      {% endif %}
+      {% if section.settings.text != blank %}
+        <div class="product-section-text">{{ section.settings.text }}</div>
+      {% endif %}
+    </div>
+    <div class="pcb_blocks">
+      {% for block in section.blocks %}
+        <div class="pcb_blocks-slide">
+          {% if block.settings.img != blank %}
+          <div class="first" style="--pt_desktop:{{ 100 | divided_by: block.settings.img.aspect_ratio }}%;">
+            {{ block.settings.img | image_url: width: '250x' | image_tag  }}
+          </div>
+          {% endif %}
+          <div class="second">
+            {% if  block.settings.heading != blank %}
+            <div class="parameter_heading">{{ block.settings.heading }}</div>
+            {% endif %}
+            {% for i in (1..2) %}
+              {% liquid
+                assign width_key = 'width_' | append: i
+                assign bg_key = 'bg_' | append: i
+                assign text_color_key = 'text_color_' | append: i
+                assign text_key = 'text_' | append: i
+                assign text_2_key = 'text_2_' | append: i
+                assign width = block.settings[width_key]
+                assign bg = block.settings[bg_key]
+                assign text_color = block.settings[text_color_key]
+                assign text = block.settings[text_key]
+                assign text_2 = block.settings[text_2_key]
+              %}
+              <div class="barbox {{ i | prepend :'value_' }}" style="--bg:{{ bg }};--text_color:{{ text_color }}">
+                <div class="bar" style="--w:{{ width }}"></div>
+                <div class="text1">{{ text }}</div>
+              </div>
+              <div class="text2">{{ text_2 }}</div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  document.addEventListener('DOMContentLoaded', function () {
+
+    function handleIntersection(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          
+          if(!entries[0].target.children[0].classList.contains('active')){
+            entries[0].target.children[0].classList.add('active')
+            observer.unobserve(entry.target);
+          }
+          
+        }
+      });
+    }
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5
+    };
+    const targetElement{{ section.index }}Index = document.querySelectorAll('#shopify-section-{{ sid }} .barbox');
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    targetElement{{ section.index }}Index.forEach((element) => {
+        observer.observe(element);
+    });
+ });
+    
+</script>
+
+{% schema %}
+  {
+    "name": "Product compare bar",
+    "settings": [
+      {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Fast & Free Shipping"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default":"Price includes shipping, free "
+          },
+       {
+        "type": "header",
+        "content": "Padding"
+      },
+      {
+        "type": "text",
+        "id": "padding_pc",
+        "label": "Padding (desktop)",
+        "default":"100px 0"
+      },
+      {
+            "type": "text",
+            "id": "padding_m",
+            "label": "Padding (mobile)",
+            "default":"80px 0"
+          }
+    ],
+    "blocks": [
+      {
+        "type": "item",
+        "name":"item",
+        "settings": [
+         {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          },
+          {
+            "type": "header",
+            "content": "Value 1"
+          },
+          {
+            "type": "range",
+            "id": "width_1",
+            "label": "Width",
+            "max": 100,
+            "min": 0,
+            "step": 1,
+            "unit": "%",
+            "default":80
+          },
+          {
+            "type": "color_background",
+            "id":"bg_1",
+            "label": "Background",
+            "default":"linear-gradient(270deg, #FFEF75 0%, #F47C20 100%)"
+          },
+          {
+            "type": "text",
+            "id": "text_1",
+            "label": "Text 1",
+            "default":"44,000RPM"
+          },
+          {
+            "type": "color_background",
+            "id":"text_color_1",
+            "label": "Color",
+            "default":"linear-gradient(90deg, #F47C20 0%, #FFEF75 100%)"
+          },
+          {
+            "type": "text",
+            "id": "text_2_1",
+            "label": "Text 2",
+            "default":"Oneisall Cozy C1 8"
+          },
+          {
+            "type": "header",
+            "content": "Value 2"
+          },
+          {
+            "type": "range",
+            "id": "width_2",
+            "label": "Width",
+            "max": 100,
+            "min": 0,
+            "step": 1,
+            "unit": "%",
+            "default":40
+          },
+          {
+            "type": "color_background",
+            "id":"bg_2",
+            "label": "Background",
+            "default":"#b3b3b3"
+          },
+          {
+            "type": "text",
+            "id": "text_2",
+            "label": "Text 1",
+            "default":"44,000RPM"
+          },
+          {
+            "type": "color_background",
+            "id":"text_color_2",
+            "label": "Color",
+            "default":"#666"
+          },
+          {
+            "type": "text",
+            "id": "text_2_2",
+            "label": "Text 2",
+            "default":"20,000RPM"
+          }
+        ]
+      }
+    ],
+    "presets": [
+        {
+            "name": "Product compare bar",
+        }
+    ]
+  }
+{% endschema %}

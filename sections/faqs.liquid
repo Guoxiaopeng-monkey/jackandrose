@@ -1,0 +1,246 @@
+{% capture plus_icon %}
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x plus-icon" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+{% endcapture %}
+
+{% capture minus_icon %}
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x minus-icon" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line></svg>
+{% endcapture %}
+
+{% assign sid = section.id %}
+<style>
+    #shopify-section-{{ sid }} {
+        margin: {{section.settings.padding_pc}};
+    }
+  #shopify-section-{{ sid }} .page-width{
+      --page-width:1360px;
+    }
+    #shopify-section-{{ sid }} .sections_faqs--title{
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 1.4;
+      margin:0 0 56px;
+      text-align:{{section.settings.align}};
+      color:#000;
+    }
+
+  .accordion-faq--{{ section.id }} .accordion-content {
+    padding:0 0 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+  }
+
+  .accordion-content summary {
+      color:#000;
+    font-size: 20px;
+    line-height: 1.4;
+    padding: 24px 0 0;
+    font-weight: 500;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor:pointer;
+  }
+  .accordion-content .rte {
+    margin:24px 0 0;
+  }
+  .accordion-content .rte p{
+    color: rgba(0, 0, 0, 0.80);
+    
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  .accordion-faq--{{ section.id }} .feather-x {
+    transform: rotate(45deg);
+  }
+
+  .accordion-faq--{{ section.id }} .chevron-up {
+    transform: rotate(180deg);
+  }
+
+  .accordion-faq--{{ section.id }} .feather-x,
+  .accordion-faq--{{ section.id }} .feather-chevron-down {
+    width: var(--base-font-size);
+    height: var(--base-font-size);
+  }
+
+  .accordion-faq--{{ section.id }} details summary .minus-icon,
+  .accordion-faq--{{ section.id }} details summary .chevron-up {
+    display: none;
+  }
+
+  .accordion-faq--{{ section.id }} details[open] summary .plus-icon,
+  .accordion-faq--{{ section.id }} details[open] summary .chevron-down {
+    display: none;
+  }
+
+  .accordion-faq--{{ section.id }} details[open] summary .minus-icon,
+  .accordion-faq--{{ section.id }} details[open] summary .chevron-up {
+    display: block;
+  }
+  @media (max-width:959px){
+      #shopify-section-{{ sid }} {
+            margin: {{section.settings.padding_m}};
+        }
+    #shopify-section-{{ sid }} .sections_faqs--title{
+      font-size: 20px;
+      line-height: 1.35;
+      margin:0 0 24px;
+            text-align:{{section.settings.align_m}};
+    }
+    .accordion-faq--{{ section.id }} .accordion-content {
+      padding:0 0 20px;
+    }
+    .accordion-content summary {
+        font-size: 14px;    padding: 20px 0 0;
+      --base-font-size:20px;
+    }
+    .accordion-content .rte {
+      margin:20px 0 0;
+    }
+    .accordion-content .rte p{
+      font-size: 14px;
+    }
+  }
+</style>
+
+<section id="{{ section.settings.id }}"
+  class="homepage-sections-wrapper accordion--faq-wrapper accordion-faq--{{ section.id }} homepage-sections-wrapper--{{ section.settings.colors }}"
+  data-wetheme-section-type="accordion--faq"
+  data-wetheme-section-id="{{ section.id }}"
+>
+    <div class="accordion-container page-width">
+      {% unless section.settings.title == blank %}
+          <h2 class="sections_faqs--title">{{ section.settings.title }}</h2>
+      {% endunless %}
+      
+      {% for block in section.blocks %}
+        {% unless block.settings.text == blank and block.settings.question == blank %}
+          <details class="accordion-content" {{ block.shopify_attributes }}>
+            <summary role="button" aria-expanded="false" tabindex="0">
+              {{ block.settings.question }}<span>{{ plus_icon }}{{ minus_icon }}</span>
+            </summary>
+            <div class="rte">
+              {{ block.settings.text }}
+            </div>
+          </details>
+        {% endunless %}
+
+        <style>
+          {% if section.settings.title == blank %}
+            .accordion-faq--{{ section.id }} details:first-of-type summary {
+              padding-top: 0;
+            }
+          {% endif %}
+        </style>
+        
+      {% endfor %}
+    </div>
+
+</section>
+
+{% schema %}
+  {
+    "name": "FAQ",
+    "class": "main-accordion--wrapper",
+    "settings": [
+        {
+          "type": "text",
+          "id": "id",
+          "label": "ID",
+          "default":"faqs",
+          "info": "不能重复"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+        },
+        {
+          "type": "select",
+          "id": "align",
+          "default":"center",
+          "label": "align PC",
+          "options": [
+            {
+              "label": "left",
+              "value": "left"
+            },
+            {
+              "label": "center",
+              "value": "center"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "align_m",
+          "default":"center",
+          "label": "align M",
+          "options": [
+            {
+              "label": "left",
+              "value": "left"
+            },
+            {
+              "label": "center",
+              "value": "center"
+            }
+          ]
+        },
+       {
+        "type": "header",
+        "content": "Padding"
+      },
+      {
+            "type": "text",
+            "id": "padding_pc",
+            "label": "Padding (desktop)",
+            "default":"100px 0"
+          },
+      {
+            "type": "text",
+            "id": "padding_m",
+            "label": "Padding (mobile)",
+            "default":"80px 0"
+          }
+    ],
+    "blocks": [
+      {
+        "type": "tab_content",
+        "name": "Tab content",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Heading",
+            "default": "Place your question or heading here"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default":"<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        ]
+      }
+    ],
+    "presets": [
+        {
+            "name": "FAQs",
+            "blocks": [
+                {
+                  "type": "tab_content"
+                },
+                {
+                  "type": "tab_content"
+                },
+                {
+                  "type": "tab_content"
+                }
+            ]
+        }
+    ]
+  }
+{% endschema %}

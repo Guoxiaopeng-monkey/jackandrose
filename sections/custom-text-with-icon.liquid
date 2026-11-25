@@ -1,0 +1,279 @@
+{%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
+
+<div  class="text-with-icons color-scheme-{{ section.settings.color_scheme }} {% if section.settings.class != blank %} {{ section.settings.class }} {% endif %}"
+  data-section-id="{{ section.id }}"
+  data-section-type="text-with-icons"
+>
+ <div class="page-width">
+    <div class="text-with-icons__blocks  has-{{ section.settings.desktop_columns_per_row }}-per-row"
+      data-block-count="{{ section.blocks.size }}"    >
+      {% for block in section.blocks %}
+        <div class="text-with-icons__block text-{{ section.settings.align_text }}" {{ block.shopify_attributes }}>
+         <div class="ico-wrapper">
+            {% case block.settings.icon %}            
+              {% when 'return'%}
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.45466 3.63508C6.82824 3.27049 7.32955 3.06641 7.85155 3.06641H16.1445C16.6665 3.06641 17.1679 3.27049 17.5414 3.63508L20.932 6.94412C21.3177 7.32049 21.5352 7.83657 21.5352 8.37544V18.9316C21.5352 20.0362 20.6397 20.9316 19.5352 20.9316H4.46094C3.35637 20.9316 2.46094 20.0362 2.46094 18.9316L2.46094 8.37544C2.46094 7.83657 2.67839 7.32049 3.06405 6.94412L6.45466 3.63508Z" stroke="#291906" stroke-width="2"/>
+<path d="M8.4338 15.7361H13.5093C14.8555 15.7361 15.9468 14.6448 15.9468 13.2986V13.2986C15.9468 11.9525 14.8555 10.8612 13.5093 10.8612H8.0625L10.1208 8.26172" stroke="#291906" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>           
+  {% when 'shipping'%}
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.86112 3C6.89215 3 5.98284 3.46801 5.41972 4.25656L1.83985 9.26959C1.47655 9.77834 1.28125 10.3879 1.28125 11.013V16.1419C1.28125 17.7988 2.6244 19.1419 4.28125 19.1419H5.45574C5.92821 20.2875 7.05598 21.0937 8.37206 21.0937C9.68814 21.0937 10.8159 20.2875 11.2884 19.1419H12.7136C13.186 20.2875 14.3138 21.0937 15.6299 21.0937C16.946 21.0937 18.0737 20.2875 18.5462 19.1419H19.7188C21.3756 19.1419 22.7188 17.7988 22.7188 16.1419V6C22.7188 4.34314 21.3756 3 19.7187 3H7.86112ZM18.6812 17.1419H19.7188C20.271 17.1419 20.7188 16.6942 20.7188 16.1419V6C20.7188 5.44772 20.271 5 19.7187 5H7.86112C7.53813 5 7.23503 5.156 7.04732 5.41885L3.46745 10.4319C3.34635 10.6015 3.28125 10.8046 3.28125 11.013V16.1419C3.28125 16.6942 3.72897 17.1419 4.28125 17.1419H5.32072C5.67429 15.7871 6.9064 14.7871 8.37206 14.7871C9.83772 14.7871 11.0698 15.7871 11.4234 17.1419H12.5785C12.9321 15.7871 14.1642 14.7871 15.6299 14.7871C17.0955 14.7871 18.3276 15.7871 18.6812 17.1419ZM8.37206 16.7871C7.7351 16.7871 7.21875 17.3035 7.21875 17.9404C7.21875 18.5774 7.7351 19.0937 8.37206 19.0937C9.00902 19.0937 9.52537 18.5774 9.52537 17.9404C9.52537 17.3035 9.00902 16.7871 8.37206 16.7871ZM14.4766 17.9404C14.4766 17.3035 14.9929 16.7871 15.6299 16.7871C16.2668 16.7871 16.7832 17.3035 16.7832 17.9404C16.7832 18.5774 16.2668 19.0937 15.6299 19.0937C14.9929 19.0937 14.4766 18.5774 14.4766 17.9404Z" fill="#291906"/>
+</svg>
+
+              {% when 'payment'%}
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 7.72712C3 6.96892 3.42874 6.27591 4.1072 5.93745L11.1072 2.44539C11.6694 2.16494 12.3306 2.16494 12.8928 2.44539L19.8928 5.93745C20.5713 6.27591 21 6.96892 21 7.72712V10.3096C21 13.6037 19.6459 16.7529 17.2551 19.019L16.1276 20.0877C13.8131 22.2815 10.1869 22.2815 7.87244 20.0877L6.74488 19.019C4.35411 16.7529 3 13.6037 3 10.3096V7.72712Z" stroke="#291906" stroke-width="2"/>
+<path d="M15.1616 10.2397L11.2421 14.1591L9.00244 11.9194" stroke="#291906" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+              
+              {% when 'delivery'%}
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.5176 14.9069C19.7987 17.0134 18.3248 18.7787 16.3805 19.862C14.4362 20.9453 12.1594 21.2698 9.98991 20.7727C7.8204 20.2756 5.91204 18.9922 4.63338 17.1704C3.35472 15.3486 2.79648 13.1176 3.06645 10.9083C3.33643 8.69903 4.41547 6.66813 6.0952 5.20785C7.77492 3.74757 9.93617 2.9615 12.1615 3.00145C14.3869 3.0414 16.5186 3.90453 18.1448 5.42416C19.771 6.94379 20.7765 9.01211 20.967 11.2297" stroke="#291906" stroke-width="2" stroke-linejoin="round"/>
+<path d="M21.8576 16.8121L20.8125 14L18.0004 15.0451" stroke="#291906" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 10L12 13L15 13" stroke="#291906" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+              
+            {% endcase %}
+               
+          </div>
+          <div class="text-with-icons__block-title">
+           {%- if block.settings.button_link != blank -%}   <a href="{{ block.settings.button_link }}" >{ {%- endif -%}{{  block.settings.title }}   {%- if block.settings.button_link != blank -%}
+                </a>
+          {%- endif -%}
+
+          </div>
+   
+        </div>
+      {% endfor %}
+    </div>
+ 
+  </div>
+</div>
+
+{%- if section.settings.divider -%}</div>{%- endif -%}
+
+{% style %}
+  .text-with-icons{padding:30px 0;}
+  #shopify-section-{{ section.id }} .icon {
+    color: {{ section.settings.icon_color }};
+  }
+  .text-with-icons__blocks{
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction:row;
+  justify-content:space-between;
+  margin-left:-15px;
+}
+ 
+.custom-columns .text-with-icons__blocks .text-with-icons__block{
+  display:flex;
+  align-items:center;
+  flex-direction:row;
+  text-align:left;
+  
+}
+   @media only screen and (min-width:769px){
+.custom-columns .text-with-icons__blocks .text-with-icons__block{
+width:25%; padding:20px; 
+}
+  }
+.text-with-icons__blocks .text-with-icons__block .ico-wrapper{
+  margin-right:10px; margin-top:3px;
+}
+
+
+.text-with-icons__block-icon{
+  display:block;
+}
+
+.text-with-icons__block-icon svg{
+    width:20px;
+    height:20px;
+    margin-top:3px;
+    margin-right:1rem;
+  }
+
+  @media only screen and (max-width:768px){
+  .text-with-icons{
+    padding: 20px 0;  
+   }
+.text-with-icons__blocks{
+    flex-direction:column;
+    margin:0;
+ }
+ .text-with-icons__blocks .text-with-icons__block{
+    width:100%;
+    padding:0 0 {{ section.settings.space_mobile }}px;
+ }
+  
+.custom-columns .text-with-icons__blocks .text-with-icons__block{
+ width:100%!important: padding:10px 0; 
+}
+.text-with-icons__block-icon .icon{
+      width:20px;
+      height:20px
+  }
+  .__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *, .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after {
+    visibility: visible !important; 
+ }
+
+ }
+
+.text-with-icons__button{
+  display:flex;
+  justify-content:center;
+}
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "custom columns with icons",
+  "class": "custom-columns",
+  "settings": [
+      {
+      "type": "text",
+      "id": "class",
+      "label": "Section Class"
+    },
+     {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "t:labels.color_scheme",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:labels.none"
+        },
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "align_text",
+      "label": "Text alignment",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "desktop_columns_per_row",
+      "label": "Desktop columns per row",
+      "default": 3,
+      "min": 2,
+      "max": 4,
+      "step": 1
+    },
+       {
+      "type": "range",
+      "id": "space_mobile",
+      "label": "Space for mobile item",
+      "default": 10,
+      "min": 1,
+      "max": 50,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon color",
+      "default": "#000"
+    },
+
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "Show section divider",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "default": "return",
+          "options": [
+            {
+              "value": "return",
+              "label": "Return"
+            },
+                {
+              "value": "shipping",
+              "label": "Shipping"
+            },
+              {
+              "value": "payment",
+              "label": "Payment"
+            },
+            {
+              "value": "delivery",
+              "label": "Delivery"
+            }
+        
+    
+          ]
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Example title"
+        },
+
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "URL"
+    }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "custom columns with icon",
+      "blocks": [
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["footer", "header", "custom.popups"]
+  }
+}
+{% endschema %}
+

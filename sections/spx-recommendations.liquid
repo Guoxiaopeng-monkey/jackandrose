@@ -1,0 +1,377 @@
+{% assign sid = section.id %}
+<style>
+    #shopify-section-{{ sid }} {
+       background:{{section.settings.bg}};
+        {% if section.settings.bg != blank %}
+        padding: {{section.settings.padding_pc}};
+        {% else %}
+        margin: {{section.settings.padding_pc}};
+        {% endif %}
+    }
+    #shopify-section-{{ sid }} .page-width{
+      --page-width:1360px;
+          --productGridMargin: 20px;
+    }
+    #shopify-section-{{ sid }} .section-header,
+    #shopify-section-{{ sid }} .product-section-info{
+      margin-bottom:40px;
+    }
+    #shopify-section-{{ sid }} .h3.section-header__title,
+    #shopify-section-{{ sid }} .product-section-title{
+      color: #000;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 1.4;
+      text-align:center;
+    }
+    #shopify-section-{{ sid }} .grid-product__image-wrap{
+      border-radius: 24px;
+      overflow:hidden;
+    }
+    #shopify-section-{{ sid }} .grid-product__tags{
+      display:none;
+    }
+    #shopify-section-{{ sid }} .grid-item__meta{
+      margin:16px 8px 0;
+    }
+    #shopify-section-{{ sid }} .grid-product__title{
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4; /* 140% */
+      overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+    #shopify-section-{{ sid }} span.grid-product__price--current {
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+    #shopify-section-{{ sid }} .index-section {
+      margin:0;
+    }
+    #shopify-section-{{ sid }} .grid-product__price {
+      margin-top: 16px;
+    }
+    #shopify-section-{{ sid }} .grid-product__price--original{
+      color: rgba(0, 0, 0, 0.40);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.4; /* 140% */
+      text-decoration-line: strikethrough;
+    }
+    #shopify-section-{{ sid }} .grid-product__price--savings,
+    #shopify-section-{{ sid }} span.grid-product__price--current .grid-product__price--from span{
+      display:none;
+    }
+    #shopify-section-{{ sid }} span.grid-product__price--current .grid-product__price--from sup{
+      top:unset;
+      font-size:inherit;
+    }
+  #shopify-section-{{ sid }} .grid-item__content,#shopify-section-{{ sid }} .grid-item__link{
+    height:unset;
+  }
+   #shopify-section-{{ sid }} .grid-product__actions {
+    top: unset;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+   #shopify-section-{{ sid }} .quick-add-btn {
+    width: 100%;
+    margin: 0;
+     border-radius: 8px;
+     overflow:hidden;
+  }
+   #shopify-section-{{ sid }} .quick-add-btn:hover {
+             transform: scale(1);
+   }
+   #shopify-section-{{ sid }} .quick-add-btn span{
+     color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4; /* 140% */
+    background: linear-gradient(90deg, #04B2D1 0%, #E7E97E 100%);
+     display: block;
+    width: 100%;
+    border-radius: unset;
+         border: unset;
+   }
+   #shopify-section-{{ sid }} .quick-add-btn span at-icon{
+     display:none;
+   }
+   #shopify-section-{{ sid }} .quick-add-btn span span.icon__fallback-text.visually-hidden{
+     border: unset;
+    clip:unset;
+    height: unset;
+    margin: unset;
+    overflow: unset;
+    padding: unset;
+    position: unset;
+    width: 100%;
+   }
+  #shopify-section-{{ sid }} .grid-item__content>div>a img.grid-product__image ,
+  #shopify-section-{{ sid }} .grid-item__content>div>a {
+          aspect-ratio: 1;
+    }
+  @media (max-width:959px){
+     #shopify-section-{{ sid }} {
+      {% if section.settings.bg != blank %}
+      padding: {{section.settings.padding_m}};
+      {% else %}
+      margin: {{section.settings.padding_m}};
+      {% endif %}
+    }
+    #shopify-section-{{ sid }} .page-width{
+          --productGridMargin: 12px;
+    }
+    #shopify-section-{{ sid }} .new-grid.product-grid.scrollable-grid--small{
+          overflow: hidden;
+      flex-wrap: wrap;
+    }
+    
+    #shopify-section-{{ sid }} .new-grid {
+      padding:0;
+    }
+    #shopify-section-{{ sid }} .scrollable-grid--small .grid-item{
+              flex: 0 0 50%;
+    }
+    #shopify-section-{{ sid }} .pvs_blocks{
+      display:flex;
+      gap:12px;
+      margin-right: calc(-1* var(--pageWidthPadding));
+      overflow-x:auto;
+    }
+    #shopify-section-{{ sid }} .section-header,
+    #shopify-section-{{ sid }} .product-section-info{
+      margin-bottom:36px;
+    }
+    #shopify-section-{{ sid }} .h3.section-header__title,
+    #shopify-section-{{ sid }} .product-section-title{
+      font-size: 20px;
+      text-align:left;
+    }
+   #shopify-section-{{ sid }} .grid-product__title{
+     font-size:14px;
+     
+   }
+   #shopify-section-{{ sid }} .quick-add-btn span{
+     font-size:12px;
+   }
+    #shopify-section-{{ sid }} span.grid-product__price--current {
+    font-size: 16px;
+    font-weight: 600;
+}
+    #shopify-section-{{ sid }} .grid-product__price--original{
+    font-size: 12px;
+      
+    }
+  }
+</style>
+
+<div class="spx-recommendations" id="spx-recommendations">
+  <div class="page-width">
+    {% comment %}
+      
+      <div class="product-section-info">
+        {% if section.settings.title != blank %}
+        <div class="product-section-title">{{ section.settings.title }}</div>
+        {% endif %}
+      </div>
+    {% endcomment %}
+    {% render 'section-product-recommendations',
+        section: section,
+        product_recommendations_heading: section.settings.title,
+        related_count: 4,
+        products_per_row: 4,
+        recommendations: recommendations,
+        product: product,
+        routes: routes,
+        quick_add_enable: true,
+        quick_shop_enable: false,
+        product_grid_image_size: settings.product_grid_image_size,
+        product_grid_image_fill: settings.product_grid_image_fill,
+        product_hover_image: settings.product_hover_image,
+        enable_swatches: settings.enable_swatches,
+        vendor_enable: settings.vendor_enable,
+        product_save_amount: settings.product_save_amount,
+        product_save_type: settings.product_save_type,
+        superscript_decimals: false,
+        hydration: 'on:visible',
+        set_image_breathing_room: true,
+        product_grid_style: settings.product_grid_style,
+        spx_no:true
+      %}
+  </div>
+</div>
+                  
+
+<script type="module">
+  class QuickAdd extends HTMLElement {
+  constructor() {
+    super();
+
+    this.selectors = {
+      quickAddBtn: '[data-single-variant-quick-add]',
+      quickAddHolder: '[data-tool-tip-content]'
+    };
+
+    if (!theme.settings.quickAdd) {
+      return;
+    }
+
+    this.container = this;
+    this.init();
+  }
+
+  init() {
+    // When a single variant, auto add it to cart
+    console.log(this);
+    const quickAddBtn = this.container.querySelector(this.selectors.quickAddBtn);
+    if (quickAddBtn) {
+      quickAddBtn.addEventListener('click', this.addToCart.bind(this));
+    } else {
+      // Listen for a tool tip quick add event
+      this.addEventListener('tooltip:interact', async e => {
+        if (e.detail.context === 'QuickAdd') {
+          if (!this.quickAddData) {
+            this.quickAddData = await this.loadQuickAddForm(e);
+          }
+        }
+      });
+
+      this.addEventListener('tooltip:open', async e => {
+        if (e.detail.context === 'QuickAdd') {
+          if (!this.quickAddData) {
+            this.quickAddData = await this.loadQuickAddForm(e);
+          }
+
+          const quickAddContainer = document.querySelector(this.selectors.quickAddHolder);
+          quickAddContainer.innerHTML = this.quickAddData.outerHTML;
+          new Product(quickAddContainer);
+
+          document.dispatchEvent(new CustomEvent('quickshop:opened'));
+
+          if (Shopify && Shopify.PaymentButton) {
+            Shopify.PaymentButton.init();
+          }
+        }
+      });
+    }
+  }
+
+  addToCart(evt) {
+    const btn = evt.currentTarget;
+    const visibleBtn = btn.querySelector('.btn');
+    const id = btn.dataset.id;
+    visibleBtn.classList.add('btn--loading');
+console.log(btn);
+    const data = {
+      'items': [{
+        'id': id,
+        'quantity': 1
+      }]
+    };
+
+    fetch(theme.routes.cartAdd, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      credentials: 'same-origin',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.status === 422 || data.status === 'bad_request') {
+        if (data.description) {
+          alert(data.description);
+        }
+      } else {
+        document.dispatchEvent(new CustomEvent('ajaxProduct:added', {
+          detail: {
+            product: data,
+            addToCartBtn: btn
+          }
+        }));
+      }
+
+      visibleBtn.classList.remove('btn--loading');
+    });
+  }
+
+  async loadQuickAddForm(evt) {
+    const gridItem = evt.currentTarget.closest('.grid-product');
+    const handle = gridItem.firstElementChild.getAttribute('data-product-handle');
+    const prodId = gridItem.firstElementChild.getAttribute('data-product-id');
+
+    let url = `${theme.routes.home}/products/${handle}?view=form`;
+
+    // remove double `/` in case shop might have /en or language in URL
+    url = url.replace('//', '/');
+
+    try {
+      const response = await fetch(url);
+      const html = await response.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const div = doc.querySelector(`.product-section[data-product-handle="${handle}"]`);
+
+      window.dispatchEvent(new CustomEvent(`quickadd:loaded:-${prodId}`));
+
+      document.dispatchEvent(new CustomEvent('quickadd:loaded', {
+        detail: {
+          productId: prodId,
+          handle: handle
+        }
+      }));
+
+      return div;
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  }
+}
+
+customElements.define('quick-add', QuickAdd);
+</script>
+
+{% schema %}
+  {
+    "name": "Spx recommendations",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Recommended Purchase"
+      },
+     {
+      "type": "header",
+      "content": "Padding"
+    },
+      {
+        "type": "text",
+        "id": "padding_pc",
+        "label": "Padding (desktop)",
+        "default":"50px 0"
+      },
+      {
+            "type": "text",
+            "id": "padding_m",
+            "label": "Padding (mobile)",
+            "default":"40px 0"
+          }
+    ],
+    "presets": [
+        {
+            "name": "Spx recommendations",
+        }
+    ]
+  }
+{% endschema %}

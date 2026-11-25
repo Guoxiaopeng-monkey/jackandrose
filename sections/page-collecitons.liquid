@@ -1,0 +1,232 @@
+{% assign sid = section.id %}
+<style>
+  #shopify-section-{{ sid }} {
+      margin: 40px 0 100px;
+  }
+  #shopify-section-{{ sid }} .page-width{
+    --page-width:1360px;
+  }
+  #shopify-section-{{ sid }} .e_collecitons_header {
+    display:flex;
+    align-items: flex-start;
+    --gap:24px;
+    gap:var(--gap);
+    overflow-x: auto;
+        justify-content: space-evenly;
+  }
+  #shopify-section-{{ sid }} .e_collection-item {
+    width:calc((100% - var(--gap)*{{section.blocks.size | minus:1}})/{{section.blocks.size}});
+    max-width: 180px;
+    text-align:center;
+    flex-shrink: 0;
+  }
+  #shopify-section-{{ sid }} .e_collection-item p{
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-top:16px;
+    padding:0 2px;
+    transition:all 0.3s;
+
+  }
+  #shopify-section-{{ sid }} .e_collection-item img{
+    max-width:80px;
+    width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+    display:block;
+    margin:0 auto;
+  }
+  #shopify-section-{{ sid }} .e_collection-item:hover p{
+        /* border: 8px solid ; */
+    color:#f47c20;
+  }
+  #shopify-section-{{ sid }} .e_collection_products{
+    margin:80px 0;
+  }
+  #shopify-section-{{ sid }} .e_collection_products.first{
+    margin-top:40px;
+  }
+  #shopify-section-{{ sid }} .e_collection_products>p{
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom:40px;
+  }
+  #shopify-section-{{ sid }} .e_collection_products>.wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, calc((100% - 60px)/4));
+    gap:20px;
+  }
+  @media (max-width:959px){
+    #shopify-section-{{ sid }} {
+          margin: 40px 0 80px;
+      }
+    #shopify-section-{{ sid }} .e_collecitons_header {
+          margin-right: -17px;
+    }
+    #shopify-section-{{ sid }} .e_collection-item {
+          max-width: 100px;
+    }
+    #shopify-section-{{ sid }} .e_collection-item p{
+      margin-top:8px;
+      font-size: 12px;
+      padding:0;
+    }
+    #shopify-section-{{ sid }} .e_collection_products{
+      margin:40px 0;
+    }
+    #shopify-section-{{ sid }} .e_collection_products>p{
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom:24px;
+    }
+    #shopify-section-{{ sid }} .e_collection_products>.wrapper{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, calc((100% - 12px)/2));
+      gap:12px;
+    }
+  }
+</style>
+
+<div class="e_collecitons ">
+  <div class="page-width ">
+    {% if section.blocks.size > 0 %}
+      {% if section.blocks.size > 1 %}
+      <div class="e_collecitons_header">
+        {% for block in section.blocks %}
+          {% if block.settings.collection != blank %}
+            <a class="e_collection-item" href="{{ block.settings.collection.handle | prepend:"#" }}">
+              {% if block.settings.image != blank %}
+                {% render 'image-element', img: block.settings.image, sizeVariable: '250px', lazy: true %}
+              {% else %}
+                {% render 'image-element',
+                  img: block.settings.collection.featured_image,
+                  sizeVariable: '250px',
+                  lazy: true
+                %}
+              {% endif %}
+              <h3>
+                <p>{{ block.settings.title | default: block.settings.collection.title }}</p>
+              </h3>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% for block in section.blocks %}
+        {% if block.settings.collection != blank %}
+          <div
+            class="e_collection_products {% if forloop.first %} first{% endif %}"
+            id="{{ block.settings.collection.handle }}"
+          >
+            <h2>
+              <p>{{ block.settings.title | default: block.settings.collection.title }}</p>
+            </h2>
+            {% if block.settings.collection.products.size > 0 %}
+              <div class="wrapper">
+                {% for product in block.settings.collection.products %}
+                  <div class="item">
+                    {% render 'e_product-card', product: product,collection: block.settings.collection %}
+                  </div>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      {% if collection != blank %}
+        <div class="e_collecitons_header">
+          <a class="e_collection-item" href="{{ collection.handle | prepend:"#" }}">
+            {% render 'image-element', img: collection.featured_image, sizeVariable: '250px', lazy: true %}
+            <p>{{ collection.title }}</p>
+          </a>
+        </div>
+        <div class="e_collection_products" id="{{ collection.handle }}">
+          <p>{{ collection.title }}</p>
+          {% if collection.products.size > 0 %}
+            <div class="wrapper">
+              {% for product in collection.products %}
+                <div class="item">
+                  {% render 'e_product-card', product: product,collection: collection %}
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  $(function () {
+    $('#shopify-section-{{ sid }} .e_collection-item').on('click', function (e) {
+      e.preventDefault();
+      let that = $(this);
+      let id = that.attr('href');
+      $('html, body').animate({ scrollTop: $(`${id}`).offset().top - $('#HeaderWrapper').height() }, 1000);
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Collections",
+  "settings": [
+    {
+      "type": "select",
+      "id": "display_title_type",
+      "label": "Title type",
+      "options": [
+        { "value": "collection", "label": "Collection" },
+        { "value": "bundles", "label": "Bundles" },
+        { "value": "discount", "label": "Discount" },
+        { "value": "default", "label": "Default" }
+      ],
+      "default": "default"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_special_attr",
+      "label": "Display special attribute",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Feature image",
+          "info": "优先使用"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collections"
+    }
+  ]
+}
+{% endschema %}

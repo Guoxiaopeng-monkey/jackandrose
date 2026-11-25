@@ -1,0 +1,166 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "t:labels.header_group",
+  "sections": {
+    "toolbar": {
+      "type": "toolbar",
+      "blocks": {
+        "toolbar-1": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "richtext": "<p>🎃<a href=\"https://petlibro.com/pages/halloween\">Halloween Deals</a><a href=\"/pages/oneisall-featured-deal\" title=\"Featured Deal\"> | Up to 46% OFF &gt;&gt;&gt;</a></p>",
+            "richtext_mobile": "<p>🎃<a href=\"https://petlibro.com/pages/halloween\">Halloween Deals</a><a href=\"/pages/oneisall-featured-deal\" title=\"Featured Deal\"> | Up to 46% OFF &gt;&gt;&gt;</a></p>"
+          }
+        },
+        "toolbar-0": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "<p><a href=\"/policies/shipping-policy\" title=\"Shipping Policy\">FREE SHIPPING ON ORDERS OVER $30 IN THE US</a></p>",
+            "richtext_mobile": "<p><a href=\"/policies/shipping-policy\" title=\"Shipping Policy\">FREE SHIPPING ON ORDERS OVER $30 IN THE US</a></p>"
+          }
+        },
+        "announcement_6gYDRA": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "<p><strong>New Customer Discount: 10% Off，CODE: FIRST10</strong></p>",
+            "richtext_mobile": "<p><strong>New Customer Discount: 10% Off，CODE: FIRST10</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "toolbar-1",
+        "toolbar-0",
+        "announcement_6gYDRA"
+      ],
+      "custom_css": [
+        ".toolbar {background: #b6758d; color: #fff;}",
+        ".toolbar a {color: #fff;}",
+        ".announcement-slider__content a {text-decoration: none;}"
+      ],
+      "settings": {
+        "announcement_center": false,
+        "toolbar_social": false,
+        "show_locale_selector": false,
+        "show_currency_selector": false,
+        "show_currency_flags": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "logo_jg7cNG": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/LOGO.svg",
+            "logo-inverted": "shopify://shop_images/LOGO.svg",
+            "desktop_logo_width": 130,
+            "mobile_logo_width": 100
+          }
+        },
+        "mega_4ibcpC": {
+          "type": "mega",
+          "settings": {
+            "target_link": "Main menu 1",
+            "group_name": "Travel Steamer",
+            "product_list": [
+              "jack-rose-travel-steamer-for-clothes"
+            ],
+            "bottom_menu": "travel-steamer",
+            "btn": "Travel Steamer",
+            "link": "https://oneisall.com/collections/accessories"
+          }
+        }
+      },
+      "block_order": [
+        "logo_jg7cNG",
+        "mega_4ibcpC"
+      ],
+      "custom_css": [],
+      "settings": {
+        "main_menu_link_list": "main-menu-1",
+        "hover_menu": true,
+        "main_menu_alignment": "left-center",
+        "mega_products": true,
+        "header_sticky": true,
+        "header_footer_menu": false,
+        "sticky_index": true,
+        "sticky_collection": false
+      }
+    },
+    "spk_country_selector_mEzcKm": {
+      "type": "spk-country-selector",
+      "blocks": {
+        "country_8gYrUr": {
+          "type": "country",
+          "settings": {
+            "flag_code": "us",
+            "country_name": "US",
+            "language": "English",
+            "link": "https://jackandrose.net/"
+          }
+        },
+        "country_NKfMNh": {
+          "type": "country",
+          "disabled": true,
+          "settings": {
+            "flag_code": "eu",
+            "country_name": "EU",
+            "language": "English",
+            "link": "https://eu.oneisall.com/"
+          }
+        },
+        "country_f74aYf": {
+          "type": "country",
+          "disabled": true,
+          "settings": {
+            "flag_code": "gb",
+            "country_name": "UK",
+            "language": "English",
+            "link": "https://uk.oneisall.com/"
+          }
+        },
+        "country_KNDFrm": {
+          "type": "country",
+          "disabled": true,
+          "settings": {
+            "flag_code": "ca",
+            "country_name": "CA",
+            "language": "English",
+            "link": "https://ca.oneisall.com/"
+          }
+        }
+      },
+      "block_order": [
+        "country_8gYrUr",
+        "country_NKfMNh",
+        "country_f74aYf",
+        "country_KNDFrm"
+      ],
+      "settings": {
+        "modal_title": "Select Country/Language",
+        "show_flags": true,
+        "enable_ip_detection": false,
+        "default_country": "us",
+        "insert_position": "header",
+        "mobile_insert_position": "header",
+        "custom_selector": "#custom-position",
+        "mobile_custom_selector": "#mobile-custom-position"
+      }
+    }
+  },
+  "order": [
+    "toolbar",
+    "header",
+    "spk_country_selector_mEzcKm"
+  ]
+}

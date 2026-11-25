@@ -1,0 +1,539 @@
+{%- style -%}
+    #shopify-section-{{ section.id }} .page-width{
+        --page-width:1360px;
+      width: 100%;
+    }
+    .template-index .page-width{
+      max-width: 1360px;
+    }
+    .desktop-video {
+      display: block;
+  }
+  .mobile-video {
+      display: none;
+  }
+
+  @media (max-width: 767px) {
+      .desktop-video {
+          display: none;
+      }
+      .mobile-video {
+          display: block;
+      }
+  }
+     .home-video-section {
+         display: flex;
+         align-items: center;
+         margin:0 0 30px 0;
+      }
+  .home-video-section  .home-video-list {
+          width: 100%;
+          overflow: hidden;
+          position: relative;
+   }
+
+    .home-video-swiper .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: transparent;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-end;
+          transition: 300ms;
+          position: relative;
+      }
+    .home-video-item {
+          width: 100%;
+          height: 100%;
+          position: relative;
+      }
+
+      .home-video-con {
+         max-width:100%;
+          width: 100%;
+          height: 93vh;
+          background-color:#333;
+         position: relative;
+         overflow: hidden;
+      }
+
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      pointer-events: none; /* Makes sure the overlay doesn't block video controls */
+      display:none;
+  }
+     .home-video-con video {
+         max-width:100%;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+     .video-info-wrap{
+       position: absolute;
+       left:0; bottom:10%; width:100%;
+       /* height:100%; */
+       display:flex;
+       justify-content:flex-start;
+       align-items:center;
+       z-index:9;
+     }
+    .video-info{
+      max-width:80%;
+      margin: 0 auto;
+      text-align:center;
+      padding-bottom:3.5%;
+      color:white;
+     }
+    .video-info .video-title {
+        font-weight: 600;
+        color:#fff;
+        margin-bottom:12px;
+        font-size: 56px;
+        line-height: 1;
+        text-transform: capitalize;
+      }
+     .video-info .video-desp{
+       margin-bottom:24px;
+        color: #FFF;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px; /* 140% */
+        text-transform: capitalize;
+     }
+    .template-index .video-info .btn{
+        padding: 8px 20px;
+        border-radius: 8px;
+        background: #F47C20;
+    }
+
+    .home-video-con:hover  .home-video-title, .home-video-title a { }
+     .home-video-list .swiper-button-prev {
+      display: none;
+    }
+
+
+  .play-pause-btn {
+      position: absolute;
+      bottom: 40%;
+      left: 50%;
+      transition:all 0.3s ease;
+      transform:translateX(-20px);
+      width: 60px;
+      height: 60px;
+      border-radius:50%;
+      border:1px solid #fff;
+      background:rgba(0,0,0,0.2);
+      color:#fff;
+      cursor: pointer;
+      z-index:10;
+      display:none;
+  }
+  .play-pause-btn:hover{
+      background:rgba(0,0,0,0.5);
+  }
+  .play-pause-btn.pause::before {
+      content: '||';
+      color: #fff;
+      display: block;
+      font-weight:bold;
+      font-size: 20px;
+      line-height: 32px;
+      letter-spacing:3px;
+      text-align: center;
+  }
+
+  .play-pause-btn.play::before {
+      content: '▶';
+      color: #fff;
+      display: block;
+      font-size: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-radius:3px;
+  }
+    .text-mask{ -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent; text-transform:uppercase;
+       }
+    .home-video-section  .swiper-button{
+      opacity:0;
+    }
+  .home-video-section  .swiper-pagination{
+    z-index:99;
+  }
+
+  .home-video-section   .swiper-pagination-bullet {
+    width: 100px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: relative;
+    border-radius: 0;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .home-video-section .swiper-pagination-bullet-active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    animation: progress 13s linear forwards;
+  }
+
+  @keyframes progress {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  .mobile-video{display:none;}
+  @media  (max-width: 767px) {
+
+    .desktop-video{display:none;}
+    .mobile-video{display:block;}
+    .home-video-section {
+       display: flex;
+       margin:0 0 15px;
+       flex-direction:column;
+      }
+   .home-video-con {
+     max-width:100%;
+     height: 70vh;
+      background-color:#333;
+         position: relative;
+         overflow: hidden;
+      }
+     .video-info{
+      max-width:95%;
+      text-align:left;
+      padding-bottom:60px;
+    }
+       .home-video-con video {
+         max-width:100%;
+          width: auto;
+          height: 100%;
+          object-fit: cover;
+      }
+   .home-video-section  .home-video-list {
+      width:100%;
+    }
+      .video-info .video-title {
+          font-size:40px;
+      }
+     .home-video-section   .pro_intro {
+       flex: 0 0 100%; padding:10px;
+     }
+    .home-video-section  .pro_intro .subtitle{color:#fe8221;font-size:1.5rem; margin-bottom:1rem;}
+    .home-video-section  .pro_intro h2{color:#fe8221;font-size:3.2rem; margin-bottom:1rem;}
+     .pro_intro .desp {
+          font-size: 0.9rem;
+      }
+  .home-video-title {padding:10px 15px;}
+
+  .home-video-section   .swiper-pagination-bullet {
+    width: 40px; height:3px;
+  }
+    .video-info-wrap{
+      justify-content: flex-start;
+      align-items: flex-end;
+          bottom: 0;
+     }
+    .video-info .video-title {
+        margin-bottom:8px;
+        font-size: 28px;
+        line-height: 40px;
+      }
+     .video-info .video-desp{
+       margin-bottom:12px;
+        font-size: 14px;
+        line-height: 20px;
+     }
+    .template-index .video-info .btn{
+        padding: 6px 12px;
+    }
+  }
+
+   .home-video-list .swiper-pagination-bullet-active.paused::before {
+      animation-play-state: paused;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      .pro_intro .subtitle {
+          font-size: 1.4rem;
+      }
+
+      .pro_intro h2 {
+          font-size: 2.5rem;
+      }
+
+      .pro_intro .desp {
+          font-size: 1.1rem;
+      }
+  }
+   .video-loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 5px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top: 5px solid white;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      z-index: 0;
+     opacity:0;
+  }
+
+
+  @keyframes spin {
+      0% {
+          transform: rotate(0deg);
+      }
+      100% {
+          transform: rotate(360deg);
+      }
+  }
+{%- endstyle -%}
+
+
+<div class="home-video-section">
+  <div class="home-video-list">
+    <div class="swiper-container home-video-swiper">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide swiper-{{ block.id }}">
+            <div class="home-video-item">
+              <div class="home-video-con">
+                {% if block.settings.enable_overlay %}
+                  <div
+                    class="video-overlay"
+                    style="background: rgba(0, 0, 0, {{ block.settings.overlay | times: 0.01 }});"
+                  ></div>
+                {% endif %}
+
+                <video
+                  id="desktop-video-{{ forloop.index }}"
+                  class="desktop-video"
+                  {% if block.settings.cover_image != blank %}
+                    poster="{{ block.settings.cover_image | img_url: 'master' }}"
+                  {% endif %}
+                  autoplay
+                  loop
+                  playsinline
+                  muted
+                >
+                  <source src="{{ block.settings.video_url }}" type="video/mp4">
+                </video>
+
+                {% if block.settings.mobile_video_url != blank %}
+                  <video
+                    id="mobile-video-{{ forloop.index }}"
+                    class="mobile-video"
+                    {% if block.settings.cover_image != blank %}
+                      poster="{{ block.settings.cover_image | img_url: 'master' }}"
+                    {% endif %}
+                    autoplay
+                    loop
+                    playsinline
+                    muted
+                  >
+                    <source src="{{ block.settings.mobile_video_url }}" type="video/mp4">
+                  </video>
+                {% endif %}
+                <button class="play-pause-btn pause"></button>
+              </div>
+
+              <div class="video-loader"></div>
+              <div class="video-info-wrap">
+                <div class="page-width">
+                  <div class="video-info rte-text">
+                    {%- if block.settings.subtitle != blank -%}
+                      <div class="video-subtitle">{{ block.settings.subtitle }}</div>
+                    {%- endif -%}
+                    {%- if block.settings.title != blank -%}
+                      <h2 class="video-title">{{ block.settings.title }}</h2>
+                    {%- endif -%}
+                    {%- if block.settings.desp_text != blank -%}
+                      <div class="video-desp">{{ block.settings.desp_text }}</div>
+                    {%- endif -%}
+                    {%- if block.settings.label != blank -%}
+                      <a href="{{ block.settings.url }}" class="btn btn--primary btn-animated">
+                        <span>{{ block.settings.label }}</span>
+                      </a>
+                    {%- endif -%}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button swiper-button-prev">...</div>
+      <div class="swiper-button swiper-button-next">...</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    // Initialize Swiper
+    var swiper = new Swiper('.home-video-list .swiper-container', {
+      spaceBetween: 10,
+      slidesPerView: 1,
+      loop: true,
+      autoplay: {
+        delay: 13000, // Use the dynamic delay
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.home-video-list .swiper-button-next',
+        prevEl: '.home-video-list .swiper-button-prev',
+      },
+      pagination: {
+        el: '.home-video-list .swiper-pagination',
+        clickable: true,
+      },
+    });
+
+    $('.home-video-con').each(function () {
+      var container = $(this);
+      var desktopVideo = container.find('.desktop-video');
+      var mobileVideo = container.find('.mobile-video');
+      var button = container.find('.play-pause-btn');
+
+      // Determine which video to use for mobile
+      function selectVideo() {
+        if ($(window).width() <= 767) {
+          if (mobileVideo.length && mobileVideo.find('source').attr('src')) {
+            desktopVideo.hide();
+            mobileVideo.show();
+          } else {
+            mobileVideo.hide();
+            desktopVideo.show();
+          }
+        } else {
+          mobileVideo.hide();
+          desktopVideo.show();
+        }
+      }
+
+      button.on('click', function () {
+        var video = container.find('video:visible')[0]; // Use the visible video
+        if (video.paused) {
+          video.play();
+          button.removeClass('play').addClass('pause');
+          swiper.autoplay.stop();
+        } else {
+          video.pause();
+          button.removeClass('pause').addClass('play');
+          swiper.autoplay.start();
+        }
+      });
+
+      container.find('video').on('loadedmetadata', function () {
+        var duration = this.duration * 1000;
+
+        // Restart autoplay with the initial delay
+        if (this.paused) {
+          swiper.autoplay.start();
+        }
+      });
+
+      container.find('video').on('ended', function () {
+        swiper.slideNext();
+      });
+
+      $(window).on('resize', selectVideo).trigger('resize');
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Videos Slideshow",
+  "class": "shopify-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Video Content"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "video",
+      "settings": [
+        {
+          "type": "url",
+          "id": "video_url",
+          "label": "Video Url",
+          "info": "Link to local video"
+        },
+        {
+          "type": "url",
+          "id": "mobile_video_url",
+          "label": "Mobile Video URL",
+          "info": "Link to mobile-specific video"
+        },
+        {
+          "type": "image_picker",
+          "id": "cover_image",
+          "label": "Video Cover Image"
+        },
+        {
+          "type": "richtext",
+          "id": "subtitle",
+          "label": "Sub Title"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "desp_text",
+          "label": "Description"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Button URL"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Button Label"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_overlay",
+          "label": "Enable Overlay",
+          "default": true
+        },
+        {
+          "type": "range",
+          "id": "overlay",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Video overlay",
+          "default": 40
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

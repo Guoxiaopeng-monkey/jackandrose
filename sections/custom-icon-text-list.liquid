@@ -1,0 +1,206 @@
+{{ 'section-product-info-columns.min.css' | asset_url | stylesheet_tag }}
+
+{% case section.blocks.size %}
+	{% when 1 %}
+		{%- assign column_size = 'info-cols--item-50' -%}
+	{% when 2 %}
+		{%- assign column_size = 'info-cols--item-50' -%}
+  {% when 3%}
+		{%- assign column_size = 'info-cols--item-33' -%}
+	{% else %}
+		{%- assign column_size = 'info-cols--item-25' -%}
+{% endcase %}
+
+<section class="info-cols product-section">
+    {%- if section.settings.title != blank -%}
+     <div class="wrapper-padded page-width-narrow">
+      <div class="section-header text-{{ section.settings.align_text }}">            
+        <h2 class="title">{{ section.settings.title }}</h2>          
+      </div>
+    </div>
+  {%- endif -%}
+	<div class="homepage-sections-wrapper  info-cols--container">
+		<div class="info-cols--row wrapper-padded page-width-narrow">
+           
+			{% for block in section.blocks %}
+
+			<div class="{{ column_size }} text-{{ section.settings.align_text }}" {{ block.shopify_attributes }}>
+
+			{%- liquid 
+			if block.settings.image.alt != blank 
+				assign alt = block.settings.image.alt
+			elsif block.settings.title != blank 
+				assign alt = block.settings.title
+			else
+				assign alt = shop.name
+			endif -%}
+	
+			{% if block.settings.link != blank %}
+				<a aria-label="{{ alt }}" href="{{ block.settings.link }}" class="info-cols--image-is-link"><span class="sr-only">{{ alt }}</span>
+			{% endif %}
+
+				<div class="info-cols--image" aria-hidden="true">
+					{% if block.settings.image == blank %}
+						{{ 'image' | placeholder_svg_tag: 'icon--placeholder' }}
+					{% else %}
+						{% render 'responsive-image' with block.settings.image, alt: alt, allow_stretch: true %}
+					{% endif %}
+				</div>
+
+			{% if block.settings.link != blank %}
+				</a>
+			{% endif %}
+
+			{% if block.settings.title != '' %}
+				<h3 class="info-cols--title">{{ block.settings.title }}</h3>
+			{% endif %}
+
+			{% if block.settings.text != '' %}
+				<div class="info-cols--text">{{ block.settings.text }}</div>
+			{% endif %}
+
+			{% if block.settings.link_text != '' and block.settings.link != blank %}
+                <div class="info-cols--link--wrapper">
+                    <a href="{{ block.settings.link }}" class="info-cols--link_text">{{ block.settings.link_text }}</a>
+                </div>
+			{% endif %}
+
+			</div>
+
+		{% endfor %}
+
+		{% if section.blocks.size == 0 %}
+			<div class="placeholder-noblocks">
+				{{ 'general.onboarding.no_content' | t }}
+			</div>
+		{% endif %}
+        </div>
+		 
+	</div>
+</section>
+
+
+
+{% schema %}
+{
+	"name": {
+		"en": "Custom specs columns",
+		"de": "Info columns",
+		"es": "Info columns",
+		"fr": "Info columns",
+		"pt-PT": "Info columns"
+	},
+	"class": "custom-icon-text-columns show-on-scroll",
+	"max_blocks": 4,
+	"settings": [
+       {
+      "type": "select",
+      "id": "align_text",
+      "label": "text align",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "left"
+        },
+        {
+          "value": "center",
+          "label": "center"
+        },
+        {
+          "value": "right",
+          "label": "right"
+        }
+      ]
+    } 
+	],
+	"blocks": [
+		{
+			"type": "image",
+			"name": {
+				"en": "Image",
+				"de": "Bild",
+				"es": "Imagen",
+				"fr": "Image",
+				"pt-PT": "Imagem"
+			},
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": {
+						"en": "Image",
+						"de": "Bild",
+						"es": "Imagen",
+						"fr": "Image",
+						"pt-PT": "Imagem"
+					},
+					"info": {
+						"en": "680px minimum recommended width",
+						"de": "680 px empfohlene Mindestbreite",
+						"es": "680px ancho mínimo recomendado",
+						"fr": "Largeur minimale recommandée de 680 pixels",
+						"pt-PT": "Largura mínima recomendada de 680 px"
+					}
+				},
+				{
+					"type": "text",
+					"id": "title",
+					"label": {
+						"en": "Title",
+						"de": "Titel",
+						"es": "Título",
+						"fr": "Titre",
+						"pt-PT": "Título"
+					},
+					"default": {
+						"en": "Title",
+						"de": "Title",
+						"es": "Título",
+						"fr": "Title",
+						"pt-PT": "Title"
+					},
+					"info": {
+						"en": "Optional",
+						"de": "Optional",
+						"es": "Opcional",
+						"fr": "Facultatif",
+						"pt-PT": "Opcional"
+					}
+				}
+				
+	
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": {
+				"en": "Custom specs columns",
+				"de": "Custom specs columns",
+				"es": "Info columns",
+				"fr": "Info columns",
+				"pt-PT": "Info columns"
+			},
+			"category": {
+				"en": "Image",
+				"de": "Bild",
+				"es": "Imagen",
+				"fr": "Image",
+				"pt-PT": "Imagem"
+			},
+			"blocks": [
+				{
+					"type": "image"
+				},
+				{
+					"type": "image"
+				},
+				{
+					"type": "image"
+				}
+			]
+		}
+	]
+}
+{% endschema %}

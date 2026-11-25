@@ -1,0 +1,255 @@
+<div class="homepage-sections-wrapper--{{ section.settings.colors }}" style="background-color: {{ section.settings.bg_color }}">
+   <div class="wrapper-padded page-width"> 
+  {%- if section.settings.title != blank -%}
+      <div class="section-header text-{{ section.settings.align_text }}">
+        <h2>{{ section.settings.title | newline_to_br }}</h2>
+  
+      </div>
+  {%- endif -%}
+  <div class="text-list">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+        <div class="swiper-slide">
+         
+          <div class="rl_item">
+             <div class="rl_text">
+               <div class="scroller">
+              {% if block.settings.title != blank %}
+              <h2>{{ block.settings.title }}</h2>
+                {% endif %}
+              <div class="rtx"> {{ block.settings.text }}</div>
+               </div>
+       <div class="nav-bottom">
+          <div class="swiper-button-prev"><svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.07107 1.93044L1.9312 7.07031L7.07107 12.2102" stroke="#291906" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> </div>
+       <div class="swiper-button-next"><svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.92893 12.0696L7.0688 6.92969L1.92893 1.78982" stroke="#291906" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div>
+       
+     </div>  
+          </div>
+            <div class="rl_img">
+              {%- if block.settings.image != blank -%}
+               <div class="image-wrap"> <img class="lazyload" src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}"> </div>
+              {%- else -%}
+               {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+            </div>
+      
+          </div>
+        </div>
+        {%- endfor -%}
+      </div>
+
+      
+    </div>
+
+    
+  </div>
+  
+
+</div>
+</div>
+<style>
+ .text-slider .wrapper-padded{
+   padding-top:100px; padding-bottom:80px;
+ }
+.swiper-container {
+  width: 100%;
+}
+
+.scroller{ padding-bottom:30px;}
+.text-list .rl_item {
+  display: flex;
+  flex-wrap: nowrap; 
+  align-items: center;
+  justify-content: center;  
+  gap: 20px;  
+}
+
+ 
+.rl_item .rl_text,
+.rl_item .rl_img {
+  width: 50%;
+  box-sizing: border-box; 
+}
+ 
+ 
+.rl_item .rl_text {
+  padding-left: 0; 
+  padding-right: 20px;  
+  margin-top: 0;  
+  text-align: left; 
+}
+
+ 
+.rl_item .rl_text p {
+  font-size: 16px;  
+  line-height: 1.6; 
+}
+
+ 
+.nav-bottom {
+  display: flex;  
+ justify-content:center;
+  max-width:160px;
+  margin-top:1rem;
+  margin-left:-10px;
+  position:relative;
+  
+}
+
+  .swiper-button-prev,   .swiper-button-next {
+  background-color: #fff; 
+  border-radius: 20px; 
+  border:none;
+  width: 36px;  
+  height: 36px;  
+  display: flex; 
+  justify-content: center;  
+  align-items: center; 
+  margin-right:1rem;  
+  cursor: pointer;  
+   color:#333;
+}
+  .text-slider swiper-button-prev{left:0;}
+ .text-slider .swiper-button-next {
+right:auto;
+}
+ 
+.swiper-button-prev:after, .swiper-button-next:after {
+  font-size: 12px; font-weight:bold;
+}
+
+ 
+@media (max-width: 768px) {
+   .text-slider .wrapper-padded{
+   padding:50px 15px 10px;
+ }
+  .rl_item {
+    flex-direction: column;  
+  }
+
+  .rl_item .rl_text,
+  .rl_item .rl_img {
+    width: 100%;  
+  }
+
+  .rl_item .rl_text {
+    order: 2;  
+  }
+
+  .rl_item .rl_img {
+    order: 1;  
+  }
+
+ 
+  .rl_item .rl_text p {
+    font-size: 16px;
+  }
+}
+
+</style>
+<script>
+  var swiper = new Swiper(".text-slider .swiper-container", {
+        slidesPerView: 1,
+        autoplay: 3000,
+        navigation: {
+            nextEl: '.text-slider .swiper-button-next',
+            prevEl: '.text-slider .swiper-button-prev',
+        },
+    pagination: {
+      el: '.text-list .swiper-pagination',
+      type: 'fraction'
+    },
+    breakpoints: { 
+      320: {   
+        autoHeight: true,
+      },
+      768: {   
+        autoHeight: false,
+      }
+    }
+      });
+  
+</script>
+{% schema %}
+  {
+    "name": "Custom text slider",
+    "class": "text-slider",
+    "max_blocks": 9,
+    "settings": [ 
+     {
+		"type": "color",
+		"id": "bg_color",
+		"label": "Background color" 		 
+	  },
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Heading",
+        "default": "Title"
+      },
+      {
+        "type": "select",
+        "id": "align_text",
+        "label": "Text alignment",
+        "default": "center",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Centered"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text_block",
+        "name": "text_block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Example title"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom text slider",
+        "blocks": [
+          {
+            "type": "text_block"
+          },
+          {
+            "type": "text_block"
+          }
+        
+        ]
+      }
+    ]
+  }
+{% endschema %}

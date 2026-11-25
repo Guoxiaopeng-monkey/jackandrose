@@ -1,0 +1,214 @@
+{% comment %}
+  /**
+   * @param {object} section - section object
+   * @param {boolean} divider - show divider
+   * @param {string} color_scheme - color scheme
+   * @param {string} title - title
+   * @param {string} align_text - text alignment
+   * @param {string} heading_size - heading size
+   */
+{% endcomment %}
+
+{%- if divider -%}<div class="section--divider">{%- endif -%}
+
+<div class="color-scheme-{{ color_scheme }}">
+  {%- if color_scheme != 'none' -%}
+    {%- render 'color-scheme-texture', color_scheme: color_scheme -%}
+  {%- endif -%}
+
+  <div class="page-width container">
+    {%- if title != blank -%}
+      <div class="section-header text-{{ align_text }}">
+        <h2 class="{% if heading_size %}{{ heading_size }}{% endif %}">{{ title }}</h2>
+      </div>
+    {%- endif -%}
+  <div class="swiper-container">
+    <div class="swiper-wrapper clearfix">
+     
+      {%- for block in section.blocks -%}
+      
+        <div class="swiper-slide text-{{ align_text }}" {{ block.shopify_attributes }}>
+          <div>
+        {%- if block.settings.enable_image -%}
+            <div class="img-wrapper" style="{% if align_text == 'center' %}margin: 0 auto;{% endif %} ">
+              {%- if block.settings.button_link != blank -%}
+                <a href="{{ block.settings.button_link }}">
+              {%- endif -%}
+              {%- if block.settings.image != blank -%}
+                <div class="image-wrap"  >
+                            <img    src="{{ block.settings.image | image_url }}"  style="width:100%; height:auto">   
+                </div>
+                         
+              {%- endif -%}
+              {%- if block.settings.button_link != blank -%}
+                </a>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+          <div class="news-info">
+            {%- if block.settings.media_image != blank -%}
+                <div class="media-logo image-wrap text-spacing"  >
+                            <img    src="{{ block.settings.media_image | image_url }}"   >   
+                </div>
+                         
+              {%- endif -%}
+          {%- if block.settings.title != blank -%}
+            <h3 class="h3 rte--block">{{ block.settings.title }}</h3>
+          {%- endif -%}
+          {%- if block.settings.text != blank -%}
+            <div class="rte-setting rte--block text-spacing">{{ block.settings.text }}</div>
+          {%- endif -%}
+          {%- if block.settings.button_label != blank -%}
+            <a href="{{ block.settings.button_link }}" class="btn btn--secondary btn--small">
+              {{ block.settings.button_label }}
+            </a>
+          {%- endif -%}
+          </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+    <div class="swiper-pagination"></div>
+        <div class="swiper-button swiper-button-prev"><svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.07107 1.93044L1.9312 7.07031L7.07107 12.2102" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> </div>
+       <div class="swiper-button swiper-button-next"><svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.92893 12.0696L7.0688 6.92969L1.92893 1.78982" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div>
+  </div>
+  </div>
+</div>
+{%- if divider -%}</div>{%- endif -%}
+<style>
+  .news-slider .swiper-wrapper{
+    padding-bottom:45px;
+  }
+ 
+  .news-slider .swiper-slide > div{
+    background:#eee; border-radius:15px;
+  }
+  .news-slider .image-wrap{
+   background:transparent!important; flex-basis:21%;
+  }
+ .news-slider .news-info{
+   padding:20px 20px 25px;  display:flex;  gap:20px; align-items:center;
+ }
+   .news-slider .media-logo{
+     display:flex; align-items:center; margin:0;
+   }
+ .news-slider .media-logo img{
+   max-width:240px; background:white; padding:10px; box-sizing:border-box; border-radius:10px;  
+ }
+    .news-slider  .h3{
+       font-size:calc(var(--typeHeaderSize) * {{ section.settings.title_size_multiplier }}); display:flex; align-items:center; margin:0;
+     }
+  .news-slider  .h3 p{
+    margin:0;
+  }
+ .news-slider  .rte-setting{
+       font-size:calc(var(--typeBaseSize) * {{ section.settings.desp_size_multiplier }}); 
+     }
+   .news-slider .swiper-button svg {
+    width: 30px;
+    height: 30px;
+}
+.news-slider .swiper-button-next, .news-slider .swiper-button-prev{
+  top:40%;
+}
+.news-slider .swiper-pagination{
+    bottom:0px;
+  }
+.news-slider .swiper-pagination-bullet{
+  background:rgba(0,0,0,0.4);
+  width: 50px;
+  height: 5px; 
+  position: relative;
+  border-radius: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+.news-slider .swiper-pagination-bullet-active{
+   background:#c4c4c4; opacity:1;
+}
+ 
+.news-slider  .swiper-pagination-bullet-active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+   background:#1b1b1b;
+  animation: progress 7s linear forwards;
+}
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+  @media(max-width:768px){
+     .news-slider .news-info{
+        flex-direction:column; align-items:flex-start; gap:0;
+     }
+    .news-slider .media-logo{
+    margin-bottom:12px;
+    }
+    .news-slider .media-logo img{
+       max-width:180px; background:white; padding:8px; border-radius:6px;
+   }
+       .news-slider  .h3{
+       font-size:calc(var(--typeHeaderSize) * {{ section.settings.title_size_multiplier_mobile }}); 
+     }
+   .news-slider  .rte-setting{
+       font-size:calc(var(--typeBaseSize) * {{ section.settings.desp_size_multiplier_mobile }}); 
+     }
+     .news-slider .swiper-wrapper{
+    padding-bottom:30px;
+     }
+    .news-slider .swiper-pagination-bullet {
+      width: 25px;
+      height: 3px;
+     }
+   .news-slider .swiper-button-next, .news-slider .swiper-button-prev{
+      top:25%;
+    }
+  }
+  
+
+ 
+</style>
+<script>
+  var swiper = new Swiper(".news-slider .swiper-container", {
+        slidesPerView: 2,
+        spaceBetween: 0,
+        loop:true,
+         autoplay: {
+        delay: 7000, // Autoplay delay
+        disableOnInteraction: false
+    },
+       pagination: {
+            el: '.news-slider .swiper-pagination',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.news-slider .swiper-button-next',
+            prevEl: '.news-slider .swiper-button-prev',
+        },
+    
+    	 breakpoints: {
+         0: { /* when window >=0px - webflow mobile landscape/portriat */
+        slidesPerView: 1,
+              spaceBetween: 10,
+          },
+        769: { /* when window >= 769px - webflow desktop */
+        slidesPerView: 2,
+             spaceBetween: 20,
+          }
+         }
+      });
+ 
+</script>

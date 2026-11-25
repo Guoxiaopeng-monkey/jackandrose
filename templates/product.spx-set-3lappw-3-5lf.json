@@ -1,0 +1,627 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "custom_LtCqcj": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "<p><b>Black Friday Sale, Save </b> <span style=\"color:#FF6A00\n\">25 $</span>. Automatically apply discounts at checkout.</br>Offer ends on December 2nd.</p>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "quantity_selector_EhaEKy": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "coupon_zeMLBm": {
+          "type": "coupon",
+          "disabled": true,
+          "settings": {
+            "text1": "///$20###OFF",
+            "text2": "Extra $20 OFF after coupon",
+            "text3": "35feederSD20",
+            "text4": "Copy"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "description_M7JAy9": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "checkmark",
+            "text": "30 Days Worry-Free Returns"
+          }
+        },
+        "sales_point2": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "truck",
+            "text": "Free Shipping in The US"
+          }
+        },
+        "sales_point3": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "shield",
+            "text": "100% Secure Payments"
+          }
+        },
+        "sales_point4": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "package",
+            "text": "Ships Within 24 hours"
+          }
+        },
+        "tab_7cz8hx": {
+          "type": "tab",
+          "settings": {
+            "title": "whats in the box",
+            "content": "<ul><li>3L Cordless Cat Feeder</li><li>3.5L Cordless Water Fountain</li></ul>",
+            "page": ""
+          }
+        },
+        "tab_TLtgrD": {
+          "type": "tab",
+          "settings": {
+            "title": "Shipping & Return & Warranty",
+            "content": "<p><strong>Shipping</strong></p><p>Estimate delivery time: within 3-5 business days from the shipment date.</p><p><strong>Returns & Warranty</strong></p><p>We understand that, as a new pet care device, your pet may need a few days to adapt to and enjoy using it. However, if you’re not completely satisfied, we offer a full refund within 30 days of purchase (return shipping not included). <a href=\"/pages/return-refund-policy\" target=\"_blank\" title=\"Return & Refund Policy\">See full terms.</a></p><p>We offer a 2-year warranty. </p>",
+            "page": ""
+          }
+        },
+        "icon_bcG864": {
+          "type": "icon",
+          "settings": {
+            "icon_1": "shopify://shop_images/Fast_Free_Shipping_3812c20d-ca76-4aa4-9e69-4b6d144a4ad8.png",
+            "text_1": "Fast & Free Shipping",
+            "icon_2": "shopify://shop_images/Product_Tax_Incl..png",
+            "text_2": "Product Tax Incl.",
+            "icon_3": "shopify://shop_images/24-Month_Warranty.png",
+            "text_3": "24-Month- Warranty"
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "disabled": true,
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "complementary_products_xhNrFb": {
+          "type": "complementary_products",
+          "disabled": true,
+          "settings": {
+            "product_complementary_heading": "Frequently Bought Together",
+            "complementary_count": 3,
+            "per_slide": 3,
+            "control_type": "dots",
+            "image_style": "default"
+          }
+        },
+        "share_eTMqpL": {
+          "type": "share",
+          "disabled": true,
+          "settings": {}
+        },
+        "custom_3bHi9T": {
+          "type": "custom",
+          "settings": {
+            "code": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n</script>"
+          }
+        }
+      },
+      "block_order": [
+        "custom_LtCqcj",
+        "variant_picker",
+        "quantity_selector_EhaEKy",
+        "coupon_zeMLBm",
+        "price",
+        "buy_buttons",
+        "description_M7JAy9",
+        "sales_point",
+        "sales_point2",
+        "sales_point3",
+        "sales_point4",
+        "tab_7cz8hx",
+        "tab_TLtgrD",
+        "icon_bcG864",
+        "inventory_status",
+        "complementary_products_xhNrFb",
+        "share_eTMqpL",
+        "custom_3bHi9T"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_container_size": "medium",
+        "product_image_size": "natural",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": true,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "product_location_bar_dNC4pF": {
+      "type": "product-location-bar",
+      "blocks": {
+        "item_XKLGMV": {
+          "type": "item",
+          "settings": {
+            "title": "Overview",
+            "link": "product-scroll-video"
+          }
+        },
+        "item_bNGVkp": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "title": "Specs",
+            "link": "Product-specs"
+          }
+        },
+        "item_RNFQaQ": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "title": "Faqs",
+            "link": "faqs"
+          }
+        },
+        "item_nTXYAW": {
+          "type": "item",
+          "settings": {
+            "title": "Reviews",
+            "link": "aftership_reviews_carousel_v2_production"
+          }
+        },
+        "item_7a6hHf": {
+          "type": "item",
+          "settings": {
+            "title": "Recommended",
+            "link": "spx-recommendations"
+          }
+        }
+      },
+      "block_order": [
+        "item_XKLGMV",
+        "item_bNGVkp",
+        "item_RNFQaQ",
+        "item_nTXYAW",
+        "item_7a6hHf"
+      ],
+      "settings": {
+        "bg": "#f47c20",
+        "text-color": "#ffffff"
+      }
+    },
+    "product_scroll_img_mMNtgT": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/3Lsmart-cat-feeder-pc_247f6599-10f6-4a2b-9583-38d360fa6af6.png",
+        "img_m": "shopify://shop_images/3Lsmart-cat-feeder-m_efa63b8e-4560-454d-9202-f4ccf67c3471.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "0px 0",
+        "padding_m": "0px 0"
+      }
+    },
+    "product_scroll_img_XUKcM6": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/100-day-battry-life-pc_22f0d311-586a-4a15-9a37-c66eb7a73139.png",
+        "img_m": "shopify://shop_images/100-day-battry-life-m_8d2e9f8a-31cc-4f31-bfe1-fb8322e9b305.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "0px 0",
+        "padding_m": "0px 0"
+      }
+    },
+    "product_scroll_img_XHxbDB": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/personal-flair-pc_420e6c26-52f0-4e63-932b-95dc3014d888.png",
+        "img_m": "shopify://shop_images/personal-flair-m_577b8142-fb47-42fd-8871-79e4532abbd7.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_eizbpm": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/flexible-feeding-pc_6354c5b9-e123-4bfa-b0f6-3bad801b8260.png",
+        "img_m": "shopify://shop_images/flexible-feeding-m_3bc41820-bc52-4128-9f54-7b878da0d7b2.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_WhPfhc": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/100-days-pc_8208c321-3936-4410-8b0e-613bde119b36.png",
+        "img_m": "shopify://shop_images/100-days-m_e5878310-e9df-4ba6-9e15-b3319b49975b.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_3eGA49": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/jam-free-pc_00c5ec42-4da5-4a64-806a-5a800f7e8e67.png",
+        "img_m": "shopify://shop_images/jam-free-m_aa24e05e-8a4e-4fd6-af28-9d400269f25d.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_K7VcmP": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/place-anywhere-pc_10ffef79-20b4-40bd-b524-2e539c434653.png",
+        "img_m": "shopify://shop_images/place-anywhere-m_764824fc-7073-47f0-a14e-2e1bad297ab3.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_dJe47Q": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/more-detail-pc_cae8fc94-d583-482a-bf61-f127b0a9c088.png",
+        "img_m": "shopify://shop_images/more-detail-m_c59c9514-0e35-4d85-9b9a-1a1fe230d6e2.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_34Qkiw": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/oneisall-app-pc_8464ce9d-a77c-4777-a698-2dbd229ebfc1.png",
+        "img_m": "shopify://shop_images/oneisall-app-m_2c302573-8ecd-4569-a99a-9a53a9c3d0d0.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_yWVnG7": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/cat-water-fountain-pc_43950297-53fa-44e7-aeae-4c31118f159c.jpg",
+        "img_m": "shopify://shop_images/cat-water-fountain-m_93b6f509-3a09-4870-aabb-24c19c18535d.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_rRHPmi": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/60-days-pc_7b57543b-ed13-4fd8-94eb-13d2a99b6646.jpg",
+        "img_m": "shopify://shop_images/60-days-m_baf4f2ae-5a95-4524-bef8-dcfcbf58642c.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_fAaJPB": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/3-water-flow-mode-pc_fe765e08-30ff-4ae7-ae8f-cbcffd54dbef.jpg",
+        "img_m": "shopify://shop_images/3-water-flow-mode-m_ea15a831-4f91-4eb3-9d73-5ecb17fd305d.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_kK33jC": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/3.5l-capacity-pc_bcaf1a04-a3db-4004-9a09-28dbdcb0464c.jpg",
+        "img_m": "shopify://shop_images/3.5l-capacity-m_1f411c6b-ab22-4a89-8590-df63fbaf5a00.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_zJLFtP": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/five-layer-filtration-pc_b42fce11-7bcb-4155-88be-c329270f8ab9.jpg",
+        "img_m": "shopify://shop_images/five-layer-filtration-m_811c3932-0a4b-494f-a967-01bc1f10b7c0.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_4jeMtG": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/easy-to-control-pc_5cf77493-2996-4569-8154-915ee8ba1934.jpg",
+        "img_m": "shopify://shop_images/easy-to-control-pc_f0b7e6d4-ce31-4e21-a8ee-17e4834007d0.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_n7GyGy": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/304food-grade-pc_102a703c-b1b0-4a10-b0bd-0bae5d16b2b8.jpg",
+        "img_m": "shopify://shop_images/easy-to-control-m_024b576d-6cd4-476a-8dc2-7d84d3d1a36e.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_img_text_8Gjj3B": {
+      "type": "product-img-text",
+      "blocks": {
+        "block_style1_rUYGAN": {
+          "type": "block_style1",
+          "settings": {
+            "revese": true,
+            "img": "shopify://shop_images/3Lwifi_3.5L.png",
+            "img_m": "shopify://shop_images/3Lwifi_3.5L.png",
+            "bg": "shopify://shop_images/Group_1000007087.png",
+            "title": "What's in the box",
+            "text": "<ul><li>3L Cordless Cat Feeder</li><li>3.5L Cordless Water Fountain</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "block_style1_rUYGAN"
+      ],
+      "settings": {
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "faqs_ijrNcG": {
+      "type": "faqs",
+      "blocks": {
+        "tab_content_pBhcBm": {
+          "type": "tab_content",
+          "settings": {
+            "question": "How Does An Automatic Cat Feeder Help With My Cat’s Feeding Schedule?",
+            "text": "<p>An automatic cat feeder ensures that your cat gets fed at the same time each day, even if you're not home. You can pre-program feeding times, which helps maintain a consistent schedule and prevent overeating.</p>"
+          }
+        },
+        "tab_content_JmK8jh": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Can automatic cat feeders prevent my cat from overeating?",
+            "text": "<p>Yes, most automatic cat feeders allow you to set specific portion sizes for each meal. This helps control how much your cat eats, reducing the risk of overeating or obesity.</p>"
+          }
+        },
+        "tab_content_c6HcW7": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Will The Automatic Pet Feeder Still Feed My Pet During A Power Outage?",
+            "text": "<p>Yes, you can still feed your pet during a power outage by using an automatic pet feeder with a battery backup or feeding them manually. Preparing in advance with fresh batteries or an alternative feeding plan can help ensure your pet stays on schedule and doesn’t miss any meals during an outage.</p>"
+          }
+        },
+        "tab_content_Kzi7Uh": {
+          "type": "tab_content",
+          "settings": {
+            "question": "What Should I Look For When Choosing An Automatic Feeder For Cats?",
+            "text": "<p>When selecting an automatic feeder for cats, consider these 5 factors:</p><p>1. Capacity: Choose an automatic feeder for cats with enough space for the amount of food your cat needs.</p><p>2. Portion Control: Look for adjustable portions to manage your cat's diet.</p><p>3. Food Type Compatibility: Make sure it works with dry or wet food depending on your needs.</p><p>4. Ease of Cleaning: Choose an automatic feeder for cats with removable and washable parts.</p><p>5. Features: Look for additional features like a remote control, a camera, or a low-food indicator.</p>"
+          }
+        },
+        "tab_content_MHWpRV": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Is A Cat Automatic Feeder Safe For My Cat?",
+            "text": "<p>A Cat Automatic feeder is safe for cats as long as you use them properly and ensure they are well-maintained. </p><p>Choose a reliable, tamper-proof model, and monitor your pet's feeding habits to ensure the feeder is dispensing food correctly. Regular checks and cleaning are important to keep your pet’s food fresh and the feeder is functioning correctly.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_pBhcBm",
+        "tab_content_JmK8jh",
+        "tab_content_c6HcW7",
+        "tab_content_Kzi7Uh",
+        "tab_content_MHWpRV"
+      ],
+      "settings": {
+        "id": "faqs",
+        "title": "FAQs",
+        "align": "center",
+        "align_m": "center",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_center_slide_xFbKiR": {
+      "type": "product-center-slide",
+      "blocks": {
+        "item_TxLDJz": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/13702116-29f2-4ca0-822e-b0ce9dbc726f.__CR0_0_1464_600_PT0_SX1464_V1_ca0e4a90-c5b0-4f69-ac01-0a55b7a09b02.jpg",
+            "img_m": "shopify://shop_images/13702116-29f2-4ca0-822e-b0ce9dbc726f.__CR0_0_1464_600_PT0_SX1464_V1_ca0e4a90-c5b0-4f69-ac01-0a55b7a09b02.jpg"
+          }
+        },
+        "item_XQ7JVa": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/1_50757941-b84f-435f-b984-1dd0958bbe09.jpg",
+            "img_m": "shopify://shop_images/1_50757941-b84f-435f-b984-1dd0958bbe09.jpg"
+          }
+        },
+        "item_LTgmJR": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/208bef71-e309-4727-8a5b-bb5c7a7683b2.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+            "img_m": "shopify://shop_images/208bef71-e309-4727-8a5b-bb5c7a7683b2.__CR0_0_1464_600_PT0_SX1464_V1.jpg"
+          }
+        },
+        "item_JkfJDP": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/3261793f-146c-40ef-a156-22fa6fef76fb.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+            "img_m": "shopify://shop_images/3261793f-146c-40ef-a156-22fa6fef76fb.__CR0_0_1464_600_PT0_SX1464_V1.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "item_TxLDJz",
+        "item_XQ7JVa",
+        "item_LTgmJR",
+        "item_JkfJDP"
+      ],
+      "settings": {
+        "bg": "#fefbf8",
+        "align": "center",
+        "align_m": "center",
+        "title": "Why Oneisall",
+        "autoplay": true,
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "171524248506ebf0c3": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "spx_recommendations_EAaTNY": {
+      "type": "spx-recommendations",
+      "settings": {
+        "title": "Recommended Purchase",
+        "padding_pc": "150px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "icons_fRC7QE": {
+      "type": "product-icons",
+      "blocks": {
+        "icon_RXgQdm": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Fast & Free Shipping"
+          }
+        },
+        "icon_3tpCEf": {
+          "type": "icon",
+          "settings": {
+            "liquid": "2",
+            "title": "Product Tax Incl."
+          }
+        },
+        "icon_DDAWJJ": {
+          "type": "icon",
+          "settings": {
+            "liquid": "3",
+            "title": "24-Month Warranty"
+          }
+        },
+        "icon_6gJPeq": {
+          "type": "icon",
+          "settings": {
+            "liquid": "4",
+            "title": "30-Day Money Back"
+          }
+        }
+      },
+      "block_order": [
+        "icon_RXgQdm",
+        "icon_3tpCEf",
+        "icon_DDAWJJ",
+        "icon_6gJPeq"
+      ],
+      "settings": {
+        "padding_pc": "150px 0",
+        "padding_m": "80px 0"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product_location_bar_dNC4pF",
+    "product_scroll_img_mMNtgT",
+    "product_scroll_img_XUKcM6",
+    "product_scroll_img_XHxbDB",
+    "product_scroll_img_eizbpm",
+    "product_scroll_img_WhPfhc",
+    "product_scroll_img_3eGA49",
+    "product_scroll_img_K7VcmP",
+    "product_scroll_img_dJe47Q",
+    "product_scroll_img_34Qkiw",
+    "product_scroll_img_yWVnG7",
+    "product_scroll_img_rRHPmi",
+    "product_scroll_img_fAaJPB",
+    "product_scroll_img_kK33jC",
+    "product_scroll_img_zJLFtP",
+    "product_scroll_img_4jeMtG",
+    "product_scroll_img_n7GyGy",
+    "product_img_text_8Gjj3B",
+    "faqs_ijrNcG",
+    "product_center_slide_xFbKiR",
+    "171524248506ebf0c3",
+    "spx_recommendations_EAaTNY",
+    "icons_fRC7QE"
+  ]
+}

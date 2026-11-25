@@ -1,0 +1,592 @@
+<style>
+  .coupons-list-container {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  .section-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  .section-subtitle {
+    font-size: 20px;
+    color: #666;
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .coupons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .coupon-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .coupon-item:hover {
+    transform: translateY(-4px);
+  }
+
+  .coupon-item::before,
+  .coupon-item::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: #fff;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  .coupon-item::before {
+    left: -16px;
+  }
+
+  .coupon-item::after {
+    right: -16px;
+  }
+
+  .coupon-content {
+    display: flex;
+    position: relative;
+    height: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+  }
+
+  .coupon-left {
+    flex: 1;
+    padding: 14px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(180deg, #F47C20 0%, #FFEF75 100%);
+    color: #ffffff;
+    border-radius: 12px 0 0 12px;
+    position: relative;
+  }
+
+  .coupon-left::after {
+    content: '';
+    position: absolute;
+    right: -2px;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255) 50%, transparent 50%);
+    background-size: 4px 12px;
+    background-repeat: repeat-y;
+  }
+
+  .coupon-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 20px;
+    width: 155px;
+    background: #FBF7D7;
+    gap: 12px;
+    border-radius: 0 12px 12px 0;
+  }
+
+  .coupon-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .coupon-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .coupon-title  i{
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  .coupon-description {
+    font-size: 12px;
+    margin-bottom: 0;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 2.4em; /* line-height * 2 */
+  }
+
+  .coupon-timer {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: #000000;
+    margin: 8px 0;
+  }
+
+  .coupon-code {
+    font-size: 16px;
+    color: #000000;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  .coupon-status {
+    font-size: 14px;
+    padding: 2px 16px;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.2);
+    width: fit-content;
+    max-width: 100%;
+    background:#ffffff;
+    margin-top: 12px;
+  }
+
+  .coupon-status.sufficient {
+    color: #F47C20;
+  }
+
+  .coupon-status.limited {
+    color: #00B1D2;
+  }
+
+  .coupon-status.ended {
+    color: #808080;
+  }
+
+  .copy-button {
+    background: #F47C20;
+    border: none;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    line-height: 1;
+    cursor: pointer;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .copy-button:hover {
+    transform: scale(1.05);
+  }
+
+  .copy-button.disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+  }
+
+  .copy-button.disabled:hover {
+    transform: none;
+  }
+
+  .timer-block {
+    background: #ffffff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    min-width: 32px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .timer-separator {
+    color: #000000;
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .coupons-container {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .section-title {
+      font-size: 20px;
+    }
+
+    .section-subtitle {
+      font-size: 18px;
+    }
+
+
+    .coupon-title-container {
+      gap: 4px;
+    }
+
+    .coupon-title {
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+
+    .coupon-description {
+      font-size: 12px;
+      max-height: 2.4em; /* line-height * 2 */
+    }
+
+    .coupon-timer {
+      font-size: 12px;
+      width: 100%;
+      justify-content: flex-start;
+      order: 3;
+      margin-top: 4px;
+      margin-bottom: 8px;
+    }
+
+    .timer-block {
+      min-width: 28px;
+      padding: 3px 6px;
+    }
+
+    .timer-separator {
+      font-size: 12px;
+    }
+
+
+
+    .coupon-left {
+      padding: 14px 20px;
+    }
+
+    .coupon-right {
+      padding: 14px 20px;
+      width: 137px;
+    }
+
+    .copy-button {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<div class="coupons-list-container page-width">
+  <h2 class="section-title text-{{ section.settings.title_alignment }}">{{ section.settings.title }}</h2>
+  {% if section.settings.subtitle != blank %}
+    <p class="section-subtitle text-{{ section.settings.title_alignment }}">{{ section.settings.subtitle }}</p>
+  {% endif %}
+
+  <div class="coupons-container">
+    {% for block in section.blocks %}
+      {% if block.type == 'coupon' %}
+        <div class="coupon-item" {{ block.shopify_attributes }}>
+          <div class="coupon-content">
+            <div class="coupon-left">
+              <div class="coupon-title-container">
+                {% assign title_parts = block.settings.title | split: '**' %}
+                {% assign title_with_italics = '' %}
+                {% for part in title_parts %}
+                  {% assign index = forloop.index0 | modulo: 2 %}
+                  {% if index == 1 %}
+                    {% assign title_with_italics = title_with_italics | append: '<i>' | append: part | append: '</i>' %}
+                  {% else %}
+                    {% assign title_with_italics = title_with_italics | append: part %}
+                  {% endif %}
+                {% endfor %}
+                <h3 class="coupon-title">{{ title_with_italics }}</h3>
+                {% if block.settings.description != blank %}
+                  <div class="coupon-description">{{ block.settings.description }}</div>
+                {% endif %}
+                {% if block.settings.end_date != blank %}
+                  <div class="coupon-timer" data-end-date="{{ block.settings.end_date }}">
+                    <span class="timer-block days" style="display: none;">00</span>
+                    <span class="timer-separator days-separator" style="display: none;">:</span>
+                    <span class="timer-block hours">00</span>
+                    <span class="timer-separator">:</span>
+                    <span class="timer-block minutes">00</span>
+                    <span class="timer-separator">:</span>
+                    <span class="timer-block seconds">00</span>
+                  </div>
+                {% endif %}
+              </div>
+              {% if block.settings.status_text != blank %}
+                <div class="coupon-status {{ block.settings.status }}">
+                  {{ block.settings.status_text }}
+                </div>
+              {% endif %}
+            </div>
+            <div class="coupon-right">
+              <div class="coupon-code">{{ block.settings.code }}</div>
+              {% if block.settings.button_text != blank %}
+                <button
+                  class="copy-button {% if block.settings.status == 'ended' %}disabled{% endif %}"
+                  data-code="{{ block.settings.code }}"
+                  {% if block.settings.status == 'ended' %}
+                    disabled
+                  {% endif %}
+                >
+                  {% if block.settings.status == 'ended' %}Ended{% else %}{{ block.settings.button_text }}{% endif %}
+                </button>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const copyButtons = document.querySelectorAll('.copy-button:not(.disabled)');
+
+    copyButtons.forEach((button) => {
+      button.addEventListener('click', function () {
+        if (!this.textContent.includes('Copy')) {
+          return;
+        }
+        const code = this.getAttribute('data-code');
+        navigator.clipboard.writeText(code).then(() => {
+          const originalText = this.textContent;
+          this.textContent = 'Copied';
+          this.style.backgroundColor = '#4caf50';
+          this.style.borderColor = '#4caf50';
+          this.style.color = 'white';
+
+          setTimeout(() => {
+            this.textContent = originalText;
+            this.style.backgroundColor = '';
+            this.style.borderColor = '#ffffff';
+            this.style.color = '#ffffff';
+          }, 2000);
+        });
+      });
+    });
+
+    function updateCountdown() {
+      const timers = document.querySelectorAll('.coupon-timer');
+
+      timers.forEach((timer) => {
+        const endDateStr = timer.dataset.endDate;
+
+        // 检查日期字符串是否存在且有效
+        if (!endDateStr || endDateStr.trim() === '') {
+          timer.innerHTML = '<span class="timer-block">无截止时间</span>';
+          return;
+        }
+
+        // 标准化日期格式，确保能够正确解析
+        let normalizedDateStr = endDateStr.trim();
+        
+        // 如果只有日期没有时间，添加默认时间
+        if (normalizedDateStr.match(/^\d{4}-\d{1,2}-\d{1,2}$/)) {
+          normalizedDateStr += ' 23:59:59';
+        }
+        
+        // 确保月份和日期是两位数格式
+        normalizedDateStr = normalizedDateStr.replace(/(\d{4})-(\d{1,2})-(\d{1,2})/, function(match, year, month, day) {
+          return year + '-' + month.padStart(2, '0') + '-' + day.padStart(2, '0');
+        });
+
+        // 尝试解析日期
+        const endDate = new Date(normalizedDateStr);
+
+        
+        // 检查日期是否有效
+        if (isNaN(endDate.getTime())) {
+          timer.innerHTML = '<span class="timer-block">日期格式错误</span>';
+          return;
+        }
+
+        const endTime = endDate.getTime();
+        const now = new Date().getTime();
+        const distance = endTime - now;
+
+        if (distance < 0) {
+          timer.style.display = 'none';
+          const couponItem = timer.closest('.coupon-item');
+          if (couponItem) {
+            const button = couponItem.querySelector('.copy-button');
+            if (button && !button.classList.contains('disabled')) {
+              button.textContent = 'Ended';
+              button.classList.add('disabled');
+              button.disabled = true;
+            }
+          }
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        const daysElement = timer.querySelector('.days');
+        const daysSeparator = timer.querySelector('.days-separator');
+
+        if (days > 0) {
+          daysElement.style.display = 'inline-block';
+          daysSeparator.style.display = 'inline-block';
+          daysElement.textContent = days.toString().padStart(2, '0');
+        } else {
+          daysElement.style.display = 'none';
+          daysSeparator.style.display = 'none';
+        }
+
+        timer.querySelector('.hours').textContent = hours.toString().padStart(2, '0');
+        timer.querySelector('.minutes').textContent = minutes.toString().padStart(2, '0');
+        timer.querySelector('.seconds').textContent = seconds.toString().padStart(2, '0');
+      });
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Coupons List",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Coupons List"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "select",
+      "id": "title_alignment",
+      "label": "Title Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "coupon",
+      "name": "Coupon",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Coupon Title",
+          "default": "Coupon",
+          "info": "** $10 ** OFF"
+        },
+        {
+          "type": "text",
+          "id": "code",
+          "label": "Coupon Code",
+          "default": "COUPON123"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Use this coupon to get special discount"
+        },
+        {
+          "type": "text",
+          "id": "end_date",
+          "label": "End Date",
+          "info": "优惠券结束时间 (格式: YYYY-MM-DD 或 YYYY-MM-DD HH:mm:ss，例如: 2025-06-30 或 2025-06-30 23:59:59)"
+        },
+        {
+          "type": "select",
+          "id": "status",
+          "label": "Status",
+          "options": [
+            {
+              "value": "sufficient",
+              "label": "Sufficient"
+            },
+            {
+              "value": "limited",
+              "label": "Limited"
+            },
+            {
+              "value": "ended",
+              "label": "Ended"
+            }
+          ],
+          "default": "sufficient"
+        },
+        {
+          "type": "text",
+          "id": "status_text",
+          "label": "Status Text",
+          "default": "Available"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Copy"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Coupons List",
+      "blocks": [
+        {
+          "type": "coupon"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

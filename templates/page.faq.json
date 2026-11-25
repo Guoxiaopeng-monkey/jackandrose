@@ -1,0 +1,139 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rich_text_AdAwCF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mY3C7C": {
+          "type": "heading",
+          "settings": {
+            "title": "FAQs",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mY3C7C"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "1",
+        "section_visibility": "always",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "h2 {text-align: center; font-size: 0px;}"
+      ],
+      "settings": {}
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "question_zP7EQD": {
+          "type": "question",
+          "settings": {
+            "title": "Where does Oneisall Ship?",
+            "text": "<p>Oneisall ships everywhere in the United States and Australia.</p>"
+          }
+        },
+        "question_zHUDWq": {
+          "type": "question",
+          "settings": {
+            "title": "How much does shipping cost?",
+            "text": "<p>1. USA Standard and Australia</p><p> Free Shipping on all orders exclude remote regions, please check it in our <a href=\"https://oneisall.com/pages/shipping-policy\" title=\"https://oneisall.com/pages/shipping-policy\">Shipping Details</a></p><p>Deliveries are made with USPS (3-5 Business Day)</p><p> </p><p>2. Day Delivery with Fedex$15</p><p> </p><p>Order before 4pm CST Monday to Thursday for Delivery Within 2 Business Day With Fedex</p>"
+          }
+        },
+        "question_TTFxX4": {
+          "type": "question",
+          "settings": {
+            "title": "Will I receive a confirmation number when I place my order?",
+            "text": "<p>Yes, all customers will receive an order number after placing their orders. Please contact us if you don't receive one within 24 hours.</p>"
+          }
+        },
+        "question_dGCb7h": {
+          "type": "question",
+          "settings": {
+            "title": "Who can I contact if I have a problem with my order?",
+            "text": "<p>All inquiries can be forwarded to support@oneisall.com</p>"
+          }
+        },
+        "question_EN3YWa": {
+          "type": "question",
+          "settings": {
+            "title": "How can I pay?",
+            "text": "<p>We accept all Major Credit Cards and Paypal.</p>"
+          }
+        },
+        "question_8jKDKj": {
+          "type": "question",
+          "settings": {
+            "title": "Is checkout on this site safe and secure?",
+            "text": "<p>You can be absolutely sure that all purchases here are safe and secure and are SSL-encrypted to protect your data!</p>"
+          }
+        },
+        "question_iKPEqz": {
+          "type": "question",
+          "settings": {
+            "title": "If I enter my email address will you sell my information?",
+            "text": "<p>We do not sell our customers information. Emails are strictly for follow-up and to send newsletters of our promotions and coupons for discounts.</p>"
+          }
+        },
+        "question_TRCRx9": {
+          "type": "question",
+          "settings": {
+            "title": "How long is the warranty of your product?",
+            "text": "<p>All our products have a 2-Year hassle-free warranty from the order date and machine lifetime tech support. If you have any questions during use, just contact our customer support via email <a href=\"mailto:support@oneisall.com\" title=\"mailto:support@oneisall.com\">support@oneisall.com</a>, we will reply to you as soon as possible with solutions.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_zP7EQD",
+        "question_zHUDWq",
+        "question_TTFxX4",
+        "question_dGCb7h",
+        "question_EN3YWa",
+        "question_8jKDKj",
+        "question_iKPEqz",
+        "question_TRCRx9"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "brochure_title": "",
+        "brochure_link": "",
+        "heading_position": "left"
+      }
+    },
+    "contact_form_WqTjcQ": {
+      "type": "contact-form",
+      "settings": {
+        "title": "Contact us if you have any further questions",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "text": "",
+        "show_phone": false,
+        "narrow_column": false,
+        "color_scheme": "none"
+      }
+    }
+  },
+  "order": [
+    "rich_text_AdAwCF",
+    "main",
+    "faq",
+    "contact_form_WqTjcQ"
+  ]
+}

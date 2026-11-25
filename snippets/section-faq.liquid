@@ -1,0 +1,167 @@
+{% comment %}
+  /**
+   * @param {object} section - section object
+   * @param {boolean} divider - show divider
+   * @param {string} title - section title
+   * @param {string} heading_position - heading position
+   * @param {string} heading_size - heading size
+   * @param {number} section_blocks_size - number of blocks in section
+   */
+{% endcomment %}
+
+{%- if divider -%}<div class="section--divider">{%- endif -%}
+
+<div class="page-width" id="faqs">
+
+  {%- if title != blank -%}
+    <header class="section-header text-{{ heading_position }}">
+      <h2 class="section-header__title {{ heading_size }}">
+        {{ title | escape }}
+      </h2>
+    </header>
+  {%- endif -%}
+
+  {%- if section_blocks_size > 0 -%}
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'question' %}
+                {
+                  "@type": "Question",
+                  "name": {{ block.settings.title | json }},
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": {{ block.settings.text | json }}
+                  }
+                }{% unless forloop.last %},{% endunless %}
+            {% endcase %}
+          {% endfor %}
+        ]
+      }
+    </script>
+    <h3 class="faq-title"><span>FAQ  </span>   <span class="faq-icon" >
+                      {% render 'icon', name: 'chevron-down' %}
+                    </span></h3>
+    {%- for block in section.blocks -%}
+      <div {{ block.shopify_attributes }} class="faq-content">
+        {% case block.type %}
+          {% when 'rich-text'%}
+            <div class="index-section index-section--faq">
+              <div class="text-{{ block.settings.align_text }}">
+                {%- if block.settings.title != blank -%}
+                  <p class="h2">
+                    {{ block.settings.title | escape }}
+                  </p>
+                {%- endif -%}
+                {%- if block.settings.text != blank -%}
+                  <div class="rte clearfix">
+                    {%- if block.settings.enlarge_text %}<div class="enlarge-text">{% endif -%}
+                      {{ block.settings.text }}
+                    {%- if block.settings.enlarge_text %}</div>{% endif -%}
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+
+          {% when 'question'%}
+            <collapsible-elements>
+              <div>
+                <button type="button"
+                  class="label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height"
+                  aria-controls="FAQ-content-{{ block.id }}">
+                  <span class="collapsible-trigger__layout">
+                    <span>
+                      <span>{{ block.settings.title }}</span>
+                    </span>
+                    <span class="collapsible-trigger__icon collapsible-trigger__icon--open" role="presentation">
+                      {% render 'icon', name: 'chevron-down' %}
+                    </span>
+                  </span>
+                </button>
+                <div id="FAQ-content-{{ block.id }}" class="collapsible-content collapsible-content--all">
+                  <div class="collapsible-content__inner rte clearfix">
+                    {{ block.settings.text }}
+                  </div>
+                </div>
+              </div>
+          </collapsible-elements>
+        {% endcase %}
+      </div>
+    {%- endfor -%}
+  {%- endif -%}
+
+  {%- if section_blocks_size == 0 -%}
+    <div class="placeholder-noblocks">
+      {{ 'info.section_no_content' | t }}
+    </div>
+  {%- endif -%}
+</div>
+  {% if brochure_title != blank %}
+  <div class="page-width">
+<a href="{{ brochure_link }}" target="_blank" class="brochure-download">
+          <span>{{ brochure_title }}</span>
+          <svg t="1644833155754" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2762" width="25" height="25">
+  <path d="M802 664v146c0 7.7-6.3 14-14 14H236c-7.7 0-14-6.3-14-14V664c0-5.5-4.5-10-10-10h-50c-5.5 0-10 4.5-10 10v170c0 33.1 26.9 60 60 60h600c33.1 0 60-26.9 60-60V664c0-5.5-4.5-10-10-10h-50c-5.5 0-10 4.5-10 10z" p-id="2763" fill="currentColor"></path><path d="M547 163v449.5l173.6-173.6c13.7-13.7 35.8-13.7 49.5 0 13.7 13.7 13.7 35.8 0 49.5L536.8 721.7c-0.4 0.4-0.8 0.8-1.3 1.2-0.2 0.2-0.4 0.4-0.6 0.5-0.2 0.2-0.4 0.4-0.7 0.6-0.3 0.2-0.5 0.4-0.8 0.6-0.2 0.1-0.4 0.3-0.5 0.4l-0.9 0.6c-0.2 0.1-0.3 0.2-0.5 0.3-0.3 0.2-0.6 0.4-1 0.6-0.2 0.1-0.3 0.2-0.5 0.3-0.3 0.2-0.6 0.4-1 0.5-0.2 0.1-0.4 0.2-0.5 0.3-0.3 0.2-0.6 0.3-0.9 0.5l-0.6 0.3c-0.3 0.1-0.6 0.3-0.8 0.4-0.2 0.1-0.5 0.2-0.7 0.3-0.3 0.1-0.5 0.2-0.8 0.3l-0.9 0.3c-0.2 0.1-0.4 0.2-0.7 0.2-0.3 0.1-0.6 0.2-1 0.3-0.2 0.1-0.4 0.1-0.6 0.2-0.4 0.1-0.7 0.2-1.1 0.3-0.2 0-0.4 0.1-0.6 0.1-0.4 0.1-0.7 0.2-1.1 0.2-0.2 0-0.4 0.1-0.6 0.1-0.4 0.1-0.7 0.1-1.1 0.2-0.2 0-0.4 0.1-0.7 0.1-0.3 0-0.7 0.1-1 0.1-0.3 0-0.6 0-0.9 0.1-0.3 0-0.5 0-0.8 0.1-1.2 0.1-2.3 0.1-3.5 0-0.3 0-0.5 0-0.8-0.1-0.3 0-0.6 0-0.9-0.1-0.3 0-0.7-0.1-1-0.1-0.2 0-0.4-0.1-0.7-0.1-0.4-0.1-0.7-0.1-1.1-0.2-0.2 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.2-0.2 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.3-0.2-0.1-0.4-0.1-0.6-0.2-0.3-0.1-0.6-0.2-1-0.3-0.2-0.1-0.5-0.1-0.7-0.2l-0.9-0.3c-0.3-0.1-0.5-0.2-0.8-0.3-0.2-0.1-0.5-0.2-0.7-0.3-0.3-0.1-0.6-0.3-0.8-0.4l-0.6-0.3c-0.3-0.2-0.6-0.3-0.9-0.5-0.2-0.1-0.4-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-0.9-0.7-0.2-0.1-0.3-0.3-0.5-0.4-0.3-0.2-0.5-0.4-0.8-0.6-0.2-0.2-0.4-0.4-0.7-0.6-0.2-0.2-0.4-0.4-0.6-0.5l-1.2-1.2-233.1-233.1c-13.7-13.7-13.7-35.8 0-49.5 13.7-13.7 35.8-13.7 49.5 0L477 612.5V163c0-19.3 15.7-35 35-35s35 15.7 35 35z" p-id="2764" fill="var(--svg-color,#000)"></path>
+</svg>
+
+        </a>
+  </div>
+    {% endif %}
+{%- if divider -%}</div>{%- endif -%}
+<style>
+  .faq-title {
+  font-size:1.3rem;
+  margin: 0;
+  padding: 10px 0px 0;
+  cursor: pointer;
+  display:flex;
+  justify-content:space-between;
+}
+.faq-icon{  transition: transform 0.3s ease;}
+.faq-title[aria-expanded="true"] .faq-icon {
+  transform: rotate(180deg);
+}
+ .faq-title svg{
+   width:18px; height:18px;
+ }
+.faq-content {
+  display: none; 
+  padding: 10px 0px 10px 30px;
+  background-color: #fff;
+}
+  .brochure-download{display:flex; align-items:center; justify-content:space-between; margin-top:15px; padding:20px 0; border-top:1px solid #e8e8e8;}
+   .brochure-download span{font-size:1.3rem; font-weight:bold;}
+   .brochure-download svg{width:24px; height:24px;}
+  @media(max-width:768px){
+  .faq-title svg{
+   width:12px; height:12px;
+   }
+     .faq-title , .brochure-download span{
+      font-size:1.1rem;
+     }
+  }
+</style>
+<script>
+$(document).ready(function() {
+  $('#shopify-section-{{ section.id }} .faq-title').click(function() {
+ 
+    const areAllVisible = $('#shopify-section-{{ section.id }} .faq-content').filter(':hidden').length === 0;
+
+    if (areAllVisible) {
+ 
+      $('#shopify-section-{{ section.id }} .faq-content').slideUp();
+      $('#shopify-section-{{ section.id }} .faq-title').attr('aria-expanded', 'false');
+    } else {
+      // Expand all
+      $('#shopify-section-{{ section.id }} .faq-content').slideDown();
+      $('#shopify-section-{{ section.id }} .faq-title').attr('aria-expanded', 'true');
+    }
+  });
+});
+
+  </script>

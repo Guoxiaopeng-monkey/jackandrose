@@ -1,0 +1,606 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner_z7rirW": {
+      "type": "banner",
+      "disabled": true,
+      "settings": {
+        "img": "shopify://shop_images/6_8866dc3a-3fa0-427b-a15b-622c0495a80c.png",
+        "img_m": "shopify://shop_images/6-1.png",
+        "hide": false,
+        "overlayer": 1,
+        "title": "Accessories",
+        "text": "",
+        "btn": "",
+        "link": "",
+        "btn_style": "main"
+      }
+    },
+    "spk_nav_image_bNFgAF": {
+      "type": "spk-nav-image",
+      "blocks": {
+        "item_rqFVpD": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/7-in-1_Pet_Grooming_Vacuum_Kit.jpg",
+            "title": "Grooming Accessories",
+            "link": "G"
+          }
+        },
+        "item_mRrGnB": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/oneisall-35l-cordless-pet-water-fountain-6pcs-carbon-filters-replacement-613467.jpg",
+            "title": "Fountain Accessories",
+            "link": "F"
+          }
+        },
+        "item_ExRm4A": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/oneisall-p2a11x2-dog-clipper-blade-replacement-301362.png",
+            "title": "Clipper Accessories",
+            "link": "C"
+          }
+        },
+        "item_LyRDkw": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/3a376354ff73a22879bd2daa87f32f25.jpg",
+            "title": "Purifier Accessories",
+            "link": "A"
+          }
+        },
+        "item_YG6XdH": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/oneisall-5l-automatic-cat-feeder-double-bowls-replacement-457318.png",
+            "title": "Feeder Accessories",
+            "link": "E"
+          }
+        },
+        "item_xVghUT": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/oneisall-reflective-dog-leash-788269.jpg",
+            "title": "Dog Walk Sets",
+            "link": "D"
+          }
+        }
+      },
+      "block_order": [
+        "item_rqFVpD",
+        "item_mRrGnB",
+        "item_ExRm4A",
+        "item_LyRDkw",
+        "item_YG6XdH",
+        "item_xVghUT"
+      ],
+      "name": "SPX Nav Image",
+      "settings": {
+        "text_color": "#000000"
+      }
+    },
+    "dealpage_two_7aQcUR": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_D4inRm": {
+          "type": "collection",
+          "settings": {
+            "collection": "accessories-for-lm2",
+            "text": "LM2",
+            "subtitle": ""
+          }
+        },
+        "collection_xP7aDf": {
+          "type": "collection",
+          "settings": {
+            "collection": "accessories-for-cozy-c1",
+            "text": "Cozy C1(BM1)",
+            "subtitle": ""
+          }
+        },
+        "collection_6PGVja": {
+          "type": "collection",
+          "settings": {
+            "collection": "accessories-for-bm3",
+            "text": "BM3",
+            "subtitle": ""
+          }
+        },
+        "collection_nzQezi": {
+          "type": "collection",
+          "settings": {
+            "collection": "grooming-accessories",
+            "text": "ALL",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_D4inRm",
+        "collection_xP7aDf",
+        "collection_6PGVja",
+        "collection_nzQezi"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Grooming Accessories",
+        "subtitle": "",
+        "target_id": "G",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "default",
+        "display_special_attr": false,
+        "padding_pc": "80px 0",
+        "padding_m": "60px 0"
+      }
+    },
+    "dealpage_two_feHh4e": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_Y6iwK9": {
+          "type": "collection",
+          "settings": {
+            "collection": "fountain-accessories-3-5l",
+            "text": "3.5L",
+            "subtitle": ""
+          }
+        },
+        "collection_aiCFMG": {
+          "type": "collection",
+          "settings": {
+            "collection": "fountain-accessories-7l",
+            "text": "7L",
+            "subtitle": ""
+          }
+        },
+        "collection_4CKard": {
+          "type": "collection",
+          "settings": {
+            "collection": "fountain-accessories-10l",
+            "text": "10L",
+            "subtitle": ""
+          }
+        },
+        "collection_3rFK3A": {
+          "type": "collection",
+          "settings": {
+            "collection": "fountain-accessories-2l",
+            "text": "2L",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_Y6iwK9",
+        "collection_aiCFMG",
+        "collection_4CKard",
+        "collection_3rFK3A"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Fountain Accessories",
+        "subtitle": "",
+        "target_id": "F",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "default",
+        "display_special_attr": false,
+        "padding_pc": "80px 0",
+        "padding_m": "60px 0"
+      }
+    },
+    "dealpage_two_wa9LTM": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_Kc8eVf": {
+          "type": "collection",
+          "settings": {
+            "collection": "clippers-accessories",
+            "text": "ALL",
+            "subtitle": ""
+          }
+        },
+        "collection_H9HM74": {
+          "type": "collection",
+          "settings": {
+            "collection": "clipper-accessories-blade",
+            "text": "Replacement Blades",
+            "subtitle": ""
+          }
+        },
+        "collection_PCrXBE": {
+          "type": "collection",
+          "settings": {
+            "collection": "clipper-accessories-head",
+            "text": "Replacement Heads",
+            "subtitle": ""
+          }
+        },
+        "collection_DM3iVr": {
+          "type": "collection",
+          "settings": {
+            "collection": "clipper-accessories-charging",
+            "text": "Replacement Chargers",
+            "subtitle": ""
+          }
+        },
+        "collection_Hg7CiE": {
+          "type": "collection",
+          "settings": {
+            "collection": "clipper-accessories-comb",
+            "text": "Replacement Combs",
+            "subtitle": ""
+          }
+        },
+        "collection_CBwr6w": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "clipper-accessories-for-p2",
+            "text": "P2/X2",
+            "subtitle": ""
+          }
+        },
+        "collection_qn9mnY": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "clipper-accessories-for-dtj",
+            "text": "DTJ",
+            "subtitle": ""
+          }
+        },
+        "collection_YH3zbP": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "clipper-accessories-for-pc14",
+            "text": "Grandmaster Pro 1",
+            "subtitle": ""
+          }
+        },
+        "collection_6K44n9": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "clipper-accessories-for-yp-7268",
+            "text": "YP-7268",
+            "subtitle": ""
+          }
+        },
+        "collection_QrAHyL": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "clipper-accessories-for-676",
+            "text": "RFC-676",
+            "subtitle": ""
+          }
+        },
+        "collection_g4xdb7": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "clipper-accessories-for-n12",
+            "text": "N12",
+            "subtitle": ""
+          }
+        },
+        "collection_WPGrt3": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "clipper-accessories-for-n5",
+            "text": "N5",
+            "subtitle": ""
+          }
+        },
+        "collection_9yqfxp": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "clipper-accessories-for-fc10",
+            "text": "FC10",
+            "subtitle": ""
+          }
+        },
+        "collection_wVjWTe": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "clipper-accessories-for-others",
+            "text": "LGL006",
+            "subtitle": ""
+          }
+        },
+        "collection_cfDaDw": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "clipper-accessories-for-rko34",
+            "text": "RK034",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_Kc8eVf",
+        "collection_H9HM74",
+        "collection_PCrXBE",
+        "collection_DM3iVr",
+        "collection_Hg7CiE",
+        "collection_CBwr6w",
+        "collection_qn9mnY",
+        "collection_YH3zbP",
+        "collection_6K44n9",
+        "collection_QrAHyL",
+        "collection_g4xdb7",
+        "collection_WPGrt3",
+        "collection_9yqfxp",
+        "collection_wVjWTe",
+        "collection_cfDaDw"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Clipper Accessories",
+        "subtitle": "",
+        "target_id": "C",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "default",
+        "display_special_attr": false,
+        "padding_pc": "80px 0",
+        "padding_m": "60px 0"
+      }
+    },
+    "dealpage_two_Y4UKG3": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_dPnxAy": {
+          "type": "collection",
+          "settings": {
+            "collection": "air-purifier-accessories",
+            "text": "",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_dPnxAy"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Air Purifier Accessories",
+        "subtitle": "",
+        "target_id": "",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "default",
+        "display_special_attr": false,
+        "padding_pc": "80px 0",
+        "padding_m": "60px 0"
+      }
+    },
+    "dealpage_two_d4M7Be": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_3378pr": {
+          "type": "collection",
+          "settings": {
+            "collection": "feeder-accessories",
+            "text": "Feeder Accessories",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_3378pr"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Feeder Accessories",
+        "subtitle": "",
+        "target_id": "E",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "default",
+        "display_special_attr": false,
+        "padding_pc": "60px 0",
+        "padding_m": "80px 0"
+      }
+    },
+    "dealpage_two_HtmBWn": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_XzbtFC": {
+          "type": "collection",
+          "settings": {
+            "collection": "dog-walk-sets",
+            "text": "Dog Walk Sets",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_XzbtFC"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Dog Walk Sets",
+        "subtitle": "",
+        "target_id": "D",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "default",
+        "display_special_attr": false,
+        "padding_pc": "80px 0",
+        "padding_m": "60px 0"
+      }
+    },
+    "page_collecitons_4dDpNR": {
+      "type": "page-collecitons",
+      "blocks": {
+        "collection_wkzfV8": {
+          "type": "collection",
+          "settings": {
+            "collection": "grooming-accessories",
+            "image": "shopify://shop_images/9_6952dcbf-8feb-4119-9b92-743ba29c9bb0.png",
+            "title": ""
+          }
+        },
+        "collection_FffjaA": {
+          "type": "collection",
+          "settings": {
+            "collection": "fountain-accessories",
+            "image": "shopify://shop_images/10_313ad8b2-e026-46d1-81ac-d08a766ebc39.png",
+            "title": ""
+          }
+        },
+        "collection_hzjP6R": {
+          "type": "collection",
+          "settings": {
+            "collection": "feeder-accessories",
+            "title": ""
+          }
+        },
+        "collection_fKYzRq": {
+          "type": "collection",
+          "settings": {
+            "collection": "clippers-accessories",
+            "image": "shopify://shop_images/15_3169a802-f3fc-4d0c-958c-f7a791a181fe.png",
+            "title": ""
+          }
+        },
+        "collection_WgtViM": {
+          "type": "collection",
+          "settings": {
+            "collection": "dog-walk-sets",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_wkzfV8",
+        "collection_FffjaA",
+        "collection_hzjP6R",
+        "collection_fKYzRq",
+        "collection_WgtViM"
+      ],
+      "disabled": true,
+      "settings": {
+        "display_title_type": "default",
+        "display_special_attr": false
+      }
+    },
+    "faqs_ijrNcG": {
+      "type": "faqs",
+      "blocks": {
+        "tab_content_JmK8jh": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Place your question or heading here",
+            "text": "<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        },
+        "tab_content_c6HcW7": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Place your question or heading here",
+            "text": "<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        },
+        "tab_content_Rpa4Mk": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Place your question or heading here",
+            "text": "<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_JmK8jh",
+        "tab_content_c6HcW7",
+        "tab_content_Rpa4Mk"
+      ],
+      "disabled": true,
+      "settings": {
+        "id": "faqs",
+        "title": "FAQs",
+        "align": "center",
+        "align_m": "center",
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    },
+    "icons_fRC7QE": {
+      "type": "icons",
+      "blocks": {
+        "icon_RXgQdm": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Fast & Free Shipping",
+            "text": "Price includes shipping, free"
+          }
+        },
+        "icon_3tpCEf": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Fast & Free Shipping",
+            "text": "Price includes shipping, free"
+          }
+        },
+        "icon_DDAWJJ": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Fast & Free Shipping",
+            "text": "Price includes shipping, free"
+          }
+        },
+        "icon_6gJPeq": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Fast & Free Shipping",
+            "text": "Price includes shipping, free"
+          }
+        }
+      },
+      "block_order": [
+        "icon_RXgQdm",
+        "icon_3tpCEf",
+        "icon_DDAWJJ",
+        "icon_6gJPeq"
+      ],
+      "settings": {
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    }
+  },
+  "order": [
+    "banner_z7rirW",
+    "spk_nav_image_bNFgAF",
+    "dealpage_two_7aQcUR",
+    "dealpage_two_feHh4e",
+    "dealpage_two_wa9LTM",
+    "dealpage_two_Y4UKG3",
+    "dealpage_two_d4M7Be",
+    "dealpage_two_HtmBWn",
+    "page_collecitons_4dDpNR",
+    "faqs_ijrNcG",
+    "icons_fRC7QE"
+  ]
+}

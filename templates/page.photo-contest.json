@@ -1,0 +1,208 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {}
+    },
+    "slideshow_94wNwe": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_FxwDqV": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/photo-contest-pc.png",
+            "image_mobile": "shopify://shop_images/photo-contest_1c6d181b-3024-4d3c-a6b6-a00ee2ae20b5.png",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "hero_FxwDqV"
+      ],
+      "settings": {
+        "full_width": true,
+        "desktop_size": 0,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "rich_text_t9AAfh": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8XVFrh": {
+          "type": "heading",
+          "settings": {
+            "title": "Rules",
+            "heading_size": "h0"
+          }
+        },
+        "text_ENRhW8": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Calling all pet lovers! 🐾 Oneisall's 4th of July photo contest is fast approaching! 📸 Show off your furry friends in their best, most patriotic poses, or costumes, for a chance to win some pawsome prizes! 🏆 Here's how to enter:</p><p>1. Take an original, new photo of your pet showing off their patriotic spirit with a paper sign \"Pawsome Patriot\" somewhere in the background or in an accompanying photo. </p><p>2. Starting July 1st, you can upload your photo, the deadline for entering is July 11 at 11:59.</p><p>3. Follow, tag, and mention <a href=\"https://www.instagram.com/oneisall_official/tagged/\" target=\"_blank\" title=\"https://www.instagram.com/oneisall_official/tagged/\">@oneisall_official</a> and join our Facebook community to be eligible! Here is the group link to join: <a href=\"https://bit.ly/4blu0OA\" target=\"_blank\" title=\"https://bit.ly/4blu0OA\">https://bit.ly/4blu0OA</a></p><p>4. The 3 photos with the most comments will win a free <a href=\"https://oneisall.com/products/lm2-dog-grooming-vacuum\" title=\"https://oneisall.com/products/lm2-dog-grooming-vacuum\">Oneisall LM2 pet grooming set</a>. You can also comment on our post and tag your friends.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8XVFrh",
+        "text_ENRhW8"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        "h1 {text-align: center;}"
+      ],
+      "settings": {}
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "disabled": true,
+      "settings": {}
+    },
+    "171982227170cb18e1": {
+      "type": "apps",
+      "settings": {
+        "full_width": true,
+        "space_around": false
+      }
+    },
+    "text_columns_mnPQid": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_GiJXt7": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-photo-contest.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_BGm3Xz": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-photo-contest-1.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_JdnkFX": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-photo-contest-2.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_GiJXt7",
+        "text_block_BGm3Xz",
+        "text_block_JdnkFX"
+      ],
+      "settings": {
+        "title": "Featured Photography",
+        "heading_size": "h0",
+        "align_text": "center",
+        "divider": false,
+        "color_scheme": "none"
+      }
+    },
+    "newsletter_GxBpzW": {
+      "type": "newsletter",
+      "blocks": {
+        "title_VJbVf9": {
+          "type": "title",
+          "settings": {
+            "title": "Get 10% off your first purchase",
+            "heading_size": "h2"
+          }
+        },
+        "text_cMdDeP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Subscribe to our newsletter for the latest updates and exclusive offers!</p>"
+          }
+        },
+        "form_E74C7J": {
+          "type": "form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title_VJbVf9",
+        "text_cMdDeP",
+        "form_E74C7J"
+      ],
+      "settings": {
+        "color_scheme": "none",
+        "align_text": "center",
+        "image_width": "33",
+        "image_mask": "none",
+        "image_position": "right",
+        "divider": false,
+        "top_padding": false,
+        "bottom_padding": true
+      }
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "slideshow_94wNwe",
+    "rich_text_t9AAfh",
+    "main",
+    "shogun-optimizer",
+    "171982227170cb18e1",
+    "text_columns_mnPQid",
+    "newsletter_GxBpzW"
+  ]
+}

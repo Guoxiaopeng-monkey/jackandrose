@@ -1,0 +1,72 @@
+<style>
+  .images-scroll{
+    background-color: {{ section.settings.color_bg }};
+  }
+</style>
+
+<div class="page-width wrapper">
+  
+</div>
+
+{% schema %}
+  {
+    "name": "Images scroll",
+    "class": "images-scroll",
+    "max_blocks": 3,
+    "limit": 1,
+    "tag": "section",
+    "disabled_on": {
+      "groups": ["footer","header"]
+    },
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_bg",
+        "default": "#FEF2E9",
+        "label": "Background color"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "color",
+            "id": "color",
+            "default": "#fff",
+            "label": "Background color"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Small Breeds"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text",
+            "default": "30-35min"
+          },
+          {
+            "type": "text",
+            "id": "subtext",
+            "label": "Subtext",
+            "default": "Blurams Dome Camera 2k"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Images scroll"
+      }
+    ]
+  }
+{% endschema %}

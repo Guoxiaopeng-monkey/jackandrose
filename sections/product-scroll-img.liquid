@@ -1,0 +1,204 @@
+{% assign sid = section.id %}
+<style>
+    #shopify-section-{{ sid }} {
+      margin: {{section.settings.padding_pc}};
+    }
+    #shopify-section-{{ sid }} .page-width{
+      --page-width:1360px;
+    }
+    #shopify-section-{{ sid }} .product-section-info{
+      max-width:800px;
+      margin-bottom:40px;
+    }
+    #shopify-section-{{ sid }} .product-section-title{
+      /* background: linear-gradient(90deg, #F47C20 0%, #FFEF75 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; */
+      color: #F47C20;
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    #shopify-section-{{ sid }} .product-section-text{
+      color: rgba(0, 0, 0, 0.80);
+      font-size: 20px;
+      line-height: 1.4;
+      margin-top:12px;
+    }
+    #shopify-section-{{ sid }} .media{
+      position:relative;
+    }
+    #shopify-section-{{ sid }} .media img{
+      border-radius:24px;
+      width: 100%;
+      overflow:hidden;
+      object-fit: cover;
+    }
+  @media (min-width:960px){
+    #shopify-section-{{ sid }} .media {
+      height:0;
+      padding-bottom:var(--pt_desktop);
+      width:40%;
+      margin:0 auto;
+    }
+    #shopify-section-{{ sid }} .media picture img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+  }
+  @media (max-width:959px){
+    #shopify-section-{{ sid }} {
+      margin: {{section.settings.padding_m}};
+    }
+    #shopify-section-{{ sid }} .product-section-info{
+      margin-bottom:24px;
+      
+    }
+    #shopify-section-{{ sid }} .product-section-title{
+      font-size: 20px;
+    }
+    #shopify-section-{{ sid }} .product-section-text{
+      font-size: 14px;
+    }
+    #shopify-section-{{ sid }} .media img{
+      border-radius: 12px;
+    }
+    
+  }
+</style>
+
+<div class="product-scroll-img" id="Product-scroll-img">
+  <div class="page-width">
+    {% if section.settings.title != blank or section.settings.text != blank %} 
+    <div class="product-section-info">
+      {% if section.settings.title != blank %}
+        <div class="product-section-title">{{ section.settings.title }}</div>
+      {% endif %}
+      {% if section.settings.text != blank %}
+        <div class="product-section-text">{{ section.settings.text }}</div>
+      {% endif %}
+    </div>
+    {% endif %}
+      {% liquid
+        assign pc_image = section.settings.img
+        assign mobile_image = section.settings.img_m
+        assign alt = section.settings.img.alt
+    %}
+    <div class="media" {%if pc_image != blank %}style="--pt_desktop:{{ 100 | divided_by: pc_image.aspect_ratio }}%;"{% endif %}>
+    <picture>
+        <source srcset="{{ mobile_image | img_url: '750x' }}"
+                media="(max-width: 375px)">
+        <source srcset="{{ mobile_image | img_url: '1536x' }}"
+                media="(max-width: 768px)">
+        <source srcset="{{ pc_image | img_url: '2160x' }}"
+                media="(max-width: 1080px)">
+        <source srcset="{{ pc_image | img_url: '2400x' }}"
+                media="(max-width: 1200px)">
+        <source srcset="{{ pc_image | img_url: '3840x' }}"
+                media="(max-width: 1920px)">
+        <img src="{{ pc_image | img_url: '3840x' }}" alt="{{ alt }}" loading="lazy" width="auto" height="100%">
+    </picture>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  document.addEventListener('DOMContentLoaded', function () {
+    gsap.registerPlugin(ScrollTrigger);
+    let t1;
+    const container = $('#shopify-section-{{ sid }} .product-scroll-img');
+    const banner = $('#shopify-section-{{ sid }} .media');
+    const endPoint = window.innerHeight*0.5;
+    const width = window.innerWidth;
+
+    handleScroll();
+    function handleScroll(){
+      ScrollTrigger.matchMedia({
+        "(min-width: 960px)": function () {
+            if(t1) t1.revert();
+            t1 = gsap.timeline({
+              scrollTrigger:{
+                trigger: container,
+                start: 'top 70%',
+                end: ()=>`+=${endPoint}`,
+                // pin: true,
+                scrub: true,
+                // markers:true,
+                invalidateOnRefresh: true,
+              }
+            });
+      
+            t1.to(banner,{
+              "width":"100%",
+            })
+          }
+      })
+    };
+
+    $(window).resize(function() {
+      if(t1) {
+        t1.revert();
+        t1.clear();
+      }
+      handleScroll();
+    });
+    
+ });
+    
+</script>
+
+{% schema %}
+  {
+    "name": "Product scroll image",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "image (desktop)"
+      },
+      {
+        "type": "image_picker",
+        "id": "img_m",
+        "label": "image (mobile)"
+      },
+      {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Fast & Free Shipping"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default":"Price includes shipping, free "
+          },
+       {
+        "type": "header",
+        "content": "Padding"
+      },
+      {
+        "type": "text",
+        "id": "padding_pc",
+        "label": "Padding (desktop)",
+        "default":"100px 0"
+      },
+      {
+            "type": "text",
+            "id": "padding_m",
+            "label": "Padding (mobile)",
+            "default":"80px 0"
+          }
+    ],
+    "presets": [
+        {
+            "name": "Product scroll image",
+        }
+    ]
+  }
+{% endschema %}

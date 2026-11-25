@@ -1,0 +1,221 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {}
+    },
+    "rich_text_t9AAfh": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8XVFrh": {
+          "type": "heading",
+          "settings": {
+            "title": "News & Events",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8XVFrh"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "1",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        "h1 {text-align: center;}"
+      ],
+      "settings": {}
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "settings": {}
+    },
+    "advanced_content_weTjU4": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_ewR896": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2><a href=\"https://oneisall.com/pages/hamptons-vip\">Meet Oneisall at Jill Zarin's Luxury Luncheon</a></h2><p>To sponsor Jill Zarin's luxurious luncheon, Oneisall will gift VIP guests the Cozy C1 pet grooming vacuum. Additionally, we will showcase the 5L automatic pet feeder, 7L water fountain, and DTJ001 dog hair clippers to the attendees.</p>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "image_bMbRXJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/hamptons-party.jpg",
+            "link": "shopify://pages/hamptons-vip",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_ewR896",
+        "image_bMbRXJ"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "advanced_content_Q9c6mq": {
+      "type": "advanced-content",
+      "blocks": {
+        "image_RgwBcd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/photo-contest-pc.png",
+            "link": "shopify://pages/photo-contest",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "liquid_REihWr": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2><a href=\"https://oneisall.com/pages/photo-contest\">Photography Contest</a></h2>\n<p>Calling all pet lovers! Oneisall's 4th of July photo contest is fast approaching! Show off your furry friends in their best, most patriotic poses, or costumes, for a chance to win some pawsome prizes!</p>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_RgwBcd",
+        "liquid_REihWr"
+      ],
+      "custom_css": [],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "advanced_content_mieGjA": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_deHiwX": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2><a href=\"https://oneisall.com/pages/vip\">The 66th GRAMMY Awards</a></h2><p>To celebrate the 66th GRAMMY Awards®, Oneisall is delighted to gift VIP guests at the Official GRAMMY® Gift Lounge with our innovative Cozy C1 Grooming Vacuum Kit.</p>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "image_EAmiHg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Oneisall_The_Official_Gift_Lounge_of_the_66th_GRAMMY_Awards-pc_96714148-8b29-4346-af90-8d67445a101b.jpg",
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_deHiwX",
+        "image_EAmiHg"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "advanced_content_iR3R8Y": {
+      "type": "advanced-content",
+      "blocks": {
+        "image_FAYkKJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pc__02_51374ee6-91e3-485d-892b-d5eedca9917b.jpg",
+            "link": "shopify://pages/oneisall-jp",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "liquid_CcxaKm": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2><a href=\"https://oneisall.com/pages/oneisall-jp\">2024 Japan Exhibition</a></h2><p>第66回ゲラミ-賞の公式ギフトラウンジ\n唯-ペット用品スポンサ-\nONISALはインタ-ペットに初出展. ま“第13回インタ-ペット”\nに出展いたします.ご来場を心よ\nりお待ち申しあけております</p>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_FAYkKJ",
+        "liquid_CcxaKm"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "newsletter_GxBpzW": {
+      "type": "newsletter",
+      "blocks": {
+        "title_VJbVf9": {
+          "type": "title",
+          "settings": {
+            "title": "Get 10% off your first purchase",
+            "heading_size": "h2"
+          }
+        },
+        "text_cMdDeP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Subscribe to our newsletter for the latest updates and exclusive offers!</p>"
+          }
+        },
+        "form_E74C7J": {
+          "type": "form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title_VJbVf9",
+        "text_cMdDeP",
+        "form_E74C7J"
+      ],
+      "settings": {
+        "color_scheme": "none",
+        "align_text": "center",
+        "image_width": "33",
+        "image_mask": "none",
+        "image_position": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "rich_text_t9AAfh",
+    "main",
+    "shogun-optimizer",
+    "advanced_content_weTjU4",
+    "advanced_content_Q9c6mq",
+    "advanced_content_mieGjA",
+    "advanced_content_iR3R8Y",
+    "newsletter_GxBpzW"
+  ]
+}

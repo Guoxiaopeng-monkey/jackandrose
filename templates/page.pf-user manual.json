@@ -1,0 +1,698 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rich_text_K4MrPF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_tHhwAJ": {
+          "type": "heading",
+          "settings": {
+            "title": "User Manual",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tHhwAJ"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "1",
+        "section_visibility": "always",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "pf-ae10dceb": {
+      "type": "pf-ae10dceb",
+      "disabled": true,
+      "settings": {}
+    },
+    "text_columns_tTcAWN": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_dJ9ETB": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-lm2-7-in-1-pet-grooming-vacuum-kit-purple-810181.jpg",
+            "image_mask": "none",
+            "image_width": 500,
+            "title": "",
+            "text": "<p>LM2 Grooming Vacuum Kit</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/S1.pdf?v=1701054937"
+          }
+        },
+        "text_block_4RcXat": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/8-in-1_dog_grooming_vacuum_kit.png",
+            "image_mask": "none",
+            "image_width": 500,
+            "title": "",
+            "text": "<p>Cozy C1 Grooming Vacuum Kit</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/BM1.pdf?v=1701676769"
+          }
+        },
+        "text_block_fY9RaM": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/BM3.png",
+            "image_mask": "none",
+            "image_width": 500,
+            "title": "",
+            "text": "<p>BM3 Grooming Vacuum Kit</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/BM3.pdf?v=1701676780"
+          }
+        },
+        "text_block_rCUjgq": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-comfy-l1-cordless-pet-grooming-vacuum-kit-895067.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p>Comfy L1 Grooming Vacuum Kit</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/PG07_aa129973-2ac1-4053-9bf7-b6b48392e980.pdf?v=1743130354"
+          }
+        },
+        "text_block_aABDXJ": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-lm5-4-in-1-pet-grooming-vacuum-kit-505715.jpg",
+            "image_mask": "none",
+            "image_width": 500,
+            "title": "",
+            "text": "<p>LM5 Grooming Vacuum Kit</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/LM5.pdf?v=1701676685"
+          }
+        },
+        "text_block_eBWiqd": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-lm5c-6-in-1-cat-grooming-vacuum-kit-604366.jpg",
+            "image_mask": "none",
+            "image_width": 500,
+            "title": "",
+            "text": "<p>LM5C Grooming Vacuum Kit</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/LM5C.pdf?v=1743404245"
+          }
+        },
+        "text_block_PKYTwX": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-3000w-dog-hair-dryer-356290.png",
+            "image_mask": "none",
+            "image_width": 500,
+            "title": "",
+            "text": "<p>MAS 520 Dryer</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/MAS-520_-___V3_11.28.pdf?v=1740105737"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_dJ9ETB",
+        "text_block_4RcXat",
+        "text_block_fY9RaM",
+        "text_block_rCUjgq",
+        "text_block_aABDXJ",
+        "text_block_eBWiqd",
+        "text_block_PKYTwX"
+      ],
+      "custom_css": [],
+      "settings": {
+        "title": "Pet Grooming Vacuum Kit",
+        "heading_size": "h0",
+        "align_text": "center",
+        "divider": false,
+        "two_column_mobile": true,
+        "color_scheme": "none"
+      }
+    },
+    "text_columns_FHMjMr": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_GwUKpF": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-7l-dog-water-fountain-for-large-dogs-597036.png",
+            "image_mask": "none",
+            "image_width": 500,
+            "title": "",
+            "text": "<p>7L Water Fountain</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/7L_Water_Fountain.pdf?v=1709192211"
+          }
+        },
+        "text_block_3XNika": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-7l-dog-water-fountain-with-visual-water-level-for-large-dogs-636518.png",
+            "image_mask": "none",
+            "image_width": 500,
+            "title": "",
+            "text": "<p>7L Water Fountain Pro</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/7L_c8699d7c-e869-4993-acc1-1ef4672cd442.pdf?v=1739959029"
+          }
+        },
+        "text_block_FCFzaD": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-35l-cordless-smart-cat-water-fountain-stainless-steelpre-sale-823346.png",
+            "image_mask": "none",
+            "image_width": 500,
+            "title": "",
+            "text": "<p>3.5L Cordless Water Fountain </p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/PW04_____V1_2024.12.27.pdf?v=1742285008"
+          }
+        },
+        "text_block_qTpKBm": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Pet_Water_Fountain_with_3PCS_Filters.jpg",
+            "image_mask": "none",
+            "image_width": 500,
+            "title": "",
+            "text": "<p>3.5L Corded Water Fountain </p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/PW03_____V3_2024.12.24.pdf?v=1743404231"
+          }
+        },
+        "text_block_Fe6T9V": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-2l-cat-water-fountain-304-stainless-steel-667211.png",
+            "image_mask": "none",
+            "image_width": 500,
+            "title": "",
+            "text": "<p>2L Water Fountain </p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/PWF-001___V4_2025.3.14.pdf?v=1743404223"
+          }
+        },
+        "text_block_3JBWmx": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/4L.png",
+            "image_mask": "none",
+            "image_width": 500,
+            "title": "",
+            "text": "<p>4L Stainless Steel Cat Fountain</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/4L.pdf?v=1735886692"
+          }
+        },
+        "text_block_c8edce": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/lQDPKdBTiX1597nNBDjNBDiwojD2R4xR66EIMit5F1YfAg_1080_1080.jpg",
+            "image_mask": "none",
+            "image_width": 500,
+            "title": "",
+            "text": "<p>10L Water Fountain</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/PW07_____V1_2024.11.28.pdf?v=1758010989"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_GwUKpF",
+        "text_block_3XNika",
+        "text_block_FCFzaD",
+        "text_block_qTpKBm",
+        "text_block_Fe6T9V",
+        "text_block_3JBWmx",
+        "text_block_c8edce"
+      ],
+      "settings": {
+        "title": "Pet Water Fountain",
+        "heading_size": "h0",
+        "align_text": "center",
+        "divider": false,
+        "two_column_mobile": true,
+        "color_scheme": "none"
+      }
+    },
+    "text_columns_nMiahj": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_EjzF6f": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/P2.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p>P2 Pet Clipper</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/P2.pdf?v=1701676749"
+          }
+        },
+        "text_block_i6zeXg": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/X2.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p>X2 Pet Clipper</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/X2_Pet_Clipper.pdf?v=1709192225"
+          }
+        },
+        "text_block_Nkiz4r": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/676.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p>676 Pet Clipper</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/676_Pet_Clipper.pdf?v=1709192215"
+          }
+        },
+        "text_block_nFK7NE": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-676-pro-dog-clippers-with-detachable-metal-combs-904233.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p>676Pro Pet Clipper</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/676pro_-V1_-24.8.12.pdf?v=1743404246"
+          }
+        },
+        "text_block_BXQgyh": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/K52NTS.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p>K52NTS Pet Clipper</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/K52NTS_Pet_Clipper.pdf?v=1709192226"
+          }
+        },
+        "text_block_qNEEHt": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/DTJ002.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p>DTJ002 Pet Clipper</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/DTJ-002-User-Manual.pdf?v=1717577007"
+          }
+        },
+        "text_block_KWEbVf": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-dtj001-pet-hair-trimmer-for-thick-coat-429718.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p>DTJ001 Pet Clipper</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/DTJ-001_Pet_Clipper.pdf?v=1709192210"
+          }
+        },
+        "text_block_hMCBic": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-cordless-multi-functional-dog-clipper-558804.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p>FC10 Pet Clipper</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/FC10_Apollo_-V1_1-9.pdf?v=1743404234"
+          }
+        },
+        "text_block_K9KcBP": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-all-in-one-cordless-horse-clipper-863877.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p>2601 Horse Clipper</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/2601_-V0.pdf?v=1743404241"
+          }
+        },
+        "text_block_kdQxmd": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-rk034-cordless-horse-clippers-805369.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p>RK034 Horse Clipper</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/RK-034_-_V0-24.0729.pdf?v=1743404246"
+          }
+        },
+        "text_block_Hhzm39": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-a11-cordless-cat-clippers-746443.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p>A11 Cat Clipper</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/A11_____V1_9.11.pdf?v=1743404243"
+          }
+        },
+        "text_block_a8tmwL": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-x2n5-2-in-1-dog-clippers-dog-paw-trimmer-856428.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p>X2N5 Pet Clipper & Trimmer</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/X2N5-__V3__3.17.pdf?v=1743404240"
+          }
+        },
+        "text_block_webjxc": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/N5.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p>N5 Pet Trimmer</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/N5_Pet_Clipper.pdf?v=1709192220"
+          }
+        },
+        "text_block_E9kWTd": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/N12.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p>N12 Pet Trimmer</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/N12_Pet_Clipper.pdf?v=1709192218"
+          }
+        },
+        "text_block_nMNeFE": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-fc09-4-in-1-dog-clippers-dog-grooming-kit-800911.jpg",
+            "mobile_image": "shopify://shop_images/oneisall-fc09-4-in-1-dog-clippers-dog-grooming-kit-800911.jpg",
+            "image_mask": "none",
+            "image_width": 440,
+            "title": "",
+            "text": "<p>FC09 Pet Clipper</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/5188_V1_12-19.pdf?v=1758010709"
+          }
+        },
+        "text_block_FqmwyL": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/screenshot_2025-05-22_16-52-37.png",
+            "mobile_image": "shopify://shop_images/screenshot_2025-05-22_16-52-37.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p>CP-9050 Dog Clipper</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/CP-9050_User_Manual-_Old_Version.pdf?v=1747903629"
+          }
+        },
+        "text_block_U4Y3rb": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-yp-5-speeds-cat-clipper-525611.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p>YP-7268 Cat Clipper</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/YP-7268_-V0.pdf?v=1758010916"
+          }
+        },
+        "text_block_MbR86U": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/61oGF4Dkl5L._AC_SL1500.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p>N12 Cat Clipper</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/N12.pdf?v=1758010931"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_EjzF6f",
+        "text_block_i6zeXg",
+        "text_block_Nkiz4r",
+        "text_block_nFK7NE",
+        "text_block_BXQgyh",
+        "text_block_qNEEHt",
+        "text_block_KWEbVf",
+        "text_block_hMCBic",
+        "text_block_K9KcBP",
+        "text_block_kdQxmd",
+        "text_block_Hhzm39",
+        "text_block_a8tmwL",
+        "text_block_webjxc",
+        "text_block_E9kWTd",
+        "text_block_nMNeFE",
+        "text_block_FqmwyL",
+        "text_block_U4Y3rb",
+        "text_block_MbR86U"
+      ],
+      "settings": {
+        "title": "Pet Clippers",
+        "heading_size": "h0",
+        "align_text": "center",
+        "divider": false,
+        "two_column_mobile": true,
+        "color_scheme": "none"
+      }
+    },
+    "text_columns_znx9Bq": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_nFVHE8": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-5l-automatic-cat-feeder-for-two-cats-with-5g-wi-fi-app-control-781976.png",
+            "image_mask": "none",
+            "image_width": 500,
+            "title": "",
+            "text": "<p>5L Double Feeder With APP</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/Feed5LWIFI.pdf?v=1701678707"
+          }
+        },
+        "text_block_VT9fp4": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/5l-pet-feeder-2.png",
+            "image_mask": "none",
+            "image_width": 500,
+            "title": "",
+            "text": "<p>5L Double Feeder Without APP</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/5L_7d967e25-fd40-4386-8ce9-45647683d65f.pdf?v=1735193738"
+          }
+        },
+        "text_block_iBbtMk": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/3L_Feeder.png",
+            "image_mask": "none",
+            "image_width": 500,
+            "title": "",
+            "text": "<p>3.5L Pet Feeder with APP Control</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/Cat_Feeder_3.L.pdf?v=1709192210"
+          }
+        },
+        "text_block_xDXixx": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-pf05-3l-automatic-cat-feeder-693112.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p>3L Pet Feeder with APP Control</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/PF06WIFI.pdf?v=1743130034"
+          }
+        },
+        "text_block_Xqt76W": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-2-meal-automatic-cat-feeder-for-wet-food-dry-food-632802.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p>N1 Pet Wet Feeder<br/></p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/PFD007_V2.pdf?v=1744006506"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_nFVHE8",
+        "text_block_VT9fp4",
+        "text_block_iBbtMk",
+        "text_block_xDXixx",
+        "text_block_Xqt76W"
+      ],
+      "settings": {
+        "title": "Pet Feeder",
+        "heading_size": "h0",
+        "align_text": "center",
+        "divider": false,
+        "two_column_mobile": true,
+        "color_scheme": "none"
+      }
+    },
+    "text_columns_YQVeaq": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_9KpArT": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-pp01-pet-air-purifier-with-washable-filter-837724.jpg",
+            "image_mask": "none",
+            "image_width": 500,
+            "title": "",
+            "text": "<p>PP01 Air Purifier</p>",
+            "align_text": "center",
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/PP01.pdf?v=1743129883"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_9KpArT"
+      ],
+      "settings": {
+        "title": "Pet Air Purifier",
+        "heading_size": "h0",
+        "align_text": "center",
+        "divider": false,
+        "two_column_mobile": true,
+        "color_scheme": "none"
+      }
+    }
+  },
+  "order": [
+    "rich_text_K4MrPF",
+    "pf-ae10dceb",
+    "text_columns_tTcAWN",
+    "text_columns_FHMjMr",
+    "text_columns_nMiahj",
+    "text_columns_znx9Bq",
+    "text_columns_YQVeaq"
+  ]
+}

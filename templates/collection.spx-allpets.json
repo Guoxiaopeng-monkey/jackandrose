@@ -1,0 +1,351 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "background_image_mbmaEE": {
+      "type": "background-image",
+      "disabled": true,
+      "settings": {}
+    },
+    "banner_z7rirW": {
+      "type": "banner",
+      "settings": {
+        "img": "shopify://shop_images/Feature_deal_2_992f8225-4be5-4fd4-a930-22b525e998c1.png",
+        "img_m": "shopify://shop_images/3_8fa9d756-3243-413e-aa64-bcfd2c1a5b06.png",
+        "hide": false,
+        "overlayer": 1,
+        "title": "",
+        "text": "",
+        "btn": "",
+        "link": "",
+        "btn_style": "main"
+      }
+    },
+    "spk_nav_image_YpeqbY": {
+      "type": "spk-nav-image",
+      "blocks": {
+        "item_8zzeGz": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/7_59654d27-62eb-49f3-bfa4-15d197e29590.png",
+            "title": "Large Pet Picks",
+            "link": "L"
+          }
+        },
+        "item_teyzMf": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/8_3010bb4a-adb6-4a52-a1cd-23f50726f284.png",
+            "title": "Small & Medium Pet Picks",
+            "link": "S"
+          }
+        },
+        "item_myjYJr": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/23-1_a10a38bf-2d2a-4571-a079-bb6be28cbd48.png",
+            "title": "Multi-Pet Picks",
+            "link": "M"
+          }
+        }
+      },
+      "block_order": [
+        "item_8zzeGz",
+        "item_teyzMf",
+        "item_myjYJr"
+      ],
+      "name": "SPX Nav Image",
+      "settings": {
+        "text_color": "#000000"
+      }
+    },
+    "dealpage_two_DQB79R": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_dDWDxR": {
+          "type": "collection",
+          "settings": {
+            "collection": "large-dog-grooming-vacuum",
+            "text": "Pet Grooming Vacuum",
+            "subtitle": ""
+          }
+        },
+        "collection_qwGtUx": {
+          "type": "collection",
+          "settings": {
+            "collection": "large-dog-fountain",
+            "text": "Pet Water Fountain",
+            "subtitle": ""
+          }
+        },
+        "collection_4w4eLL": {
+          "type": "collection",
+          "settings": {
+            "collection": "dog-clippers",
+            "text": "Clippers",
+            "subtitle": ""
+          }
+        },
+        "collection_JKkUUL": {
+          "type": "collection",
+          "settings": {
+            "collection": "dog-walk-sets",
+            "text": "",
+            "subtitle": ""
+          }
+        },
+        "collection_GGgUXh": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundle-saving-for-large-dog",
+            "text": "Bundle & Save",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_dDWDxR",
+        "collection_qwGtUx",
+        "collection_4w4eLL",
+        "collection_JKkUUL",
+        "collection_GGgUXh"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Large Pet Picks",
+        "subtitle": "Big Buddy Essentials",
+        "target_id": "L",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "collection",
+        "display_special_attr": false,
+        "padding_pc": "80px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "dealpage_two_Ke9PYe": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_WFweKW": {
+          "type": "collection",
+          "settings": {
+            "collection": "small-dogs-cats-grooming-vacuum",
+            "text": "Pet Grooming Vacuum",
+            "subtitle": ""
+          }
+        },
+        "collection_fq983g": {
+          "type": "collection",
+          "settings": {
+            "collection": "samll-dogs-cats-fountain",
+            "text": "Pet Water Fountain",
+            "subtitle": ""
+          }
+        },
+        "collection_pR6Nc4": {
+          "type": "collection",
+          "settings": {
+            "collection": "feeder",
+            "text": "Pet Feeder",
+            "subtitle": ""
+          }
+        },
+        "collection_MQW7Ch": {
+          "type": "collection",
+          "settings": {
+            "collection": "cat-clippers",
+            "text": "Clippers",
+            "subtitle": ""
+          }
+        },
+        "collection_GqmefW": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "bundle-saving-for-small-dog-cats",
+            "text": "Bundle & Save",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_WFweKW",
+        "collection_fq983g",
+        "collection_pR6Nc4",
+        "collection_MQW7Ch",
+        "collection_GqmefW"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Small & Medium Pet Picks",
+        "subtitle": "Tiny Paws Favorites",
+        "target_id": "S",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "collection",
+        "display_special_attr": false,
+        "padding_pc": "80px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "dealpage_two_txVaNw": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_KKKVcV": {
+          "type": "collection",
+          "settings": {
+            "collection": "multi-pet-picks",
+            "text": "TOP Picks",
+            "subtitle": ""
+          }
+        },
+        "collection_wF8JE3": {
+          "type": "collection",
+          "settings": {
+            "collection": "large-dog-fountain",
+            "text": "Large Water Fountain",
+            "subtitle": ""
+          }
+        },
+        "collection_EYrw8e": {
+          "type": "collection",
+          "settings": {
+            "collection": "pet-feeder-basic-for-two-cats",
+            "text": "Automatic Feeder",
+            "subtitle": ""
+          }
+        },
+        "collection_Hz8tG8": {
+          "type": "collection",
+          "settings": {
+            "collection": "app-control-feeder-for-two-cats",
+            "text": "Smart App Control Feeder",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_KKKVcV",
+        "collection_wF8JE3",
+        "collection_EYrw8e",
+        "collection_Hz8tG8"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Multi-Pet Picks",
+        "subtitle": "For Homes with More Than One",
+        "target_id": "M",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "collection",
+        "display_special_attr": false,
+        "padding_pc": "80px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "faqs_ijrNcG": {
+      "type": "faqs",
+      "blocks": {
+        "tab_content_JmK8jh": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Place your question or heading here",
+            "text": "<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        },
+        "tab_content_c6HcW7": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Place your question or heading here",
+            "text": "<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        },
+        "tab_content_Rpa4Mk": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Place your question or heading here",
+            "text": "<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_JmK8jh",
+        "tab_content_c6HcW7",
+        "tab_content_Rpa4Mk"
+      ],
+      "disabled": true,
+      "settings": {
+        "id": "faqs",
+        "title": "FAQs",
+        "align": "center",
+        "align_m": "center",
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    },
+    "icons_fRC7QE": {
+      "type": "icons",
+      "blocks": {
+        "icon_RXgQdm": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Fast & Free Shipping",
+            "text": ""
+          }
+        },
+        "icon_3tpCEf": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Product Tax Incl.",
+            "text": ""
+          }
+        },
+        "icon_DDAWJJ": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "24-Month Warranty",
+            "text": ""
+          }
+        },
+        "icon_6gJPeq": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "30-Day Money Back",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_RXgQdm",
+        "icon_3tpCEf",
+        "icon_DDAWJJ",
+        "icon_6gJPeq"
+      ],
+      "settings": {
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    }
+  },
+  "order": [
+    "background_image_mbmaEE",
+    "banner_z7rirW",
+    "spk_nav_image_YpeqbY",
+    "dealpage_two_DQB79R",
+    "dealpage_two_Ke9PYe",
+    "dealpage_two_txVaNw",
+    "faqs_ijrNcG",
+    "icons_fRC7QE"
+  ]
+}

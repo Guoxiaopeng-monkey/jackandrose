@@ -1,0 +1,411 @@
+<style>
+  #shopify-section-{{ section.id }} .page-width{
+      --page-width:1360px;
+  }
+  .template-index .page-width{
+    max-width: 1360px;
+  }
+  .home-story {
+    padding-top: 80px;
+  }
+  .home-story .section_title{
+    color: #000;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.4;
+    text-transform: capitalize;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  .home-story .wrapper{
+    display: flex;
+    gap: 20px;
+  }
+  .home-story .wrapper .item{
+    width: calc( (100% - 60px)/4);
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 35rem;
+    min-height: 460px;
+    max-height: 66.66vh;
+    transition: width .6s cubic-bezier(0.38, 0.005, 0.215, 1);
+  }
+  .home-story .wrapper .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .home-story .wrapper .item .content-box{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 24px;
+  }
+  .home-story .item-title{
+    color: #0D0D0D;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 39.2px;
+    margin-bottom: 8px;
+  }
+  .home-story .item-text{
+    color: rgba(0, 0, 0, 0.80);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    margin: 0;
+  }
+  .play-video{
+    cursor: pointer;
+  }
+  .play-video svg{
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .opaicty-change{
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  .home-story .wrapper .item:hover .opaicty-change{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all .2s cubic-bezier(0.38, 0.005, 0.215, 1) .6s;
+  }
+  .home-story .wrapper .item.maxwidth{
+    width: calc( (100% - 60px) * 0.4 );
+  }
+  .home-story .wrapper .item.width-0{
+    width: calc( (100% - 60px) * 0.1);
+  }
+  .home-story .wrapper .item.width-1{
+    width: calc( (100% - 60px) * 0.2);
+  }
+  .home-story .wrapper .item.width-2{
+    width: calc( (100% - 60px) * 0.3);
+  }
+  .home-story .wrapper-m{
+    display: none;
+  }
+  #video-wrapper{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  #close-btn{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+  }
+  #close-btn svg{
+    display: block;
+  }
+  #video-box{
+    max-width: 80%;
+    max-height: 85%;
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+  }
+  #video-box video{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+   @media (max-width: 990px){
+     #video-box{
+        max-width: 100%;
+        width: 100%;
+     }
+     #close-btn{
+       top: 12px;
+        right: 12px;
+     }
+     .home-story{
+       padding-top: 40px;
+     }
+     .home-story .section_title{
+        font-size: 20px;
+        text-align: left;
+        margin-bottom: 24px;
+      }
+     .home-story .wrapper{
+        display: none;
+      }
+     .home-story .wrapper-m{
+        display: block;
+      }
+     .home-story .page-width{
+        padding-right: 0;
+      }
+     .home-story .wrapper-m .img-box{
+       border-radius: 24px;
+       overflow: hidden;
+       position: relative;
+     }
+     .play-video{
+        cursor: pointer;
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
+     }
+     .home-story .wrapper-m .content-box{
+        margin-top: 12px;
+      }
+     .home-story .item-title{
+        color: #0D0D0D;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 25.2px;
+        margin-bottom: 4px;
+      }
+      .home-story .item-text{
+        color: rgba(0, 0, 0, 0.80);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.6px;
+        margin: 0;
+      }
+  }
+</style>
+
+<div class="page-width">
+  {% if section.settings.title != blank %}
+    <h2 class="section_title">{{ section.settings.title }}</h2>
+  {% endif %}
+  <div class="wrapper">
+    {% for block in section.blocks %}
+      <div class="item item{{ forloop.index }}">
+        {% if block.settings.image != blank %}
+          <picture>
+            <source
+              srcset="{{ block.settings.image_m | img_url:'master' }}"
+              media="(max-width: 990px)"
+            >
+            <img
+              src="{{ block.settings.image_m | img_url:'master' }}"
+              alt=""
+              loading="lazy"
+              width="100%"
+              height="auto"
+            >
+          </picture>  
+        {% endif %}
+        <div class="content-box">
+          <div class="box">
+            {% if block.settings.title != blank %}
+              <h2 class="item-title opaicty-change" style="color:{{ block.settings.color }};">{{ block.settings.title }}</h2>
+            {% endif %}
+            {% if block.settings.text != blank %}
+              <p class="item-text opaicty-change" style="color:{{ block.settings.color }};">{{ block.settings.text }}</p>
+            {% endif %}
+          </div>
+          <span class="play-video opaicty-change" data-video="{{ block.settings.url }}">
+              <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25.2083 46.0417C36.7143 46.0417 46.0417 36.7143 46.0417 25.2083C46.0417 13.7024 36.7143 4.375 25.2083 4.375C13.7024 4.375 4.375 13.7024 4.375 25.2083C4.375 36.7143 13.7024 46.0417 25.2083 46.0417Z" stroke="#333333" stroke-linejoin="round"/>
+                <path d="M20.625 25.2452V20.482C20.625 19.7122 21.4583 19.2311 22.125 19.616L26.25 21.9976L30.375 24.3792C31.0417 24.7641 31.0417 25.7263 30.375 26.1112L26.25 28.4928L22.125 30.8744C21.4583 31.2593 20.625 30.7781 20.625 30.0083V25.2452Z" fill="black"/>
+              </svg>
+          </span>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="wrapper-m swiper-container">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+              <div class="item swiper-slide">
+                {% if block.settings.image != blank %}
+                  <div class="img-box">
+                    <picture>
+                      <source
+                        srcset="{{ block.settings.image_m | img_url:'master' }}"
+                        media="(max-width: 990px)"
+                      >
+                      <img
+                        src="{{ block.settings.image | img_url:'master' }}"
+                        alt=""
+                        loading="lazy"
+                        width="100%"
+                        height="auto"
+                      >
+                    </picture>  
+                    <span class="play-video" data-video="{{ block.settings.url }}">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M25.2083 46.0417C36.7143 46.0417 46.0417 36.7143 46.0417 25.2083C46.0417 13.7024 36.7143 4.375 25.2083 4.375C13.7024 4.375 4.375 13.7024 4.375 25.2083C4.375 36.7143 13.7024 46.0417 25.2083 46.0417Z" stroke="#333333" stroke-linejoin="round"/>
+                          <path d="M20.625 25.2452V20.482C20.625 19.7122 21.4583 19.2311 22.125 19.616L26.25 21.9976L30.375 24.3792C31.0417 24.7641 31.0417 25.7263 30.375 26.1112L26.25 28.4928L22.125 30.8744C21.4583 31.2593 20.625 30.7781 20.625 30.0083V25.2452Z" fill="black"/>
+                        </svg>
+                    </span>
+                  </div>
+                {% endif %}
+                <div class="content-box">
+                  <div class="box">
+                    {% if block.settings.title != blank %}
+                      <h2 class="item-title" style="color:{{ block.settings.color }};">{{ block.settings.title }}</h2>
+                    {% endif %}
+                    {% if block.settings.text != blank %}
+                      <p class="item-text" style="color:{{ block.settings.color }};">{{ block.settings.text }}</p>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<div id="video-wrapper">
+  <div id="close-btn">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+        <path fill="#000" opacity="0.4" d="M16 0c8.837 0 16 7.163 16 16s-7.163 16-16 16c-8.837 0-16-7.163-16-16s7.163-16 16-16z"></path>
+        <path fill="#fff" d="M21.734 10.275c-0.355-0.355-0.928-0.355-1.283 0l-4.451 4.441-4.45-4.45c-0.355-0.355-0.928-0.355-1.283 0s-0.355 0.928 0 1.283l4.45 4.45-4.45 4.451c-0.355 0.355-0.355 0.928 0 1.283s0.928 0.355 1.283 0l4.45-4.45 4.451 4.45c0.355 0.355 0.928 0.355 1.283 0s0.355-0.928 0-1.283l-4.45-4.451 4.45-4.45c0.346-0.346 0.346-0.928 0-1.274z"></path>
+    </svg>
+  </div>
+  <div id="video-box"></div>
+</div>                            
+
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    $('.home-story .wrapper .item').hover(function(){
+        $(this).addClass('maxwidth');
+        $(".home-story .wrapper .item").not(".maxwidth").each(function(index,item){
+          $(item).addClass(`width-${index}`);
+        })
+    },function(){
+        $(".home-story .wrapper .item").not(".maxwidth").each(function(index,item){
+          $(item).removeClass(`width-${index}`);
+        })
+        $(this).removeClass('maxwidth');
+    });
+
+    let story_swiper = null;
+    initStorySwiper();
+    $(window).resize(function(){
+        initStorySwiper();
+    })              
+    function initStorySwiper(){
+              if (story_swiper) {
+                story_swiper.destroy(true, true); // 销毁并清除DOM
+                story_swiper = null;
+              }
+              story_swiper = new Swiper('.home-story .wrapper-m', {
+                  slidesPerView : 1.2,
+                  loop: false,
+                  spaceBetween : 12,
+                  
+                  breakpoints: { 
+                    591: {  //当屏幕宽度大于等于590
+                      slidesPerView: 2.2,
+                      spaceBetween: 12
+                    }
+                  }
+                })
+              }
+
+    $('#close-btn').click(function(){
+      $('#video-wrapper').hide();
+      $('html').css('overflow','initial');
+      $('#video-box').empty();
+    })
+    $('.home-story .play-video').click(function(){
+      let current_video = $(this).attr('data-video');
+      $('#video-wrapper').css('display','flex');
+      $('html').css('overflow','hidden');
+      $('#video-box').append(`<video
+                width="100%"
+                height="auto"
+                autoplay
+                loop
+                controls>
+                <source src="${current_video}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>`);
+    })
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Home story",
+    "class": "home-story",
+    "max_blocks": 4,
+    "limit": 1,
+    "tag": "section",
+    "disabled_on": {
+      "groups": ["footer","header"]
+    },
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Perk and Rewards"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_m",
+            "label": "Image mobile"
+          },
+          {
+            "type": "color",
+            "id": "color",
+            "default": "#000",
+            "label": "Text color"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "turpis sed sagittis "
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text",
+            "default": "Lorem ipsum dolor sit amet consectetur. Nulla dictumst massa natoque pulvinar pellentesque. "
+          },
+          {
+            "type": "text",
+            "id": "url",
+            "label": "Hosted video url"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Home story"
+      }
+    ]
+  }
+{% endschema %}

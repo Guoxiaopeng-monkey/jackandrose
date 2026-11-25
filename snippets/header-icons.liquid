@@ -1,0 +1,97 @@
+{% comment %}
+  /**
+    * @param {string} cart_icon - The icon to use for the cart
+    * @param {string} nav_position - The position of the navigation
+  */
+{% endcomment %}
+
+{%- liquid
+  assign hide_icon_labels = true
+  if nav_position == 'below'
+    assign hide_icon_labels = false
+  endif
+-%}
+
+<div class="site-nav">
+  <div class="site-nav__icons">
+    <a href="{{ routes.search_url }}" class="site-nav__link site-nav__link--icon js-search-header{% if nav_position == 'below' %} medium-up--hide{% endif %} js-no-transition">
+      {% comment %}
+        {% render 'icon', name: 'search' %}
+      {% endcomment %}
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false" role="presentation" class="icon icon-search e_icon-search">
+<g id="Frame" clip-path="url(#clip0_256_3796)">
+<path id="Vector_2" d="M7.875 14.25C11.3958 14.25 14.25 11.3958 14.25 7.875C14.25 4.3542 11.3958 1.5 7.875 1.5C4.3542 1.5 1.5 4.3542 1.5 7.875C1.5 11.3958 4.3542 14.25 7.875 14.25Z" stroke="currentColor" stroke-linejoin="round"></path>
+<path id="Vector_3" d="M12.458 12.4582L15.64 15.6402" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+</g>
+<defs>
+<clipPath id="clip0_256_3796">
+<rect width="18" height="18" fill="currentColor"></rect>
+</clipPath>
+</defs>
+</svg>
+      <span class="icon__fallback-text visually-hidden">{{ 'labels.search' | t }}</span>
+    </a>
+
+    {%- if shop.customer_accounts_enabled -%}
+      <a class="site-nav__link site-nav__link--icon" href="{{ routes.account_url }}">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false" role="presentation" class="icon icon-user e_icon-user">
+        <g id="Frame">
+        <path id="Vector" d="M8.99951 7.49991C10.6564 7.49991 11.9995 6.15676 11.9995 4.49991C11.9995 2.84305 10.6564 1.49991 8.99951 1.49991C7.34266 1.49991 5.99951 2.84305 5.99951 4.49991C5.99951 6.15676 7.34266 7.49991 8.99951 7.49991Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path id="Vector_2" d="M15.75 16.5C15.75 12.7721 12.7279 9.75 9 9.75C5.27209 9.75 2.25 12.7721 2.25 16.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        </svg>
+        <span class="site-nav__icon-label small--hide{% if hide_icon_labels %} icon__fallback-text visually-hidden{% endif %}">
+          {{ 'labels.account' | t }}
+        </span>
+      </a>
+    {%- endif -%}
+
+    <a href="{{ routes.cart_url }}"
+      id="HeaderCartTrigger"
+      aria-controls="HeaderCart"
+      class="site-nav__link site-nav__link--icon js-no-transition"
+      data-icon="{{ cart_icon }}"
+      aria-label="{{ 'labels.cart' | t }}"
+    >
+      <span class="cart-link">
+      {% comment %}
+        
+        {% render 'icon', name: cart_icon %}
+          
+        {% endcomment %}
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false" role="presentation" class="icon icon-cart e_icon-cart">
+<g id="Component 1">
+<g id="Group 1">
+<rect id="Rectangle 8" x="1.625" y="5" width="14.75" height="12.5" stroke="currentColor"></rect>
+<path id="Rectangle 9" d="M6.125 3.375C6.125 1.78718 7.41218 0.5 9 0.5C10.5878 0.5 11.875 1.78718 11.875 3.375V5.125H6.125V3.375Z" stroke="currentColor"></path>
+</g>
+</g>
+</svg>
+        <span class="cart-link__bubble{% if cart.item_count > 0 %} cart-link__bubble--visible{% endif %}">
+          <span class="cart-link__bubble-num">{{ cart.item_count }}</span>
+        </span>
+      </span>
+      <span class="site-nav__icon-label small--hide{% if hide_icon_labels %} icon__fallback-text visually-hidden{% endif %}">
+        {{ 'labels.cart' | t }}
+      </span>
+    </a>
+
+    <button type="button"
+      aria-controls="MobileNav"
+      class="site-nav__link site-nav__link--icon e_medium-up--hide mobile-nav-trigger">
+      {% comment %}
+      {% render 'icon', name: 'hamburger' %}
+        {% endcomment %}
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-hamburger" viewBox="0 0 64 64"><path d="M7 15h51">.</path><path d="M7 32h43">.</path><path d="M7 49h51">.</path></svg>
+      <span class="icon__fallback-text visually-hidden">{{ 'labels.site_navigation' | t }}</span>
+    </button>
+  </div>
+
+  <div class="site-nav__close-cart">
+    <button type="button" class="site-nav__link site-nav__link--icon js-close-header-cart">
+      <span>{{ 'actions.close' | t }}</span>
+      {% render 'icon', name: 'close' %}
+    </button>
+  </div>
+</div>

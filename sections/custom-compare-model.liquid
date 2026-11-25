@@ -1,0 +1,412 @@
+ 
+ {%- liquid
+    assign product1 = all_products[section.settings.product1] 
+    assign product2 = all_products[section.settings.product2]
+    assign product3 = all_products[section.settings.product3] 
+    assign product4 = all_products[section.settings.product4] 
+-%}
+<div id="compare-models" class="compare-models">
+  <div class=" wrapper-padded">
+      {%- if section.settings.title != blank -%}
+    <div class="section-header text-{{ section.settings.align_text }}">
+      <h2>{{ section.settings.title }}</h2>
+    {{ section.settings.content }}
+    </div>
+  {%- endif -%}
+<div id="product-compare-models" class="page-width compare-content  color-scheme-{{ section.settings.color_scheme }}" >
+
+    <div class="compare-container">
+    <table id="comparison-table" class="comparison-table">
+        <thead>
+   <tr>
+    <th>&nbsp;</th>
+        <th>
+          
+            <img src="{{ section.settings.image1 | image_url:  width: 300 }}" alt="{{ section.settings.title1 }}" class="product-image" />
+               <span>{{ section.settings.title1 }}</span>
+             <div class="price">{{ product1.price | money }}</div>
+             <div class="link"><a href="{{ product1.url }}" class="btn"> {{ section.settings.button_label }} </a> </div>           </th>
+            <th>
+            
+              <img src="{{ section.settings.image2 | image_url:  width: 300 }}" alt="{{ section.settings.title2 }}" class="product-image" />
+               <span>{{ section.settings.title2 }}</span>  
+                 <div class="price">{{ product2.price | money }}</div>
+              <div class="link"> <a href="{{ product2.url }}" class="btn">{{ section.settings.button_label }} </a>   </div>    
+            </th>
+         
+   
+  </tr>
+
+    </thead>
+    <tbody>
+ 
+  
+  <tr>
+ 
+    <td class="title">CLIPPER</td>
+  <td class="tick">{% if section.settings.clipper1 %}✔ {% else %}<i>-</i>{% endif %}</td>
+    <td class="tick">{% if section.settings.clipper2 %}✔ {% else %}<i>-</i>{% endif %}</td>
+ 
+    
+  </tr>
+  <tr>
+    
+    <td class="title">NAIL&PAW</td>
+  <td class="tick">{% if section.settings.nail_paw1 %}✔ {% else %}<i>-</i>{% endif %}</td>
+    <td class="tick">{% if section.settings.nail_paw2 %}✔ {% else %}<i>-</i>{% endif %}</td>
+ 
+ 
+  </tr>
+   <tr>
+
+    <td class="title">LIMIT COMB</td>
+  <td class="tick">{% if section.settings.limit_comb1 %}✔ {% else %}<i>-</i>{% endif %}</td>
+    <td class="tick">{% if section.settings.limit_comb1 %}✔ {% else %}<i>-</i>{% endif %}</td>
+  
+
+  </tr>  
+    <tr>
+
+    <td class="title">CLEANING</td>
+  <td class="tick">{% if section.settings.cleaning1 %}✔ {% else %}<i>-</i>{% endif %}</td>
+    <td class="tick">{% if section.settings.cleaning1 %}✔ {% else %}<i>-</i>{% endif %}</td>
+ 
+
+  </tr>    
+      <tr>
+
+    <td class="title">DRYER</td>
+  <td class="tick">{% if section.settings.dryer1 %}✔ {% else %}<i>-</i>{% endif %}</td>
+    <td class="tick">{% if section.settings.dryer2 %}✔ {% else %}<i>-</i>{% endif %}</td>
+ 
+
+  </tr>   
+      <tr>
+
+    <td class="title">HEATING</td>
+  <td class="tick">{% if section.settings.heating1 %}✔ {% else %}<i>-</i>{% endif %}</td>
+    <td class="tick">{% if section.settings.heating1 %}✔ {% else %}<i>-</i>{% endif %}</td>
+ 
+
+  </tr>   
+  <tr>
+
+    <td class="title">NOISE</td>
+    <td>{{ section.settings.noise1 }}</td>
+    <td>{{ section.settings.noise2 }}</td>
+ 
+  
+  </tr>
+  <tr>
+
+    <td class="title">ACCESSORIES</td>
+    <td>{{ section.settings.accessories1 }}</td>
+    <td>{{ section.settings.accessories2 }}</td>
+ 
+
+  </tr>
+  <tr>
+   
+    <td class="title">SUCTION</td>
+    <td>{{ section.settings.suction1 }}</td>
+    <td>{{ section.settings.suction2 }}</td>
+ 
+
+  </tr>
+  <tr>
+
+    <td class="title">HOSE</td>
+    <td>{{ section.settings.hose1 }}</td>
+    <td>{{ section.settings.hose2 }}</td>
+ 
+
+  </tr>
+        </tbody>
+    </table>
+    </div>
+ </div>
+  </div>
+</div>
+<style>
+  .wrapper-padded{overflow-x:visible;}
+  .compare-models .wrapper-padded{padding-top:50px; padding-bottom:30px;}
+  .compare-models .header{text-align:center;}
+ 
+  .compare-content {padding:40px; border-radius:10px;}
+ .compare-models table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background:transparent;
+    max-width:1100px;
+    margin:0 auto;
+  }
+ 
+ 
+ .compare-models  th,.compare-models  td {
+    padding: 16px; min-width:15%;
+    text-align: center;
+   border:none;
+  }
+ 
+.compare-models   th {
+    color: #333; 
+    font-weight: bold;  background:transparent;
+  }
+.compare-models   th span{font-size:1.2rem; display:inline-block; padding:1rem 0.5rem;}
+.compare-models   td i{color:#333;}
+.compare-models   td {
+    color: #000; font-weight:bold; background:transparent;
+  }
+  .compare-models   th:last-child, .compare-models   td:last-child{ }
+ .compare-models .title{font-weight:normal; text-align:left;  }
+  .compare-models .price{margin-bottom:20px;}
+  .compare-models .btn{font-size:0.9rem; margin:0 auto; padding:6px 14px; font-weight:400;}
+  /*
+.compare-models   tr:nth-child(odd) {
+    background-color: #F7F6F5;
+  }
+.compare-models  thead tr{background-color:#fff!important;}
+ */
+  .tick {
+    color: #FF6A00!important; font-size:1.2em;
+  }
+.compare-models   tr td:first-child, .compare-models   tr th:first-child{
+  min-width:10%; 
+}
+ 
+.compare-models .cross {
+  color: #FF6A00;
+  }
+ 
+.compare-models .comparison-table .product-image{
+  width:200px; margin:0 auto;
+}
+ 
+ 
+  @media(max-width:768px){
+  .compare-content {
+    padding:10px; border-radius:5px;
+  }
+  .compare-models .wrapper-padded{ 
+    padding:0;
+  }
+  .compare-container{
+    width:100%;
+    overflow-x:auto;
+  }
+    .compare-models table{
+      width:100%;
+    }
+   .compare-models table tr{
+      display:auto;
+   }
+
+  .compare-models  th,.compare-models  td {
+    padding: 10px 0px;  width:40%;
+    text-align: center; font-size:0.9rem;   
+  }
+   .compare-models  th:first-child,.compare-models  td:first-child{
+     width:calc(20% - 20px);
+   }
+  .compare-models .title{
+      font-size:0.75rem; text-align:left; width:calc(20% - 20px); padding:10px 0; max-width:20%;
+  }
+  .compare-models .btn{
+    font-size:0.8rem; padding:6px 10px;
+  }  
+ }
+</style>
+ 
+  
+
+ 
+
+{% schema %}
+  {
+    "name": "custom compare models",
+    "class": "index-section section-overview",
+    "settings": [
+        {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "t:labels.color_scheme",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:labels.none"
+        },
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        }
+      ]
+    },
+       {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+        {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button label"
+      },
+      {
+        "type":"header",
+        "content":"product item 1"
+      },
+     {
+          "type": "product",
+          "id": "product1",
+          "label": "product one" 
+        },
+      {
+        "type": "image_picker",
+            "id": "image1",
+            "label": "Image"
+          },
+            {
+          "type": "text",
+          "id": "title1",
+          "label": "product title" 
+        },
+        {
+          "type": "checkbox",
+          "id": "clipper1",
+          "label": "Clipper"
+        },
+          {
+          "type": "checkbox",
+          "id": "nail_paw1",
+          "label": "Nail&Paw"
+        },
+          {
+          "type": "checkbox",
+          "id": "limit_comb1",
+          "label": "Limit Comb"
+        },
+         {
+          "type": "checkbox",
+          "id": "cleaning1",
+          "label": "Cleaning"
+        },
+          {
+          "type": "checkbox",
+          "id": "dryer1",
+          "label": "Dryer"
+        },
+          {
+          "type": "checkbox",
+          "id": "heating1",
+          "label": "Heating"
+        },
+         {
+          "type": "text",
+          "id": "noise1",
+          "label": "Noise"
+        },
+          {
+          "type": "text",
+          "id": "accessories1",
+          "label": "Accessories"
+        },
+      {
+          "type": "text",
+          "id": "suction1",
+          "label": "Suction"
+        },
+         {
+          "type": "text",
+          "id": "hose1",
+          "label": "Hose"
+        },
+      {
+        "type":"header",
+        "content":"product item 2"
+      },
+     {
+          "type": "product",
+          "id": "product2",
+          "label": "product two" 
+        },
+      {
+        "type": "image_picker",
+            "id": "image2",
+            "label": "Image"
+          },
+            {
+          "type": "text",
+          "id": "title2",
+          "label": "product title" 
+        },
+        {
+          "type": "checkbox",
+          "id": "clipper2",
+          "label": "Clipper"
+        },
+        {
+          "type": "checkbox",
+          "id": "nail_paw2",
+          "label": "Nail&Paw"
+        },
+          {
+          "type": "checkbox",
+          "id": "limit_comb2",
+          "label": "Limit Comb"
+        },
+         {
+          "type": "checkbox",
+          "id": "cleaning2",
+          "label": "Cleaning"
+        },
+          {
+          "type": "checkbox",
+          "id": "dryer2",
+          "label": "Dryer"
+        },
+          {
+          "type": "checkbox",
+          "id": "heating2",
+          "label": "Heating"
+        },
+         {
+          "type": "text",
+          "id": "noise2",
+          "label": "Noise"
+        },
+          {
+          "type": "text",
+          "id": "accessories2",
+          "label": "Accessories"
+        },
+      {
+          "type": "text",
+          "id": "suction2",
+          "label": "Suction"
+        },
+         {
+          "type": "text",
+          "id": "hose2",
+          "label": "Hose"
+        }
+     
+    
+    ],
+  
+    "presets": [
+      {
+        "name": "Custom compare models"
+      }
+    ]
+  }
+{% endschema %}

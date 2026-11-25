@@ -1,0 +1,666 @@
+{% comment %}
+  /**
+   * @param {object} section - section object
+   * @param {boolean} show_newsletter - show newsletter
+   * @param {string} newsletter_richtext - newsletter richtext
+   * @param {string} context - context (default: 'footer')
+   * @param {boolean} footer_main_menu - footer main menu
+   * @param {boolean} show_copyright - show copyright
+   * @param {string} copyright_text - copyright text
+   * @param {object} shop - shop object
+   * @param {object} policies_menu - policies menu object
+   * @param {string} social_instagram_link - instagram link
+   * @param {string} social_facebook_link - facebook link
+   * @param {string} social_twitter_link - twitter link
+   * @param {string} social_youtube_link - youtube link
+   * @param {string} social_pinterest_link - pinterest link
+   * @param {string} social_linkedin_link - linkedin link
+   * @param {string} social_snapchat_link - snapchat link
+   * @param {string} social_vimeo_link - vimeo link
+   * @param {string} social_tiktok_link - tiktok link
+   * @param {string} social_tumblr_link - tumblr link
+   * @param {string} [hydration] - hydration mode - (default: 'on:idle')
+   * @param {string} blocks_heading_size - heading size for title in blocks,
+   * @param {boolean} show_wave - show wave
+   */
+{% endcomment %}
+
+{%- assign hydration = hydration | default: 'on:idle' -%}
+
+{%- if show_newsletter -%}
+  <div class="footer__section footer__section--border">
+    <div class="page-width">
+      <div class="footer__newsletter">
+        {%- if newsletter_richtext != blank -%}
+          <div class="footer__subscribe rte rte--nomargin clearfix">
+            {{ newsletter_richtext }}
+          </div>
+        {%- endif -%}
+
+        {%- render 'newsletter-form', section_id: section.id, snippet_context: context, customer: customer -%}
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% comment %}
+  Main navigation is copied here with JS for mobile users
+{% endcomment %}
+{%- if footer_main_menu -%}
+  <div id="FooterMobileNavWrap" class="footer__section footer__section--border medium-up--hide hide">
+    <div id="FooterMobileNav" class="page-width"></div>
+  </div>
+{%- endif -%}
+
+<is-land {{ hydration }}>
+  <footer-section class="site-footer" data-section-id="{{ section.id }}" data-section-type="footer-section">
+    <div
+      id="FooterMenus"
+      class="footer__section footer__section--menus {% if show_wave %}background-svg--wave-reverse{% endif %}"
+    >
+      <div class="page-width">
+        <div class="return-top-wrap only-mobile">
+          <a href="#" class="return-top"
+            ><span>{{ section.settings.return_top }}</span
+            ><at-icon
+              src="//cdn.shopify.com/s/files/1/0655/6716/2614/t/48/assets/icon-chevron-down.svg?v=66558011826176374081726017241"
+              data-name="chevron-down"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                focusable="false"
+                role="presentation"
+                class="icon icon--wide icon-chevron-up"
+                viewBox="0 0 28 16"
+              >
+                <path fill="none" stroke="#fff" stroke-width="2" d="m1.57 1.59 12.76 12.77L27.1 1.59"></path>
+              </svg></at-icon
+          ></a>
+        </div>
+        <div class="footer__blocks">
+          {%- for block in section.blocks -%}
+            <div
+              {{ block.shopify_attributes }}
+              class="footer__block footer__block--{{ block.type }}"
+              data-type="{{ block.type }}"
+            >
+              {%- liquid
+                case block.type
+                  when 'menu'
+                    render 'footer-menu', block: block, linklists: linklists, routes: routes, blocks_heading_size: blocks_heading_size
+                  when 'payment'
+                    assign show_currency_flags = block.settings.show_currency_flags
+                    render 'footer-payments', block: block, show_currency_flags: show_currency_flags, shop: shop, blocks_heading_size: blocks_heading_size
+                  when 'contact'
+                    render 'footer-contact', block: block, pages: pages, social_instagram_link: social_instagram_link, social_facebook_link: social_facebook_link, social_twitter_link: social_twitter_link, social_youtube_link: social_youtube_link, social_pinterest_link: social_pinterest_link, social_linkedin_link: social_linkedin_link, social_snapchat_link: social_snapchat_link, social_vimeo_link: social_vimeo_link, social_tiktok_link: social_tiktok_link, social_tumblr_link: social_tumblr_link, blocks_heading_size: blocks_heading_size
+                  when 'image'
+                    render 'footer-image', block: block
+                  when 'richtext'
+                    render 'footer-richtext', block: block
+                  when 'follow_shop_cta'
+                    render 'follow-shop-cta'
+                endcase
+              -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="page-width footer-bottom">
+          <div class="footer-bottom-row grid">
+            <div class="grid__item one-half">
+              <ul class="inline-list payment-icons">
+                {%- for type in shop.enabled_payment_types -%}
+                  <!--
+                    <li class="icon--payment">
+                      {{ type | payment_type_svg_tag }}
+                    </li>
+                  -->
+                {%- endfor -%}
+                <li class="icon--payment">
+                  <img src="{{ 'paypal' | payment_type_img_url }}" height="25" alt="paypal">
+                </li>
+                <li class="icon--payment"><img src="{{ 'visa' | payment_type_img_url }}" height="25" alt="visa"></li>
+                <li class="icon--payment">
+                  <img src="{{ 'master' | payment_type_img_url }}" height="25" alt="master">
+                </li>
+                <li class="icon--payment">
+                  <img src="{{ 'maestro' | payment_type_img_url }}" height="25" alt="maestro">
+                </li>
+                <li class="icon--payment"><img src="{{ 'jcb' | payment_type_img_url }}" height="25" alt="jcb"></li>
+                <li class="icon--payment">
+                  <img src="{{ 'american_express' | payment_type_img_url }}" height="25" alt="american express">
+                </li>
+                <li class="icon--payment">
+                  <img src="{{ 'diners_club' | payment_type_img_url }}" height="25" alt="diners club">
+                </li>
+                <li class="icon--payment">
+                  <img src="{{ 'discover' | payment_type_img_url }}" height="25" alt="discover">
+                </li>
+                <li class="icon--payment">
+                  <img src="{{ 'klarna' | payment_type_img_url }}" height="25" alt="klarna">
+                </li>
+                <li class="icon--payment">
+                  <img src="{{ 'google_pay' | payment_type_img_url }}" height="25" alt="googlepay">
+                </li>
+                <li class="icon--payment">
+                  <img src="{{ 'apple_pay' | payment_type_img_url }}" height="25" alt="applepay">
+                </li>
+                <li class="icon--payment">
+                  <img src="{{ 'after_pay.jpg' | asset_url }}" height="25" alt="afterpay" width="auto" style="height:25px">
+                </li>
+              </ul>
+            </div>
+            <div class="grid__item one-half social-media-footer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-info">
+        <div class="page-width">
+          <div class="grid">
+            <div class="footer__base-links grid__item one-half">
+              {%- if show_copyright -%}
+                <span>
+                  &copy; {{ 'now' | date: '%Y' }}
+                  {{ shop.name }}
+                  {%- if copyright_text != blank -%}
+                    {{ copyright_text }}
+                  {%- endif -%}
+                </span>
+              {%- endif -%}
+              {%- if linklists[policies_menu].links.size > 0 -%}
+                {%- for link in linklists[policies_menu].links -%}
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                {%- endfor -%}
+              {%- endif -%}
+
+              {{ powered_by_link }}
+            </div>
+
+            <div class="lang-switch grid__item one-half">
+              {%- render 'multi-selectors',
+                locale_selector: true,
+                currency_selector: true,
+                show_currency_flags: false
+              -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer-section>
+  <div class="return-top" style="display: flex;">
+    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+      </path>
+    </svg>
+  </div>
+  <style>
+    .return-top {
+      background: #000 none repeat scroll 0 0;
+      bottom: 80px;
+      right: 30px;
+      color: #fff;
+      display: inline-block;
+      align-items: center;
+      font-size: 28px;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      line-height: 30px;
+      overflow: hidden;
+      position: fixed;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      z-index: 9999;
+    }
+    .return-top:hover {
+      background-color: #ff6a00;
+      color: #fff;
+    }
+    .return-top svg {
+      height: 0.8rem;
+      margin: 0 auto;
+      transform: rotate(180deg);
+    }
+    @media (max-width: 768px) {
+      .return-top {
+        width: 44px;
+        height: 44px;
+        bottom: 88px;
+        right: 16px;
+        z-index: 999999 !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  </style>
+  <script>
+    $(window).scroll(function () {
+      var height = $('header').height();
+      if ($(this).scrollTop() >= height) {
+        $('.return-top').fadeIn(500);
+      } else {
+        $('.return-top').fadeOut(500);
+      }
+    });
+    $('.return-top').click(function () {
+      $('body,html').animate(
+        {
+          scrollTop: 0,
+        },
+        500
+      );
+    });
+  </script>
+
+  <style>
+    @media (min-width: 768px) {
+      .only-mobile {
+        display: none;
+      }
+      .footer__blocks > div {
+        flex: 1 1 180px;
+      }
+      .footer__blocks > div:last-child {
+        flex: 0 1 auto;
+        min-width: 300px;
+      }
+      .footer__blocks > div.footer__block--richtext {
+      }
+      .footer__blocks > div.footer__block--richtext .footer__block--mobile p {
+        padding-right: 2rem;
+      }
+      .payment-icons li {
+        margin: 0 8px 4px 0;
+      }
+    }
+    .footer__section {
+      padding: 45px 0 35px;
+    }
+    .footer__blocks {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(120px 1fr));
+    }
+
+    .newsletter__input-group {
+      margin-left: 0;
+    }
+    .site-footer .image-wrap {
+      background: transparent !important;
+    }
+    .footer__block--image img {
+      max-width: 120px;
+    }
+
+    .site-footer .h3 {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      margin-top: 0.5rem;
+    }
+    .footer__title {
+      font-size: 18px;
+    }
+    .site-footer .links-footer a {
+      font-size: 14px;
+      color: #7b7b80;
+    }
+    .site-footer .links-footer a:hover {
+      text-decoration: underline;
+    }
+    .footer__menu a {
+      color: #fff;
+      font-size: 13px;
+    }
+    .site-footer p {
+      color: #fff;
+      margin-bottom: 0px;
+      font-size: 13px;
+    }
+    /*
+ .footer__block {
+  flex: 1 1 calc(25% - 20px);
+  box-sizing:border-box;
+}
+ .footer__block {
+   font-size:13px;
+ }
+ 
+.footer__block:last-child{
+  flex-basis:calc(42% - 20px); text-align:right;
+}
+  */
+    .site-footer .footer__bottom .page-width {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer-bottom-row {
+      display: flex;
+      align-items: center;
+    }
+    .site-footer .footer__section {
+      border: none;
+    }
+    .site-footer .newsletter__input-group {
+      margin-right: 0;
+      max-width: 100%;
+      gap: 0;
+      margin-bottom: 15px;
+    }
+    .site-footer .input-group-field {
+      background: #f7f6f5;
+      border: 1px solid #eeeeee;
+      font-size: 14px;
+      padding: 5px 10px;
+      border-top-left-radius: 4px !important;
+      border-bottom-left-radius: 4px !important;
+    }
+    .site-footer .input-group .input-group-btn:last-child .btn {
+      border-top-left-radius: 0px !important;
+      border-bottom-left-radius: 0px !important;
+      padding: 5px 10px;
+      line-height: 1;
+    }
+
+    .site-footer .footer-bottom {
+      margin-top: 50px;
+    }
+
+    .social-media-footer .footer__social svg path {
+      fill: white;
+    }
+
+    .social-media-footer .footer__social svg path:hover {
+      fill: #ccc;
+    }
+    /*
+   .site-footer .footer-bottom-row {
+     display:flex; justify-content:space-between;
+     align-items:flex-start; flex-direction:row; flex-wrap:wrap; align-items:center;
+   }
+*/
+    .site-footer .footer-info {
+      padding: 0;
+    }
+    .site-footer .footer-info .page-width {
+    }
+    .site-footer .footer-info .grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid #706f6d;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .site-footer .grid {
+      margin-left: 0;
+    }
+    .site-footer .grid__item {
+      padding-left: 0;
+    }
+    .lang-switch {
+      text-align: right;
+    }
+    .site-footer .faux-select {
+      border: none;
+      font-size: 12px;
+      color: #fff;
+      background: transparent;
+    }
+
+    .multi-selectors {
+      justify-content: flex-start;
+      flex-direction: row-reverse;
+    }
+    .site-footer .social-media-top {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .footer__section {
+        padding: 25px 0;
+      }
+      .footer__blocks > div {
+        margin-bottom: 20px;
+      }
+      .faux-select {
+        padding-right: 18px;
+      }
+      .faux-select .icon {
+        right: 0;
+      }
+      .site-footer .social-media-top {
+        display: block;
+      }
+      .site-footer .social-media-top svg {
+        width: 21px;
+        height: 21px;
+      }
+      .site-footer .social-media-top path {
+        fill: #fff;
+      }
+      .site-footer .social-media-top li a {
+        border-radius: 50%;
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        padding-top: 3px;
+        border: 1px solid #fff;
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .site-footer .footer__social {
+        margin-bottom: 0;
+      }
+      .site-footer .footer-bottom .social-media-footer {
+        display: none;
+      }
+      .site-footer li.contact-info {
+        display: none;
+      }
+      .site-footer .newsletter__input-group {
+      }
+      .site-footer .input-group-field {
+        flex: 1 1 auto;
+        font-size: 13px;
+      }
+      .site-footer .input-group-btn .btn {
+        font-size: 12px;
+      }
+      .site-footer .footer-bottom .payment-icons li {
+        margin: 0 6px 10px;
+      }
+      .site-footer .footer-bottom svg {
+        max-height: 19px;
+        width: auto;
+      }
+
+      /*  .site-footer .contact-info{padding-bottom:30px;}
+     .site-footer .contact-info li:first-child{font-size:18px;}*/
+      #FooterMenus .contact-info {
+        padding-bottom: 20px;
+      }
+      #FooterMenus .contact-info p {
+        text-align: center;
+        color: #fff;
+      }
+      #FooterMenus .contact-info a {
+        color: #fff;
+      }
+      .page-width-narrow {
+        padding: 0 var(--pageWidthPadding);
+      }
+      .breadcrumb-section {
+        padding: 15px 0 10px;
+      }
+      .breadcrumb-section .breadcrumb {
+        margin-bottom: 0;
+        font-size: 14px;
+        padding-left: 4px;
+      }
+      .page-content--product {
+        padding-bottom: 0;
+      }
+      .wrapper-padded {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      .product-section {
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+      .product-info-section .product-section {
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+      .product-details-wrapper {
+        padding: 20px 10px;
+      }
+      .grid--product-images--partial .flickity-slider .product-main-slide {
+        width: calc(100% - 30px);
+        margin: 0 15px;
+      }
+      .product-details-product-title {
+        font-size: 1.4rem;
+      }
+
+      .info-cols--container .info-cols--item-25 {
+        width: 50% !important;
+        box-sizing: border-box;
+        float: left;
+      }
+      .section-header h2,
+      .homepage-sections--title {
+        font-size: 1.8rem;
+        text-align: center;
+      }
+      .swiper-container-autoheight .swiper-wrapper {
+        padding-bottom: 1rem;
+      }
+      .footer__blocks {
+        flex-direction: row;
+      }
+
+      .footer__block {
+        flex-wrap: wrap;
+      }
+
+      .footer__block:last-child {
+        flex-basis: 100%;
+        text-align: center;
+      }
+      .footer__mobile-section {
+        border: none;
+      }
+      .site-footer .newsletter__input-group {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      .footer-bottom-row,
+      .site-footer .footer-info .grid {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+      .site-footer .footer-bottom {
+        margin-top: 30px;
+      }
+      .footer-bottom-row .one-half {
+        width: 100%;
+        text-align: center;
+      }
+      .site-footer .footer-info .grid {
+        border: none;
+        padding-top: 5px;
+      }
+      .footer__base-links {
+        padding-top: 10px;
+        width: 100%;
+      }
+      .footer-bottom-row .payment-icons {
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        text-align: left;
+      }
+      .footer__social {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .footer__social li {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .multi-selectors {
+        flex-wrap: nowrap;
+        justify-content: center;
+        flex-direction: row-reverse;
+      }
+      .footer__title {
+        font-size: 15px;
+        font-weight: bold;
+        color: #fff;
+      }
+      .footer__menu a {
+        color: #fff;
+        font-size: 13px;
+      }
+      .site-footer p {
+        color: #fff;
+        margin-bottom: 0px;
+        font-size: 13px;
+      }
+      .footer__block--image {
+        display: none;
+      }
+      .footer__block--contact {
+        order: 1;
+      }
+      .footer__block--menu {
+        order: 2;
+      }
+      .footer__block--richtext {
+        order: 2; /* width:100%; flex-basis:100%!important;*/
+      }
+      .footer__block--richtext .footer__mobile-section {
+        padding-top: 0 !important;
+      }
+      .footer__base-links a,
+      .footer__base-links span {
+        color: #fff;
+      }
+      .footer__block--contact .footer__title.h4 {
+        display: none;
+      }
+      .return-top-wrap {
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 6px;
+      }
+      .return-top {
+        color: #fff !important;
+        font-size: 16px;
+      }
+      .return-top .icon {
+        transform: rotate(180deg);
+        width: 20px;
+        height: 20px;
+        right: 0;
+      }
+      .site-footer .footer-info .grid {
+        padding-top: 0px;
+        padding-bottom: 10px;
+      }
+    }
+  </style>
+  <template data-island>
+    <script type="module">
+      import 'components/section-footer';
+    </script>
+  </template>
+</is-land>

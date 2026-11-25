@@ -1,0 +1,221 @@
+{% capture plus_icon %}
+  <svg class="plus_icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12.03 5L12.0117 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+{% endcapture %}
+
+{% capture minus_icon %}
+ <svg class="minus_icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+{% endcapture %}
+{% assign sid = section.id %}
+<style>
+    #shopify-section-{{ sid }} {
+       background:{{section.settings.bg}};
+        {% if section.settings.bg != blank %}
+        padding: {{section.settings.padding_pc}};
+        {% else %}
+        margin: {{section.settings.padding_pc}};
+        {% endif %}
+    }
+    #shopify-section-{{ sid }} .page-width{
+      --page-width:1360px;
+    }
+    #shopify-section-{{ sid }} .product-section-info{
+      margin-bottom:40px;
+    }
+    #shopify-section-{{ sid }} .product-section-title{
+      color: #000;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 1.4;
+      text-align:center;
+    }
+    #shopify-section-{{ sid }} .specs-blocks{
+      width:100%;
+    }
+    #shopify-section-{{ sid }} .specs-item{
+      display:flex;
+      gap:24px;
+      padding:40px 0;
+      border-top:1px solid rgba(0, 0, 0, 0.10);
+      cursor:pointer;
+    }
+    #shopify-section-{{ sid }} .specs-blocks>div:last-child{
+      border-bottom:1px solid rgba(0, 0, 0, 0.10);
+    }
+    #shopify-section-{{ sid }} .specs-item .name{
+      display:flex;
+      gap:24px;
+      color: #000;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.4;
+      width:30%;
+    }
+    #shopify-section-{{ sid }} .specs-item .name span{
+      display:block;
+    }
+    #shopify-section-{{ sid }} .specs-item .content{
+      width:calc(100% - 30% - 24px);
+      color: rgba(0, 0, 0, 0.80);
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    #shopify-section-{{ sid }} .specs-item .content*{
+      color:inherit;
+    }
+    #shopify-section-{{ sid }} .specs-item .minus_icon{
+      display:none;
+    }
+    #shopify-section-{{ sid }} .specs-item.open .minus_icon{
+      display:block;
+    }
+    #shopify-section-{{ sid }} .specs-item .plus_icon{
+      display:block;
+    }
+    #shopify-section-{{ sid }} .specs-item.open .plus_icon{
+      display:none;
+    }
+    #shopify-section-{{ sid }} .specs-item:not(.open) .content{
+      display:none;
+    }
+  @media (max-width:959px){
+    #shopify-section-{{ sid }} {
+      {% if section.settings.bg != blank %}
+      padding: {{section.settings.padding_m}};
+      {% else %}
+      margin: {{section.settings.padding_m}};
+      {% endif %}
+    }
+    #shopify-section-{{ sid }} .product-section-info{
+      margin-bottom:24px;
+    }
+    #shopify-section-{{ sid }} .product-section-title{
+      text-align:left;
+      font-size: 20px;
+    }
+    #shopify-section-{{ sid }} .specs-item{
+          flex-direction: column;
+      gap:18px;
+      padding:22px 0;
+      
+    }
+    #shopify-section-{{ sid }} .specs-item .name{
+      width:100%;
+      font-size: 14px;
+      gap:20px;
+    }
+    #shopify-section-{{ sid }} .specs-item .content{
+      width:100%;
+    }
+    #shopify-section-{{ sid }} .specs-item .name span svg{
+      width:20px;
+      height:20px;
+    }
+    #shopify-section-{{ sid }} .specs-item .content{
+      font-size: 14px;
+    }
+  }
+</style>
+
+<div class="product-specs" id="Product-specs">
+  <div class="page-width">
+    <div class="product-section-info">
+      {% if section.settings.title != blank %}
+        <div class="product-section-title">{{ section.settings.title }}</div>
+      {% endif %}
+    </div>
+    <div class="specs-blocks">
+      {% for block in section.blocks %}
+        {% assign bs = block.settings %}
+        <div class="specs-item {% if forloop.first %}open{% endif %}">
+          <div class="name">
+            <span>
+              {{ plus_icon }}
+              {{ minus_icon }}
+            </span>
+            {{ bs.question }}
+          </div>
+          <div class="content">{{ bs.text }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+<script type="module">
+  $("#shopify-section-{{ sid }} .specs-item").on('click',function(){
+    $(this).toggleClass('open')
+  })
+</script>
+
+{% schema %}
+  {
+    "name": "Product specs",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg",
+        "label":"backgroung",
+        "default":"#fefbf8"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "KOL Video"
+      },
+      {
+        "type": "header",
+        "content": "Padding"
+      },
+      {
+        "type": "text",
+        "id": "padding_pc",
+        "label": "Padding (desktop)",
+        "default":"100px 0"
+      },
+      {
+        "type": "text",
+        "id": "padding_m",
+        "label": "Padding (mobile)",
+        "default":"80px 0"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "tab_content",
+        "name": "Tab content",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Heading",
+            "default": "Heading here"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default":"<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        ]
+      }
+    ],
+    "presets": [
+        {
+            "name": "Product specs",
+            "blocks": [
+                {
+                  "type": "tab_content"
+                },
+                {
+                  "type": "tab_content"
+                },
+                {
+                  "type": "tab_content"
+                }
+            ]
+        }
+    ]
+  }
+{% endschema %}

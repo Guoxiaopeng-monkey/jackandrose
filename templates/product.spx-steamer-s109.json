@@ -1,0 +1,813 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "sales_point_AALmjj": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "tag",
+            "text": "Foldable steaming for quick touch-ups anywhere.",
+            "color": ""
+          }
+        },
+        "loox_reviews_loox_rating_iV3cLw": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "contentSize": 16,
+            "pattern": "",
+            "hideText": false,
+            "alignment": "",
+            "layout": "",
+            "textColor": "",
+            "starColor": "",
+            "showAllReviews": false,
+            "looxOpenFloatingWidget": false,
+            "emptyRatingWidget": false
+          }
+        },
+        "custom_LtCqcj": {
+          "type": "custom",
+          "settings": {
+            "code": "<div style=\"background-color: #f5f5f5; padding: 12px 16px; border-radius: 6px; margin-top: 16px;\"> <div style=\"display: flex; flex-wrap: wrap; gap: 12px 0; font-size: 14px; line-height: 1.6; color: #333;\"> <div style=\"width: 50%; padding-left: 12px; text-indent: -12px;\">• 8s Fast Heat-Up</div> <div style=\"width: 50%; padding-left: 12px; text-indent: -12px;\">• No-Spill Steaming </div> <div style=\"width: 50%; padding-left: 12px; text-indent: -12px;\">• Iron or Steam</div> <div style=\"width: 50%; padding-left: 12px; text-indent: -12px;\">• Ultra Portable </div>  </div>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "quantity_selector_EhaEKy": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "coupon_zeMLBm": {
+          "type": "coupon",
+          "disabled": true,
+          "settings": {
+            "text1": "///$10###OFF",
+            "text2": "Extra $10 OFF after coupon",
+            "text3": "C1SD10",
+            "text4": "Copy"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "description_M7JAy9": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "tab_TLtgrD": {
+          "type": "tab",
+          "settings": {
+            "title": "Shipping & Return & Warranty",
+            "content": "<p><strong>Shipping</strong></p><p>Estimate delivery time: within 3-5 business days from the shipment date.</p><p><strong>Returns & Warranty</strong></p><p>We understand that, as a new pet care device, your pet may need a few days to adapt to and enjoy using it. However, if you’re not completely satisfied, we offer a full refund within 30 days of purchase (return shipping not included). <a href=\"/pages/return-refund-policy\" target=\"_blank\" title=\"Return & Refund Policy\">See full terms.</a></p><p>We offer a 2-year warranty. </p>",
+            "page": ""
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "shield",
+            "text": "30 -Day Money Back",
+            "color": ""
+          }
+        },
+        "sales_point2": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "truck",
+            "text": "Fast Shipping",
+            "color": ""
+          }
+        },
+        "sales_point3": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "lock",
+            "text": "24-Month- Warranty",
+            "color": ""
+          }
+        },
+        "sales_point4": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "package",
+            "text": "Ships Within 24 hours",
+            "color": ""
+          }
+        },
+        "tab_7cz8hx": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Whats in the box",
+            "content": "<ul><li>Jack ＆ Rose Travel Steamer</li><li>Storage Bag</li></ul>",
+            "page": ""
+          }
+        },
+        "icon_bcG864": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "text_1": "Fast & Free Shipping",
+            "text_2": "Product Tax Incl.",
+            "text_3": "24-Month- Warranty"
+          }
+        },
+        "icon_iQ9AzE": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "text_1": "24-Month- Warranty",
+            "text_2": "Fast $ Free Shipping",
+            "text_3": "Product Tax Incl."
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "disabled": true,
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "complementary_products_xhNrFb": {
+          "type": "complementary_products",
+          "disabled": true,
+          "settings": {
+            "product_complementary_heading": "Frequently Bought Together",
+            "complementary_count": 3,
+            "per_slide": 3,
+            "control_type": "dots",
+            "image_style": "default"
+          }
+        },
+        "share_eTMqpL": {
+          "type": "share",
+          "disabled": true,
+          "settings": {}
+        },
+        "custom_3bHi9T": {
+          "type": "custom",
+          "settings": {
+            "code": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n</script>"
+          }
+        }
+      },
+      "block_order": [
+        "sales_point_AALmjj",
+        "loox_reviews_loox_rating_iV3cLw",
+        "custom_LtCqcj",
+        "variant_picker",
+        "quantity_selector_EhaEKy",
+        "coupon_zeMLBm",
+        "price",
+        "buy_buttons",
+        "description_M7JAy9",
+        "tab_TLtgrD",
+        "sales_point",
+        "sales_point2",
+        "sales_point3",
+        "sales_point4",
+        "tab_7cz8hx",
+        "icon_bcG864",
+        "icon_iQ9AzE",
+        "inventory_status",
+        "complementary_products_xhNrFb",
+        "share_eTMqpL",
+        "custom_3bHi9T"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_container_size": "medium",
+        "product_image_size": "natural",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": true,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "1766394261cc6556ee": {
+      "type": "apps",
+      "blocks": {
+        "vizup_videos_videos_block_jbT4bR": {
+          "type": "shopify://apps/vizup-videos/blocks/videos-block/eaecaa7b-ab6b-40ae-8ddf-50daa867f3eb",
+          "settings": {
+            "videoc_widget_id": "",
+            "custom_css": ""
+          }
+        }
+      },
+      "block_order": [
+        "vizup_videos_videos_block_jbT4bR"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "product_location_bar_dNC4pF": {
+      "type": "product-location-bar",
+      "blocks": {
+        "item_XKLGMV": {
+          "type": "item",
+          "settings": {
+            "title": "Overview",
+            "link": "shopify-section-template--25622737551655__main"
+          }
+        },
+        "item_bNGVkp": {
+          "type": "item",
+          "settings": {
+            "title": "Specs",
+            "link": "Product-specs"
+          }
+        },
+        "item_RNFQaQ": {
+          "type": "item",
+          "settings": {
+            "title": "Faqs",
+            "link": "faqs"
+          }
+        },
+        "item_nTXYAW": {
+          "type": "item",
+          "settings": {
+            "title": "Reviews",
+            "link": "shopify-block-AYVFGT3dsNHBiR2FZQ__loox_reviews_loox_dynamic_section_38RjhW"
+          }
+        },
+        "item_7a6hHf": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "title": "Recommended",
+            "link": "spx-recommendations"
+          }
+        }
+      },
+      "block_order": [
+        "item_XKLGMV",
+        "item_bNGVkp",
+        "item_RNFQaQ",
+        "item_nTXYAW",
+        "item_7a6hHf"
+      ],
+      "settings": {
+        "bg": "#b6758d",
+        "text-color": "#ffffff",
+        "button_outline": false
+      }
+    },
+    "product_scroll_img_mMNtgT": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/A_1.jpg",
+        "img_m": "shopify://shop_images/A_1_801b868c-aebe-4a98-8e2d-88464ebd9688.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "80px 0",
+        "padding_m": "60px 0"
+      }
+    },
+    "product_scroll_img_XTB7Kb": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/888dea63-2757-415a-89cb-4d250e89e1e1.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "img_m": "shopify://shop_images/A_2_e80f0703-1a0a-49db-909f-b4db586d6f8b.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "80px 0",
+        "padding_m": "60px 0"
+      }
+    },
+    "product_scroll_img_KbwcR4": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/2857e848-e3b8-4d0a-be02-0925a222bb21.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "img_m": "shopify://shop_images/A_3_89febf2d-3e92-4b43-9ccb-6d19f901beb9.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "80px 0",
+        "padding_m": "60px 0"
+      }
+    },
+    "product_scroll_img_D3EhB7": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/A_3-1.jpg",
+        "img_m": "shopify://shop_images/A_3-1_fae634f7-d885-410e-8ea5-4d2ed215ede9.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "80px 0",
+        "padding_m": "60px 0"
+      }
+    },
+    "product_scroll_img_a3WiDB": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/8e7663e2-cf2e-47e0-bd7a-4c642fc0696e.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "img_m": "shopify://shop_images/A_3-2_5fc3fe1b-f485-45c7-95f2-02824894cb2b.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "80px 0",
+        "padding_m": "60px 0"
+      }
+    },
+    "product_scroll_img_JPRykh": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/cfa0d17a-49c6-451b-856d-5626e3b8355e.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "img_m": "shopify://shop_images/A_4-1_b9a1e62b-a3a6-4bfb-aeba-01e413b8357d.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "80px 0",
+        "padding_m": "60px 0"
+      }
+    },
+    "product_scroll_img_rVWwwr": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/66324551-d2e1-40b1-aab2-2835094450c0.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "img_m": "shopify://shop_images/A_5_5e36b15c-6be1-4a2c-88d2-07ea0ae15b08.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "80px 0",
+        "padding_m": "60px 0"
+      }
+    },
+    "product_scroll_img_zFJNDj": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/A_7.jpg",
+        "img_m": "shopify://shop_images/A_7_7efb410f-88d7-45fe-a580-505cb932d32e.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "80px 0",
+        "padding_m": "60px 0"
+      }
+    },
+    "product_scroll_img_tpKzTF": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/A_6.jpg",
+        "img_m": "shopify://shop_images/A_6_58be2166-2235-45d8-88d0-c521fbc7a5e8.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "80px 0",
+        "padding_m": "60px 0"
+      }
+    },
+    "product_scroll_img_cWrCxA": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/A_8.jpg",
+        "img_m": "shopify://shop_images/A_8_89438c4e-16b6-4fdb-8a70-f24e008e590a.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "80px 0",
+        "padding_m": "60px 0"
+      }
+    },
+    "product_scroll_img_QYDmGa": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/e5bf9586-b54a-4bd6-8c84-914e02a1e336.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "img_m": "shopify://shop_images/389b0aec710b414ea91f5f5d6d41684f_tplv-fhlh96nyum-resize-jpeg_800_1066.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "80px 0",
+        "padding_m": "60px 0"
+      }
+    },
+    "product_scroll_img_8R4BxJ": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/3_1f8dea3d-04e7-4d0f-8177-14f08c313e76.jpg",
+        "img_m": "shopify://shop_images/6_2c8d7b82-673f-462a-898f-8841afc2abbd.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "80px 0",
+        "padding_m": "60px 0"
+      }
+    },
+    "product_comparison_c79bTB": {
+      "type": "product-comparison",
+      "blocks": {
+        "parameter_name_qBt8k6": {
+          "type": "parameter_name",
+          "settings": {
+            "text": "Model",
+            "text_1": "Idal for",
+            "text_2": "Grooming Features",
+            "text_3": "Capacity",
+            "text_4": "Deshedding&Grooming Brush",
+            "text_5": "Electric clipper",
+            "text_6": "Paw Trimmer",
+            "text_7": "Nail Grinder",
+            "text_8": "Suitable for",
+            "text_9": "Suction",
+            "text_10": "",
+            "text_11": "",
+            "text_12": "",
+            "text_13": ""
+          }
+        },
+        "parameter_value_NxWiqw": {
+          "type": "parameter_value",
+          "settings": {
+            "product": "oneisall-comfy-c1-cordless-smart-grooming-vacuum",
+            "title": "Comfy C1",
+            "text_1": "Anywhere Grooming",
+            "text_2": "Trimming, Shedding & Cleaning",
+            "text_3": "2L",
+            "text_4": "NO Deshedding Brush",
+            "text_5": "✔",
+            "text_6": "×",
+            "text_7": "×",
+            "text_8": "All Dogs&Cats",
+            "text_9": "10000Pa",
+            "text_10": "",
+            "text_11": "",
+            "text_12": "",
+            "text_13": ""
+          }
+        },
+        "parameter_value_CmUMWm": {
+          "type": "parameter_value",
+          "settings": {
+            "product": "oneisall-6-in-1-cat-grooming-vacuum-kit",
+            "title": "LM5C",
+            "text_1": "Cat Grooming",
+            "text_2": "Trimming, Shedding & Cleaning",
+            "text_3": "1.5L",
+            "text_4": "✔",
+            "text_5": "✔",
+            "text_6": "✔",
+            "text_7": "×",
+            "text_8": "All Cats",
+            "text_9": "8000Pa",
+            "text_10": "",
+            "text_11": "",
+            "text_12": "",
+            "text_13": ""
+          }
+        },
+        "parameter_value_dmXhAz": {
+          "type": "parameter_value",
+          "settings": {
+            "product": "oneisall-dog-grooming-vacuum-kit-lm5",
+            "title": "LM5",
+            "text_1": "Basic Grooming",
+            "text_2": "Shedding & Cleaning",
+            "text_3": "1.5L",
+            "text_4": "✔",
+            "text_5": "×",
+            "text_6": "×",
+            "text_7": "×",
+            "text_8": "Medium & Small Pets",
+            "text_9": "12000Pa",
+            "text_10": "",
+            "text_11": "",
+            "text_12": "",
+            "text_13": ""
+          }
+        },
+        "parameter_value_Xpkxh4": {
+          "type": "parameter_value",
+          "settings": {
+            "product": "cozy-c1-dog-grooming-vacuum",
+            "title": "Cozy C1",
+            "text_1": "All in one",
+            "text_2": "Drying, Shedding & Trimming",
+            "text_3": "2L",
+            "text_4": "✔",
+            "text_5": "✔",
+            "text_6": "×",
+            "text_7": "×",
+            "text_8": "All Dogs&Cats",
+            "text_9": "12000Pa",
+            "text_10": "",
+            "text_11": "",
+            "text_12": "",
+            "text_13": ""
+          }
+        }
+      },
+      "block_order": [
+        "parameter_name_qBt8k6",
+        "parameter_value_NxWiqw",
+        "parameter_value_CmUMWm",
+        "parameter_value_dmXhAz",
+        "parameter_value_Xpkxh4"
+      ],
+      "disabled": true,
+      "settings": {
+        "bg": "#fefbf8",
+        "title": "Product Comparison",
+        "padding_pc": "75px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "product_specs_tGpzc9": {
+      "type": "product-specs",
+      "blocks": {
+        "tab_content_BnynBK": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Basic",
+            "text": "<ul><li>SKU：SI09AHU</li><li>Weight: 1.38 Pounds</li><li>Heat Time: 8 Seconds</li><li>Wattage: 1200 Watts</li><li>Voltage: 110 Volts</li></ul>"
+          }
+        },
+        "tab_content_bpKUhU": {
+          "type": "tab_content",
+          "disabled": true,
+          "settings": {
+            "question": "Manual",
+            "text": "<p><a href=\"https://cdn.shopify.com/s/files/1/0655/6716/2614/files/BM1.pdf?v=1701676769\" target=\"_blank\" title=\"Cozy C1 manual\">Download</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_BnynBK",
+        "tab_content_bpKUhU"
+      ],
+      "settings": {
+        "bg": "#fefbf8",
+        "title": "Product Specs",
+        "padding_pc": "75px 0 60px",
+        "padding_m": "40px 0"
+      }
+    },
+    "faqs_ijrNcG": {
+      "type": "faqs",
+      "blocks": {
+        "tab_content_pBhcBm": {
+          "type": "tab_content",
+          "disabled": true,
+          "settings": {
+            "question": "Can I use this steamer abroad?",
+            "text": "<p>Yes, it works with 100–220V voltage, so you can use it worldwide without an adapter.</p>"
+          }
+        },
+        "tab_content_JmK8jh": {
+          "type": "tab_content",
+          "settings": {
+            "question": "How long does it take to heat up?",
+            "text": "<p>The steamer is ready in just 8 seconds for instant wrinkle removal.</p>"
+          }
+        },
+        "tab_content_c6HcW7": {
+          "type": "tab_content",
+          "settings": {
+            "question": "What types of fabrics can I use it on?",
+            "text": "<p>It works safely on all fabrics including cotton, linen, silk, denim, and wool.</p>"
+          }
+        },
+        "tab_content_RK8XUk": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Can I steam and press clothes with this device?",
+            "text": "<p>Yes, it has a 2-in-1 function for both hanging steam and flat ironing collars, sleeves, and pant legs.</p>"
+          }
+        },
+        "tab_content_9Fj64V": {
+          "type": "tab_content",
+          "settings": {
+            "question": "How long can I steam per water tank fill?",
+            "text": "<p>The 5 oz water tank provides enough steam for 3–5 outfits.</p>"
+          }
+        },
+        "tab_content_a9yggN": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Is it safe to use?",
+            "text": "<p>Yes, it includes an auto shut-off feature, LED display, and comes with a travel pouch for safe storage.</p>"
+          }
+        },
+        "tab_content_8h3aFn": {
+          "type": "tab_content",
+          "disabled": true,
+          "settings": {
+            "question": "How portable is it?",
+            "text": "<p>It’s compact, lightweight (1.6 lb), and comes with a deluxe travel pouch for easy packing.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_pBhcBm",
+        "tab_content_JmK8jh",
+        "tab_content_c6HcW7",
+        "tab_content_RK8XUk",
+        "tab_content_9Fj64V",
+        "tab_content_a9yggN",
+        "tab_content_8h3aFn"
+      ],
+      "settings": {
+        "id": "faqs",
+        "title": "FAQs",
+        "align": "center",
+        "align_m": "center",
+        "padding_pc": "80px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "17627574323de27349": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_dynamic_section_38RjhW": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "reviews_to_display": "",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 20,
+            "hide_thumbnails": false,
+            "maxwidth": 1080,
+            "is_sample": false
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_dynamic_section_38RjhW"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "faqs_8ym9X6": {
+      "type": "faqs",
+      "disabled": true,
+      "settings": {
+        "id": "whattheysay",
+        "title": "What they say",
+        "align": "center",
+        "align_m": "center",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "173880581027b32eda": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "product_center_slide_xFbKiR": {
+      "type": "product-center-slide",
+      "blocks": {
+        "item_TxLDJz": {
+          "type": "item",
+          "settings": {}
+        },
+        "item_XQ7JVa": {
+          "type": "item",
+          "settings": {}
+        },
+        "item_LTgmJR": {
+          "type": "item",
+          "settings": {}
+        },
+        "item_ehTHBL": {
+          "type": "item",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "item_TxLDJz",
+        "item_XQ7JVa",
+        "item_LTgmJR",
+        "item_ehTHBL"
+      ],
+      "disabled": true,
+      "settings": {
+        "bg": "#fefbf8",
+        "align": "center",
+        "align_m": "center",
+        "title": "Why Oneisall",
+        "autoplay": true,
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "171524248506ebf0c3": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "spx_recommendations_EAaTNY": {
+      "type": "spx-recommendations",
+      "settings": {
+        "title": "Recommended Purchase",
+        "padding_pc": "150px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "icons_fRC7QE": {
+      "type": "product-icons",
+      "blocks": {
+        "icon_RXgQdm": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Fast & Free Shipping"
+          }
+        },
+        "icon_3tpCEf": {
+          "type": "icon",
+          "settings": {
+            "liquid": "2",
+            "title": "Product Tax Incl."
+          }
+        },
+        "icon_DDAWJJ": {
+          "type": "icon",
+          "settings": {
+            "liquid": "3",
+            "title": "24-Month Warranty"
+          }
+        },
+        "icon_6gJPeq": {
+          "type": "icon",
+          "settings": {
+            "liquid": "4",
+            "title": "30-Day Money Back"
+          }
+        }
+      },
+      "block_order": [
+        "icon_RXgQdm",
+        "icon_3tpCEf",
+        "icon_DDAWJJ",
+        "icon_6gJPeq"
+      ],
+      "settings": {
+        "padding_pc": "150px 0",
+        "padding_m": "80px 0"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1766394261cc6556ee",
+    "product_location_bar_dNC4pF",
+    "product_scroll_img_mMNtgT",
+    "product_scroll_img_XTB7Kb",
+    "product_scroll_img_KbwcR4",
+    "product_scroll_img_D3EhB7",
+    "product_scroll_img_a3WiDB",
+    "product_scroll_img_JPRykh",
+    "product_scroll_img_rVWwwr",
+    "product_scroll_img_zFJNDj",
+    "product_scroll_img_tpKzTF",
+    "product_scroll_img_cWrCxA",
+    "product_scroll_img_QYDmGa",
+    "product_scroll_img_8R4BxJ",
+    "product_comparison_c79bTB",
+    "product_specs_tGpzc9",
+    "faqs_ijrNcG",
+    "17627574323de27349",
+    "faqs_8ym9X6",
+    "173880581027b32eda",
+    "product_center_slide_xFbKiR",
+    "171524248506ebf0c3",
+    "spx_recommendations_EAaTNY",
+    "icons_fRC7QE"
+  ]
+}

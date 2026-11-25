@@ -1,0 +1,770 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "custom_LtCqcj": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "<p><b>Black Friday Sale, Save </b> <span style=\"color:#FF6A00\n\">25 $</span>. Automatically apply discounts at checkout.</br>Offer ends on December 2nd.</p>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "quantity_selector_EhaEKy": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "coupon_zeMLBm": {
+          "type": "coupon",
+          "disabled": true,
+          "settings": {
+            "text1": "///$10###OFF",
+            "text2": "",
+            "text3": "C1SD10",
+            "text4": "Copy"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "description_M7JAy9": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "checkmark",
+            "text": "30 Days Worry-Free Returns"
+          }
+        },
+        "sales_point2": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "truck",
+            "text": "Free Shipping in The US"
+          }
+        },
+        "sales_point3": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "shield",
+            "text": "100% Secure Payments"
+          }
+        },
+        "sales_point4": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "package",
+            "text": "Ships Within 24 hours"
+          }
+        },
+        "tab_7cz8hx": {
+          "type": "tab",
+          "settings": {
+            "title": "whats in the box",
+            "content": "<p><strong>LM5 & 2L Water Fountain</strong></p><p><strong>LM5:</strong></p><ul><li>Oneisall Grooming Machine x 1</li><li>Hose x 1</li><li>Crevice Tool x 1</li><li>Cleaning Brush x 1</li><li>Grooming Brush x1</li><li>Deshedding Brush x 1</li></ul><p><strong> 2L Water Fountain:</strong></p><ul><li>Filter x 3</li><li>Sponge x 1</li><li>Filter box x 1</li><li>Top cover x 1</li><li>Barrel body x 1</li><li>Water Faucet x 1</li></ul>",
+            "page": ""
+          }
+        },
+        "tab_TLtgrD": {
+          "type": "tab",
+          "settings": {
+            "title": "Shipping & Return & Warranty",
+            "content": "<p><strong>Shipping</strong></p><p>Estimate delivery time: within 3-5 business days from the shipment date.</p><p><strong>Returns & Warranty</strong></p><p>We understand that, as a new pet care device, your pet may need a few days to adapt to and enjoy using it. However, if you’re not completely satisfied, we offer a full refund within 30 days of purchase (return shipping not included). <a href=\"/pages/return-refund-policy\" target=\"_blank\" title=\"Return & Refund Policy\">See full terms.</a></p><p>We offer a 2-year warranty. </p>",
+            "page": ""
+          }
+        },
+        "icon_bcG864": {
+          "type": "icon",
+          "settings": {
+            "icon_1": "shopify://shop_images/Fast_Free_Shipping_3812c20d-ca76-4aa4-9e69-4b6d144a4ad8.png",
+            "text_1": "Fast & Free Shipping",
+            "icon_2": "shopify://shop_images/Product_Tax_Incl..png",
+            "text_2": "Product Tax Incl.",
+            "icon_3": "shopify://shop_images/24-Month_Warranty.png",
+            "text_3": "24-Month- Warranty"
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "disabled": true,
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "complementary_products_xhNrFb": {
+          "type": "complementary_products",
+          "disabled": true,
+          "settings": {
+            "product_complementary_heading": "Frequently Bought Together",
+            "complementary_count": 3,
+            "per_slide": 3,
+            "control_type": "dots",
+            "image_style": "default"
+          }
+        },
+        "share_eTMqpL": {
+          "type": "share",
+          "disabled": true,
+          "settings": {}
+        },
+        "custom_3bHi9T": {
+          "type": "custom",
+          "settings": {
+            "code": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n</script>"
+          }
+        }
+      },
+      "block_order": [
+        "custom_LtCqcj",
+        "variant_picker",
+        "quantity_selector_EhaEKy",
+        "coupon_zeMLBm",
+        "price",
+        "buy_buttons",
+        "description_M7JAy9",
+        "sales_point",
+        "sales_point2",
+        "sales_point3",
+        "sales_point4",
+        "tab_7cz8hx",
+        "tab_TLtgrD",
+        "icon_bcG864",
+        "inventory_status",
+        "complementary_products_xhNrFb",
+        "share_eTMqpL",
+        "custom_3bHi9T"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_container_size": "medium",
+        "product_image_size": "natural",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": true,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "product_location_bar_dNC4pF": {
+      "type": "product-location-bar",
+      "blocks": {
+        "item_XKLGMV": {
+          "type": "item",
+          "settings": {
+            "title": "Overview",
+            "link": "product-scroll-video"
+          }
+        },
+        "item_bNGVkp": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "title": "Specs",
+            "link": "Product-specs"
+          }
+        },
+        "item_RNFQaQ": {
+          "type": "item",
+          "settings": {
+            "title": "Faqs",
+            "link": "faqs"
+          }
+        },
+        "item_nTXYAW": {
+          "type": "item",
+          "settings": {
+            "title": "Reviews",
+            "link": "aftership_reviews_carousel_v2_production"
+          }
+        },
+        "item_7a6hHf": {
+          "type": "item",
+          "settings": {
+            "title": "Recommended",
+            "link": "spx-recommendations"
+          }
+        }
+      },
+      "block_order": [
+        "item_XKLGMV",
+        "item_bNGVkp",
+        "item_RNFQaQ",
+        "item_nTXYAW",
+        "item_7a6hHf"
+      ],
+      "settings": {
+        "bg": "#f47c20",
+        "text-color": "#ffffff"
+      }
+    },
+    "product_scroll_img_mMNtgT": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/dog-grooming-clipper-pc_46c48a1b-7c0d-46c3-98e0-41a4c32c6dba.jpg",
+        "img_m": "shopify://shop_images/1_7864e251-ed53-4a22-afa1-e8970214814d.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_A8GRQM": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/3_f5aae12a-9ec6-4e00-9ce4-40066a7d1b83.jpg",
+        "img_m": "shopify://shop_images/3_3ae82d54-69e6-4582-9110-63692bbf4267.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_iE9fFf": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/4_b0087caf-54ec-4ed0-ac68-4c5a4b328d72.jpg",
+        "img_m": "shopify://shop_images/4_736e22cd-3318-4a22-ab6a-94db2357e1e8.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_AKHgpb": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/5_56a0f31f-8f9b-4734-aa55-92ec55bfd68f.jpg",
+        "img_m": "shopify://shop_images/5_a2e0f64b-4ca4-4dd5-aee2-33dab9e2802e.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_Q9W3bA": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/4_848ed559-1f0f-49f1-849c-9c0fa9dc9530.jpg",
+        "img_m": "shopify://shop_images/4_70d174df-6447-4365-9e3b-e420e75fe9cb.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_gcgGX3": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/3dcf2a8d-ce2c-4c4e-aba8-c566bf693940.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "img_m": "shopify://shop_images/3dcf2a8d-ce2c-4c4e-aba8-c566bf693940.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_XE6YLU": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/e33ca9b9-3aa8-487a-9063-23fec9b7131b.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "img_m": "shopify://shop_images/e33ca9b9-3aa8-487a-9063-23fec9b7131b.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_WHHqfQ": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/d18d17fa-2b17-494c-b77d-37552a4c01c4.__CR0_0_1464_600_PT0_SX1464_V1_c45b1cf2-5b64-4bf7-bfd1-06cf60162316.jpg",
+        "img_m": "shopify://shop_images/1_a12b06a1-48bd-4531-a99a-6c3420ee0e09.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_JwA9Ca": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/8_7c15be41-3aa3-4546-ba34-6bf137aee72c.jpg",
+        "img_m": "shopify://shop_images/8_9de3f894-2d34-43de-a4e8-fc80e1078cab.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_gkFzNE": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/7_52f912cd-7846-42bf-ae0b-67ec499e9130.jpg",
+        "img_m": "shopify://shop_images/7_7748ebe5-c63f-4cc9-a8de-b4ab83d406d5.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_kFHEiX": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/9_2a018023-4880-40d5-8984-19013a524a91.jpg",
+        "img_m": "shopify://shop_images/9_58c2be9b-ef0b-42be-be7d-fb61c3a33fc7.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_w3mTGX": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/6_ea01b5b9-741b-404a-94a8-5f3048ad1228.jpg",
+        "img_m": "shopify://shop_images/6_cc10f375-07ef-4f01-9edb-23b056734423.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_cKYGAk": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/healthy-stainless-pc_04b28d8a-170d-4428-b199-b154df13c0e5.jpg",
+        "img_m": "shopify://shop_images/4_35912482-51c1-4dac-98a0-93e006b963b4.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_scroll_img_WhCPhF": {
+      "type": "product-scroll-img",
+      "settings": {
+        "img": "shopify://shop_images/2_d281a96a-48ab-48d4-9649-27250e178135.jpg",
+        "img_m": "shopify://shop_images/2_2c353e2a-ba5f-4df9-9a33-cdab3430045d.jpg",
+        "title": "",
+        "text": "",
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_img_text_8Gjj3B": {
+      "type": "product-img-text",
+      "blocks": {
+        "block_style1_rUYGAN": {
+          "type": "block_style1",
+          "disabled": true,
+          "settings": {
+            "revese": true,
+            "img": "shopify://shop_images/8_eac36415-e4eb-43ed-b14d-2fca4f7b7dd6.jpg",
+            "img_m": "shopify://shop_images/8_073a2418-17c2-4458-8f54-4370d1b5889c.jpg",
+            "bg": "shopify://shop_images/Group_1000007087.png",
+            "title": "What's in the box",
+            "text": "<ul><li>Oneisall Grooming Machine x 1</li><li>Hose x 1</li><li>Crevice Tool x 1</li><li>Cleaning Brush x 1</li><li>Grooming Brush x1</li><li>Deshedding Brush x 1</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "block_style1_rUYGAN"
+      ],
+      "settings": {
+        "padding_pc": "10px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "product_app_bkMG8T": {
+      "type": "product-app",
+      "disabled": true,
+      "settings": {
+        "bg": "#fefbf8",
+        "img": "shopify://shop_images/image_6.png",
+        "img_m": "shopify://shop_images/image_7.png",
+        "title": "Oneisall APP",
+        "text": "Lorem ipsum dolor sit amet consectetur fermentum augue porta ultrices.",
+        "icon1": "shopify://shop_images/image_320.png",
+        "link1": "",
+        "icon2": "shopify://shop_images/image_319.png",
+        "link2": "",
+        "padding_pc": "75px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "product_comparison_c79bTB": {
+      "type": "product-comparison",
+      "blocks": {
+        "parameter_name_qBt8k6": {
+          "type": "parameter_name",
+          "settings": {
+            "text": "Model",
+            "text_1": "Idal for",
+            "text_2": "Grooming Features",
+            "text_3": "Capacity",
+            "text_4": "Deshedding&Grooming Brush",
+            "text_5": "Electric clipper",
+            "text_6": "Paw Trimmer",
+            "text_7": "Nail Grinder",
+            "text_8": "Suitable for",
+            "text_9": "Suction",
+            "text_10": "",
+            "text_11": "",
+            "text_12": "",
+            "text_13": ""
+          }
+        },
+        "parameter_value_dmXhAz": {
+          "type": "parameter_value",
+          "settings": {
+            "product": "oneisall-dog-grooming-vacuum-kit-lm5",
+            "title": "LM5 4-in-1",
+            "text_1": "Basic Grooming",
+            "text_2": "Shedding & Cleaning",
+            "text_3": "1.5L",
+            "text_4": "✔",
+            "text_5": "×",
+            "text_6": "×",
+            "text_7": "×",
+            "text_8": "Medium & Small Pets",
+            "text_9": "12000Pa",
+            "text_10": "",
+            "text_11": "",
+            "text_12": "",
+            "text_13": ""
+          }
+        },
+        "parameter_value_HBB7fP": {
+          "type": "parameter_value",
+          "settings": {
+            "product": "bm3-dog-grooming-vacuum-with-3l-dustbin",
+            "title": "BM3 5-in-1",
+            "text_1": "Deep Grooming",
+            "text_2": "Trimming, Shedding & Cleaning",
+            "text_3": "3L",
+            "text_4": "✔",
+            "text_5": "✔",
+            "text_6": "×",
+            "text_7": "×",
+            "text_8": "Large Dog/Multiple Pets",
+            "text_9": "13000Pa",
+            "text_10": "",
+            "text_11": "",
+            "text_12": "",
+            "text_13": ""
+          }
+        },
+        "parameter_value_Xpkxh4": {
+          "type": "parameter_value",
+          "settings": {
+            "product": "oneisall-6-in-1-cat-grooming-vacuum-kit",
+            "title": "LM5C 6-in-1",
+            "text_1": "Cat Grooming",
+            "text_2": "Trimming, Shedding & Cleaning",
+            "text_3": "1.5L",
+            "text_4": "✔",
+            "text_5": "✔",
+            "text_6": "✔",
+            "text_7": "×",
+            "text_8": "All Cats",
+            "text_9": "8000Pa",
+            "text_10": "",
+            "text_11": "",
+            "text_12": "",
+            "text_13": ""
+          }
+        },
+        "parameter_value_F8prCU": {
+          "type": "parameter_value",
+          "settings": {
+            "product": "lm2-dog-grooming-vacuum",
+            "title": "LM2 7-in-1",
+            "text_1": "Routine Grooming",
+            "text_2": "Trimming, Shedding & Cleaning",
+            "text_3": "1.5L",
+            "text_4": "✔",
+            "text_5": "✔",
+            "text_6": "✔",
+            "text_7": "✔",
+            "text_8": "All Dogs&Cats",
+            "text_9": "12000Pa",
+            "text_10": "",
+            "text_11": "",
+            "text_12": "",
+            "text_13": ""
+          }
+        }
+      },
+      "block_order": [
+        "parameter_name_qBt8k6",
+        "parameter_value_dmXhAz",
+        "parameter_value_HBB7fP",
+        "parameter_value_Xpkxh4",
+        "parameter_value_F8prCU"
+      ],
+      "settings": {
+        "bg": "#fefbf8",
+        "title": "Product Comparison",
+        "padding_pc": "55px 0",
+        "padding_m": "20px 0"
+      }
+    },
+    "product_specs_tGpzc9": {
+      "type": "product-specs",
+      "blocks": {
+        "tab_content_BnynBK": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Basic",
+            "text": "<ul><li>SKU：CW16016</li><li>Weight：8 pounds</li><li>Dimensions：8.7 x 5 x 12.8 inches</li><li>Package Dimensions：16.1 x 12.32 x 7.64 inches</li><li>Hose Length (Suction)：59 inch</li><li>Charging Cable Length：98.43 inch</li><li>Capacity：1.5L</li><li>Noise：&lt;60db</li></ul>"
+          }
+        },
+        "tab_content_pWcnFC": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Function",
+            "text": "<ul><li><strong>Grooming Brush: </strong>Used to clean floating hair and dander, making the hair more healthy, shiny, and soft.</li><li><strong>Deshedding Brush: </strong>Used to remove the pet's long and unnecessary thick hair.</li><li><strong>Cleaning Brush: </strong>Used to clean pet's paws or pet hair on clothes and furniture.</li><li><strong>Crevice Tool: </strong>Used to clean hair on the furniture and hard-to-reach areas.</li><li><strong>Install Guide Comb: </strong>Used with electric clippers</li></ul>"
+          }
+        },
+        "tab_content_bpKUhU": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Manual",
+            "text": "<p><a href=\"https://cdn.shopify.com/s/files/1/0655/6716/2614/files/LM5.pdf?v=1701676685\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0655/6716/2614/files/LM5.pdf?v=1701676685\">Download</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_BnynBK",
+        "tab_content_pWcnFC",
+        "tab_content_bpKUhU"
+      ],
+      "disabled": true,
+      "settings": {
+        "bg": "#fefbf8",
+        "title": "Product Specs",
+        "padding_pc": "55px 0 60px",
+        "padding_m": "20px 0"
+      }
+    },
+    "faqs_ijrNcG": {
+      "type": "faqs",
+      "blocks": {
+        "tab_content_pBhcBm": {
+          "type": "tab_content",
+          "settings": {
+            "question": "What Is A Dog Vacuum Brush And How Does It Work?",
+            "text": "<p>A dog vacuum brush is a grooming tool that combines brushing and vacuuming functions. It removes loose fur and debris from your dog's coat while suctioning the hair into a vacuum, reducing mess during grooming sessions. For example, the Oneisall Cozy C1 Grooming Vacuum Kit offers this functionality, efficiently collecting pet hair into its 2L vacuum container.</p>"
+          }
+        },
+        "tab_content_JmK8jh": {
+          "type": "tab_content",
+          "settings": {
+            "question": "What Are The Benefits Of Using Professional Dog Clippers?",
+            "text": "<p>Professional dog clippers provide a more efficient and precise grooming experience compared to standard clippers. They are designed to handle various coat types and lengths, ensuring a smooth and even cut.  Cozy C1 includes precision clippers suitable for expert trimming, allowing pet owners to achieve professional-quality grooming at home.</p>"
+          }
+        },
+        "tab_content_c6HcW7": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Can Professional Dog Clippers Be Used On All Breeds?",
+            "text": "<p>When selecting a dog vacuum brush, consider your dog's coat type, size, and sensitivity to noise. Look for brushes with adjustable suction levels and appropriate attachments for different coat lengths.  Cozy C1 operates at a noise level of approximately 60 dB, minimizing auditory stress for pets and fostering a serene grooming experience.</p>"
+          }
+        },
+        "tab_content_Kzi7Uh": {
+          "type": "tab_content",
+          "settings": {
+            "question": "How Often Should I Use A Dog Vacuum Brush On My Pet?",
+            "text": "<p>The frequency of using a dog vacuum brush depends on your dog's breed, coat length, and shedding patterns. For most dogs, grooming sessions 1-2 times per week are sufficient to maintain a healthy coat and reduce shedding. Using tools like  Cozy C1 can help keep your home cleaner by efficiently collecting loose fur.</p>"
+          }
+        },
+        "tab_content_RK8XUk": {
+          "type": "tab_content",
+          "settings": {
+            "question": "What Features Should I Look For In A Dog Vacuum Brush?",
+            "text": "<p>When choosing a dog vacuum brush, consider features such as adjustable suction power, noise level, ease of cleaning, and compatibility with your dog's coat type.  Cozy C1 offers powerful suction capabilities and operates quietly, ensuring a stress-free grooming experience for both pets and owners.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_pBhcBm",
+        "tab_content_JmK8jh",
+        "tab_content_c6HcW7",
+        "tab_content_Kzi7Uh",
+        "tab_content_RK8XUk"
+      ],
+      "settings": {
+        "id": "faqs",
+        "title": "FAQs",
+        "align": "center",
+        "align_m": "center",
+        "padding_pc": "40px 0",
+        "padding_m": "10px 0"
+      }
+    },
+    "171524248506ebf0c3": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "product_center_slide_xFbKiR": {
+      "type": "product-center-slide",
+      "blocks": {
+        "item_TxLDJz": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/3261793f-146c-40ef-a156-22fa6fef76fb.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+            "img_m": "shopify://shop_images/3261793f-146c-40ef-a156-22fa6fef76fb.__CR0_0_1464_600_PT0_SX1464_V1.jpg"
+          }
+        },
+        "item_XQ7JVa": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/1_50757941-b84f-435f-b984-1dd0958bbe09.jpg",
+            "img_m": "shopify://shop_images/1_50757941-b84f-435f-b984-1dd0958bbe09.jpg"
+          }
+        },
+        "item_LTgmJR": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/5deb0f2a-cc09-40c7-8d18-53d4d987741e.__CR0_0_1464_600_PT0_SX1464_V1_ed76ab22-218c-442a-be0e-c1a4ce5ae730.jpg",
+            "img_m": "shopify://shop_images/5deb0f2a-cc09-40c7-8d18-53d4d987741e.__CR0_0_1464_600_PT0_SX1464_V1_ed76ab22-218c-442a-be0e-c1a4ce5ae730.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "item_TxLDJz",
+        "item_XQ7JVa",
+        "item_LTgmJR"
+      ],
+      "settings": {
+        "bg": "#fefbf8",
+        "align": "center",
+        "align_m": "center",
+        "title": "Why Oneisall",
+        "autoplay": true,
+        "padding_pc": "0px 0",
+        "padding_m": "0px 0"
+      }
+    },
+    "spx_recommendations_EAaTNY": {
+      "type": "spx-recommendations",
+      "settings": {
+        "title": "Recommended Purchase",
+        "padding_pc": "150px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "icons_fRC7QE": {
+      "type": "product-icons",
+      "blocks": {
+        "icon_RXgQdm": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Fast & Free Shipping"
+          }
+        },
+        "icon_3tpCEf": {
+          "type": "icon",
+          "settings": {
+            "liquid": "2",
+            "title": "Product Tax Incl."
+          }
+        },
+        "icon_DDAWJJ": {
+          "type": "icon",
+          "settings": {
+            "liquid": "3",
+            "title": "24-Month Warranty"
+          }
+        },
+        "icon_6gJPeq": {
+          "type": "icon",
+          "settings": {
+            "liquid": "4",
+            "title": "30-Day Money Back"
+          }
+        }
+      },
+      "block_order": [
+        "icon_RXgQdm",
+        "icon_3tpCEf",
+        "icon_DDAWJJ",
+        "icon_6gJPeq"
+      ],
+      "settings": {
+        "padding_pc": "150px 0",
+        "padding_m": "80px 0"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product_location_bar_dNC4pF",
+    "product_scroll_img_mMNtgT",
+    "product_scroll_img_A8GRQM",
+    "product_scroll_img_iE9fFf",
+    "product_scroll_img_AKHgpb",
+    "product_scroll_img_Q9W3bA",
+    "product_scroll_img_gcgGX3",
+    "product_scroll_img_XE6YLU",
+    "product_scroll_img_WHHqfQ",
+    "product_scroll_img_JwA9Ca",
+    "product_scroll_img_gkFzNE",
+    "product_scroll_img_kFHEiX",
+    "product_scroll_img_w3mTGX",
+    "product_scroll_img_cKYGAk",
+    "product_scroll_img_WhCPhF",
+    "product_img_text_8Gjj3B",
+    "product_app_bkMG8T",
+    "product_comparison_c79bTB",
+    "product_specs_tGpzc9",
+    "faqs_ijrNcG",
+    "171524248506ebf0c3",
+    "product_center_slide_xFbKiR",
+    "spx_recommendations_EAaTNY",
+    "icons_fRC7QE"
+  ]
+}

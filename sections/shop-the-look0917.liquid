@@ -1,0 +1,346 @@
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const hotspots = document.querySelectorAll('.hotspot');
+  const isMobile = window.innerWidth <= 768; // Check if the user is on a mobile device
+
+  // Function to hide all info boxes
+  function hideAllInfoBoxes() {
+    hotspots.forEach(function (hotspot) {
+      const infoBox = hotspot.querySelector('.hotspot-info');
+      infoBox.classList.remove('visible');
+      infoBox.classList.add('hidden');
+    });
+  }
+
+  // Adjust the position of each hotspot based on device type
+  hotspots.forEach(function (hotspot) {
+    // Use different settings for mobile and desktop
+    const top = isMobile ? hotspot.dataset.mobileTop : hotspot.dataset.top;
+    const left = isMobile ? hotspot.dataset.mobileLeft : hotspot.dataset.left;
+    hotspot.style.top = top + '%';
+    hotspot.style.left = left + '%';
+
+    hotspot.addEventListener('mouseover', function (event) {
+      event.stopPropagation();
+      hideAllInfoBoxes();
+      const infoBox = hotspot.querySelector('.hotspot-info');
+      infoBox.classList.remove('hidden');
+      infoBox.classList.add('visible');
+    });
+  });
+
+  // Hide info boxes on click outside of hotspots
+  document.addEventListener('click', function (event) {
+    let isHotspot = event.target.closest('.hotspot');
+    if (!isHotspot) {
+      hideAllInfoBoxes();
+    }
+  });
+});
+
+
+</script>
+ 
+
+
+<style>
+
+.shop-the-look {
+  text-align: center; min-height:50vh;
+}
+.shop-the-look-container{position:relative; overflow:hidden;}
+.shop-the-look-container .content-wrap{
+  position:absolute;
+  left:0; top:0;
+  width:100%; height:100%;
+  display:flex;
+  justify-content:center;
+  z-index:1;
+}
+  .shop-the-look-container .text-overlay{
+    width:1200px;  
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    text-align:center;
+    box-sizing:border-box;
+   }
+  .shop-the-look-container .text-overlay .top-text{
+   margin-top:90px; color:#fff;
+  }
+  .top-text h2{
+    font-size:48px;
+  }
+  .top-text h3{
+    font-size:32px;
+  }
+  .top-text em{
+    font-style:normal; font-weight:bold; display:inline-block;
+        font-size: 100px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #00b1d2,#ffef75 );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;   
+    -webkit-text-fill-color: transparent;  
+    -webkit-text-stroke-width: 1px;  
+    -webkit-text-stroke-color: white; 
+  }
+  .shop-the-look-container .text-overlay .bottom-text{
+   margin-bottom:60px; color:#fff;
+  }
+.hotspot-container {
+  position: relative;
+  display: inline-block;
+}
+
+.look-image {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+}
+
+/* Hotspot styling */
+.hotspot {
+  position: absolute;
+  cursor: pointer;
+  display: inline-block;
+  z-index:2;
+}
+
+ .hotspot-icon {
+    position:relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    background: #ffffff;
+    border-radius: 100%;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.25);
+    cursor: pointer;
+    z-index: 1;
+    transform: scale(1);
+    transition: transform 0.25s ease-in-out;
+  }
+   .hotspot-icon:hover  {
+    transform: scale(1.5);
+  }
+   .hotspot-icon::after {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 40px;
+    left: -12px;
+    top: -12px;
+    border-radius: 100%;
+    background: rgba(255,255,255,0.4);
+    -webkit-animation: 1.4s shopTheLookDotKeyframe ease-in-out infinite;
+    animation: 1.4s shopTheLookDotKeyframe ease-in-out infinite;
+  }
+  
+ 
+.hotspot-info {
+  display: flex;  
+  gap:10px;
+  opacity: 0;
+  transform: scale(0.9);  
+  position: absolute;
+  z-index:3!important;
+  top: 5px;
+  left: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  min-width: 300px; 
+  border-radius:15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100; text-align:left;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Add transition */
+}
+
+
+.hotspot-info.visible {
+  opacity: 1;
+  transform: scale(1);  
+}
+
+ 
+.hotspot-info.hidden {
+  opacity: 0;
+  transform: scale(0.9);  
+}
+ .hotspot-info .product-title {
+  font-size: 1rem;
+  }
+.hotspot-info .product-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px; /* Add space between price and the CTA button */
+}
+@media(max-width:768px){
+   .shop-the-look-container .text-overlay .top-text{
+   margin-top:40px; color:#fff;
+  }
+.hotspot-info{
+  min-width:60vw; top:-100px;
+}
+  .top-text h2{
+    font-size:27px;
+  }
+  .top-text h3{
+    font-size:18px;
+  }
+  .shop-the-look-image {
+    height:50vh;
+  }
+  .shop-the-look-image img{
+    object-fit:cover; height:100%!important; width:100%!important;
+  }
+}
+</style>
+<section class="shop-the-look" style="margin-top: {{ section.settings['section-margin'] }}px; margin-bottom: {{ section.settings['section-margin'] }}px;">
+  <div class="shop-the-look-container">
+   <div class="content-wrap">
+     <div class="text-overlay">
+      <div class="top-text ">
+    <h2 class="wow fadeInLeft animated" data-wow-duration="1s" data-wow-delay="0.2s">{{ section.settings.title }}</h2>
+    <h3  class="wow fadeInLeft animated" data-wow-duration="1s" data-wow-delay="0.5s">{{ section.settings.subtitle }}</h3>
+      </div>
+       <div class="bottom-text">
+          {{ section.settings.bottom_text }}
+       </div>
+     </div>
+   </div>
+    <!-- Background Image -->
+    <div class="shop-the-look-image" style="position: relative;">
+      <img class="hidden-mobile" src="{{ section.settings.image | img_url: 'master' }}" alt="Shop the Look Image" style="width: 100%; height: auto;">
+     <img class="visible-mobile"  src="{{ section.settings.mobile_image | img_url: 'master' }}" alt="Shop the Look Image" style="width: 100%; height: auto;">
+      <!-- Hotspots for Products -->
+{% for block in section.blocks %}
+<div class="hotspot" data-top="{{ block.settings.top }}" data-left="{{ block.settings.left }}" 
+     data-mobile-top="{{ block.settings.mobile_top }}" data-mobile-left="{{ block.settings.mobile_left }}"
+     style="position: absolute;">
+  <span class="hotspot-icon"></span>
+  <div class="hotspot-info hidden">
+    {% if block.settings.product.featured_image %}
+    <img src="{{ block.settings.product.featured_image | img_url: 'small' }}" alt="{{ block.settings.product.title }}" class="product-image">
+    {% endif %}
+    <a href="{{ block.settings.product.url }}" class="{{ section.settings['button-class'] }}">
+      <h3 class="product-title">{{ block.settings.product.title }}</h3>
+      <p class="product-price">{{ block.settings.product.price | money }}</p>
+    </a>
+  </div>
+</div>
+{% endfor %}
+    </div>
+  </div>
+</section>
+
+
+
+{% schema %}
+  {
+    "name": "Shop the Look",
+    "settings": [
+	         {
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+          },
+          {
+            "id": "subtitle",
+            "type": "text",
+            "label": "Subtitle"
+          },
+		  {
+            "id": "bottom_text",
+            "type": "text",
+            "label": "Bottom Text" 
+          }, 
+          {
+            "id": "image",
+            "type": "image_picker",
+            "label": "Image"
+          },
+          {
+            "id": "mobile_image",
+            "type": "image_picker",
+            "label": "Image"
+          },
+		  {
+              "type":   "range",
+              "id":     "section-margin",
+              "min":       0,
+              "max":       100,
+              "step":      5,
+              "unit":      "px",
+              "label":     "Section Top/Bottom Margin",
+              "default":   0
+          }
+	],
+	"blocks": [
+      {
+        "type": "product",
+        "name": "Prodct",
+        "settings": [
+          {
+            "id": "product",
+            "type": "product",
+            "label": "Product"
+          },
+          {
+            "type":"header",
+            "content":"position for desktop"
+          },
+          {
+            "type": "range",
+            "id": "top",
+            "label": "Position from Top",
+            "step": 1,
+            "min": 0,
+            "max": 100,
+            "unit": "%",
+            "default": 50
+          },
+          {
+            "type": "range",
+            "id": "left",
+            "label": "Position from Left",
+            "step": 1,
+            "min": 0,
+            "max": 100,
+            "unit": "%",
+            "default": 50
+          },
+            {
+            "type":"header",
+            "content":"position for mobile"
+          },
+            {
+            "type": "range",
+            "id": "mobile_top",
+            "label": "Position from Top",
+            "step": 1,
+            "min": 0,
+            "max": 100,
+            "unit": "%",
+            "default": 50
+          },
+          {
+            "type": "range",
+            "id": "mobile_left",
+            "label": "Position from Left",
+            "step": 1,
+            "min": 0,
+            "max": 100,
+            "unit": "%",
+            "default": 50
+          }
+        ]
+      }
+    ] 
+  }
+{% endschema %}

@@ -1,0 +1,253 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rich_text_VLYdhN": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ywdtpX": {
+          "type": "heading",
+          "settings": {
+            "title": "Shipping Policy",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ywdtpX"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "1",
+        "section_visibility": "always",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "text_with_icons_9GbeHC": {
+      "type": "text-with-icons",
+      "blocks": {
+        "text_block_i4P4nH": {
+          "type": "text_block",
+          "settings": {
+            "icon": "package",
+            "title": "The United States",
+            "text": "<p>All regions exclude remote areas including Alaska, Hawaii, Puerto Rico, U.S. Virgin Islands, Armed Forces Americas, Armed Forces Europe, Armed Force Pacific, and U.S. Overseas Territories.</p>"
+          }
+        },
+        "text_block_dkweY9": {
+          "type": "text_block",
+          "settings": {
+            "icon": "package",
+            "title": "Europe",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>"
+          }
+        },
+        "text_block_8rRGNW": {
+          "type": "text_block",
+          "settings": {
+            "icon": "chat",
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_i4P4nH",
+        "text_block_dkweY9",
+        "text_block_8rRGNW"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading_size": "h2",
+        "heading_position": "center",
+        "title": "",
+        "desktop_columns_per_row": 3,
+        "icon_color": "#000000",
+        "button_label": "",
+        "button_link": "",
+        "divider": false
+      }
+    },
+    "rich_text_EU4mN6": {
+      "type": "rich-text",
+      "blocks": {
+        "text_HXRrMK": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h2><strong>Delivery Availability</strong></h2><p></p><ul><li>United States: All regions exclude remote areas including Alaska, Hawaii, Puerto Rico, U.S. Virgin Islands, Armed Forces Americas, Armed Forces Europe, Armed Force Pacific, and U.S. Overseas Territories.</li></ul><p></p><h2><strong>Shipping Time & Fee</strong></h2><p></p><ul><li>Estimated delivery time: It takes up to 3-5 business days to deliver your order since the time it was created. Accessories may take an additional week as they might be shipped from our warehouses outside the US.</li></ul><p></p><ul><li>Estimated delivery time during peak periods: During holidays like Black Friday, Cyber Monday, and New Year, allow up to 5 additional business days for dispatch.</li></ul><p></p><ul><li>Estimated delivery time of pre-orders: Delivery times are as indicated on the pre-sale product page.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "text_HXRrMK"
+      ],
+      "custom_css": [],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "section_visibility": "always",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "h1 {text-align: center; font-size: 0px;}"
+      ],
+      "settings": {}
+    },
+    "rich_text_yM4Lyz": {
+      "type": "rich-text",
+      "blocks": {
+        "text_DrhcAK": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h2>Note</h2><p>1. Delivery to PO Boxes may fail due to logistics restrictions. Please provide a specific address or use an alternative address with specific street and apartment number for prompt delivery.</p><p>2. Non-Standard Specifications: An additional $50 shipping fee will be charged if you purchase a product with specifications not common in your country (e.g., buying a European-spec product in the United States).</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_DrhcAK"
+      ],
+      "custom_css": [],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "section_visibility": "always",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "faq_CKjfbf": {
+      "type": "faq",
+      "blocks": {
+        "question_x9qJdJ": {
+          "type": "question",
+          "settings": {
+            "title": "Where do you ship from?",
+            "text": "<p>We ship from warehouses located the United States</p><p><strong>*Please note that if you order multiple items, they may be shipped separately as they are likely stored in different warehouses.</strong></p>"
+          }
+        },
+        "question_MNCLbX": {
+          "type": "question",
+          "settings": {
+            "title": "How long will it take for my items to arrive?",
+            "text": "<p>It will usually take <strong>5-15 business days</strong> for all orders to arrive. Typically, it takes <strong>2-5 business days</strong> to dispatch an order from the warehouse. Shipping times will then vary based on customer location and from product-to-product; based on demand and shipping location.</p>"
+          }
+        },
+        "question_x3pDMm": {
+          "type": "question",
+          "settings": {
+            "title": "What should I do if I filled in my address incorrectly?",
+            "text": "<p>Please contact our customer service at the email address <strong>support@oneisall.com</strong> as soon as possible. If the package has not been sent out yet, our customer service team will manually modify the address for you. If the address cannot be modified and the package needs to be returned according to the logistics provider's policies, our customer service team will resend the product for you.</p>"
+          }
+        },
+        "question_kHAWCD": {
+          "type": "question",
+          "settings": {
+            "title": "What should I do if the package is lost or damaged during transportation?",
+            "text": "<p>If your package is lost, please confirm with the logistics provider and then contact us directly. </p><p>Once confirmed, we will file a claim with the logistics provider and arrange a replacement or refund for you. </p><p>If your package is damaged during transportation, please contact us directly and provide photos of the damage, along with a copy of the logistics bill. </p><p>We will then file a claim with the logistics provider and arrange a replacement or refund for you.</p>"
+          }
+        },
+        "question_BV6tqi": {
+          "type": "question",
+          "settings": {
+            "title": "Will my order be shipped in multiple packages?",
+            "text": "<p>Yes. If the products you ordered are stored in different warehouses, they will be shipped separately in multiple packages.</p>"
+          }
+        },
+        "question_HnCRVe": {
+          "type": "question",
+          "settings": {
+            "title": "Is there a detailed product operation video to watch?",
+            "text": "<p>Yes, you can scan the QR code on the product packaging to watch the operation video, or click our official youtube to watch more videos</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_x9qJdJ",
+        "question_MNCLbX",
+        "question_x3pDMm",
+        "question_kHAWCD",
+        "question_BV6tqi",
+        "question_HnCRVe"
+      ],
+      "settings": {
+        "title": "Shipping Questions",
+        "heading_size": "h2",
+        "brochure_title": "",
+        "brochure_link": "",
+        "heading_position": "left"
+      }
+    },
+    "faq_zT4jgN": {
+      "type": "faq",
+      "blocks": {
+        "question_3z9QcK": {
+          "type": "question",
+          "settings": {
+            "title": "How can I check the logistics information of my order?",
+            "text": "<p>You can go to the Track Order Page and enter your Order Number or Tracking Number to check.</p>"
+          }
+        },
+        "question_dAWtTf": {
+          "type": "question",
+          "settings": {
+            "title": "How do I know my tracking number? What if I can't find my tracking number?",
+            "text": "<p>After your order has been shipped, you will receive an Order Tracking Number via email or text message. </p><p>You can use this number to track the status of your shipment.</p><p> If you have not received within 5 business days, please feel free to contact us at <strong>support@oneisall.com</strong>, and we will respond as soon as possible.</p>"
+          }
+        },
+        "question_gRMLyJ": {
+          "type": "question",
+          "settings": {
+            "title": "What if I can't find the logistics information?",
+            "text": "<p>If you are unable to check the specific logistics information within 2 business days after receiving your tracking number, it may be due to a system delay.</p><p> If you are still unable to check the specific logistics information after 3 business days, please contact us at <strong>support@oneisall.com</strong>.</p>"
+          }
+        },
+        "question_raVfDJ": {
+          "type": "question",
+          "settings": {
+            "title": "My item has been in transit for a long time. What should I do?",
+            "text": "<p>If your item has been in transit for an extended period, you can try contacting the logistics provider directly to check the status of the item. </p><p>Alternatively, feel free to reach out to our customer service team for feedback and assistance.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_3z9QcK",
+        "question_dAWtTf",
+        "question_gRMLyJ",
+        "question_raVfDJ"
+      ],
+      "settings": {
+        "title": "Order Tracking",
+        "heading_size": "h1",
+        "brochure_title": "",
+        "brochure_link": "",
+        "heading_position": "left"
+      }
+    }
+  },
+  "order": [
+    "rich_text_VLYdhN",
+    "text_with_icons_9GbeHC",
+    "rich_text_EU4mN6",
+    "main",
+    "rich_text_yM4Lyz",
+    "faq_CKjfbf",
+    "faq_zT4jgN"
+  ]
+}

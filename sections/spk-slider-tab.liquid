@@ -1,0 +1,135 @@
+<div id="{{ section.settings.target_id }}">
+  {% render 'spk-slider-tab', section: section %}
+</div>
+
+{% schema %}
+{
+  "name": "SPK Slider With Tab",
+  "class": "spk-slider-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "target_id",
+      "label": "Target ID",
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "SPK Slider With Tab"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout PC",
+      "default": "title-left",
+      "options": [
+        {
+          "value": "title-left",
+          "label": "Title Left"
+        },
+        {
+          "value": "title-center",
+          "label": "Title Center"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#F47C20"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#FEF9F6"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_rounded",
+      "label": "Card Rounded",
+      "default": true
+    },
+
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "default": 60,
+      "min": 0,
+      "max": 120,
+      "step": 10
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "default": 60,
+      "min": 0,
+      "max": 120,
+      "step": 10
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_pc",
+          "label": "Image PC"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Image Mobile"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Tab Text",
+          "default": "Tab Text"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "SPK Slider With Tab",
+      "blocks": [
+        {
+          "type": "slide",
+          "settings": {
+            "title": "Tab Text"
+          }
+        },
+        {
+          "type": "slide",
+          "settings": {
+            "title": "Tab Text"
+          }
+        },
+        {
+          "type": "slide",
+          "settings": {
+            "title": "Tab Text"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

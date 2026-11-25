@@ -1,0 +1,172 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner_z7rirW": {
+      "type": "banner",
+      "disabled": true,
+      "settings": {
+        "img": "shopify://shop_images/2_68d24d97-1c29-457a-80d7-0b8fdf5e3912.png",
+        "img_m": "shopify://shop_images/3_819a8f05-d9de-4f2b-bca7-de200f5d26b4.png",
+        "hide": false,
+        "overlayer": 1,
+        "title": "Pet Water Fountain",
+        "text": "Keep hydration fresh and clean with less effort",
+        "btn": "",
+        "link": "",
+        "btn_style": "main"
+      }
+    },
+    "page_collecitons_4dDpNR": {
+      "type": "page-collecitons",
+      "blocks": {
+        "collection_bPdxFL": {
+          "type": "collection",
+          "settings": {
+            "collection": "fountain-accessories-filters",
+            "title": "Carbon Filters"
+          }
+        },
+        "collection_YeWrXY": {
+          "type": "collection",
+          "settings": {
+            "collection": "fountain-accessories-pumps",
+            "title": "Pumps"
+          }
+        },
+        "collection_kHBWKW": {
+          "type": "collection",
+          "settings": {
+            "collection": "fountain-accessories-others",
+            "title": "Battery Module & Control Panel”"
+          }
+        }
+      },
+      "block_order": [
+        "collection_bPdxFL",
+        "collection_YeWrXY",
+        "collection_kHBWKW"
+      ],
+      "settings": {
+        "display_title_type": "default",
+        "display_special_attr": false
+      }
+    },
+    "faqs_ijrNcG": {
+      "type": "faqs",
+      "blocks": {
+        "tab_content_JmK8jh": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Can I Use Tap Water In My Dog Water Fountain?",
+            "text": "<p>Yes, you can use tap water in a dog water fountain, but it's advisable to use filtered or purified water if possible to reduce mineral deposits and impurities. If you're using tap water, ensure the fountain has a reliable filter to keep the water clean and safe for your dog. Regular cleaning is also essential to prevent build-up from minerals or bacteria.</p>"
+          }
+        },
+        "tab_content_c6HcW7": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Is The Pet Water Fountain Easy To Assemble?",
+            "text": "<p>Yes. Most pet water fountains are easy to assemble and designed to be user-friendly. The process usually involves a few simple steps and can be done in minutes. </p><p>Here's a basic outline of what to expect:</p><ul><li>Put filter cotton into the filter box</li><li>Assemble the pump</li><li>Fill the tank with water</li><li>Put on the cover drinking tray and insert the faucet</li></ul><p>Most pet water fountains come with an instruction manual that includes a step-by-step guide. Following this ensures that all parts are properly installed and the fountain functions correctly.</p>"
+          }
+        },
+        "tab_content_JPgzEA": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Does A Pet Drinking Fountain Need A Filter?",
+            "text": "<p>Yes, a pet drinking fountain needs a filter.</p><p> Filters help remove impurities, hair, food particles, and other debris from the water, keeping it clean and safe for your pet. Many filters also have activated charcoal to help reduce odor and improve the taste of the water, which can encourage your pet to drink more. </p><p>It is recommended to purchase the set containing a filter. About four filters need to be replaced in a month. Be sure to regularly check and replace the filter as the manufacturer recommends.</p>"
+          }
+        },
+        "tab_content_Rpa4Mk": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Can I Use A Cat Water Fountain For Both Cats And Dogs?",
+            "text": "<p>Yes, many cat water fountains are designed to accommodate both cats and dogs. Choose a cat water fountain for your pet's size and breed. Larger dogs may require a pet drinking fountain with a higher water capacity.</p>"
+          }
+        },
+        "tab_content_G3VjQF": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Do Cat Water Fountains Require Electricity?",
+            "text": "<p>Most cat water fountains need to plug into power the pump that circulates the water. Some cat water fountain models are USB-powered, while others use traditional outlets. Check the pet drinking fountain details for power requirements before purchasing.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_JmK8jh",
+        "tab_content_c6HcW7",
+        "tab_content_JPgzEA",
+        "tab_content_Rpa4Mk",
+        "tab_content_G3VjQF"
+      ],
+      "disabled": true,
+      "settings": {
+        "id": "faqs",
+        "title": "FAQs",
+        "align": "center",
+        "align_m": "center",
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    },
+    "icons_fRC7QE": {
+      "type": "icons",
+      "blocks": {
+        "icon_RXgQdm": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Fast & Free Shipping",
+            "text": ""
+          }
+        },
+        "icon_3tpCEf": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Hassle-Free Warranty",
+            "text": ""
+          }
+        },
+        "icon_DDAWJJ": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "24-Month Warranty",
+            "text": ""
+          }
+        },
+        "icon_6gJPeq": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "30-Day Money Back",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_RXgQdm",
+        "icon_3tpCEf",
+        "icon_DDAWJJ",
+        "icon_6gJPeq"
+      ],
+      "settings": {
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    }
+  },
+  "order": [
+    "banner_z7rirW",
+    "page_collecitons_4dDpNR",
+    "faqs_ijrNcG",
+    "icons_fRC7QE"
+  ]
+}

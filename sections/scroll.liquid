@@ -1,0 +1,888 @@
+{% assign sid = section.id %}
+<script src="{{ 'glider.min.js' | asset_url }}" defer="defer"></script>
+
+{{ 'os-base.css' | asset_url | stylesheet_tag }}
+<style>
+    #shopify-section-{{ section.id }} .page-width{
+        --page-width:1360px;
+    }
+    .template-index .page-width{
+      max-width: 1360px;
+    }
+    .dl-highlight0718-h {
+    position: relative;
+    height: calc(300px * 5 + (100vh - 70px - 80px));
+  }
+  .scroll-swiper{
+    display:none;
+  }
+  .dl-highlight0718-h-container {
+    position: sticky;
+    top: calc(70px + 40px);
+    background: {{section.settings.color_bg}};
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 70px - 80px);
+  }
+
+  .dl-highlight0718-h-items {
+    display: flex;
+    height: 880px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-height: 100%;
+    position: relative;
+  }
+    .circle{
+      position: absolute;
+      top: 0;
+      right: 0;
+      max-width: 28vw;
+    }
+
+  .dl-highlight0718-h-images {
+    position: relative;
+    height: 880px;
+    max-height: 100%;
+  }
+
+  .dl-highlight0718-h-image {
+    width: 100%;
+    max-width: 100%;
+    line-height: 0;
+    max-height: 100%;
+
+    position: absolute;
+    left: 200px;
+    top: 40px;
+  }
+
+  .dl-highlight0718-h-image.dl-prev {
+    width: 200px;
+    height: 200px;
+    left: 1200px;
+    top: -200px;
+    opacity:0;
+  }
+
+  .dl-highlight0718-h-image.dl-next {
+    height: 200px;
+    width: 200px;
+    left: 0;
+    top: 1080px;
+    opacity:0;
+
+  }
+
+  .dl-highlight0718-h-image img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .dl-highlight0718-h-infos-base {
+    min-height: 333px;
+  }
+
+  .dl-highlight0718-h-infos {
+    /* margin-left: 216px; */
+    position: relative;
+  }
+  .dl-highlight0718-h-infos::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    height: 100%;
+    background: #E5DAD2;
+    border-radius: 4px;
+  }
+  .dl-highlight0718-h-infos::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 4px;
+    height: 185px;
+    border-radius: 4px;
+    background: linear-gradient(180deg, rgba(0,177,210,1) 0%, rgba(255,239,117,1) 100%);
+  }
+
+  .dl-highlight0718-h-infos[data-dl-active-index="0"]::after {
+    top: 0;
+  }
+
+  .dl-highlight0718-h-infos[data-dl-active-index="1"]::after {
+    top: 78px;
+  }
+
+  .dl-highlight0718-h-infos[data-dl-active-index="2"]::after {
+    top: 132px;
+  }
+
+  .dl-highlight0718-h-info {
+    margin-bottom: 24px;
+    height: 34px;
+  }
+
+  .dl-highlight0718-h-image,
+  .dl-highlight0718-h-info,
+  .dl-highlight0718-h-info *,
+  .dl-highlight0718-h-infos::after {
+    transition-property: all;
+    transition-duration: 0.8s;
+    transition-timing-function: cubic-bezier(0.38, 0.005, 0.215, 1);
+  }
+
+  .dl-highlight0718-h-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 24px;
+    position: relative;
+    width: 480px;
+  }
+
+  .dl-highlight0718-h-info-subtitle {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #000000;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .dl-highlight0718-h-info-title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+
+    opacity: 0;
+  }
+    .dl-highlight0718-h-info-title span{
+      color: #F47C20;
+      font-weight: 700;
+      font-size: 36px;
+    }
+  .dl-highlight0718-h-info-desc {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    height: 42px;
+    opacity: 0;
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .dl-highlight0718-h-info-func {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    opacity: 0;
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .dl-highlight0718-h-info-btn {
+    display: flex;
+    width: 136px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: #315800;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    width: auto !important;
+    padding: 0 12px;
+    white-space: nowrap;
+  }
+
+  .dl-highlight0718-h-info-more {
+    display: flex;
+    gap: 8px;
+    height: 32px;
+    align-items: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    color: black;
+  }
+
+  .dl-highlight0718-h-info-more svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  #shopify-section-{{ sid }} .product-section-title{
+    /* background: linear-gradient(90deg, #F47C20 0%, #FFEF75 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+        color: #F47C20;
+
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  #shopify-section-{{ sid }} .product-section-text{
+    color: rgba(0, 0, 0, 0.80);
+    font-size: 20px;
+    line-height: 1.4;
+    margin-top:12px;
+  }
+  @media screen and (min-width: 990px) {
+    .dl-highlight0718-h-info-more svg {
+      transition: transform 0.2s ease-in-out;
+    }
+    .dl-highlight0718-h-info-more:hover svg {
+      transform: translateX(5px);
+    }
+  }
+
+  .dl-highlight0718-h-info:first-child {
+    margin-top: 0 !important;
+  }
+
+  .dl-highlight0718-h-info:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .dl-highlight0718-h-info.dl-active {
+    margin-top: 24px;
+    margin-bottom: 40px;
+    height: 185px;
+  }
+
+  .dl-highlight0718-h-info.dl-active .dl-highlight0718-h-info-subtitle {
+    opacity: 1;
+    top: 0;
+  }
+
+  .dl-highlight0718-h-info.dl-active .dl-highlight0718-h-info-title {
+    font-size: 32px;
+    line-height: 42px;
+    top: 37px;
+  }
+  .dl-highlight0718-h-info.dl-active .dl-highlight0718-h-info-desc {
+    opacity: 1;
+    top: 95px;
+  }
+
+  .dl-highlight0718-h-info.dl-active .dl-highlight0718-h-info-func {
+    opacity: 1;
+    top: 153px;
+  }
+
+    @media screen and (min-width: 991px) {
+      #shopify-section-{{ sid }} .product-section-info{
+        position:absolute;
+        left: 50%;
+        top:5%;
+        transform:translateX(-50%);
+        z-index:2;
+        text-align:center;
+      }
+    .dl-highlight0718-h-items {
+      height: 45.833vw;
+      /* padding: 2.0833vw 10.4167vw; */
+    }
+
+    .dl-highlight0718-h-images {
+      width: 45%;
+      height: 45.833vw;
+    }
+
+    .dl-highlight0718-h-image {
+      left: 0;
+      top: 0;
+      height: 100%;
+      line-height: 0;
+    }
+
+    .dl-highlight0718-h-image.dl-prev {
+      width: 10.417vw;
+      height: 10.417vw;
+      left: 100%;
+      top: -12.5vw;
+    }
+
+    .dl-highlight0718-h-image.dl-next {
+      height: 10.417vw;
+      width: 10.417vw;
+      top: calc(100% + 2.0833vw);
+      left: -10.417vw;
+    }
+
+    .dl-highlight0718-h-infos-base {
+      width: 50%;
+      min-height: 15vw;
+        transform: translateY(10%);
+    }
+
+    .dl-highlight0718-h-infos {
+      margin-left: 5vw;
+      padding-left: 20px;
+    }
+
+
+
+    .dl-highlight0718-h-infos[data-dl-active-index="1"]::after {
+      top: 3.163vw;
+    }
+
+    .dl-highlight0718-h-infos[data-dl-active-index="2"]::after {
+      top: 6.775vw;
+    }
+
+    .dl-highlight0718-h-info {
+      margin-bottom: 1.25vw;
+      height: 1.771vw;
+    }
+
+    .dl-highlight0718-h-info-container {
+      gap: 0.833vw;
+      padding-left: 1.25vw;
+      /* width: 25vw; */
+    }
+
+    .dl-highlight0718-h-info-subtitle {
+      font-size: 24px;
+      line-height: normal;
+    }
+
+    .dl-highlight0718-h-info-title {
+      font-size: 1.25vw;
+    }
+
+    .dl-highlight0718-h-info-desc {
+      font-size: 14px;
+      height: 2.188vw;
+    }
+
+    .dl-highlight0718-h-info-func {
+      gap: 0.833vw;
+    }
+
+    .dl-highlight0718-h-info-btn {
+      width: 7.083vw;
+      height: 1.667vw;
+      border-radius: 0.208vw;
+      font-size: 0.729vw;
+    }
+
+    .dl-highlight0718-h-info-more {
+      gap: 0.417vw;
+      height: 1.667vw;
+      font-size: 0.729vw;
+    }
+
+    .dl-highlight0718-h-info-more svg {
+      width: 1.25vw;
+      height: 1.25vw;
+    }
+
+    .dl-highlight0718-h-info.dl-active {
+      /* margin-top: 2.083vw;*/
+      margin-bottom: 30px;
+      height: 6.635vw;
+    }
+    .dl-highlight0718-h-infos::after {
+      height: 6.635vw;
+    }
+    .dl-highlight0718-h-info.dl-active .dl-highlight0718-h-info-title {
+      font-size: 24px;
+      top: 3.527vw;
+      opacity:1;
+    }
+
+    .dl-highlight0718-h-info.dl-active .dl-highlight0718-h-info-desc {
+      top: 7.148vw;
+      color: rgba(0, 0, 0, 0.80);
+    }
+
+    .dl-highlight0718-h-info.dl-active .dl-highlight0718-h-info-func {
+      top: 7.969vw;
+    }
+  }
+
+    @media screen and (min-width: 991px) and (max-width:1399px){
+      .dl-highlight0718-h-infos-base{
+          height: 17vw;
+          min-height: max-content;
+      }
+      .dl-highlight0718-h-info.dl-active .dl-highlight0718-h-info-title{top:3.5vw;}
+      .dl-highlight0718-h-info.dl-active .dl-highlight0718-h-info-desc{top:6.6vw;}
+      .dl-highlight0718-h-infos::after,
+      .dl-highlight0718-h-info.dl-active{height: 8vw;}
+      .dl-highlight0718-h-info{margin-bottom:2.1vw;}
+      .dl-highlight0718-h-info.dl-active{
+        margin:20px 0;
+      }
+      .dl-highlight0718-h-info.dl-active .dl-highlight0718-h-info-title,
+      .dl-highlight0718-h-info-subtitle{font-size:24px;}
+      .dl-highlight0718-h-info-title span{    font-size: 36px;}
+      .dl-highlight0718-h-info-desc{font-size:14px;}
+      .dl-highlight0718-h-infos[data-dl-active-index="1"]::after {
+          top: 4.263vw;
+      }
+      .dl-highlight0718-h-infos[data-dl-active-index="2"]::after {
+          top: 8.575vw;
+      }
+      .dl-highlight0718-h-image{
+                left: 10%;        width: 80%;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .dl-highlight0718-h-info.dl-active .dl-highlight0718-h-info-title {
+        top: 2vw;
+        opacity:1;
+      }
+    .circle{
+      top: 5vw;
+    }
+      .dl-highlight0718-h-info.dl-active .dl-highlight0718-h-info-desc {
+        top: 4.4vw;
+      }
+    .dl-highlight0718-h-info.dl-active {
+      margin-bottom: 20px;
+    }
+    }
+    @media (max-width: 990px) {
+      dl-highlight0718-h{
+        display: none;
+      }
+      .scroll-swiper{
+        display:block;
+        padding: 32px 0;
+        background: {{section.settings.color_bg}};
+        overflow: hidden;
+        width: 100%;
+      }
+      .scroll-swiper .item-info{
+        padding: 0 16px;
+      }
+      .scroll-swiper .info-subtitle{
+        color: #000;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 28px;
+        margin-bottom: 4px;
+      }
+      .scroll-swiper .info-title{
+        color: #000;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 39.2px;
+        margin-bottom: 8px;
+      }
+      .scroll-swiper .info-title span{
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 39.2px;
+        color: #F47C20;
+      }
+      .scroll-swiper .info-desc{
+        color: rgba(0, 0, 0, 0.80);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.6px;
+      }
+      .custom-scroll-swiper-bottom{
+        margin-top: 24px;
+        padding-top: 24px;
+        position: relative;
+      }
+      .custom-scroll-swiper-bottom .swiper-pagination-progressbar{
+        width: calc(100% - 32px);
+        height: 4px;
+        left: 16px;
+        right: 16px;
+        top: 0;
+        background: rgba(0, 0, 0, 0.10);
+      }
+      .custom-scroll-swiper-bottom .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+        background: linear-gradient(100deg, rgba(0,177,210,1) 0%, rgba(255,239,117,1) 100%);
+      }
+    }
+    @media (max-width: 767px){
+      #shopify-section-{{ sid }} .product-section-info{
+        margin-bottom:24px;
+        padding:0 16px;
+        text-align:center;
+      }
+      #shopify-section-{{ sid }} .product-section-title{
+        font-size: 20px;
+      }
+      #shopify-section-{{ sid }} .product-section-text{
+        font-size: 14px;
+      }
+      .scroll_controls{
+        position:absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      #shopify-section-{{ sid }} .swiper-pagination ,
+      #shopify-section-{{ sid }} .scroll_controls>div {
+        z-index:4;
+      }
+      #shopify-section-{{ sid }} .item-img {
+          width: 80%;
+          margin: 0 auto;
+      }
+      .dl-highlight0718-h-infos{
+        margin-left: 0px;
+      }
+      .dl-highlight0718-h-info{
+        width: 90.667vw;
+        height: 100% !important;
+        flex-direction: column;
+        padding-bottom: 0;
+      }
+      .dl-highlight0718-h-info-bg{
+        position: static;
+      }
+      .dl-highlight0718-h-infos-base{
+        padding: 0 0;
+      }
+      .dl-highlight0718-h-items{
+        padding-top: 32px;
+        padding-bottom: 32px;
+      }
+      .dl-highlight0718-h-info-container{
+        padding: 0 0;
+        margin-top: 24px;
+      }
+      .dl-highlight0718-h-info-subtitle{
+        color: #000;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 28px;
+        margin-bottom: 4px;
+      }
+      .dl-highlight0718-h-info-title{
+        color: #000;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 39.2px;
+        margin-bottom: 8px;
+      }
+      .dl-highlight0718-h-info-title span{
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 39.2px;
+      }
+      .dl-highlight0718-h-info-desc{
+        color: rgba(0, 0, 0, 0.80);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.6px;
+      }
+      .custom-scroll-swiper{
+        position: relative;
+      }
+    }
+</style>
+<style>
+  @media (max-width: 767px) {
+    .scroll-swiper .swiper-button-next,
+    .scroll-swiper .swiper-button-prev {
+      {% comment %} display: none; {% endcomment %}
+    }
+    .item-info{
+      text-align: center; 
+    }
+  }
+</style>
+
+<dl-highlight0718-h>
+  <div class="dl-highlight0718-h">
+    <div class="dl-highlight0718-h-container">
+      <div class="dl-highlight0718-h-items page-width">
+        {% if section.settings.title != blank or section.settings.text != blank %}
+          <div class="product-section-info">
+            {% if section.settings.title != blank %}
+              <div class="product-section-title">{{ section.settings.title }}</div>
+            {% endif %}
+            {% if section.settings.text != blank %}
+              <div class="product-section-text">{{ section.settings.text }}</div>
+            {% endif %}
+          </div>
+        {% endif %}
+        <div class="dl-highlight0718-h-images dl-hidden-mobile">
+          {% for block in section.blocks %}
+            <div class="dl-highlight0718-h-image {% unless forloop.first %}dl-next{% endunless %}">
+              <img
+                src="{{ block.settings.image | img_url:'1600x' }}"
+                alt=""
+                width="1600"
+                height="1440"
+                class="dl-hidden-mobile"
+              >
+            </div>
+          {% endfor %}
+        </div>
+        <div class="dl-highlight0718-h-infos-base">
+          <div class="dl-highlight0718-h-infos" data-dl-active-index="0">
+            {% for block in section.blocks %}
+              <div class="dl-highlight0718-h-info {% if forloop.first %}dl-active{% endif %}">
+                <div class="dl-highlight0718-h-info-bg dl-hidden-desktop">
+                  <img src="{{ block.settings.image | img_url:'560x' }}" alt="" width="560" height="688">
+                </div>
+                <div class="dl-highlight0718-h-info-container">
+                  <div class="dl-highlight0718-h-info-subtitle" data-dl-index="{{ forloop.index0 }}">
+                    {{ block.settings.title }}
+                  </div>
+                  <div class="dl-highlight0718-h-info-title">{{ block.settings.text }}</div>
+                  <div class="dl-highlight0718-h-info-desc">{{ block.settings.subtext }}</div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% if section.settings.circle != blank %}
+          <div class="circle dl-hidden-mobile">
+            <img class="" src="{{ section.settings.circle | img_url:'master' }}">
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</dl-highlight0718-h>
+<div class="scroll-swiper">
+  {% if section.settings.title != blank or section.settings.text != blank %}
+    <div class="product-section-info">
+      {% if section.settings.title != blank %}
+        <div class="product-section-title">{{ section.settings.title }}</div>
+      {% endif %}
+      {% if section.settings.text != blank %}
+        <div class="product-section-text">{{ section.settings.text }}</div>
+      {% endif %}
+    </div>
+  {% endif %}
+  <div class="swiper custom-scroll-swiper" style="position:relative;">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="item swiper-slide">
+          <div class="item-img">
+            <img src="{{ block.settings.image | img_url:'560x' }}" alt="" width="560" height="688">
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% comment %} <div class="scroll_controls"> {% endcomment %}
+      <div class="swiper-button-prev scroll_prev">
+        <svg
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24px"
+          height="24px"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"></path>
+        </svg>
+      </div>
+      <div class="swiper-button-next scroll_next">
+        <svg
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24px"
+          height="24px"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+        </svg>
+      </div>
+    {% comment %} </div> {% endcomment %}
+  </div>
+
+  <div class="swiper custom-scroll-swiper-bottom">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="item swiper-slide">
+          <div class="item-info">
+            <div class="info-subtitle">{{ block.settings.title }}</div>
+            <div class="info-title">{{ block.settings.text }}</div>
+            <div class="info-desc">{{ block.settings.subtext }}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+<script src="{{ 'product-scroll.js' | asset_url }}" defer="defer"></script>
+<script>
+  let cards_swiper = null;
+  let cards_swiper2 = null;
+  document.addEventListener('DOMContentLoaded', (event) => {
+    if ($(window).width() < 990) {
+      initCardSwiper();
+    }
+
+    $(window).resize(function () {
+      initCardSwiper();
+    });
+  });
+
+  function initCardSwiper() {
+    if (cards_swiper && cards_swiper2) {
+      cards_swiper.destroy(true, true); // 销毁并清除DOM
+      cards_swiper2.destroy(true, true); // 销毁并清除DOM
+      cards_swiper = null;
+      cards_swiper2 = null;
+    }
+    cards_swiper = new Swiper('.custom-scroll-swiper', {
+      slidesPerView: 1,
+      loop: false,
+      spaceBetween: 12,
+      navigation: {
+        nextEl: '.custom-scroll-swiper .swiper-button-next',
+        prevEl: '.custom-scroll-swiper .swiper-button-prev',
+      },
+      breakpoints: {
+        591: {
+          //当屏幕宽度大于等于590
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+      },
+    });
+
+    cards_swiper2 = new Swiper('.custom-scroll-swiper-bottom', {
+      slidesPerView: 1,
+      loop: false,
+      spaceBetween: 12,
+      controller: {
+        control: cards_swiper, //控制Swiper1
+      },
+      pagination: {
+        el: '.custom-scroll-swiper-bottom .swiper-pagination',
+        type: 'progressbar',
+      },
+      breakpoints: {
+        591: {
+          //当屏幕宽度大于等于590
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+      },
+    });
+    cards_swiper.controller.control = cards_swiper2;
+    cards_swiper2.controller.control = cards_swiper;
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Scroll",
+  "class": "images-scroll",
+  "max_blocks": 3,
+  "limit": 1,
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["footer", "header"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Fast & Free Shipping"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Price includes shipping, free "
+    },
+    {
+      "type": "color",
+      "id": "color_bg",
+      "default": "#FEF2E9",
+      "label": "Background color"
+    },
+    {
+      "type": "image_picker",
+      "id": "circle",
+      "label": "Circle image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_m",
+          "label": "Image mobile"
+        },
+        {
+          "type": "color",
+          "id": "color",
+          "default": "#fff",
+          "label": "Background color"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Small Breeds"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "30-35min"
+        },
+        {
+          "type": "text",
+          "id": "subtext",
+          "label": "Subtext",
+          "default": "Blurams Dome Camera 2k"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Scroll"
+    }
+  ]
+}
+{% endschema %}

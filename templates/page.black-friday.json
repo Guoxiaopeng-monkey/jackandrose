@@ -1,0 +1,516 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {}
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        "h1 {text-align: center;}"
+      ],
+      "settings": {}
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "disabled": true,
+      "settings": {}
+    },
+    "slideshow_RcKGmj": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_QWQrFa": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/3_7fb7201b-ee0d-42c1-a592-5c9a6bb1de34.png",
+            "image_mobile": "shopify://shop_images/1-3.png",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "hero_QWQrFa"
+      ],
+      "settings": {
+        "full_width": true,
+        "desktop_size": 0,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "countdown_pgR3dC": {
+      "type": "countdown",
+      "blocks": {
+        "content_jmQYHG": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "heading": "Black Friday Savings",
+            "heading_size": "h1",
+            "text": "<p><strong>Limited-Time Only</strong></p>",
+            "content_alignment": "center"
+          }
+        },
+        "timer_khLYrj": {
+          "type": "timer",
+          "settings": {
+            "year": "2024",
+            "month": "12",
+            "day": "2",
+            "hour": "23",
+            "minute": "59",
+            "hide_timer": true,
+            "text": ""
+          }
+        },
+        "button_KKfV4A": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_link": "",
+            "button": "Shop Collection",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "content_jmQYHG",
+        "timer_khLYrj",
+        "button_KKfV4A"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "banner",
+        "full_width": true,
+        "color_scheme": "2",
+        "blur_image": false,
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "rich_text_ymGyJD": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_AWX7Jy": {
+          "type": "heading",
+          "settings": {
+            "title": "🎄🎁 Give Your Pet Family the Best Gift! 🎁🎄",
+            "heading_size": "h0"
+          }
+        },
+        "text_KweDPt": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>🎉 New Year, Purr-fect Deals! 🐾 Shop Oneisall and save big on smart pet essentials! 🛒✨now with <strong>up to 25% OFF</strong>!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_AWX7Jy",
+        "text_KweDPt"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "2",
+        "section_visibility": "always",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "text_columns_PDAKYM": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_MU4JFQ": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/3.5LFeeding_Fountain_Set.png",
+            "image_mask": "none",
+            "image_width": 300,
+            "title": "3.5L Automatic Pet Feeder & 2L Water Fountain",
+            "text": "<p>Convenient feeding and hydration for your pets</p><p><strong>74.99</strong></p>",
+            "align_text": "center",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/automatic-pet-feeder-and-2l-cat-water-fountain"
+          }
+        },
+        "text_block_LfPdM4": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/cozy-c1-dog-grooming-vacuum-and-water-fountain_2.png",
+            "image_mask": "none",
+            "image_width": 300,
+            "title": "Cozy C1 Pet Grooming Vacuum  & 7L Water Fountain Set",
+            "text": "<p>Ultimate combo for your pet’s grooming, drying and hydration needs</p><p><strong>179.98</strong></p>",
+            "align_text": "center",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/cozy-c1-dog-grooming-vacuum-and-dog-water-fountain-7"
+          }
+        },
+        "text_block_adUBXV": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/bm3-7L-water-fountain.jpg",
+            "image_mask": "none",
+            "image_width": 300,
+            "title": "3L Dog Grooming Vacuum & 7L Water Fountain",
+            "text": "<p>Simplify grooming and hydration for your large dog</p><p><strong>166.98</strong></p>",
+            "align_text": "center",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/bm3-big-3l-pet-grooming-vacuum-kit-and-7l-large-water-fountain-1"
+          }
+        },
+        "text_block_XyRJAE": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/pet_clipper-pet_feeder-and-pet-water-fountain.png",
+            "image_mask": "none",
+            "image_width": 300,
+            "title": "Pet Grooming Vacuum & Fountain & Feeder",
+            "text": "<p>Groom, feed, and hydrate your pets in one seamless routine</p><p><strong>159.99</strong></p>",
+            "align_text": "center",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/oneisall-lm2-pet-grooming-vacuum-kit-2l-cat-water-fountain-3-5l-automatic-cat-feeder-set"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_MU4JFQ",
+        "text_block_LfPdM4",
+        "text_block_adUBXV",
+        "text_block_XyRJAE"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h3",
+        "align_text": "center",
+        "divider": false,
+        "two_column_mobile": true,
+        "color_scheme": "2"
+      }
+    },
+    "rich_text_xBHnJC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8PytP8": {
+          "type": "heading",
+          "settings": {
+            "title": "Easy Grooming, Happy Pets",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8PytP8"
+      ],
+      "custom_css": [],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "2",
+        "section_visibility": "always",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "text_columns_cgXhPP": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_YyLdE9": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Dog-grooming-vacuum-kit-2.png",
+            "image_mask": "none",
+            "image_width": 300,
+            "title": "LM5 Grooming Vacuum Kit",
+            "text": "<p>4-in-1 tool groom your pet and keep your home clean effortlessly</p><p><strong>69.99</strong></p>",
+            "align_text": "center",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/oneisall-dog-grooming-vacuum-kit-lm5"
+          }
+        },
+        "text_block_QRxa9i": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/8-in-1_dog_grooming_vacuum_kit.png",
+            "image_mask": "none",
+            "image_width": 300,
+            "title": "Cozy C1 Grooming Vacuum Kit",
+            "text": "<p>8-in-1 vacuum, dryer, and clipper solution for your pets</p><p><strong>119.99</strong></p>",
+            "align_text": "center",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/cozy-c1-dog-grooming-vacuum"
+          }
+        },
+        "text_block_FUginN": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/1_288aec42-8439-4061-9fa8-bec2d0466f16.png",
+            "image_mask": "none",
+            "image_width": 300,
+            "title": "Comfy C1 5-in-1 Cordless Pet Grooming Vacuum",
+            "text": "<p>Cordless design, effortless grooming anytime, anywhere</p><p><strong>99.99</strong></p>",
+            "align_text": "center",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/oneisall-comfy-c1-cordless-smart-grooming-vacuum"
+          }
+        },
+        "text_block_YGYNYA": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/cat_grooming_vacuum.png",
+            "image_mask": "none",
+            "image_width": 300,
+            "title": " LM5C 6-in-1 Cat Grooming Vacuum",
+            "text": "<p>Do massage and reduce desheding, Keep your cats coat shiny and healthy</p><p><strong>99.99</strong><br/></p>",
+            "align_text": "center",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/oneisall-6-in-1-cat-grooming-vacuum-kit"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_YyLdE9",
+        "text_block_QRxa9i",
+        "text_block_FUginN",
+        "text_block_YGYNYA"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h3",
+        "align_text": "center",
+        "divider": false,
+        "two_column_mobile": true,
+        "color_scheme": "2"
+      }
+    },
+    "rich_text_4FQCFY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xVeFnP": {
+          "type": "heading",
+          "settings": {
+            "title": "Give your pet the ultimate in comfort",
+            "heading_size": "h1"
+          }
+        },
+        "text_thfJgC": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Provide your pet with the best care and comfort! </p><p>Don’t forget to use the code: <strong>BF12 </strong>for Extra 12% Off!</p><p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xVeFnP",
+        "text_thfJgC"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "2",
+        "section_visibility": "always",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "text_columns_HhCKep": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_R4MwpC": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/7L_Water_Fountain.jpg",
+            "image_mask": "none",
+            "image_width": 300,
+            "title": "7L Water Fountain",
+            "text": "<p>Large capacity easily meets your pet's hydration needs.</p><p><strong>42.99</strong></p>",
+            "align_text": "center",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/dog-water-fountain-7l"
+          }
+        },
+        "text_block_4g9mtq": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/1-cat-water-fountain-2l-new.jpg",
+            "image_mask": "none",
+            "image_width": 300,
+            "title": "2L Water Fountain",
+            "text": "<p>Fresh water, perfect for cats daily water needs</p><p><strong>29.99</strong></p>",
+            "align_text": "center",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/cat-water-drinker-2l"
+          }
+        },
+        "text_block_a9KVKy": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/WIFI.jpg",
+            "image_mask": "none",
+            "image_width": 300,
+            "title": "5L Automatic Food Dispenser",
+            "text": "<p>Double bowl design fits 2 cats, scientific feeding</p><p><strong>69.99</strong></p>",
+            "align_text": "center",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/automatic-cat-food-dispenser-5l"
+          }
+        },
+        "text_block_TxYjAd": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/DTJ001_Dog_Clipper.jpg",
+            "image_mask": "none",
+            "image_width": 300,
+            "title": "DTJ001 Dog Clipper",
+            "text": "<p>Powerful trimming, designed for thick and curly hair pets.</p><p><strong>39.99</strong></p>",
+            "align_text": "center",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/dtj001-dog-clipper-for-thick-coat"
+          }
+        },
+        "text_block_w4dziM": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/DTJ002.jpg",
+            "image_mask": "none",
+            "image_width": 300,
+            "title": "DTJ002 Dog Clipper",
+            "text": "<p>Trims smoothly and keeps your pet’s coat neat and tidy.</p><p><strong>38.99</strong></p>",
+            "align_text": "center",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/dtj002-dog-clipper"
+          }
+        },
+        "text_block_UakP7c": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/676_dog_clipper.jpg",
+            "image_mask": "none",
+            "image_width": 300,
+            "title": "676-Dog Clippers",
+            "text": "<p>Perfect for medium and large dogs, it handles thick fur.</p><p><strong>39.99</strong></p>",
+            "align_text": "center",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/676-dog-clipper"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_R4MwpC",
+        "text_block_4g9mtq",
+        "text_block_a9KVKy",
+        "text_block_TxYjAd",
+        "text_block_w4dziM",
+        "text_block_UakP7c"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h3",
+        "align_text": "left",
+        "divider": false,
+        "two_column_mobile": true,
+        "color_scheme": "2"
+      }
+    },
+    "featured_collections_myBLrw": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_Vi6qTM": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundles-saving",
+            "title": ""
+          }
+        },
+        "collection_pcxHqx": {
+          "type": "collection",
+          "settings": {
+            "collection": "pet-grooming-vacuum",
+            "title": ""
+          }
+        },
+        "collection_wc6MRK": {
+          "type": "collection",
+          "settings": {
+            "collection": "water-fountain",
+            "title": ""
+          }
+        },
+        "collection_FrjUEj": {
+          "type": "collection",
+          "settings": {
+            "collection": "feeder",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_Vi6qTM",
+        "collection_pcxHqx",
+        "collection_wc6MRK",
+        "collection_FrjUEj"
+      ],
+      "settings": {
+        "title": "Popular Categories",
+        "heading_size": "h2",
+        "heading_position": "center",
+        "divider": true
+      }
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "main",
+    "shogun-optimizer",
+    "slideshow_RcKGmj",
+    "countdown_pgR3dC",
+    "rich_text_ymGyJD",
+    "text_columns_PDAKYM",
+    "rich_text_xBHnJC",
+    "text_columns_cgXhPP",
+    "rich_text_4FQCFY",
+    "text_columns_HhCKep",
+    "featured_collections_myBLrw"
+  ]
+}

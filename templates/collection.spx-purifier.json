@@ -1,0 +1,236 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner_z7rirW": {
+      "type": "banner",
+      "disabled": true,
+      "settings": {
+        "img": "shopify://shop_images/4_4b587a29-66e5-46d8-a70d-12503318a61d.png",
+        "img_m": "shopify://shop_images/4-1-1.png",
+        "hide": false,
+        "overlayer": 1,
+        "title": "Pet Feeder",
+        "text": "Hassle-Free Mealtimes for Furry Friends",
+        "btn": "",
+        "link": "",
+        "btn_style": "main"
+      }
+    },
+    "page_collecitons_4dDpNR": {
+      "type": "page-collecitons",
+      "blocks": {
+        "collection_RgLKjL": {
+          "type": "collection",
+          "settings": {
+            "collection": "feeder-app",
+            "title": "Smart APP Control"
+          }
+        },
+        "collection_7TWb9V": {
+          "type": "collection",
+          "settings": {
+            "collection": "feeder-basic",
+            "image": "shopify://shop_images/oneisall-5l-automatic-cat-feeder-for-two-cats-with-5g-wi-fi-app-control-781976.png",
+            "title": "Easy-Setup"
+          }
+        },
+        "collection_YQbELp": {
+          "type": "collection",
+          "settings": {
+            "collection": "feeder-accessories",
+            "title": "Accessories"
+          }
+        }
+      },
+      "block_order": [
+        "collection_RgLKjL",
+        "collection_7TWb9V",
+        "collection_YQbELp"
+      ],
+      "disabled": true,
+      "settings": {
+        "display_title_type": "collection",
+        "display_special_attr": true
+      }
+    },
+    "dealpage_two_zwz4BR": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_VXJABe": {
+          "type": "collection",
+          "settings": {
+            "collection": "pet-air-purifier",
+            "text": "",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_VXJABe"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "target_id": "",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "collection",
+        "display_special_attr": false,
+        "padding_pc": "150px 0",
+        "padding_m": "80px 0"
+      }
+    },
+    "1753779309a28110a0": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "faqs_ijrNcG": {
+      "type": "faqs",
+      "blocks": {
+        "tab_content_JmK8jh": {
+          "type": "tab_content",
+          "settings": {
+            "question": "How Does An Automatic Cat Feeder Help With My Cat’s Feeding Schedule?",
+            "text": "<p>An automatic cat feeder ensures that your cat gets fed at the same time each day, even if you're not home. You can pre-program feeding times, which helps maintain a consistent schedule and prevent overeating.</p>"
+          }
+        },
+        "tab_content_c6HcW7": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Can automatic cat feeders prevent my cat from overeating?",
+            "text": "<p>Yes, most automatic cat feeders allow you to set specific portion sizes for each meal. This helps control how much your cat eats, reducing the risk of overeating or obesity.</p>"
+          }
+        },
+        "tab_content_Rpa4Mk": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Will The Automatic Pet Feeder Still Feed My Pet During A Power Outage?",
+            "text": "<p>Yes, you can still feed your pet during a power outage by using an automatic pet feeder with a battery backup or feeding them manually. Preparing in advance with fresh batteries or an alternative feeding plan can help ensure your pet stays on schedule and doesn’t miss any meals during an outage.</p>"
+          }
+        },
+        "tab_content_fWkGJG": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Is A Cat Automatic Feeder Safe For My Cat?",
+            "text": "<p>A Cat Automatic feeder is safe for cats as long as you use them properly and ensure they are well-maintained. </p><p>Choose a reliable, tamper-proof model, and monitor your pet's feeding habits to ensure the feeder is dispensing food correctly. Regular checks and cleaning are important to keep your pet’s food fresh and the feeder is functioning correctly.</p>"
+          }
+        },
+        "tab_content_Aa7VPw": {
+          "type": "tab_content",
+          "settings": {
+            "question": "What Should I Look For When Choosing An Automatic Feeder For Cats?",
+            "text": "<p>When selecting an automatic feeder for cats, consider these 5 factors:</p><p>1. Capacity: Choose an automatic feeder for cats with enough space for the amount of food your cat needs.</p><p>2. Portion Control: Look for adjustable portions to manage your cat's diet.</p><p>3. Food Type Compatibility: Make sure it works with dry or wet food depending on your needs.</p><p>4. Ease of Cleaning: Choose an automatic feeder for cats with removable and washable parts.</p><p>5. Features: Look for additional features like a remote control, a camera, or a low-food indicator.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_JmK8jh",
+        "tab_content_c6HcW7",
+        "tab_content_Rpa4Mk",
+        "tab_content_fWkGJG",
+        "tab_content_Aa7VPw"
+      ],
+      "disabled": true,
+      "settings": {
+        "id": "faqs",
+        "title": "FAQs",
+        "align": "left",
+        "align_m": "left",
+        "padding_pc": "50px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "advanced_accordion_CBPMgW": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "html_block_gYnLqp": {
+          "type": "html_block",
+          "settings": {
+            "html": "<div>\n  <p><strong>• Customized Feeding:</strong> Tailor your pet's meals with precision, adhering to dietary needs.</p>\n  <p><strong>• Scheduled Feeding:</strong> Maintain a consistent feeding routine, even when you're away.</p>\n  <p><strong>• Portion Control:</strong> Manage portion sizes to prevent overfeeding and promote health.</p>\n  <p><strong>• Remote Access:</strong> Dispense meals remotely via smartphone, offering real-time interaction.</p>\n  <p><strong>• Peace of Mind:</strong> Monitor your pet's meals and eating habits, ensuring their well-being.</p>\n  <p><strong>• Travel Friendly:</strong> Simplify pet care during trips with automated feeding solutions.</p>\n</div>\n<p></p><p>Elevate your pet's dining experience with the convenience and care provided by a smart pet feeder.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "html_block_gYnLqp"
+      ],
+      "disabled": true,
+      "name": "Advanced accordion",
+      "settings": {
+        "title": "Unlocking the Advantages of a Smart Pet Feeder",
+        "per_row": 1,
+        "two_per_row_mobile": false,
+        "opened": true,
+        "disabled": false
+      }
+    },
+    "icons_fRC7QE": {
+      "type": "icons",
+      "blocks": {
+        "icon_RXgQdm": {
+          "type": "icon",
+          "settings": {
+            "liquid": "1",
+            "title": "Fast & Free Shipping",
+            "text": ""
+          }
+        },
+        "icon_3tpCEf": {
+          "type": "icon",
+          "settings": {
+            "liquid": "2",
+            "title": "Product Tax Incl.",
+            "text": ""
+          }
+        },
+        "icon_DDAWJJ": {
+          "type": "icon",
+          "settings": {
+            "liquid": "3",
+            "title": "24-Month Warranty",
+            "text": ""
+          }
+        },
+        "icon_6gJPeq": {
+          "type": "icon",
+          "settings": {
+            "liquid": "4",
+            "title": "30-Day Money Back",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_RXgQdm",
+        "icon_3tpCEf",
+        "icon_DDAWJJ",
+        "icon_6gJPeq"
+      ],
+      "settings": {
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    }
+  },
+  "order": [
+    "banner_z7rirW",
+    "page_collecitons_4dDpNR",
+    "dealpage_two_zwz4BR",
+    "1753779309a28110a0",
+    "faqs_ijrNcG",
+    "advanced_accordion_CBPMgW",
+    "icons_fRC7QE"
+  ]
+}

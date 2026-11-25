@@ -1,0 +1,276 @@
+{% assign sid = section.id %}
+<style>
+    #shopify-section-{{ sid }} {
+       background:{{section.settings.bg}};
+        {% if section.settings.bg != blank %}
+        padding: {{section.settings.padding_pc}};
+        {% else %}
+        margin: {{section.settings.padding_pc}};
+        {% endif %}
+    }
+    #shopify-section-{{ sid }} .page-width{
+      --page-width:1360px;
+    }
+    #shopify-section-{{ sid }} .product-section-info{
+      margin-bottom:40px;
+    }
+    #shopify-section-{{ sid }} .product-section-title{
+      color: #000;
+      font-size: 36px;
+      font-weight: 500;
+      text-align:{{section.settings.align}};
+      line-height: 1.4;
+    }
+    #shopify-section-{{ sid }} .pvs_blocks{
+      display:flex;
+      gap:16px;
+    }
+    #shopify-section-{{ sid }} .pvs_blocks-slide{
+      width:calc((100% - 16px*3)/4);
+      position:relative;
+      border-radius: 24px;
+      overflow:hidden;
+    }
+    #shopify-section-{{ sid }} .pvs_blocks-slide img{
+      width:100%;
+    }
+    #shopify-section-{{ sid }} .pvs_blocks-slide .pvs_play{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      z-index:1;
+      cursor:pointer;
+    }
+    #shopify-section-{{ sid }} .pvs_popup{
+      position: fixed;
+      display: none;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #111111d4;
+      justify-content: center;
+      align-items: center;
+      z-index: 999999;
+    }
+    #shopify-section-{{ sid }} .pvs_popup-inner{
+      width: 840px;
+      max-width: 840px;
+      position: relative;
+    }
+    #shopify-section-{{ sid }} .pvs_popup-inner video{
+      width:100%;
+      max-height: 80vh;
+    }
+    #shopify-section-{{ sid }} .pvs_popup .close-btn{
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      top: calc(50vh - 300px);
+      right: calc(50vw - 500px);
+      opacity: .3;
+          z-index: 2;
+    }
+    #shopify-section-{{ sid }} .pvs_popup .close-btn:hover{
+      opacity: 1;
+    }
+  @media (max-width:959px){
+     #shopify-section-{{ sid }} {
+      {% if section.settings.bg != blank %}
+      padding: {{section.settings.padding_m}};
+      {% else %}
+      margin: {{section.settings.padding_m}};
+      {% endif %}
+    }
+    #shopify-section-{{ sid }} .pvs_blocks{
+      display:flex;
+      gap:12px;
+      margin-right: calc(-1* var(--pageWidthPadding));
+      overflow-x:auto;
+    }
+    #shopify-section-{{ sid }} .pvs_blocks-slide{
+      width:85%;
+      flex-shrink: 0;
+    }
+    #shopify-section-{{ sid }} .product-section-info{
+      margin-bottom:24px;
+    }
+    #shopify-section-{{ sid }} .product-section-title{
+      font-size: 20px;
+      text-align:{{section.settings.align_m}};
+      
+    }
+    #shopify-section-{{ sid }} .pvs_popup .close-btn{
+      top: 8%;
+      right: 8%;
+    }
+  }
+</style>
+
+<div class="product-video-slide" id="Product-video-slide">
+  <div class="page-width">
+    <div class="product-section-info">
+      {% if section.settings.title != blank %}
+        <div class="product-section-title">{{ section.settings.title }}</div>
+      {% endif %}
+    </div>
+    <div class="pvs_blocks">
+      {% for block in section.blocks %}
+        <div class="pvs_blocks-slide">
+           {% liquid
+                assign bs = block.settings
+                assign pc_image = bs.img
+                assign mobile_image = bs.img_m
+                assign alt = bs.img.alt
+            %}
+            <picture>
+                <source srcset="{{ mobile_image | img_url: '750x' }}"
+                        media="(max-width: 375px)">
+                <source srcset="{{ mobile_image | img_url: '1536x' }}"
+                        media="(max-width: 768px)">
+                <source srcset="{{ pc_image | img_url: '2160x' }}"
+                        media="(max-width: 1080px)">
+                <source srcset="{{ pc_image | img_url: '2400x' }}"
+                        media="(max-width: 1200px)">
+                <source srcset="{{ pc_image | img_url: '3840x' }}"
+                        media="(max-width: 1920px)">
+                <img src="{{ pc_image | img_url: '3840x' }}" alt="{{ alt }}" loading="lazy" width="auto" height="100%">
+            </picture>
+            <div class="pvs_play" data-src="{{ bs.video.sources[1].url }}">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <path d="M30.25 55.25C44.0571 55.25 55.25 44.0571 55.25 30.25C55.25 16.4429 44.0571 5.25 30.25 5.25C16.4429 5.25 5.25 16.4429 5.25 30.25C5.25 44.0571 16.4429 55.25 30.25 55.25Z" fill="white" fill-opacity="0.6"/>
+                <path d="M24.75 30.2942V24.2321C24.75 23.4623 25.5833 22.9811 26.25 23.366L31.5 26.3971L36.75 29.4282C37.4167 29.8131 37.4167 30.7754 36.75 31.1603L31.5 34.1913L26.25 37.2224C25.5833 37.6073 24.75 37.1262 24.75 36.3564V30.2942Z" fill="black"/>
+              </svg>
+            </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div id="pvs_popup" class="pvs_popup">
+      <svg stroke="#fff" fill="#fff" stroke-width="0" viewBox="0 0 512 512" class="close-btn" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 48C140.559 48 48 140.559 48 256c0 115.436 92.559 208 208 208 115.435 0 208-92.564 208-208 0-115.441-92.564-208-208-208zm104.002 282.881l-29.12 29.117L256 285.117l-74.881 74.881-29.121-29.117L226.881 256l-74.883-74.881 29.121-29.116L256 226.881l74.881-74.878 29.12 29.116L285.119 256l74.883 74.881z"></path></svg>
+      <div class="pvs_popup-inner" id="pvs_popup-inner">
+      </div>
+    </div>
+  </div>
+</div>
+                  
+
+<script type="module">
+    $('#shopify-section-{{ sid }} .pvs_play').click(function(){
+      let src = $(this).attr('data-src'); 
+      let videoElement = $('<video>', {
+            src: src, 
+            'data-type': 'mp4',      
+            autoplay: true,
+            muted: true,
+            controls: true 
+        });
+      $('#shopify-section-{{ sid }} .pvs_popup').css('display','flex');
+      $('html').css('overflow','hidden');
+      $('#shopify-section-{{ sid }} .pvs_popup-inner').append(videoElement);
+    })
+
+    $('#shopify-section-{{ sid }} .pvs_popup .close-btn').click(function(){
+      $('html').css('overflow-y','auto');
+      $('#shopify-section-{{ sid }} .pvs_popup').css('display','none');
+      $('#shopify-section-{{ sid }} .pvs_popup-inner').empty();
+    })
+</script>
+
+{% schema %}
+  {
+    "name": "Product video slide",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg",
+        "label":"backgroung",
+        "default":"#fefbf8"
+      },
+      {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "KOL Video"
+          },
+      {
+          "type": "select",
+          "id": "align",
+          "default":"center",
+          "label": "align PC",
+          "options": [
+            {
+              "label": "left",
+              "value": "left"
+            },
+            {
+              "label": "center",
+              "value": "center"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "align_m",
+          "default":"center",
+          "label": "align M",
+          "options": [
+            {
+              "label": "left",
+              "value": "left"
+            },
+            {
+              "label": "center",
+              "value": "center"
+            }
+          ]
+        },
+       {
+        "type": "header",
+        "content": "Padding"
+      },
+      {
+        "type": "text",
+        "id": "padding_pc",
+        "label": "Padding (desktop)",
+        "default":"50px 0"
+      },
+      {
+            "type": "text",
+            "id": "padding_m",
+            "label": "Padding (mobile)",
+            "default":"40px 0"
+          }
+    ],
+    "blocks": [
+      {
+        "type": "item",
+        "name":"item",
+        "limit": 4,
+        "settings": [
+         {
+            "type": "image_picker",
+            "id": "img",
+            "label": "image (desktop)"
+          },
+          {
+            "type": "image_picker",
+            "id": "img_m",
+            "label": "image (mobile)"
+          },
+          {
+            "type": "video",
+            "id": "video",
+            "label": "Video"
+          }
+        ]
+      }
+    ],
+    "presets": [
+        {
+            "name": "Product video slide",
+        }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,301 @@
+{% assign sid = section.id %}
+<style>
+    #shopify-section-{{ sid }} {
+       background:{{section.settings.bg}};
+        {% if section.settings.bg != blank %}
+        padding: {{section.settings.padding_pc}};
+        {% else %}
+        margin: {{section.settings.padding_pc}};
+        {% endif %}
+      overflow:hidden;
+    }
+    #shopify-section-{{ sid }} .page-width{
+      --page-width:1360px;
+    }
+    #shopify-section-{{ sid }} .swiper-container{
+          overflow: visible;
+    }
+    #shopify-section-{{ sid }} .product-section-info{
+      /* max-width:800px; */
+      margin-bottom:40px;
+    }
+    #shopify-section-{{ sid }} .product-section-title{
+      color: #000;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 1.4;
+      text-align:{{section.settings.align}};
+    }
+    #shopify-section-{{ sid }} .pcs_swiper_box img{
+      width:100%;
+      max-wdith:1280px;
+    }
+    #shopify-section-{{ sid }} .swiper-pagination-bullet{
+      background:#fff;  opacity:0.5
+    }
+    .swiper-pagination-bullet-active{
+      background:#ff981c;
+    }
+    #shopify-section-{{ sid }} .swiper-pagination-bullet-active{
+      background:#fff; opacity:1;
+    }
+    #shopify-section-{{ sid }} .swiper-button-prev, #shopify-section-{{ sid }} .swiper-button-next{
+      width:var(--swiper-navigation-size);
+    }
+    #shopify-section-{{ sid }} .swiper-button-prev:after, #shopify-section-{{ sid }} .swiper-button-next:after{ }
+    #shopify-section-{{ sid }} .swiper-button-prev{
+      left:2%;
+    }
+    #shopify-section-{{ sid }} .swiper-button-next{
+      right:2%;
+    }
+    #shopify-section-{{ sid }} .swiper-button {top:40%;}
+    #shopify-section-{{ sid }} .swiper-button svg{width:30px; height:30px;}
+    #shopify-section-{{ sid }} .swiper-pagination-bullet, #shopify-section-{{ sid }} .swiper-pagination-bullet {
+      width: 25px;
+      height: 3px;
+      border-radius: 0;
+      margin: 0 5px;
+    }
+    #shopify-section-{{ sid }}  .swiper-pagination{
+        bottom:12px;
+    }
+    #shopify-section-{{ sid }} .swiper-pagination-bullet{
+      background:rgba(255,255,255,0.4);
+      width: 50px;
+      height: 6px; 
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    #shopify-section-{{ sid }} .swiper-pagination-bullet-active{
+        opacity:1;
+    }
+    #shopify-section-{{ sid }} .swiper-pagination-bullet-active::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background:#fff;
+      animation: progress 5s linear forwards;
+    }
+    @keyframes progress {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+  @media (max-width:959px){
+    #shopify-section-{{ sid }} {
+      {% if section.settings.bg != blank %}
+      padding: {{section.settings.padding_m}};
+      {% else %}
+      margin: {{section.settings.padding_m}};
+      {% endif %}
+    }
+    #shopify-section-{{ sid }} .product-section-info{
+      margin-bottom:24px;
+    }
+    #shopify-section-{{ sid }} .product-section-title{
+      font-size: 20px;
+      text-align:{{section.settings.align_m}};
+    }
+    #shopify-section-{{ sid }} .pcs_swiper_box{
+      margin:0 var(--pageWidthPadding) ;
+    }
+    #shopify-section-{{ sid }} .swiper-button-prev, #shopify-section-{{ sid }} .swiper-button-next{
+      /* display:none; */
+      --swiper-navigation-size:35px;
+    }
+  }
+</style>
+
+<div class="product-center-slide" id="Product-center-slide">
+  <div class="page-width">
+    <div class="product-section-info">
+      {% if section.settings.title != blank %}
+        <div class="product-section-title">{{ section.settings.title }}</div>
+      {% endif %}
+    </div>
+    <div class="pcs_swiper_box">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide pcs_blocks-slide">
+               {% liquid
+                    assign bs = block.settings
+                    assign pc_image = bs.img
+                    assign mobile_image = bs.img_m
+                    assign alt = bs.img.alt
+                %}
+                <picture>
+                    <source srcset="{{ mobile_image | img_url: '750x' }}"
+                            media="(max-width: 375px)">
+                    <source srcset="{{ mobile_image | img_url: '1536x' }}"
+                            media="(max-width: 768px)">
+                    <source srcset="{{ pc_image | img_url: '2160x' }}"
+                            media="(max-width: 1080px)">
+                    <source srcset="{{ pc_image | img_url: '2400x' }}"
+                            media="(max-width:c 1200px)">
+                    <source srcset="{{ pc_image | img_url: '3840x' }}"
+                            media="(max-width: 1920px)">
+                    <img src="{{ pc_image | img_url: '3840x' }}" alt="{{ alt }}" loading="lazy" width="auto" height="100%">
+                </picture>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+            <circle cx="25" cy="25" r="24.25" fill="white" fill-opacity="0.15" stroke="#F47C20" stroke-width="1.5"/>
+            <path d="M27.3809 30.9526L22.619 25.5954L27.3809 20.2383" stroke="#F47C20" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="swiper-button-next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+            <circle cx="25" cy="25" r="24.25" transform="rotate(-180 25 25)" fill="white" fill-opacity="0.15" stroke="#F47C20" stroke-width="1.5"/>
+            <path d="M22.6191 19.0474L27.381 24.4046L22.6191 29.7617" stroke="#F47C20" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="module">
+    var productSwiper{{section.index}} = new Swiper("#shopify-section-{{ sid }} .swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop:true,
+        centeredSlides: true,
+        centerInsufficientSlides:true,
+        {% if section.settings.autoplay %}
+        autoplay: {
+          delay: 5000, 
+          disableOnInteraction: false
+        },
+        {% endif %}
+       pagination: {
+            el: '#shopify-section-{{ sid }} .swiper-pagination',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '#shopify-section-{{ sid }} .swiper-button-next',
+            prevEl: '#shopify-section-{{ sid }} .swiper-button-prev',
+        },
+    
+    	breakpoints: {
+         0: { 
+              slidesPerView: 1,
+              spaceBetween: 8,
+          },
+        960: { 
+              slidesPerView: 1,
+              spaceBetween: 20,
+          }
+         }
+      });
+</script>
+
+{% schema %}
+  {
+    "name": "Product center slide",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg",
+        "label":"backgroung",
+        "default":"#fefbf8"
+      },
+       {
+          "type": "select",
+          "id": "align",
+          "default":"center",
+          "label": "align PC",
+          "options": [
+            {
+              "label": "left",
+              "value": "left"
+            },
+            {
+              "label": "center",
+              "value": "center"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "align_m",
+          "default":"center",
+          "label": "align M",
+          "options": [
+            {
+              "label": "left",
+              "value": "left"
+            },
+            {
+              "label": "center",
+              "value": "center"
+            }
+          ]
+        },
+      {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "KOL Video"
+          },
+      {
+        "type": "checkbox",
+        "id": "autoplay",
+        "label": "autoplay"
+      },
+       {
+        "type": "header",
+        "content": "Padding"
+      },
+      {
+        "type": "text",
+        "id": "padding_pc",
+        "label": "Padding (desktop)",
+        "default":"50px 0"
+      },
+      {
+            "type": "text",
+            "id": "padding_m",
+            "label": "Padding (mobile)",
+            "default":"40px 0"
+          }
+    ],
+    "blocks": [
+      {
+        "type": "item",
+        "name":"item",
+        "limit": 4,
+        "settings": [
+         {
+            "type": "image_picker",
+            "id": "img",
+            "label": "image (desktop)"
+          },
+          {
+            "type": "image_picker",
+            "id": "img_m",
+            "label": "image (mobile)"
+          }
+        ]
+      }
+    ],
+    "presets": [
+        {
+            "name": "Product center slide",
+        }
+    ]
+  }
+{% endschema %}

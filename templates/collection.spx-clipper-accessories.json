@@ -1,0 +1,265 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "spk_nav_image_4ggfxG": {
+      "type": "spk-nav-image",
+      "blocks": {
+        "item_hdDN98": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/oneisall-dtj001-dog-hair-trimmer-metal-blades-replacment-150157.png",
+            "title": "By Model",
+            "link": "M"
+          }
+        },
+        "item_PPHB4Y": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/oneisall-p2-dog-clipper-6pcs-guide-comb-replacement-489472.png",
+            "title": "ALL",
+            "link": "A"
+          }
+        }
+      },
+      "block_order": [
+        "item_hdDN98",
+        "item_PPHB4Y"
+      ],
+      "name": "SPX Nav Image",
+      "settings": {
+        "text_color": "#000"
+      }
+    },
+    "dealpage_two_zdi7Hj": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_VJxiQP": {
+          "type": "collection",
+          "settings": {
+            "collection": "clippers-accessories",
+            "text": "",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_VJxiQP"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "ALL",
+        "subtitle": "",
+        "target_id": "A",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "default",
+        "display_special_attr": false,
+        "padding_pc": "150px 0",
+        "padding_m": "80px 0"
+      }
+    },
+    "dealpage_two_3r4AkA": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_kaxgtx": {
+          "type": "collection",
+          "settings": {
+            "collection": "clipper-accessories-for-p2",
+            "text": "P2/X2",
+            "subtitle": ""
+          }
+        },
+        "collection_CP7jXA": {
+          "type": "collection",
+          "settings": {
+            "collection": "clipper-accessories-for-dtj",
+            "text": "DTJ",
+            "subtitle": ""
+          }
+        },
+        "collection_8cfH9j": {
+          "type": "collection",
+          "settings": {
+            "collection": "clipper-accessories-for-676",
+            "text": "RFC-676",
+            "subtitle": ""
+          }
+        },
+        "collection_6VGRrc": {
+          "type": "collection",
+          "settings": {
+            "collection": "clipper-accessories-for-yp-7268",
+            "text": "YP-7268",
+            "subtitle": ""
+          }
+        },
+        "collection_zhTqUE": {
+          "type": "collection",
+          "settings": {
+            "collection": "clipper-accessories-for-n5",
+            "text": "N5",
+            "subtitle": ""
+          }
+        },
+        "collection_AYWFAz": {
+          "type": "collection",
+          "settings": {
+            "collection": "clipper-accessories-for-n12",
+            "text": "N12",
+            "subtitle": ""
+          }
+        },
+        "collection_KR3hN9": {
+          "type": "collection",
+          "settings": {
+            "collection": "clipper-accessories-for-fc10",
+            "text": "FC10",
+            "subtitle": ""
+          }
+        },
+        "collection_W9DhP6": {
+          "type": "collection",
+          "settings": {
+            "collection": "clipper-accessories-for-pc14",
+            "text": "Grandmaster Pro 1",
+            "subtitle": ""
+          }
+        },
+        "collection_j8GTDb": {
+          "type": "collection",
+          "settings": {
+            "collection": "clipper-accessories-for-others",
+            "text": "Others",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_kaxgtx",
+        "collection_CP7jXA",
+        "collection_8cfH9j",
+        "collection_6VGRrc",
+        "collection_zhTqUE",
+        "collection_AYWFAz",
+        "collection_KR3hN9",
+        "collection_W9DhP6",
+        "collection_j8GTDb"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "By Model",
+        "subtitle": "",
+        "target_id": "M",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "default",
+        "display_special_attr": false,
+        "padding_pc": "150px 0",
+        "padding_m": "80px 0"
+      }
+    },
+    "faqs_ijrNcG": {
+      "type": "faqs",
+      "blocks": {
+        "tab_content_JmK8jh": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Place your question or heading here",
+            "text": "<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        },
+        "tab_content_c6HcW7": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Place your question or heading here",
+            "text": "<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        },
+        "tab_content_Rpa4Mk": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Place your question or heading here",
+            "text": "<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_JmK8jh",
+        "tab_content_c6HcW7",
+        "tab_content_Rpa4Mk"
+      ],
+      "disabled": true,
+      "settings": {
+        "id": "faqs",
+        "title": "FAQs",
+        "align": "center",
+        "align_m": "center",
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    },
+    "icons_fRC7QE": {
+      "type": "icons",
+      "blocks": {
+        "icon_RXgQdm": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Fast & Free Shipping",
+            "text": "Price includes shipping, free"
+          }
+        },
+        "icon_3tpCEf": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Fast & Free Shipping",
+            "text": "Price includes shipping, free"
+          }
+        },
+        "icon_DDAWJJ": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Fast & Free Shipping",
+            "text": "Price includes shipping, free"
+          }
+        },
+        "icon_6gJPeq": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Fast & Free Shipping",
+            "text": "Price includes shipping, free"
+          }
+        }
+      },
+      "block_order": [
+        "icon_RXgQdm",
+        "icon_3tpCEf",
+        "icon_DDAWJJ",
+        "icon_6gJPeq"
+      ],
+      "disabled": true,
+      "settings": {
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    }
+  },
+  "order": [
+    "spk_nav_image_4ggfxG",
+    "dealpage_two_3r4AkA",
+    "dealpage_two_zdi7Hj",
+    "faqs_ijrNcG",
+    "icons_fRC7QE"
+  ]
+}

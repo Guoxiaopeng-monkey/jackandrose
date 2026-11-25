@@ -1,0 +1,777 @@
+<style>
+  .grid-product.no_background:after{
+    background-color:transparent;
+  }
+  .e_product_item{
+    max-width:500px;
+    /* text-align:center; */
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    height:100%;
+    max-height:100%;
+  }
+  .e_product_item > a{
+    flex-grow:1;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+  }
+  .e_product_item .e_meida .e_product_badge_new {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    z-index: 3;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4px;
+  }
+  .e_product_item .e_meida{
+    position:relative;
+    overflow: hidden;
+    aspect-ratio: 1;
+  }
+
+  .cp_item .e_product_item .e_meida{
+    max-width:100%;
+    width:100%;
+    height:100%;
+    min-height:fit-content;
+    max-height:fit-content
+  }
+
+  .e_product_item .e_meida a{
+    aspect-ratio: 1;
+    min-height: fit-content;
+  }
+
+  .e_product_item .e_meida .grid-product__price--savings{
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    z-index: 3;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    background: url({{settings.saving_bg | img_url:'60x'}}) no-repeat center;
+    background-size:contain;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4px;
+  }
+
+  .e_product_item .e_meida>is-land{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    width:100%;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #00B1D2 0%, #FFEF75 100%);
+    /* background: linear-gradient(90deg, #04B2D1 0%, #E7E97E 100%); */
+    transform: translateY(100%);
+    transition: all 0.3s;
+  }
+  .e_product_item .e_meida>is-land .quick-add-btn{
+    width:100%;
+    padding: 8px;
+    background: linear-gradient(90deg, #00B1D2 0%, #FFEF75 100%);
+    color:#fff;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+
+  .e_product_item .action_box_mobile>is-land{
+    width:100%;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    background: linear-gradient(90deg, #00B1D2 0%, #FFEF75 100%);
+    /* background: linear-gradient(90deg, #04B2D1 0%, #E7E97E 100%); */
+    padding:8px;
+    border-radius: 8px;
+    margin-top:10px;
+  }
+  .e_product_item .action_box_mobile .btn{
+    background:transparent;
+    font-size:14px;
+    line-height:1;
+    padding:0
+  }
+  @media(max-width:767.98px){
+    .e_product_item .action_box_mobile>is-land{
+      display:flex;
+    }
+  }
+
+
+
+
+  .e_product_item .e_meida>is-land span.btn{
+    background:transparent;
+    padding:8px 20px;
+    font-size:16px;
+    width:100%;
+    max-width: 100%;
+  }
+
+
+  .e_product_item .e_meida img{
+    width:100%;
+    height:100%;
+    border-radius: 24px;
+    overflow: hidden;
+    object-fit:cover;
+    display:block;
+    background:#fff;
+    aspect-ratio: 1;
+  }
+  .e_product_item .e_meida .second{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transition:all 0.3s ease-in;
+    z-index:1;
+    opacity:0;
+    visibility: hidden;
+  }
+  .e_product_item:hover .e_meida .first{
+    opacity:0;
+    visibility: hidden;
+  }
+  .e_product_item:hover .e_meida .second{
+    opacity:1;
+    visibility: visible;
+  }
+  .e_product_item:hover .e_meida>is-land{
+    transform: translateY(0%);
+  }
+  @media(max-width:767.98px){
+    .e_product_item:hover .e_meida>is-land{
+      transform: translateY(100%);
+    }
+  }
+  .e_product_item .e_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .e_product_item .e_info h3{
+    color: #000;
+    font-weight: 500;
+    margin:16px 0 12px;
+    font-size:16px;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  {% comment %} {% if section.settings.display_title_type == 'default' %} {% endcomment %}
+    .e_product_item .e_info h3{
+      min-height:48px;
+    }
+    .e_product_item .e_info .e_product_item_subtitle {
+      min-height: 44px;
+      margin-bottom:8px;
+    }
+  {% comment %} {% endif %} {% endcomment %}
+  .e_product_item .e_info .e_product_item_subtitle {
+    color: #1a1a1a;
+    font-size: 16px;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 2px;
+  }
+  .e_product_item .e_info .grid-product__price{
+    margin-top: auto;
+  }
+  .e_product_item .e_info .grid-product__price--current{
+    color: #000;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .e_product_item .e_info span.grid-product__price--original{
+    color: rgba(0, 0, 0, 0.40);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-decoration-line: strikethrough;
+    text-transform: capitalize;
+  }
+  {% comment %} .e_product_item .e_info .grid-product__price--current span.grid-product__price--from>span{
+    {% comment %} display:none; {% endcomment %}
+    font-size: 20px;
+  } {% endcomment %}
+  .e_product_item .e_info .action_box {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .e_product_item .e_info .action_box >*{
+    width: calc((100% - 8px) / 2);
+  }
+  .e_product_item .e_info .action_box .quick-add-btn{
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .e_product_item .e_info .action_box .quick-add-btn span{
+    background: linear-gradient(90deg, #00B1D2 0%, #FFEF75 100%);
+    border-radius: 8px;
+    border: unset;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    padding: 8px;
+  }
+  .e_product_item .e_info .action_box .more a{
+    color: #000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size: 16px;
+    border-radius: 8px;
+    border:1.5px solid;
+    height: 100%;
+    padding: 7px 8px;
+    box-sizing: border-box;
+    line-height: 1.4;
+  }
+  @media (max-width:1024px){
+
+  }
+  @media (max-width:959px){
+    .e_product_item .e_info .action_box {
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 8px;
+  }
+    .e_product_item .e_info .action_box >*{
+    width: 100%;
+  }
+    .e_product_item .e_info h3{
+      font-size:14px;
+      margin:16px 0 8px;
+    }
+    .e_product_item .e_info .e_product_item_subtitle {
+      font-size: 14px;
+    }
+
+    {% comment %} {% if section.settings.display_title_type == 'default' %} {% endcomment %}
+      .e_product_item .e_info h3{
+        min-height:44px;
+      }
+      .e_product_item .e_info .e_product_item_subtitle {
+        min-height: 44px;
+      }
+    {% comment %} {% endif %} {% endcomment %}
+    .e_product_item .e_info .grid-product__price--current{
+      font-size:18px;
+    }
+    .e_product_item .e_info span.grid-product__price--original{
+      font-size:12px;
+    }
+    .e_product_item .e_meida>is-land span.btn{
+      font-size:14px;
+    }
+    .e_product_item .e_meida .grid-product__price--savings{
+      font-size:12px;
+      width: 45px;
+      height: 45px;
+    }
+    .e_product_item .e_info .action_box .quick-add-btn span,
+    .e_product_item .e_info .action_box .more a{
+      font-size:14px;
+
+    }
+  }
+
+  countdown-timer{
+    min-height:30px;
+    margin:8px 0;
+  }
+  .deal-text{
+    color:#3a3a3a;
+    margin:8px 0;
+    font-size:14px;
+    min-height:30px;
+  }
+  .deal-text-title{
+    background: #FF6a00;
+    color:#fff;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right:8px;
+  }
+  .deal-tag-text{
+    color: #FF6a00;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin:8px 0;
+  }
+  .deal-tag-text .icon-tag{
+    width: 24px;
+    height: 24px;
+  }
+  .deal-tag-text .deal—tag-text-title{
+    color: #FF6a00;
+  }
+
+  @media (max-width:767.98px){
+    .deal-text,
+    .deal-tag-text,
+    countdown-timer{
+      margin:0;
+    }
+    .deal-text{
+      font-size: 12px;
+    }
+    .deal-text-title{
+      font-size: 12px;
+    }
+    .deal-tag-text .icon-tag{
+      width: 20px;
+      height: 20px;
+    }
+    .deal-tag-text{
+      font-size: 12px;
+    }
+  }
+</style>
+
+{% liquid
+  assign on_sale = false
+  if product.compare_at_price > product.price
+    assign on_sale = true
+  endif
+%}
+
+<div class="grid-product no_background">
+  <div
+    class=" e_product_item"
+    data-product-handle="{{ product.handle }}"
+    data-product-id="{{ product.id }}"
+    data-product-grid-item
+  >
+    {% liquid
+      assign product_title = title | default: product.title
+      assign product_subtitle = product.metafields.custom.custom_subtitle | default: ''
+      assign bundles_title = product.metafields.custom.display_title_type.value.bundles | default: product.title
+      assign bundles_subtitle = product.metafields.custom.display_title_type.value.buddles_subtitle | default: ''
+      assign discount_title = product.metafields.custom.display_title_type.value.discount_title | default: product.title
+      assign discount_subtitle = product.metafields.custom.display_title_type.value.discount_subtitle | default: ''
+      assign collection_subtitle = product.metafields.custom.display_title_type.value.collction_subtitle | default: ''
+
+      if collection.title
+        assign collection_title = product.metafields.custom.display_title_type.value.collection | default: product.title | replace: '{collection}', collection.title
+      else
+        assign collection_title = product.metafields.custom.display_title_type.value.collection | default: product.title
+      endif
+      assign special_attr = product.metafields.custom.display_title_type.value.special_attr | default: ''
+    %}
+    {% unless layout %}
+      <div class="e_meida">
+        <a href="{{ product.url }}">
+          {{ product.images[0] | image_url: width: '500x' | image_tag: class: 'first' }}
+          {% if product.images[1] != blank %}
+            {{ product.images[1] | image_url: width: '500x' | image_tag: class: 'second' }}
+          {% else %}
+            {{ product.images[0] | image_url: width: '500x' | image_tag: class: 'second' }}
+          {% endif %}
+          {%- if on_sale -%}
+            {%- if settings.product_save_amount -%}
+              {%- if product_save_type == 'dollar' -%}
+                {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}{%- endcapture -%}
+              {%- else -%}
+                {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%{%- endcapture -%}
+              {%- endif -%}
+              <span class="grid-product__price--savings">
+                {% comment %}
+                  {{ 'info.save_amount' | t: saved_amount: saved_amount }}
+                {% endcomment %}
+                {{ saved_amount | prepend: '-' }}
+              </span>
+            {%- endif -%}
+          {%- endif -%}
+
+          {% for tag in product.tags %}
+            {% if tag contains 'TAG_' %}
+              <div
+                class="e_product_badge_new"
+                style="color:{{ settings.product_new_color }}; background: url({{ settings.product_new_bg | img_url:"master" }}) no-repeat center;background-size: contain;"
+              >
+                {{ tag | remove: 'TAG_' }}
+              </div>
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        </a>
+        {%- if product.available -%}
+          {%- if product.variants.size > 1 -%}
+            {%- capture quickAddButton %}
+              <button type="button" class=" quick-add-btn js-quick-add-form js-modal-open-quick-add" title="{{ 'actions.add_to_cart' | t }}">
+                <span class="btn btn--circle btn--icon">
+                  {{ 'actions.add_to_cart' | t }}
+                  <span class="icon__fallback-text visually-hidden">{{ 'actions.add_to_cart' | t }}</span>
+                </span>
+              </button>
+            {%- endcapture -%}
+            {%- capture content -%}
+              {% render 'tool-tip-trigger',
+                button: quickAddButton,
+                context: 'QuickAdd',
+                tool-tip-classes: 'quick-add-modal',
+              %}
+            {%- endcapture -%}
+            {% render 'quick-add', content: content %}
+          {%- else -%}
+            {%- capture content -%}
+              <button
+                type="button" class=" quick-add-btn"
+                title="{{ 'actions.add_to_cart' | t }}"
+                data-id="{{ product.selected_or_first_available_variant.id }}"
+                data-single-variant-quick-add
+              >
+                <span class="btn btn--circle btn--icon">
+                  {{ 'actions.add_to_cart' | t }}
+                  <span class="icon__fallback-text visually-hidden">{{ 'actions.add_to_cart' | t }}</span>
+                </span>
+              </button>
+            {%- endcapture -%}
+            {% render 'quick-add', content: content %}
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+      <a href="{{ product.url }}">
+        <div class="e_info">
+          {% if section.settings.display_title_type == 'collection' %}
+            <h3>
+              {{ collection_title }}
+              {% if section.settings.display_special_attr %}{{ special_attr }}{% endif %}
+            </h3>
+            {% if collection_subtitle != blank %}
+              <p class="e_product_item_subtitle">{{ collection_subtitle }}</p>
+            {% endif %}
+          {% elsif section.settings.display_title_type == 'bundles' %}
+            <h3>
+              {{ bundles_title }}
+              {% if section.settings.display_special_attr %}{{ special_attr }}{% endif %}
+            </h3>
+            {% if bundles_subtitle != blank %}
+              <p class="e_product_item_subtitle">{{ bundles_subtitle }}</p>
+            {% endif %}
+          {% elsif section.settings.display_title_type == 'discount' %}
+            <h3>
+              {{ discount_title }}
+              {% if section.settings.display_special_attr %}{{ special_attr }}{% endif %}
+            </h3>
+            {% if discount_subtitle != blank %}
+              <p class="e_product_item_subtitle">{{ discount_subtitle }}</p>
+            {% endif %}
+          {% else %}
+            <h3>{{ product_title }}</h3>
+            {% if product_subtitle != blank %}
+              <p class="e_product_item_subtitle">{{ product_subtitle }}</p>
+            {% endif %}
+          {% endif %}
+          {% if product.metafields.custom.deal_end_time != blank %}
+            <countdown-timer end-time="{{ product.metafields.custom.deal_end_time }}"></countdown-timer>
+          {% endif %}
+          {% if product.metafields.custom.deal_text != blank %}
+            <div class="deal-text">
+              <span class="deal-text-title">{{ product.metafields.custom.deal_text }}</span> With Coupon
+            </div>
+          {% endif %}
+          {% if product.metafields.custom.deal_tag_text != blank %}
+            <div class="deal-tag-text">
+              {% render 'icon', name: 'tag', class: 'deal-tag-icon' %}
+              <span class="deal—tag-text-title">{{ product.metafields.custom.deal_tag_text  }}</span>
+            </div>
+            {% endif %}
+
+          <div class="grid-product__price">
+            {%- if product.price_varies -%}
+              <span class="grid-product__price--current">
+                {%- render 'price-varies',
+                  price: product.price_min,
+                  shop: shop,
+                  superscript_decimals: superscript_decimals
+                -%}
+              </span>
+            {%- else -%}
+              {%- if on_sale -%}
+                <span class="visually-hidden">{{ 'labels.sale_price' | t }}</span>
+              {%- endif -%}
+              <span class="grid-product__price--current">
+                {%- render 'price', price: product.price, shop: shop, superscript_decimals: superscript_decimals -%}
+              </span>
+            {%- endif -%}
+            {%- if on_sale -%}
+              <span class="visually-hidden">{{ 'labels.regular_price' | t }}</span>
+              <span class="grid-product__price--original">
+                {%- render 'price',
+                  price: product.compare_at_price,
+                  shop: shop,
+                  superscript_decimals: superscript_decimals
+                -%}
+              </span>
+            {%- endif -%}
+
+            {%- assign product_variant = product.selected_or_first_available_variant -%}
+            {%- if product_variant.unit_price_measurement -%}
+              <div class="product__unit-price">
+                {%- capture unit_price_base_unit -%}
+                {%- if product_variant.unit_price_measurement -%}
+                  {%- if product_variant.unit_price_measurement.reference_value != 1 -%}
+                    {{ product_variant.unit_price_measurement.reference_value }}
+                  {%- endif -%}
+                  {{ product_variant.unit_price_measurement.reference_unit }}
+                {%- endif -%}
+              {%- endcapture -%}
+
+                {{ product_variant.unit_price | money }}/{{ unit_price_base_unit }}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      </a>
+      {%- if product.available -%}
+        <div class="action_box_mobile">
+          {%- if product.variants.size > 1 -%}
+            {%- capture quickAddButton %}
+                  <button type="button" class=" quick-add-btn js-quick-add-form js-modal-open-quick-add" title="{{ 'actions.add_to_cart' | t }}">
+                    <span class="btn btn--circle btn--icon">
+                      {{ 'actions.add_to_cart' | t }}
+                      <span class="icon__fallback-text visually-hidden">{{ 'actions.add_to_cart' | t }}</span>
+                    </span>
+                  </button>
+                {%- endcapture -%}
+            {%- capture content -%}
+                  {% render 'tool-tip-trigger',
+                    button: quickAddButton,
+                    context: 'QuickAdd',
+                    tool-tip-classes: 'quick-add-modal',
+                  %}
+                {%- endcapture -%}
+            {% render 'quick-add', content: content %}
+          {%- else -%}
+            {%- capture content -%}
+                  <button
+                    type="button" class=" quick-add-btn"
+                    title="{{ 'actions.add_to_cart' | t }}"
+                    data-id="{{ product.selected_or_first_available_variant.id }}"
+                    data-single-variant-quick-add
+                  >
+                    <span class="btn btn--circle btn--icon">
+                      {{ 'actions.add_to_cart' | t }}
+                      <span class="icon__fallback-text visually-hidden">{{ 'actions.add_to_cart' | t }}</span>
+                    </span>
+                  </button>
+                {%- endcapture -%}
+            {% render 'quick-add', content: content %}
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    {% else %}
+      <div class="e_meida">
+        <a href="{{ product.url }}">
+          {{ product.images[0] | image_url: width: '500x' | image_tag: class: 'first' }}
+          {% if product.images[1] != blank %}
+            {{ product.images[1] | image_url: width: '500x' | image_tag: class: 'second' }}
+          {% else %}
+            {{ product.images[0] | image_url: width: '500x' | image_tag: class: 'second' }}
+          {% endif %}
+          {%- if on_sale -%}
+            {%- if settings.product_save_amount -%}
+              {%- if product_save_type == 'dollar' -%}
+                {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}{%- endcapture -%}
+              {%- else -%}
+                {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%{%- endcapture -%}
+              {%- endif -%}
+              <span class="grid-product__price--savings">
+                {% comment %}
+                  {{ 'info.save_amount' | t: saved_amount: saved_amount }}
+                {% endcomment %}
+                {{ saved_amount | prepend: '-' }}
+              </span>
+            {%- endif -%}
+          {%- endif -%}
+          {% for tag in product.tags %}
+            {% if tag contains 'TAG_' %}
+              <div
+                class="e_product_badge_new"
+                style="color:{{ settings.product_new_color }}; background: url({{ settings.product_new_bg | img_url:"master" }}) no-repeat center;background-size: contain;"
+              >
+                {{ tag | remove: 'TAG_' }}
+              </div>
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        </a>
+      </div>
+      <div class="e_info style">
+        <a href="{{ product.url }}">
+          {% if section.settings.display_title_type == 'collection' %}
+            <h3>
+              {{ collection_title }}
+              {% if section.settings.display_special_attr %}{{ special_attr }}{% endif %}
+            </h3>
+            {% if collection_subtitle != blank %}
+              <p class="e_product_item_subtitle">{{ collection_subtitle }}</p>
+            {% endif %}
+          {% elsif section.settings.display_title_type == 'bundles' %}
+            <h3>
+              {{ bundles_title }}
+              {% if section.settings.display_special_attr %}{{ special_attr }}{% endif %}
+            </h3>
+            {% if bundles_subtitle != blank %}
+              <p class="e_product_item_subtitle">{{ bundles_subtitle }}</p>
+            {% endif %}
+          {% elsif section.settings.display_title_type == 'discount' %}
+            <h3>
+              {{ discount_title }}
+              {% if section.settings.display_special_attr %}{{ special_attr }}{% endif %}
+            </h3>
+            {% if discount_subtitle != blank %}
+              <p class="e_product_item_subtitle">{{ discount_subtitle }}</p>
+            {% endif %}
+          {% else %}
+            <h3>{{ product_title }}</h3>
+            {% if product_subtitle != blank %}
+              <p class="e_product_item_subtitle">{{ product_subtitle }}</p>
+            {% endif %}
+          {% endif %}
+        </a>
+        {% if product.metafields.custom.deal_end_time != blank %}
+          <countdown-timer end-time="{{ product.metafields.custom.deal_end_time }}"></countdown-timer>
+        {% endif %}
+        {% if product.metafields.custom.deal_text != blank %}
+          <div class="deal-text">
+            <span class="deal-text-title">{{ product.metafields.custom.deal_text }}</span> With Coupon
+          </div>
+        {% endif %}
+        {% if product.metafields.custom.deal_tag_text != blank %}
+        <div class="deal-tag-text">
+          {% render 'icon', name: 'tag', class: 'deal-tag-icon' %}
+          <span class="deal—tag-text-title">{{ product.metafields.custom.deal_tag_text  }}</span>
+        </div>
+        {% endif %}
+
+        <div class="grid-product__price">
+          {%- if product.price_varies -%}
+            <span class="grid-product__price--current">
+              {%- render 'price-varies',
+                price: product.price_min,
+                shop: shop,
+                superscript_decimals: superscript_decimals
+              -%}
+            </span>
+          {%- else -%}
+            {%- if on_sale -%}
+              <span class="visually-hidden">{{ 'labels.sale_price' | t }}</span>
+            {%- endif -%}
+            <span class="grid-product__price--current">
+              {%- render 'price', price: product.price, shop: shop, superscript_decimals: superscript_decimals -%}
+            </span>
+          {%- endif -%}
+          {%- if on_sale -%}
+            <span class="visually-hidden">{{ 'labels.regular_price' | t }}</span>
+            <span class="grid-product__price--original">
+              {%- render 'price',
+                price: product.compare_at_price,
+                shop: shop,
+                superscript_decimals: superscript_decimals
+              -%}
+            </span>
+          {%- endif -%}
+
+          {%- assign product_variant = product.selected_or_first_available_variant -%}
+          {%- if product_variant.unit_price_measurement -%}
+            <div class="product__unit-price">
+              {%- capture unit_price_base_unit -%}
+                  {%- if product_variant.unit_price_measurement -%}
+                    {%- if product_variant.unit_price_measurement.reference_value != 1 -%}
+                      {{ product_variant.unit_price_measurement.reference_value }}
+                    {%- endif -%}
+                    {{ product_variant.unit_price_measurement.reference_unit }}
+                  {%- endif -%}
+                {%- endcapture -%}
+
+              {{ product_variant.unit_price | money }}/{{ unit_price_base_unit }}
+            </div>
+          {%- endif -%}
+        </div>
+        <div class="action_box">
+          {%- if product.available -%}
+            {%- if product.variants.size > 1 -%}
+              {%- capture quickAddButton %}
+                  <button type="button" class=" quick-add-btn js-quick-add-form js-modal-open-quick-add" title="{{ 'actions.add_to_cart' | t }}">
+                    <span class="btn btn--circle btn--icon">
+                      {{ 'actions.add_to_cart' | t }}
+                      <span class="icon__fallback-text visually-hidden">{{ 'actions.add_to_cart' | t }}</span>
+                    </span>
+                  </button>
+                {%- endcapture -%}
+              {%- capture content -%}
+                  {% render 'tool-tip-trigger',
+                    button: quickAddButton,
+                    context: 'QuickAdd',
+                    tool-tip-classes: 'quick-add-modal',
+                  %}
+                {%- endcapture -%}
+              {% render 'quick-add', content: content %}
+            {%- else -%}
+              {%- capture content -%}
+                  <button
+                    type="button" class=" quick-add-btn"
+                    title="{{ 'actions.add_to_cart' | t }}"
+                    data-id="{{ product.selected_or_first_available_variant.id }}"
+                    data-single-variant-quick-add
+                  >
+                    <span class="btn btn--circle btn--icon">
+                      {{ 'actions.add_to_cart' | t }}
+                      <span class="icon__fallback-text visually-hidden">{{ 'actions.add_to_cart' | t }}</span>
+                    </span>
+                  </button>
+                {%- endcapture -%}
+              {% render 'quick-add', content: content %}
+            {%- endif -%}
+          {%- endif -%}
+          <div class="more"><a href="{{ product.url }}">Learn More</a></div>
+        </div>
+      </div>
+    {% endunless %}
+  </div>
+</div>

@@ -1,0 +1,492 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {}
+    },
+    "shogun-above": {
+      "type": "shogun-above",
+      "disabled": true,
+      "settings": {}
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "custom_PQRnYG": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "<p><b>Prime Day Sale, Up to </b> <span style=\"color:#FF6A00\n\">27% Off</span>. Automatic Discount.</p>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "quantity_selector_DHn6Vq": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "description_M7JAy9": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "complementary_products_xhNrFb": {
+          "type": "complementary_products",
+          "settings": {
+            "product_complementary_heading": "Frequently Bought Together",
+            "complementary_count": 3,
+            "per_slide": 3,
+            "control_type": "dots",
+            "image_style": "default"
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "checkmark",
+            "text": "30 Days Worry-Free Returns"
+          }
+        },
+        "sales_point2": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "truck",
+            "text": "Free Shipping in The US"
+          }
+        },
+        "sales_point3": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "shield",
+            "text": "100% Secure Payments"
+          }
+        },
+        "sales_point4": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "package",
+            "text": "Ships Within 24 hours"
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "share_eTMqpL": {
+          "type": "share",
+          "settings": {}
+        },
+        "custom_9MhFdx": {
+          "type": "custom",
+          "settings": {
+            "code": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n</script>"
+          }
+        }
+      },
+      "block_order": [
+        "custom_PQRnYG",
+        "variant_picker",
+        "quantity_selector_DHn6Vq",
+        "price",
+        "buy_buttons",
+        "description_M7JAy9",
+        "complementary_products_xhNrFb",
+        "sales_point",
+        "sales_point2",
+        "sales_point3",
+        "sales_point4",
+        "inventory_status",
+        "share_eTMqpL",
+        "custom_9MhFdx"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_container_size": "medium",
+        "product_image_size": "natural",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "slideshow_image_8PWjh7": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_ACw9kd": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/automatic-pet-feeder.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_ACw9kd"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_48aEbr": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_dPPFjm": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/one-tap-to-feed-now.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_dPPFjm"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_T4n9Ba": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_qBpGLg": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/feeding-logs.jpg"
+          }
+        },
+        "image_GHhiKg": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/slow-feed-setting.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_qBpGLg",
+        "image_GHhiKg"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_4RFkLa": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_89bmzb": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/customized_feeding.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_89bmzb"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_wPJgbK": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_cGPcdx": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/stainless-bowl-can-be-detached-for-cleaning.jpg"
+          }
+        },
+        "image_tJ3ADy": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/triple-seal-design-keeps-every-bite-fresh-and-crispy.jpg"
+          }
+        },
+        "image_KE9neP": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/equal-rotor-design.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_cGPcdx",
+        "image_tJ3ADy",
+        "image_KE9neP"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_XWc7ed": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_NwXYET": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/food-dispensing-during-a-power-outage.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_NwXYET"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_WWp7eh": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_Fh8j3c": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/download-the-app.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_Fh8j3c"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "slideshow_image_kj7J63": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_8qmJdV": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/feeding-recommendation.jpg"
+          }
+        },
+        "image_BAQLxa": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/recommended-feeding-plan.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_8qmJdV",
+        "image_BAQLxa"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_tXmebz": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_bypqVG": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/suitable-for-home-decoration-style.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_bypqVG"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "171524248506ebf0c3": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "blocks": {
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": true
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "settings": {
+            "title": "Shipping information",
+            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
+            "page": ""
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+            "title": "Ask a question",
+            "phone": false
+          }
+        }
+      },
+      "block_order": [
+        "description",
+        "tab",
+        "contact"
+      ],
+      "disabled": true,
+      "settings": {
+        "max_width": false
+      }
+    },
+    "spx_recommendations_pB9wzL": {
+      "type": "spx-recommendations",
+      "settings": {
+        "title": "Recommended Purchase",
+        "padding_pc": "50px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 5,
+        "products_per_row": 5
+      }
+    },
+    "more-products-vendor": {
+      "type": "more-products-vendor",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "more-products-collection": {
+      "type": "more-products-collection",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {}
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "2"
+      }
+    },
+    "shogun-below": {
+      "type": "shogun-below",
+      "disabled": true,
+      "settings": {}
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "shogun-above",
+    "main",
+    "slideshow_image_8PWjh7",
+    "slideshow_image_48aEbr",
+    "slideshow_image_T4n9Ba",
+    "slideshow_image_4RFkLa",
+    "slideshow_image_wPJgbK",
+    "slideshow_image_XWc7ed",
+    "slideshow_image_WWp7eh",
+    "slideshow_image_kj7J63",
+    "slideshow_image_tXmebz",
+    "171524248506ebf0c3",
+    "sub",
+    "spx_recommendations_pB9wzL",
+    "recommendations",
+    "more-products-vendor",
+    "more-products-collection",
+    "recently-viewed",
+    "collection-return",
+    "shogun-below",
+    "shogun-optimizer"
+  ]
+}

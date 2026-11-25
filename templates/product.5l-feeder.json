@@ -1,0 +1,621 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {}
+    },
+    "shogun-above": {
+      "type": "shogun-above",
+      "disabled": true,
+      "settings": {}
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "custom_C9XhHp": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "<p><b>Black Friday Sale,</b> <span style=\"color:#FF6A00\n\">12% off</span>. Automatically apply discounts at checkout.</br>Offer ends on December 2nd.</p>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "quantity_selector_czdtEJ": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "description_M7JAy9": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "checkmark",
+            "text": "30 Days Worry-Free Returns"
+          }
+        },
+        "sales_point2": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "truck",
+            "text": "Free Shipping in The US"
+          }
+        },
+        "sales_point3": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "shield",
+            "text": "100% Secure Payments"
+          }
+        },
+        "sales_point4": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "package",
+            "text": "Ships Within 24 hours"
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "share_eTMqpL": {
+          "type": "share",
+          "settings": {}
+        },
+        "custom_9irXdQ": {
+          "type": "custom",
+          "settings": {
+            "code": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n</script>"
+          }
+        }
+      },
+      "block_order": [
+        "custom_C9XhHp",
+        "variant_picker",
+        "quantity_selector_czdtEJ",
+        "price",
+        "buy_buttons",
+        "description_M7JAy9",
+        "sales_point",
+        "sales_point2",
+        "sales_point3",
+        "sales_point4",
+        "inventory_status",
+        "share_eTMqpL",
+        "custom_9irXdQ"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_container_size": "medium",
+        "product_image_size": "natural",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "custom_content_navigation_A8gHmV": {
+      "type": "custom-content-navigation",
+      "settings": {
+        "colors": "light"
+      }
+    },
+    "promo_grid_TJD337": {
+      "type": "promo-grid",
+      "blocks": {
+        "advanced_CdwFBx": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "title": "",
+            "description": "",
+            "image": "shopify://shop_images/smart-feeder-5g-pc.jpg",
+            "image_mobile": "shopify://shop_images/smart-feeder-5g-m.jpg",
+            "image_url": "",
+            "video_url": "",
+            "width": "100",
+            "height": 500,
+            "height_mobile": 400,
+            "text_align": "vertical-center horizontal-center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "image_iGpYAF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/12_4ed23483-7d72-4186-9ab9-0b5fefe7e23f.jpg",
+            "image_mobile": "shopify://shop_images/12_c45c0018-0d26-43d2-84ad-7f9cff5eb7d9.jpg",
+            "link": "",
+            "width": "100"
+          }
+        },
+        "image_ERNQca": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/two-bowls-pc.jpg",
+            "image_mobile": "shopify://shop_images/two-bowls-m.jpg",
+            "link": "",
+            "width": "100"
+          }
+        }
+      },
+      "block_order": [
+        "advanced_CdwFBx",
+        "image_iGpYAF",
+        "image_ERNQca"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": true,
+        "title_size_multiplier": 1.8,
+        "title_size_multiplier_mobile": 1.3,
+        "desp_size_multiplier": 1.8,
+        "desp_size_multiplier_mobile": 1.3,
+        "btn_size_multiplier": 1.4,
+        "btn_size_multiplier_mobile": 1.4
+      }
+    },
+    "slideshow_image_izJ8Te": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_nKM7tL": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/feed-now-pc.jpg",
+            "image_mobile": "shopify://shop_images/feed-now-m_3b7971a5-eba4-44b1-818d-6dd6a7307b6d.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_nKM7tL"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_pRDXLm": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_EFdC3g": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/feed-anywhere-pc.jpg",
+            "image_mobile": "shopify://shop_images/feed-anywhere-m.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_EFdC3g"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_VLFM8q": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_YVyjAN": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/automatic-feeder-pc.jpg",
+            "image_mobile": "shopify://shop_images/automatic-feeder-m.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_YVyjAN"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_XnyRJB": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_tNYMkJ": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/slow-feed-pc.jpg",
+            "image_mobile": "shopify://shop_images/slow-feed-m.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_tNYMkJ"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_rPePHJ": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_icVnQ4": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/food-diamete-pc.jpg",
+            "image_mobile": "shopify://shop_images/food-diamete-m.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_icVnQ4"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_KH6LN7": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_AJ9hhb": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/recommende-daily-food-pc.jpg",
+            "image_mobile": "shopify://shop_images/recommende-daily-food-m.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_AJ9hhb"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_MKLX76": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_XBCAC8": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/download-the-app.jpg",
+            "image_mobile": "shopify://shop_images/app-m.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_XBCAC8"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "product_spec_xiJbBG": {
+      "type": "product-spec",
+      "blocks": {
+        "text_block_Dtz6em": {
+          "type": "text_block",
+          "settings": {
+            "title": "Dimension",
+            "Content": "7.4x7.2x9.9 inches"
+          }
+        },
+        "text_block_eke7nr": {
+          "type": "text_block",
+          "settings": {
+            "title": "Weight",
+            "Content": "5.2 Pounds"
+          }
+        },
+        "text_block_FwfGih": {
+          "type": "text_block",
+          "settings": {
+            "title": "Model Name",
+            "Content": "PFD-002 PRO"
+          }
+        },
+        "text_block_bRG3Ut": {
+          "type": "text_block",
+          "settings": {
+            "title": "Color",
+            "Content": "Black"
+          }
+        },
+        "text_block_rVLwKk": {
+          "type": "text_block",
+          "settings": {
+            "title": "Capacity",
+            "Content": "20 Cups"
+          }
+        },
+        "text_block_jErtPR": {
+          "type": "text_block",
+          "settings": {
+            "title": "Portion Size",
+            "Content": "6 Portions"
+          }
+        },
+        "text_block_GkQGNe": {
+          "type": "text_block",
+          "settings": {
+            "title": "Meals Setting",
+            "Content": "1-6 Meals"
+          }
+        },
+        "text_block_F7zQwB": {
+          "type": "text_block",
+          "settings": {
+            "title": "Kibble Size",
+            "Content": "<15mm(0.6 in)"
+          }
+        },
+        "text_block_DcXW8U": {
+          "type": "text_block",
+          "settings": {
+            "title": "Power",
+            "Content": "Input 5V DC/1A"
+          }
+        },
+        "text_block_dxwBzL": {
+          "type": "text_block",
+          "settings": {
+            "title": "Material",
+            "Content": "ABS+304 stainless steel"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_Dtz6em",
+        "text_block_eke7nr",
+        "text_block_FwfGih",
+        "text_block_bRG3Ut",
+        "text_block_rVLwKk",
+        "text_block_jErtPR",
+        "text_block_GkQGNe",
+        "text_block_F7zQwB",
+        "text_block_DcXW8U",
+        "text_block_dxwBzL"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "divider": false
+      }
+    },
+    "rich_text_8f6BYg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_tKPBED": {
+          "type": "heading",
+          "settings": {
+            "title": "What They Say",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tKPBED"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "none",
+        "section_visibility": "always",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "17187780533a728805": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "faq_UCycVJ": {
+      "type": "faq",
+      "blocks": {
+        "question_gypmyY": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_gypmyY"
+      ],
+      "settings": {
+        "title": "FAQs",
+        "heading_size": "h2",
+        "brochure_title": "Manual",
+        "brochure_link": "",
+        "heading_position": "left"
+      }
+    },
+    "171524248506ebf0c3": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "blocks": {
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": true
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "settings": {
+            "title": "Shipping information",
+            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
+            "page": ""
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+            "title": "Ask a question",
+            "phone": false
+          }
+        }
+      },
+      "block_order": [
+        "description",
+        "tab",
+        "contact"
+      ],
+      "disabled": true,
+      "settings": {
+        "max_width": false
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 5,
+        "products_per_row": 5
+      }
+    },
+    "more-products-vendor": {
+      "type": "more-products-vendor",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "more-products-collection": {
+      "type": "more-products-collection",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {}
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "2"
+      }
+    },
+    "shogun-below": {
+      "type": "shogun-below",
+      "disabled": true,
+      "settings": {}
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "shogun-above",
+    "main",
+    "custom_content_navigation_A8gHmV",
+    "promo_grid_TJD337",
+    "slideshow_image_izJ8Te",
+    "slideshow_image_pRDXLm",
+    "slideshow_image_VLFM8q",
+    "slideshow_image_XnyRJB",
+    "slideshow_image_rPePHJ",
+    "slideshow_image_KH6LN7",
+    "slideshow_image_MKLX76",
+    "product_spec_xiJbBG",
+    "rich_text_8f6BYg",
+    "17187780533a728805",
+    "faq_UCycVJ",
+    "171524248506ebf0c3",
+    "sub",
+    "recommendations",
+    "more-products-vendor",
+    "more-products-collection",
+    "recently-viewed",
+    "collection-return",
+    "shogun-below",
+    "shogun-optimizer"
+  ]
+}

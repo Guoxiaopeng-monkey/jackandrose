@@ -1,0 +1,724 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description_4V8gRL": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "quantity_selector_YLzyPg": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "complementary_products_xhNrFb": {
+          "type": "complementary_products",
+          "disabled": true,
+          "settings": {
+            "product_complementary_heading": "Frequently Bought Together",
+            "complementary_count": 3,
+            "per_slide": 3,
+            "control_type": "dots",
+            "image_style": "default"
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "checkmark",
+            "text": "30 Days Worry-Free Returns"
+          }
+        },
+        "sales_point2": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "truck",
+            "text": "Free Shipping in The US"
+          }
+        },
+        "sales_point3": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "shield",
+            "text": "100% Secure Payments"
+          }
+        },
+        "sales_point4": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "package",
+            "text": "Ships Within 24 hours"
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "disabled": true,
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "share_eTMqpL": {
+          "type": "share",
+          "disabled": true,
+          "settings": {}
+        },
+        "trust_badge_9p6hwP": {
+          "type": "trust_badge",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "price",
+        "description_4V8gRL",
+        "variant_picker",
+        "quantity_selector_YLzyPg",
+        "buy_buttons",
+        "complementary_products_xhNrFb",
+        "sales_point",
+        "sales_point2",
+        "sales_point3",
+        "sales_point4",
+        "inventory_status",
+        "share_eTMqpL",
+        "trust_badge_9p6hwP"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_container_size": "medium",
+        "product_image_size": "natural",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": true,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "custom_text_with_icon_3pFgH6": {
+      "type": "custom-text-with-icon",
+      "blocks": {
+        "text_block_wYmUMH": {
+          "type": "text_block",
+          "settings": {
+            "icon": "return",
+            "title": "30 Days Worry-Free Returns",
+            "button_link": ""
+          }
+        },
+        "text_block_mKRfAi": {
+          "type": "text_block",
+          "settings": {
+            "icon": "shipping",
+            "title": "Free Shipping in The US.",
+            "button_link": ""
+          }
+        },
+        "text_block_dE7KPQ": {
+          "type": "text_block",
+          "settings": {
+            "icon": "payment",
+            "title": "100% Secure Payments",
+            "button_link": ""
+          }
+        },
+        "text_block_zVMmWY": {
+          "type": "text_block",
+          "settings": {
+            "icon": "delivery",
+            "title": "Ship Within 24 hours",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_wYmUMH",
+        "text_block_mKRfAi",
+        "text_block_dE7KPQ",
+        "text_block_zVMmWY"
+      ],
+      "settings": {
+        "class": "",
+        "color_scheme": "3",
+        "align_text": "left",
+        "desktop_columns_per_row": 4,
+        "space_mobile": 10,
+        "icon_color": "#000000",
+        "divider": false
+      }
+    },
+    "custom_logo_slider_dQdpNz": {
+      "type": "custom-logo-slider",
+      "blocks": {
+        "image_xHX6AW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/FOX_NEWS_c8c12c5b-350a-48af-9534-5c375fe8edcf.png",
+            "title": ""
+          }
+        },
+        "image_kDd6VF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/yahoo_f23062cb-fbb1-4adb-b1a1-4f8dcf57321b.png",
+            "title": ""
+          }
+        },
+        "image_67LHiT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/People_95caa458-2c82-42fc-8be2-c28c11b09184.png",
+            "title": ""
+          }
+        },
+        "image_xKjYcm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LIFE-Style.png",
+            "title": ""
+          }
+        },
+        "image_kDtQgA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/NEW-YORK-POST.png",
+            "title": ""
+          }
+        },
+        "image_8fyqd3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ET_8930cebf-077d-4f4e-bd16-a89fd6c358df.png",
+            "title": ""
+          }
+        },
+        "image_HzhjDp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Daily_f71f6731-4861-46cf-92fb-08e9b6fcef9c.png",
+            "title": ""
+          }
+        },
+        "image_33MqHC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DAILY-NEWS.png",
+            "title": ""
+          }
+        },
+        "image_4NcyiT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/AP_4f393673-0321-4604-8a2a-81fd6f73992e.png",
+            "title": ""
+          }
+        },
+        "image_LhKQ4C": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OK_30629e3c-ad90-4b6f-8dd0-96ae55a0c67b.png",
+            "title": ""
+          }
+        },
+        "image_hBAUqk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/PageSix_2ca59fa9-1566-4090-a474-0bc424a7bf74.png",
+            "title": ""
+          }
+        },
+        "image_ywdVAJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Us_8a7d4f67-fc01-48c8-a011-bdc596bd85ff.png",
+            "title": ""
+          }
+        },
+        "image_yn3cUk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/trumb.png",
+            "title": ""
+          }
+        },
+        "image_GqmPbp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/TIME-stamped.png",
+            "title": ""
+          }
+        },
+        "image_wt3khB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/XOXO_b26e4db0-e4d0-45a0-9828-3ad6cc315251.png",
+            "title": ""
+          }
+        },
+        "image_d3hwkG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Aol_d3539e1d-8e84-4b7d-bd5b-b34e37063d03.png",
+            "title": ""
+          }
+        },
+        "image_epeUMM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ilovecat.png",
+            "title": ""
+          }
+        },
+        "image_QQgmBP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DogTime_e154c81d-7fe5-4fea-bcf6-42096314eae0.png",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_xHX6AW",
+        "image_kDd6VF",
+        "image_67LHiT",
+        "image_xKjYcm",
+        "image_kDtQgA",
+        "image_8fyqd3",
+        "image_HzhjDp",
+        "image_33MqHC",
+        "image_4NcyiT",
+        "image_LhKQ4C",
+        "image_hBAUqk",
+        "image_ywdVAJ",
+        "image_yn3cUk",
+        "image_GqmPbp",
+        "image_wt3khB",
+        "image_d3hwkG",
+        "image_epeUMM",
+        "image_QQgmBP"
+      ],
+      "settings": {
+        "title": "30,382+ HAPPY CUSTOMERS",
+        "white_bg": false
+      }
+    },
+    "custom_content_navigation_b9H3YG": {
+      "type": "custom-content-navigation",
+      "settings": {
+        "colors": "light"
+      }
+    },
+    "advanced_content_X4U9HL": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_DC4pJn": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div id=\"overview\"></div>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_DC4pJn"
+      ],
+      "custom_css": [
+        ".custom-content {height: 1px;}"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "promo_grid_GrEmcp": {
+      "type": "promo-grid",
+      "blocks": {
+        "advanced_rCbmqT": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "title": "",
+            "description": "",
+            "image": "shopify://shop_images/cat-water-fountain-pc.jpg",
+            "image_mobile": "shopify://shop_images/cat-water-fountain-m.jpg",
+            "image_url": "",
+            "video_url": "",
+            "width": "100",
+            "height": 600,
+            "height_mobile": 240,
+            "text_align": "vertical-center horizontal-center",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "advanced_rCbmqT"
+      ],
+      "custom_css": [
+        ".promo-grid__content {align-self: flex-start;}"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 0,
+        "space_above": false,
+        "space_below": false,
+        "title_size_multiplier": 1.8,
+        "title_size_multiplier_mobile": 1.3,
+        "desp_size_multiplier": 1.8,
+        "desp_size_multiplier_mobile": 1.3,
+        "btn_size_multiplier": 1.4,
+        "btn_size_multiplier_mobile": 1.4
+      }
+    },
+    "promo_grid_7gdKgA": {
+      "type": "promo-grid",
+      "blocks": {
+        "image_bUfbJE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3-water-flow-mode-pc.jpg",
+            "image_mobile": "shopify://shop_images/3-water-flow-mode-m.jpg",
+            "link": "",
+            "width": "100"
+          }
+        },
+        "image_PCdLDf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/60-days-pc.jpg",
+            "image_mobile": "shopify://shop_images/60-days-m.jpg",
+            "link": "",
+            "width": "100"
+          }
+        },
+        "image_t8Aaz3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3.5l-capacity-pc.jpg",
+            "image_mobile": "shopify://shop_images/3.5l-capacity-m.jpg",
+            "link": "",
+            "width": "100"
+          }
+        },
+        "image_E3qyAL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/quiet-30db-pc.jpg",
+            "image_mobile": "shopify://shop_images/quiet-30db-m.jpg",
+            "link": "",
+            "width": "100"
+          }
+        }
+      },
+      "block_order": [
+        "image_bUfbJE",
+        "image_PCdLDf",
+        "image_t8Aaz3",
+        "image_E3qyAL"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 0,
+        "space_above": true,
+        "space_below": true,
+        "title_size_multiplier": 1.8,
+        "title_size_multiplier_mobile": 1.3,
+        "desp_size_multiplier": 1.8,
+        "desp_size_multiplier_mobile": 1.3,
+        "btn_size_multiplier": 1.4,
+        "btn_size_multiplier_mobile": 1.4
+      }
+    },
+    "promo_grid_APcjnG": {
+      "type": "promo-grid",
+      "blocks": {
+        "image_E3KbYa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/five-layer-filtration-pc.jpg",
+            "image_mobile": "shopify://shop_images/five-layer-filtration-m.jpg",
+            "link": "",
+            "width": "100"
+          }
+        },
+        "image_p9QLph": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/easy-to-control-pc_8d5e68e7-6f37-497f-8538-98b81f2d34ab.jpg",
+            "image_mobile": "shopify://shop_images/easy-to-control-pc.jpg",
+            "link": "",
+            "width": "100"
+          }
+        },
+        "image_yRnaYw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/304food-grade-pc.jpg",
+            "image_mobile": "shopify://shop_images/easy-to-control-m.jpg",
+            "link": "",
+            "width": "100"
+          }
+        }
+      },
+      "block_order": [
+        "image_E3KbYa",
+        "image_p9QLph",
+        "image_yRnaYw"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": true,
+        "title_size_multiplier": 1.8,
+        "title_size_multiplier_mobile": 1.3,
+        "desp_size_multiplier": 1.8,
+        "desp_size_multiplier_mobile": 1.3,
+        "btn_size_multiplier": 1.4,
+        "btn_size_multiplier_mobile": 1.4
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "blocks": {
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": true
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "settings": {
+            "title": "Shipping information",
+            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
+            "page": ""
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+            "title": "Ask a question",
+            "phone": false
+          }
+        }
+      },
+      "block_order": [
+        "description",
+        "tab",
+        "contact"
+      ],
+      "disabled": true,
+      "settings": {
+        "max_width": false
+      }
+    },
+    "product_spec_dN8cyH": {
+      "type": "product-spec",
+      "blocks": {
+        "text_block_zNAfQy": {
+          "type": "text_block",
+          "settings": {
+            "title": "Directions",
+            "Content": "Battery is only for backup"
+          }
+        },
+        "text_block_G4EnVm": {
+          "type": "text_block",
+          "settings": {
+            "title": "Color",
+            "Content": "Black"
+          }
+        },
+        "text_block_rHVHQ4": {
+          "type": "text_block",
+          "settings": {
+            "title": "Capacity",
+            "Content": "5L/20cups"
+          }
+        },
+        "text_block_qAp3Fn": {
+          "type": "text_block",
+          "settings": {
+            "title": "Product Size",
+            "Content": "7.4*7.2*9.9inch"
+          }
+        },
+        "text_block_X9KhDF": {
+          "type": "text_block",
+          "settings": {
+            "title": "Material",
+            "Content": "Stainless Steel"
+          }
+        },
+        "text_block_k66AFN": {
+          "type": "text_block",
+          "settings": {
+            "title": "Weight",
+            "Content": "1.94KG"
+          }
+        },
+        "text_block_6f8k9C": {
+          "type": "text_block",
+          "settings": {
+            "title": "Breed Advice",
+            "Content": "Multi Cats"
+          }
+        },
+        "text_block_QeyqBK": {
+          "type": "text_block",
+          "settings": {
+            "title": "Model Name",
+            "Content": "PFD-002"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_zNAfQy",
+        "text_block_G4EnVm",
+        "text_block_rHVHQ4",
+        "text_block_qAp3Fn",
+        "text_block_X9KhDF",
+        "text_block_k66AFN",
+        "text_block_6f8k9C",
+        "text_block_QeyqBK"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Specifications",
+        "align_text": "center",
+        "divider": false
+      }
+    },
+    "faq_pkUCKa": {
+      "type": "faq",
+      "blocks": {
+        "question_zPFXRm": {
+          "type": "question",
+          "settings": {
+            "title": "How loud is the pet vacuum grooming kit?",
+            "text": "<p>The noise of our pet grooming kits is less than 60db, it is a relatively soft sound level, similar to a calm office environment, or a low-volume televisionwhich which not scare pets.</p>"
+          }
+        },
+        "question_Q4qJVH": {
+          "type": "question",
+          "settings": {
+            "title": "How often do hepa filters need to be replaced?",
+            "text": "<p>We recommend cleaning the lint in the dust cup after each use of the machine. If used frequently, it is recommended that the filter be replaced every six months.</p>"
+          }
+        },
+        "question_bmLL6d": {
+          "type": "question",
+          "settings": {
+            "title": "Does the it work on cats?",
+            "text": "<p>Yes! It works on dogs and cats alike...even more!</p>"
+          }
+        },
+        "question_4KVdLx": {
+          "type": "question",
+          "settings": {
+            "title": "Does it attachments work on all types of coats?",
+            "text": "<p>It is designed for all any medium to long-haired coats.</p>"
+          }
+        },
+        "question_nCcC69": {
+          "type": "question",
+          "settings": {
+            "title": "Is the pet vacuum grooming kit manageable for someone with little grooming experience?",
+            "text": "<p>Yes, it's user-friendly, with simple attachments that make it easy for beginners to achieve professional-looking results at home.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_zPFXRm",
+        "question_Q4qJVH",
+        "question_bmLL6d",
+        "question_4KVdLx",
+        "question_nCcC69"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "FAQs",
+        "heading_size": "h2",
+        "brochure_title": "Manual",
+        "brochure_link": "https://cdn.shopify.com/s/files/1/0655/6716/2614/files/S1.pdf?v=1701054937",
+        "heading_position": "left"
+      }
+    },
+    "17237693005eab089c": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 4,
+        "products_per_row": 4
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_text_with_icon_3pFgH6",
+    "custom_logo_slider_dQdpNz",
+    "custom_content_navigation_b9H3YG",
+    "advanced_content_X4U9HL",
+    "promo_grid_GrEmcp",
+    "promo_grid_7gdKgA",
+    "promo_grid_APcjnG",
+    "sub",
+    "product_spec_dN8cyH",
+    "faq_pkUCKa",
+    "17237693005eab089c",
+    "recommendations"
+  ]
+}

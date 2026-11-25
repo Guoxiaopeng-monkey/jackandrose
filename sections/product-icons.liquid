@@ -1,0 +1,248 @@
+{% assign sid = section.id %}
+<style>
+    #shopify-section-{{ sid }} {
+        margin: {{section.settings.padding_pc}};
+    }
+  #shopify-section-{{ sid }} .page-width{
+      --page-width:1360px;
+    }
+  #shopify-section-{{ sid }} .swiper-wrapper {
+      justify-content:center;
+    }
+  #shopify-section-{{ sid }} .icons-wrap{
+    border-radius: 109.5px;
+    background: #f47c20;
+    padding:60px;
+  }
+  #shopify-section-{{ sid }} .icons-item{
+    text-align:center;
+    width: 25%;
+  }
+  #shopify-section-{{ sid }} .icons-item svg{
+    width: 30px;
+    height: 30px;
+    display:block;
+    margin: 0 auto;
+  }
+  #shopify-section-{{ sid }} .icons-item .icon-item-title{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4; 
+    margin-top:16px;
+    margin-bottom:0;
+  }
+  #shopify-section-{{ sid }} .icons-item .icon-item-text{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    line-height: 1.4; 
+    margin-top:16px;
+  }
+  @media (max-width:959px){
+      #shopify-section-{{ sid }} {
+            margin: {{section.settings.padding_m}};
+        }
+  #shopify-section-{{ sid }} .icons-wrap{
+    padding:40px 16px;
+    border-radius: 60px;
+  }
+    #shopify-section-{{ sid }} .swiper-wrapper {
+      flex-wrap:wrap;        row-gap: 40px;
+    }
+    #shopify-section-{{ sid }} .icons-item {
+      width:100%;
+    }
+    #shopify-section-{{ sid }} .icons-item .icon-item-title{
+      margin-top:12px;
+    }
+    #shopify-section-{{ sid }} .icons-item .icon-item-text{
+      margin-top:12px;
+    }
+    #shopify-section-{{ sid }} .icons-item svg{
+      width: 24px;
+      height: 24px;
+    }
+    #shopify-section-{{ sid }} .icons-item .icon-item-title{
+      font-size: 12px;
+      margin-top:12px;
+    }
+    #shopify-section-{{ sid }} .swiper-pagination{
+      position: unset;
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    #shopify-section-{{ sid }} .swiper-pagination>span{
+      width:30px;
+      height:4px;
+      border-radius: 4px;
+    }
+    #shopify-section-{{ sid }} .swiper-pagination>span.swiper-pagination-bullet-active{
+      background:#000;
+    }
+  }
+</style>
+
+<div id="product-icons" class="icons">
+  <div class="page-width">
+    <div class="icons-wrap">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide icons-item" {% if block.settings.liquid == '2' %}style="display:none;"{% endif %}>
+            {% if block.settings.liquid != blank %}
+              <div class="icon-item-svg">
+                {% case block.settings.liquid %}
+                  {% when "1" %}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M22 7L12 2L2 7V17L12 22L22 17V7Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M2 7L12 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 22V12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 12L2.5 7L12.5 2L21 7L12 12Z" fill="white" fill-opacity="0.1"/>
+  <path d="M22 7L12 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M17 4.5L7 9.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                  {% when "2" %}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M19.5 3H4.5C3.67158 3 3 3.67158 3 4.5V19.5C3 20.3285 3.67158 21 4.5 21H19.5C20.3285 21 21 20.3285 21 19.5V4.5C21 3.67158 20.3285 3 19.5 3Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10.5 15.5L13 17.5L17 12.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M7 7.5H17" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M7 11.5H11" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                  {% when "3" %}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M3 4.62782L12.0043 2L21 4.62782V10.0169C21 15.6811 17.3751 20.7097 12.0013 22.5002C6.62605 20.7097 3 15.68 3 10.0143V4.62782Z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M7.5 11.5L11 15L17 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                  {% else %}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.99121 5.98445L15.8925 2L18.1987 5.99445L8.99121 5.98445Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M2 7C2 6.4477 2.44771 6 3 6H21C21.5523 6 22 6.4477 22 7V21C22 21.5523 21.5523 22 21 22H3C2.44771 22 2 21.5523 2 21V7Z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M17.625 16.5H22V11.5H17.625C16.1753 11.5 15 12.6193 15 14C15 15.3807 16.1753 16.5 17.625 16.5Z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M22 8.25V20.25" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+</svg>
+                {% endcase %}
+                
+              </div>
+            {% endif %}
+            {% if block.settings.title != blank %}
+             <h4 class="icon-item-title"> {{ block.settings.title }}</h4>
+            {% endif %}
+            {% if block.settings.text != blank %}
+              <div class="icon-item-text">{{ block.settings.text }}</div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- <div class="swiper-pagination"></div> -->
+    </div>
+  </div>
+</div>
+
+<!-- <script>
+  let mySwiper{{section.index}} = new Swiper(' #shopify-section-{{ sid }} .swiper-container', {
+  	slidesPerView: 1,
+    spaceBetween: 0,
+    breakpoints: { 
+      200: {  
+        slidesPerView: 1,
+        spaceBetween: 0,
+        pagination: {
+            el: '#shopify-section-{{ sid }} .swiper-pagination',
+            clickable: true
+        },
+        allowTouchMove: true
+      },
+      960: {  
+        slidesPerView: 4,
+        spaceBetween: 40,
+        allowTouchMove: false
+      }
+    }
+  })
+</script> -->
+
+{% schema %}
+  {
+    "name": "Product icons",
+    "settings": [
+       {
+        "type": "header",
+        "content": "Padding"
+      },
+      {
+            "type": "text",
+            "id": "padding_pc",
+            "label": "Padding (desktop)",
+            "default":"100px 0"
+          },
+      {
+            "type": "text",
+            "id": "padding_m",
+            "label": "Padding (mobile)",
+            "default":"80px 0"
+          }
+    ],
+    "blocks": [
+      {
+        "type": "icon",
+        "name": "icon",
+        "limit": 4,
+        "settings": [
+          {
+            "type": "select",
+            "id": "liquid",
+            "label": "Icon",
+            "default":"1",
+            "options": [
+              {
+                "label": "1",
+                "value": "1"
+              },
+              {
+                "label": "2 (废弃)",
+                "value": "2"
+              },
+              {
+                "label": "3",
+                "value": "3"
+              },
+              {
+                "label": "4",
+                "value": "4"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Fast & Free Shipping"
+          }
+        ]
+      }
+    ],
+    "presets": [
+        {
+            "name": "Product icons",
+            "blocks": [
+                {
+                  "type": "icon"
+                },
+                {
+                  "type": "icon"
+                },
+                {
+                  "type": "icon"
+                },
+                {
+                  "type": "icon"
+                }
+            ]
+        }
+    ]
+  }
+{% endschema %}

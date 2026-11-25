@@ -1,0 +1,688 @@
+ 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const hotspots = document.querySelectorAll('.hotspot');
+  const hotspotIcons = document.querySelectorAll('.hotspot-icon');
+  const isMobile = window.innerWidth <= 768; // Check if the user is on a mobile device
+
+  // Function to hide all info boxes
+  function hideAllInfoBoxes() {
+    hotspots.forEach(function (hotspot) {
+      const infoBox = hotspot.querySelector('.hotspot-info');
+      infoBox.classList.remove('visible');
+      infoBox.classList.add('hidden');
+    });
+  }
+
+  function updatePosition() {
+    if (!isMobile) return; // Only run this code on mobile devices
+
+    hotspots.forEach(hotspot => {
+      const rect = hotspot.getBoundingClientRect();
+      const infoBox = hotspot.querySelector('.hotspot-info');
+      // Check if hotspot is in viewport
+      if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        // Hotspot is visible, make infoBox fixed
+        infoBox.style.position = 'fixed';
+        infoBox.style.top = '35%'; 
+        infoBox.style.left = '50%';
+        infoBox.style.transform = 'translateX(-50%)';
+      } else {
+        // Hotspot is not visible, make infoBox absolute
+        infoBox.style.position = 'absolute';
+        infoBox.style.top = '30px';
+        infoBox.style.left = '40px';
+        infoBox.style.transform = 'none';
+      }
+    });
+  }
+
+  // Adjust the position of each hotspot based on device type
+  if (isMobile) {
+    // Mobile: Bind click events to hotspot-icons
+    hotspotIcons.forEach(function (icon) {
+      icon.addEventListener('click', function (event) {
+        event.stopPropagation(); // Stop propagation to prevent unwanted page navigation
+        event.preventDefault(); // Prevent navigation on link click
+
+        hideAllInfoBoxes();
+
+        const infoBox = icon.closest('.hotspot').querySelector('.hotspot-info');
+        if (infoBox.classList.contains('hidden')) {
+          infoBox.classList.remove('hidden');
+          infoBox.classList.add('visible');
+        } else {
+          infoBox.classList.remove('visible');
+          infoBox.classList.add('hidden');
+        }
+      });
+    });
+
+    // Ensure the info boxes are hidden and position updated on scroll
+    window.addEventListener('scroll', function () {
+      hideAllInfoBoxes();
+      updatePosition();
+    });
+
+    // Prevent default link behavior when hotspot icon is clicked
+    hotspots.forEach(function (hotspot) {
+      hotspot.addEventListener('click', function (event) {
+        if (event.target.classList.contains('hotspot-icon') || event.target.closest('.hotspot-icon')) {
+          event.preventDefault(); // Prevent link navigation
+        }
+      });
+    });
+  } else {
+    // Desktop: Handle mouseover events
+    hotspots.forEach(function (hotspot) {
+      hotspot.addEventListener('mouseover', function () {
+        hideAllInfoBoxes();
+        const infoBox = hotspot.querySelector('.hotspot-info');
+        infoBox.classList.remove('hidden');
+        infoBox.classList.add('visible');
+      });
+    });
+  }
+
+  // Click outside hotspots to hide info boxes
+  document.addEventListener('click', function (event) {
+    if (!event.target.closest('.hotspot-icon')) {
+      hideAllInfoBoxes();
+    }
+  });
+});
+
+
+</script>
+ 
+
+
+{% style %}
+
+.shop-the-look {
+  text-align: center; min-height:50vh; margin-bottom:20px;
+}
+.shop-the-look-container{position:relative; overflow:hidden;}
+.shop-the-look-container .content-wrap{
+  position:absolute;
+  left:0; top:0;
+  width:100%; height:100%;
+  display:flex;
+  justify-content:center;
+  z-index:1;
+}
+  .shop-the-look-container .text-overlay{
+    
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    text-align:center;
+    box-sizing:border-box;
+   }
+  .shop-the-look-container .text-overlay .top-text{
+   margin-top:90px; color:#fff;
+  }
+  .top-text h2{
+      font-size:calc(var(--typeHeaderSize) * {{ section.settings.title_size_multiplier }});
+  }
+  .top-text h3{
+      font-size:calc(var(--typeHeaderSize) * {{ section.settings.sub_title_size_multiplier }});
+  }
+   .top-text em{
+    font-size:calc(var(--typeHeaderSize) * 3);
+   }
+ .shop-the-look-container .text-overlay .bottom-text{
+   font-size:calc(var(--typeBaseSize) * {{ section.settings.desp_size_multiplier }});   margin-bottom:3.5%; color:#fff;  
+  }
+  .top-text em{
+    font-style:normal; font-weight:bold; display:inline-block;
+    font-weight: bold;
+    background: linear-gradient(45deg, #00b1d2,#ffef75 );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;   
+    -webkit-text-fill-color: transparent;  
+    -webkit-text-stroke-width: 1px;  
+    -webkit-text-stroke-color: white; 
+  }
+  .shop-the-look .btn{
+     font-size:calc(var(--typeBaseSize) * {{ section.settings.btn_size_multiplier }}) !important;
+  }
+ 
+.hotspot-container {
+  position: relative;
+  display: inline-block;
+}
+
+.look-image {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+}
+
+/* Hotspot styling */
+.hotspot {
+  position: absolute;
+  cursor: pointer;
+  display: inline-block;
+  z-index:2;
+}
+/* Desktop styles */
+.hotspot {
+  top: var(--hotspot-top, 50%); /* Default value */
+  left: var(--hotspot-left, 50%); /* Default value */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .hotspot {
+    top: var(--hotspot-mobile-top, 50%); /* Default value for mobile */
+    left: var(--hotspot-mobile-left, 50%); /* Default value for mobile */
+    pointer-events: auto; 
+  }
+  
+}
+  .hotspot-icon{
+    padding:{{ section.settings.desktop_expand }}px; border-radius:50%;
+  }
+ .hotspot-icon i{
+    position:relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    background: #ffffff;
+    border-radius: 100%;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.25);
+    cursor: pointer;
+    z-index: 1;
+    transform: scale(1);
+    transition: transform 0.25s ease-in-out;
+ 
+  }
+   .hotspot-icon i:hover  {
+    transform: scale(1.3);
+  }
+   .hotspot-icon i::after {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 40px;
+    left: -12px;
+    top: -12px;
+    border-radius: 100%;
+    background: rgba(255,255,255,0.4);
+    -webkit-animation: 1.4s shopTheLookDotKeyframe ease-in-out infinite;
+    animation: 1.4s shopTheLookDotKeyframe ease-in-out infinite;
+  }
+  
+ 
+.hotspot-info {
+  display: flex;  
+  gap:10px;
+  opacity: 0;
+  transform: scale(0.9);  
+  position: absolute;
+  z-index:99!important;
+  top: 30px;
+  left: 40px;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  min-width: 300px; 
+  border-radius:15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100; text-align:left;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Add transition */
+}
+
+
+.hotspot-info.visible {
+  opacity: 1;
+  transform: scale(1);  
+}
+
+ 
+.hotspot-info.hidden {
+  opacity: 0;
+  transform: scale(0.9);  
+}
+ .hotspot-info .product-title {
+  font-size: 1rem;
+  }
+.hotspot-info .product-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;  
+}
+.hotspot-info img{height:auto;}
+  .shop-the-look .btn-separated{
+    position:absolute; left:{{ section.settings.btn_position_left_desktop }}%; top:{{ section.settings.btn_position_top_desktop }}%;  z-index:2;
+  }
+@media(max-width:768px){
+  .shop-the-look {margin-top:15px;}
+   .shop-the-look-container .text-overlay .top-text{
+   margin-top:40px; color:#fff;
+  }  
+  .shop-the-look-container .text-overlay{
+      width:95%; 
+  }
+.hotspot-info{
+  min-width:76vw; top:-100px; left:30px;
+}
+  .hotspot-info {
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transform: scale(0.9);
+  position: fixed;  
+  z-index: 3!important;
+  left: 40%;  
+  top: 35%; 
+  transform: translateX(-50%) scale(0.9); 
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  min-width: 60%;
+  height:120px;
+}
+ .hotspot-info .product-title {
+  font-size: 0.8rem;
+    display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+  }
+.hotspot-info .product-price {
+  font-size: 1rem;
+ 
+}
+.hotspot-info.visible {
+  opacity: 1;
+  transform: translateX(-50%) scale(1); /* Updated transform for visibility */
+}
+  .hotspot-icon {
+    padding:{{ section.settings.mobile_expand }}px;   
+  }
+ .hotspot-icon i { 
+    transform: scale(0.6); 
+  }
+   .hotspot-icon i:hover  {
+    transform: scale(0.8);
+  }
+ 
+   
+  .top-text h2{
+      font-size:calc(var(--typeHeaderSize) * {{ section.settings.title_size_multiplier_mobile }});
+  }
+  .top-text h3{
+      font-size:calc(var(--typeHeaderSize) * {{ section.settings.sub_title_size_multiplier_mobile }});
+  }
+   .top-text em{
+    font-size:calc(var(--typeHeaderSize) * 3);
+   }
+   .shop-the-look .btn{
+     font-size:calc(var(--typeBaseSize) * {{ section.settings.btn_size_multiplier_mobile }}) !important;
+  }
+  .top-text .btn{ }
+  .shop-the-look-image {
+    min-height:50vh;
+  }
+  .shop-the-look-image > img{
+     height:auto!important; width:100%!important; object-fit:contain!important;
+  }
+    .shop-the-look-container .text-overlay .bottom-text{
+   margin-bottom:30px; font-size:calc(var(--typeBaseSize) * {{ section.settings.desp_size_multiplier_mobile }});
+  }
+   .hotspot-info > img{max-width:100%; height:auto!important; max-height:120px; flex-basis:35%;}
+  .hotspot-info > a{flex-basis:65%;}
+    .shop-the-look .btn-separated{
+    position:absolute; left:{{ section.settings.btn_position_left_mobile }}%; top:{{ section.settings.btn_position_top_mobile }}%;  
+  }
+}
+  @media(min-width:768px){
+    .bottom-text .btn{display:none;}
+  }
+
+  @media(min-width:2000px){
+  .top-text h2{
+      font-size: calc(var(--typeHeaderSize)* 2.5)!important;
+  }
+  .top-text h3{
+     font-size: calc(var(--typeHeaderSize)* 2.5)!important;
+  }
+ 
+   .hotspot-info .btn{
+     font-size: calc(var(--typeBaseSize)* 1.5)!important;
+   }
+}
+ 
+{% endstyle %}
+  <section class="shop-the-look"  >
+  <div class="shop-the-look-container">
+        {% if section.settings.enable_separate_button %}
+           {%- if section.settings.cta_text != blank -%}
+                          <a href="{{ section.settings.cta_link }}" class="btn btn-animated wow fadeInLeft animated btn-separated"  data-wow-duration="1s" data-wow-delay="0.8s">
+                           <span> {{ section.settings.cta_text }} </span>
+                          </a>
+             {%- endif -%}
+     {% endif %}
+   <div class="content-wrap">
+ 
+     <div class="text-overlay">
+      <div class="top-text ">
+    <h2 class="wow fadeInLeft animated" data-wow-duration="1s" data-wow-delay="0.2s">{{ section.settings.title }}</h2>
+    <h3  class="wow fadeInLeft animated" data-wow-duration="1s" data-wow-delay="0.5s">{{ section.settings.subtitle }}</h3>
+        {% unless section.settings.enable_separate_button %}
+           {%- if section.settings.cta_text != blank -%}
+                          <a href="{{ section.settings.cta_link }}" class="btn btn-animated wow fadeInLeft animated {% unless accent_exists %}  btn--inverse{% endunless %}"  data-wow-duration="1s" data-wow-delay="0.8s">
+                           <span> {{ section.settings.cta_text }} </span>
+                          </a>
+                        {%- endif -%}
+        {% endunless %}
+      </div>
+       <div class="bottom-text">
+        {% comment %}   {%- if section.settings.cta_text != blank -%}
+                       <p>   <a href="{{ section.settings.cta_link }}" class="btn btn-animated wow fadeInLeft animated only-mobile{% unless accent_exists %}  btn--inverse{% endunless %}"  data-wow-duration="1s" data-wow-delay="0.8s">
+                           <span> {{ section.settings.cta_text }} </span>                         
+                          </a>
+                       </p>
+                 {%- endif -%}
+                 {% endcomment %}
+        <p>   {{ section.settings.bottom_text }} </p>
+       </div>
+     </div>
+   </div>
+    <!-- Background Image -->
+    <div class="shop-the-look-image" style="position: relative;">
+      <img class="hidden-mobile" src="{{ section.settings.image | img_url: 'master' }}" alt="Shop the Look Image" style="width: 100%; height: auto;">
+     <img class="visible-mobile"  src="{{ section.settings.mobile_image | img_url: 'master' }}" alt="Shop the Look Image" style="width: 100%; height: auto;">
+      <!-- Hotspots for Products -->
+{% for block in section.blocks %}
+  <div class="hotspot" 
+           style="--hotspot-top: {{ block.settings.top }}%; --hotspot-left: {{ block.settings.left }}%;
+                  --hotspot-mobile-top: {{ block.settings.mobile_top }}%; --hotspot-mobile-left: {{ block.settings.mobile_left }}%;">
+        <span class="hotspot-icon"><i></i></span>
+  <div class="hotspot-info hidden">
+    {% if block.settings.product.featured_image %}
+    <img src="{{ block.settings.product.featured_image | img_url: 'small' }}" alt="{{ block.settings.product.title }}" class="product-image">
+    {% endif %}
+    <a href="{{ block.settings.product.url }}" class="{{ section.settings['button-class'] }}">
+      <h3 class="product-title">{{ block.settings.product.title }}</h3>
+      <p class="product-price">{{ block.settings.product.price | money }}</p>
+    </a>
+  </div>
+</div>
+{% endfor %}
+    </div>
+  </div>
+</section>
+
+
+
+{% schema %}
+  {
+    "name": "Shop the Look",
+    "settings": [
+	         {
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+          },
+            {
+                "type": "range",
+                "id": "title_size_multiplier",
+                "min": 0.5,
+                "max": 3,
+                "step": 0.1,
+                "unit": "x",
+                "label": "Font Size Multiplier for desktop",
+                "info": "based on the base size of heading",
+                "default": 2.5
+              },
+            {
+                "type": "range",
+                "id": "title_size_multiplier_mobile",
+                "min": 0.5,
+                "max": 3,
+                "step": 0.1,
+                "unit": "x",
+                "label": "Font Size Multiplier size for mobile",
+                "default": 2
+              },
+          {
+            "id": "subtitle",
+            "type": "text",
+            "label": "Subtitle"
+          },
+       {
+                "type": "range",
+                "id": "sub_title_size_multiplier",
+                "min": 0.5,
+                "max": 3,
+                "step": 0.1,
+                "unit": "x",
+                "label": "Font Size Multiplier for desktop",
+               "info": "based on the base size of heading",
+                "default": 2.5
+              },
+            {
+                "type": "range",
+                "id": "sub_title_size_multiplier_mobile",
+                "min": 0.5,
+                "max": 3,
+                "step": 0.1,
+                "unit": "x",
+                "label": "Font Size Multiplier for mobile",
+                "default": 2
+              },
+          {
+          "type": "text",
+          "id": "cta_text",
+          "label": "Button label",
+          "default": "All products"
+        },
+        {
+          "type": "url",
+          "id": "cta_link",
+          "label": "Button link"
+        },
+               {
+                "type": "range",
+                "id": "btn_size_multiplier",
+                "min": 0.5,
+                "max": 3,
+                "step": 0.1,
+                "unit": "x",
+                "label": "font Size Multiplier of button for desktop",
+                "default": 1.4
+              },
+              {
+                "type": "range",
+                "id": "btn_size_multiplier_mobile",
+                "min": 0.5,
+                "max": 3,
+                "step": 0.1,
+                "unit": "x",
+                "label": "Font Size Multiplier for mobile",
+                "default": 1.4
+              },
+		  {
+            "id": "bottom_text",
+            "type": "text",
+            "label": "Bottom Text" 
+          }, 
+         {
+                "type": "range",
+                "id": "desp_size_multiplier",
+                "min": 0.5,
+                "max": 3,
+                "step": 0.1,
+                "unit": "x",
+                "label": "Font Size Multiplier for desktop",
+               "info": "based on the base size of body text",
+                "default": 2.8
+              },
+            {
+                "type": "range",
+                "id": "desp_size_multiplier_mobile",
+                "min": 0.5,
+                "max": 3,
+                "step": 0.1,
+                "unit": "x",
+                "label": "Font Size Multiplier size for mobile",
+                "default": 2.4
+              },
+          {
+            "id": "image",
+            "type": "image_picker",
+            "label": "Image"
+          },
+          {
+            "id": "mobile_image",
+            "type": "image_picker",
+            "label": "Image"
+          },
+      {
+        "type":"header",
+        "content":"Hotspot expand"
+      },
+	      {
+            "type": "range",
+            "id": "desktop_expand",
+            "label": "Expand value for desktop",
+            "step": 1,
+            "min": 0,
+            "max": 100,
+            "unit": "px",
+            "default": 60
+          },
+         {
+            "type": "range",
+            "id": "mobile_expand",
+            "label": "Expand value for mobile",
+            "step": 1,
+            "min": 0,
+            "max": 100,
+            "unit": "px",
+            "default": 30
+        },
+         {
+        "type": "checkbox",
+        "id": "enable_separate_button",
+        "label": "Enable separate button",
+        "default": false
+      },
+            {
+            "type": "range",
+            "id": "btn_position_top_desktop",
+            "label": "Position from Top on desktop",
+            "step": 1,
+            "min": 0,
+            "max": 100,
+            "unit": "%",
+            "default": 50
+          },
+           {
+            "type": "range",
+            "id": "btn_position_left_desktop",
+            "label": "Position from left on desktop",
+            "step": 1,
+            "min": 0,
+            "max": 100,
+            "unit": "%",
+            "default": 50
+          },
+         {
+            "type": "range",
+            "id": "btn_position_top_mobile",
+            "label": "Position from Top on mobile",
+            "step": 1,
+            "min": 0,
+            "max": 100,
+            "unit": "%",
+            "default": 50
+          },
+           {
+            "type": "range",
+            "id": "btn_position_left_mobile",
+            "label": "Position from left on mobile",
+            "step": 1,
+            "min": 0,
+            "max": 100,
+            "unit": "%",
+            "default": 50
+          }
+	],
+	"blocks": [
+      {
+        "type": "product",
+        "name": "Prodct",
+        "settings": [
+          {
+            "id": "product",
+            "type": "product",
+            "label": "Product"
+          },
+          {
+            "type":"header",
+            "content":"position for desktop"
+          },
+          {
+            "type": "range",
+            "id": "top",
+            "label": "Position from Top",
+            "step": 1,
+            "min": 0,
+            "max": 100,
+            "unit": "%",
+            "default": 50
+          },
+          {
+            "type": "range",
+            "id": "left",
+            "label": "Position from Left",
+            "step": 1,
+            "min": 0,
+            "max": 100,
+            "unit": "%",
+            "default": 50
+          },
+            {
+            "type":"header",
+            "content":"position for mobile"
+          },
+            {
+            "type": "range",
+            "id": "mobile_top",
+            "label": "Position from Top",
+            "step": 1,
+            "min": 0,
+            "max": 100,
+            "unit": "%",
+            "default": 50
+          },
+          {
+            "type": "range",
+            "id": "mobile_left",
+            "label": "Position from Left",
+            "step": 1,
+            "min": 0,
+            "max": 100,
+            "unit": "%",
+            "default": 50
+          }
+        ]
+      }
+    ],
+      "presets": [
+    {
+      "name": "Shop the look",
+        "settings": {},
+    }
+  ],
+  }
+{% endschema %}

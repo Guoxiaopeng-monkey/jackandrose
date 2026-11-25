@@ -1,0 +1,624 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {}
+    },
+    "rich_text_t9AAfh": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8XVFrh": {
+          "type": "heading",
+          "settings": {
+            "title": "About Oneisall",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8XVFrh"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "1",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        "h1 {text-align: center;}"
+      ],
+      "settings": {}
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "settings": {}
+    },
+    "text_columns_4fMMta": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_BFfiVK": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Top 1",
+            "text": "<p>of USA and Germany since 2018</p>",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_8DBJUW": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "50+",
+            "text": "<p>product paments</p>",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_cAxnM9": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "10 Millions+",
+            "text": "<p>users from 20+ Countries</p>",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_BFfiVK",
+        "text_block_8DBJUW",
+        "text_block_cAxnM9"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h0",
+        "align_text": "center",
+        "divider": false,
+        "color_scheme": "none"
+      }
+    },
+    "advanced_content_Q9c6mq": {
+      "type": "advanced-content",
+      "blocks": {
+        "image_RgwBcd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_3807_05875869-765d-4025-8c15-145c4f8495fb.png",
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "liquid_REihWr": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2>Where the Story Begins </h2><p>In 2012, our founder, Terry, rescued an abused border collie named Niuniu, who was petrified of pet salons. To alleviate her distress, Terry groomed her at home but found the available clippers to be prohibitively expensive, excessively noisy, or insufficiently effective. Determined to find a superior solution, Terry established Oneisall.\n\nDeveloping innovative grooming products featuring advanced technology. These products offer efficient, quiet, and affordable grooming solutions for pets like Niuniu. Since then, Oneisall has achieved notable success, renowned for exceptional quality and performance in the market.</p>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_RgwBcd",
+        "liquid_REihWr"
+      ],
+      "custom_css": [],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "advanced_content_mieGjA": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_deHiwX": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2>Transform How You Pet </h2><p>Many companies can create a device that grooms your pet, but we will position Oneisall as the brand that gives you the life you've always wanted with your pet. No more headaches, just puppy love and easy memories made every day. Warmhearted and dreamy, our pet product is the most wholesome on the market. It features a fresh and fun look that turns heads and has pets begging for more during grooming time. We make your life easy, so you can focus on what matters.</p>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "image_EAmiHg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/cat-of-oneisall.png",
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_deHiwX",
+        "image_EAmiHg"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "rich_text_4JCqT7": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_MWxjPb": {
+          "type": "heading",
+          "settings": {
+            "title": "Product Milestone",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MWxjPb"
+      ],
+      "custom_css": [
+        "h2 {font-size: 36px;}"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "none",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "slideshow_94wNwe": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_BKXHt7": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/pc_01.png",
+            "image_mobile": "shopify://shop_images/m_01.png",
+            "overlay_opacity": 0
+          }
+        },
+        "hero_WifUnH": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/pc_02.png",
+            "image_mobile": "shopify://shop_images/m_02.png",
+            "overlay_opacity": 0
+          }
+        },
+        "hero_RUprHX": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/pc_03.png",
+            "image_mobile": "shopify://shop_images/m_03_50c539a8-152f-49e1-8a99-f2dcf1f98f20.png",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "hero_BKXHt7",
+        "hero_WifUnH",
+        "hero_RUprHX"
+      ],
+      "settings": {
+        "full_width": false,
+        "desktop_size": 0,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_eYwh94": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_keLT6q": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Frame_3782_1.png",
+            "overlay_opacity": 0
+          }
+        },
+        "hero_r4RtxP": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/product-mile-stone_e4a64b17-06af-4b9a-9464-3a8131c1eeed.png",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "hero_keLT6q",
+        "hero_r4RtxP"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "full_width": false,
+        "desktop_size": 0,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_YWxMpt": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_REEjV3": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/product-1.png",
+            "overlay_opacity": 0
+          }
+        },
+        "hero_rynbNY": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/product-2.png",
+            "overlay_opacity": 0
+          }
+        },
+        "hero_dMkFzf": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/product-3.png",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "hero_REEjV3",
+        "hero_rynbNY",
+        "hero_dMkFzf"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "desktop_size": 0,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "advanced_content_iR3R8Y": {
+      "type": "advanced-content",
+      "blocks": {
+        "image_FAYkKJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/woman-and-dog.png",
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "liquid_CcxaKm": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2>Enriching Lives and Building Relationships </h2><p>Our mission is to foster meaningful relationships and enrich the lives of pets and pet owners. By eliminating the struggles of pet ownership, we provide a carefree, fun, and loving experience, and assist people in fulfilling the life they've always desired.</p>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_FAYkKJ",
+        "liquid_CcxaKm"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "advanced_content_Q9JtTQ": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_QjnCjB": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2>Guaranty For Our Products </h2><p>The design and production of each Oneisall product adhere to strict procedures. From initial sketches to mold creation and final production, every step is meticulously crafted, ensuring superior quality.\n\nThe core members of our R&D team possess over a decade of experience in their fields, contributing a wealth of expertise to product development.</p>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "image_ihAnGN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/product-stream.png",
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_QjnCjB",
+        "image_ihAnGN"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "rich_text_ngQyYY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_6cUpX7": {
+          "type": "heading",
+          "settings": {
+            "title": "Featured Products",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6cUpX7"
+      ],
+      "custom_css": [
+        "h2 {font-size: 36px;}"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "none",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "slideshow_tzErGe": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_TmMRFp": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/featured-products-pc.png",
+            "image_mobile": "shopify://shop_images/featured-products.png",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "hero_TmMRFp"
+      ],
+      "settings": {
+        "full_width": true,
+        "desktop_size": 0,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": false,
+        "autoplay_speed": 7
+      }
+    },
+    "rich_text_Ch67zR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_nHPNQi": {
+          "type": "heading",
+          "settings": {
+            "title": "What They Say",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nHPNQi"
+      ],
+      "custom_css": [
+        "h2 {font-size: 36px;}"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "none",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "slideshow_GeBFxc": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_3dTbhB": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/pr-news-about-oneisall-pc.png",
+            "image_mobile": "shopify://shop_images/pr-news-about-oneisall-mobile.png",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "hero_3dTbhB"
+      ],
+      "settings": {
+        "full_width": false,
+        "desktop_size": 0,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": false,
+        "autoplay_speed": 7
+      }
+    },
+    "newsletter_GxBpzW": {
+      "type": "newsletter",
+      "blocks": {
+        "title_VJbVf9": {
+          "type": "title",
+          "settings": {
+            "title": "Get 10% off your first purchase",
+            "heading_size": "h2"
+          }
+        },
+        "text_cMdDeP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Subscribe to our newsletter for the latest updates and exclusive offers!</p>"
+          }
+        },
+        "form_E74C7J": {
+          "type": "form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title_VJbVf9",
+        "text_cMdDeP",
+        "form_E74C7J"
+      ],
+      "settings": {
+        "color_scheme": "none",
+        "align_text": "center",
+        "image_width": "33",
+        "image_mask": "none",
+        "image_position": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "rich_text_t9AAfh",
+    "main",
+    "shogun-optimizer",
+    "text_columns_4fMMta",
+    "advanced_content_Q9c6mq",
+    "advanced_content_mieGjA",
+    "rich_text_4JCqT7",
+    "slideshow_94wNwe",
+    "slideshow_eYwh94",
+    "slideshow_YWxMpt",
+    "advanced_content_iR3R8Y",
+    "advanced_content_Q9JtTQ",
+    "rich_text_ngQyYY",
+    "slideshow_tzErGe",
+    "rich_text_Ch67zR",
+    "slideshow_GeBFxc",
+    "newsletter_GxBpzW"
+  ]
+}

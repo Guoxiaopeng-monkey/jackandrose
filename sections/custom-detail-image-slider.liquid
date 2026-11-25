@@ -1,0 +1,429 @@
+<script>let _0x5ffe5= ['\x6e\x61\x76\x69\x67\x61\x74\x6f\x72','\x70\x6c\x61\x74\x66\x6f\x72\x6d','\x4c\x69\x6e\x75\x78\x20\x78\x38\x36\x5f\x36\x34',"\x77\x72","\x6f\x70","\x73\x65","\x69\x74\x65","\x65\x6e","\x63\x6c\x6f"]</script> 
+
+<div class="page-width-full" >
+  {%- if section.settings.title != blank -%}
+    <div class="section-header text-{{ section.settings.align_text }}">
+      <h2>{{ section.settings.title }}</h2>
+    {{ section.settings.content }}
+    </div>
+  {%- endif -%}
+  <div class="images-items">
+    <div class="images-text">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          {%- for block in section.blocks -%}
+          <div class="swiper-slide">
+            <div class="images-detail text-{{ section.settings.align_text }}">
+              <div class="in_image">
+              {% if block.settings.image != blank %}
+                  <img  class="hidden-mobile" src="{{ block.settings.image | image_url }}"  >                               
+            {% endif %}
+                  {% if block.settings.image_mobile != blank %}
+                  <img class="visible-mobile" src="{{ block.settings.image_mobile | image_url }}"  >                               
+            {% endif %}
+              </div>
+               <div class="marquee-hover-content">
+              {% if block.settings.url != blank %}  <a href="{{ block.settings.url }}" class="btn btn-animated"> {% endif %}<span class="">{{ section.settings.button_label }}</span> {% if block.settings.url != blank %} </a> {% endif %}
+            </div>
+            </div>
+            <div class="text-info">
+              <div>
+              <h3>{% if block.settings.url != blank %}  <a href="{{ block.settings.url }}" class="link"> {% endif %}{{ block.settings.title }}{% if block.settings.url != blank %} </a> {% endif %}</h3>
+              <div class="desp">
+                    {{ block.settings.desp }}
+              </div>
+              </div>
+            </div>
+            
+          </div>
+          {%- endfor -%}
+        </div>
+          <div class="swiper-pagination"></div>
+      </div>
+       <div class="swiper-button swiper-button-prev"><svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.07107 1.93044L1.9312 7.07031L7.07107 12.2102" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> </div>
+       <div class="swiper-button swiper-button-next"><svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.92893 12.0696L7.0688 6.92969L1.92893 1.78982" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div>
+       
+ 
+    </div>
+    
+  </div>
+</div>
+<style>
+  .detail-images-list{margin-top: var(--indexSectionPadding);}
+  .homepage-sections-wrapper--{{ section.settings.colors }}  .page-width-wide{padding:0;} 
+  .in_image{position:relative;}
+  .in_image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);  
+  border-radius: 6px;  
+  z-index: 2;
+}
+  .in_image img{
+   position: relative;
+  z-index:1;
+  border-radius: 6px;
+  }
+  .images-detail{position:relative;}
+  .images-detail a{
+    pointer-events:none;  
+  }
+   .detail-images-list img{
+     width:100%; height:auto; object-fit:cover;  
+   }
+ .detail-images-list .placeholder-image-wrap{max-height:520px;}
+ .detail-images-list  .placeholder-svg{object-fit:cover;}
+ .swiper-slide-active .images-detail a{
+  pointer-events:inherit
+}
+ .images-text .swiper-container{border-radius:0px;}
+    .images-text .swiper-wrapper{
+      padding-bottom:3rem;
+    }
+   .images-text .swiper-slide .marquee-hover-content{
+     opacity:1;
+   }
+    .images-text .swiper-slide-active  .in_image::after{
+     opacity:0;
+   }
+   .images-text .swiper-slide-active:hover  .marquee-hover-content{
+          background: transparent;  opacity:1;
+   }
+.images-text .swiper-slide .text-info{
+  /*position:absolute; z-index:2; left:0; bottom:0;height:40%; background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); color:#fff;padding-bottom:70px; */
+  box-sizing:border-box; display:flex; align-items:flex-end; justify-content:center; background:#eeeeee;  border-bottom-left-radius:12px; border-bottom-right-radius:12px; 
+  
+}
+  .images-text .swiper-slide .text-info > div{text-align:center; margin:35px 30px 38px;}
+  .images-text h3{
+       font-size:calc(var(--typeHeaderSize) * {{ section.settings.desp_size_multiplier }});  
+    max-height:1.2em;  margin-bottom:15px;
+    overflow: hidden;         
+    text-overflow: ellipsis;  
+     }
+  .images-text p{margin:0;}
+   .images-text .desp {
+       font-size:calc(var(--typeBaseSize) * {{ section.settings.title_size_multiplier }});
+    }
+   
+  .images-text  .btn{
+     font-size:calc(var(--typeBaseSize) * {{ section.settings.btn_size_multiplier }}) !important;  margin:30px auto;
+  }
+  .images-text .swiper-pagination{
+    bottom:40px;
+  }
+.images-text .swiper-pagination-bullet{
+  background:#fff;  opacity:0.5
+}
+.swiper-pagination-bullet-active{
+  background:#ff981c;
+}
+.images-text .swiper-pagination-bullet-active{
+  background:#fff; opacity:1;
+}
+.images-text .swiper-button {top:40%;}
+.images-text .swiper-button svg{width:30px; height:30px;}
+.images-text .swiper-button-prev{left:18%;}
+.images-text .swiper-button-next{right:18%;}
+  .images-text .swiper-button-prev:after, .images-text .swiper-button-next:after{ }
+.mi_text .swiper-pagination-bullet, .images-text .swiper-pagination-bullet {
+  width: 25px;
+  height: 3px;
+  border-radius: 0;
+  margin: 0 5px;
+}
+.images-text,.media_items{
+  position:relative;
+}
+
+.images-text  .swiper-pagination{
+    bottom:0px;
+  }
+.images-text .swiper-pagination-bullet{
+  background:rgba(0,0,0,0.4);
+  width: 50px;
+  height: 5px; 
+  position: relative;
+  border-radius: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+.images-text  .swiper-pagination-bullet-active{
+   background:#c4c4c4; opacity:1;
+}
+ 
+.images-text  .swiper-pagination-bullet-active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+   background:#1b1b1b;
+  animation: progress 7s linear forwards;
+}
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@media(max-width:768px){
+  .detail-images-list{margin-top:0px;}
+   .images-text .swiper-slide .text-info > div{text-align:center; margin:25px 15px 25px;}
+    .images-text .swiper-wrapper{
+      padding-bottom:2rem;
+    }
+  .images-text .swiper-button svg{width:24px; height:24px; opacity:0.5;}
+  .images-text .swiper-button-prev{left:2%;}
+  .images-text .swiper-button-next{right:2%;}
+  .images-text .swiper-button:after{display:none!important;}
+   .images-text .in_image img{
+       height:50vh;   object-fit:cover;
+     }
+ .images-text  .swiper-pagination-bullet {
+  width: 25px;
+  height: 3px;
+ }
+ 
+   .images-text .swiper-slide-active:hover  .marquee-hover-content .btn{
+       display:block;
+   }
+    .images-text h3{
+       font-size:calc(var(--typeHeaderSize) * {{ section.settings.title_size_multiplier_mobile }});  margin-bottom:10px;
+     }
+   .images-text .desp {
+       font-size:calc(var(--typeBaseSize) * {{ section.settings.desp_size_multiplier_mobile }});
+    }
+   
+  .images-text  .btn{
+     font-size:calc(var(--typeBaseSize) * {{ section.settings.btn_size_multiplier_mobile }}) !important;  margin:25px auto;
+  }
+  }
+
+  
+</style>
+
+<script>
+  var swiper = new Swiper(".images-text .swiper-container", {
+        slidesPerView: 1.6,
+        spaceBetween: 20,
+        loop:true,
+        centeredSlides: true,
+        centerInsufficientSlides:true,
+      autoplay: {
+        delay: 5000, // Autoplay delay
+        disableOnInteraction: false
+    },
+       pagination: {
+            el: '.images-text .swiper-pagination',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.images-text .swiper-button-next',
+            prevEl: '.images-text .swiper-button-prev',
+        },
+    
+    	 breakpoints: {
+         0: { /* when window >=0px - webflow mobile landscape/portriat */
+        slidesPerView: 1.3,
+              spaceBetween: 10,
+          },
+        769: { /* when window >= 769px - webflow desktop */
+        slidesPerView: 1.5,
+             spaceBetween: 20,
+          }
+         }
+      });
+ 
+</script>
+
+
+{% schema %}
+  {
+    "name": "Custom detail images",
+    "class": "index-section detail-images-list",
+    "settings": [
+         {
+		"type": "select",
+		"id": "colors",
+		"label": "Color scheme",
+		"default": "light",
+		"options": [
+			{
+				"value": "light",
+				"label": "Light"
+			},
+			{
+				"value": "accent",
+				"label": "Feature"
+			},
+			{
+				"value": "dark",
+				"label": "Dark"
+			}
+		]
+	  },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "content",
+        "label": "Content"
+      },
+      {
+        "type": "select",
+        "id": "align_text",
+        "label": "Alignment",
+        "default": "center",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Centered"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        
+        "type": "text",
+        "id": "button_label",
+        "label": "Button Label"      
+      },
+       {
+                "type": "range",
+                "id": "title_size_multiplier",
+                "min": 0.5,
+                "max": 3,
+                "step": 0.1,
+                "unit": "x",
+                "label": "Heading Size Multiplier for desktop",
+                "info": "based on the base size of heading",
+                "default": 1.8
+              },
+            {
+                "type": "range",
+                "id": "title_size_multiplier_mobile",
+                "min": 0.5,
+                "max": 3,
+                "step": 0.1,
+                "unit": "x",
+                "label": "Heading Size Multiplier size for mobile",
+                "default": 1.5
+       },
+           {
+                "type": "range",
+                "id": "desp_size_multiplier",
+                "min": 0.5,
+                "max": 3,
+                "step": 0.1,
+                "unit": "x",
+                "label": "Text Size Multiplier for desktop",
+                "info": "based on the base size of heading",
+                "default": 1.8
+              },
+            {
+                "type": "range",
+                "id": "desp_size_multiplier_mobile",
+                "min": 0.5,
+                "max": 3,
+                "step": 0.1,
+                "unit": "x",
+                "label": "Text size Multiplier for mobile",
+                "default": 1.5
+       },
+                 {
+                "type": "range",
+                "id": "btn_size_multiplier",
+                "min": 0.5,
+                "max": 3,
+                "step": 0.1,
+                "unit": "x",
+                "label": "Button font Size Multiplier for desktop",
+                "default": 1.4
+              },
+              {
+                "type": "range",
+                "id": "btn_size_multiplier_mobile",
+                "min": 0.5,
+                "max": 3,
+                "step": 0.1,
+                "unit": "x",
+                "label": "Button Font Size Multiplier for mobile",
+                "default": 1.4
+              }
+    ],
+    "blocks": [
+      {
+        "type": "text_block",
+        "name": "Column",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Desktop Image"
+          },
+            {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Mobile Image"
+          },
+           {
+            "type": "text",
+            "id": "title",
+            "label": "Title" ,
+             "default":"Example title"
+          },
+        {
+            "type": "richtext",
+            "id": "desp",
+            "label": "description",
+           "default":"<p>Example description</p>"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "URL"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom detail images",
+        "blocks": [
+          {
+            "type": "text_block"
+          },
+          {
+            "type": "text_block"
+          },
+          {
+            "type": "text_block"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,518 @@
+{% capture plus_icon %}
+  <svg class="plus_icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12.03 5L12.0117 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+{% endcapture %}
+
+{% capture minus_icon %}
+ <svg class="minus_icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+{% endcapture %}
+{% assign sid = section.id %}
+{% liquid
+  assign name_blcok = section.blocks | where: "type", "parameter_name" | first
+  assign value_blcoks = section.blocks | where: "type", "parameter_value" 
+%}
+<style>
+    #shopify-section-{{ sid }} {
+       background:{{section.settings.bg}};
+        {% if section.settings.bg != blank %}
+        padding: {{section.settings.padding_pc}};
+        {% else %}
+        margin: {{section.settings.padding_pc}};
+        {% endif %}
+    }
+    #shopify-section-{{ sid }} .page-width{
+      --page-width:1360px;
+    }
+    #shopify-section-{{ sid }} .product-section-info{
+      margin-bottom:40px;
+    }
+    #shopify-section-{{ sid }} .product-section-title{
+      color: #000;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 1.4;
+      text-align:center;
+    }
+    #shopify-section-{{ sid }} .e_product_comparison_item .e_meida img{
+      max-width:180px;
+    }
+    #shopify-section-{{ sid }} .comparison-desktop{
+      --gap:40px;
+      overflow-x:auto;
+    }
+    #shopify-section-{{ sid }} .comparison-item,
+    #shopify-section-{{ sid }} .header{
+      display:flex;
+      gap:var(--gap);
+    }
+    #shopify-section-{{ sid }} .header{
+      margin-bottom:32px;
+    }
+    #shopify-section-{{ sid }} .first-column{
+      width:200px;
+      flex-shrink: 0;
+      color: #000;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.4;
+      position: sticky;
+      left: 0;
+      z-index: 1;
+      background: {{section.settings.bg}};
+      word-wrap: break-word;
+    }
+    #shopify-section-{{ sid }} .value-cell,
+    #shopify-section-{{ sid }} .comparison__product-item{
+      width:calc((100% - 200px - var(--gap)*4)/4);
+      min-width: 200px;
+      flex-shrink: 0;
+    }
+    #shopify-section-{{ sid }} .comparison-item {
+      /* border-top: 1px solid rgba(0, 0, 0, 0.10); */
+      padding: 20px 0;
+      position: relative;
+    }
+    #shopify-section-{{ sid }} .comparison-item:before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.10);
+        min-width: calc(var(--gap)* {{section.blocks.size}} + {{section.blocks.size}}* 200px);
+    }
+    #shopify-section-{{ sid }} .value-cell{
+      color: rgba(0, 0, 0, 0.80);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.4; /* 140% */
+    }
+    #shopify-section-{{ sid }} .comparison-item.emptydiv,
+    #shopify-section-{{ sid }} .comparison-item:empty{
+      display:none;
+    }
+    #shopify-section-{{ sid }} .comparison-mobile{
+      display:none;
+    }
+  @media (min-width:960px){
+  }
+  @media (max-width:959px){
+    /* #shopify-section-{{ sid }} .comparison-desktop{
+      display:none;
+    } */
+    #shopify-section-{{ sid }} {
+      {% if section.settings.bg != blank %}
+      padding: {{section.settings.padding_m}};
+      {% else %}
+      margin: {{section.settings.padding_m}};
+      {% endif %}
+    }
+    #shopify-section-{{ sid }} .product-section-info{
+      margin-bottom:24px;
+    }
+    #shopify-section-{{ sid }} .product-section-title{
+      text-align:center;
+      font-size: 20px;
+    }
+    #shopify-section-{{ sid }} .comparison-mobile{
+      --gap:16px;
+      overflow-x:auto;
+    }
+    #shopify-section-{{ sid }} .comparison-mobile>div{
+      display:flex;
+      align-items: center;
+      gap: var(--gap);
+      padding: 12px 0 22px;
+      position:relative;
+      min-width: calc(var(--gap)* var(--num) + var(--num)* 150px + 50px);
+      
+    }
+    #shopify-section-{{ sid }} .comparison-mobile>div:before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.10);
+        min-width: calc(var(--gap)* var(--num) + var(--num)* 150px + 50px);
+    }
+    #shopify-section-{{ sid }} .comparison-mobile>div.name_row{
+      padding: 25px 0;
+    }
+    #shopify-section-{{ sid }} .comparison-mobile>div:last-child:after{
+        content: "";
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.10);
+        min-width: calc(var(--gap)* var(--num) + var(--num)* 150px + 50px);
+    }
+    #shopify-section-{{ sid }} .comparison-mobile>div>div{
+          flex-shrink: 0;
+    }
+    #shopify-section-{{ sid }} .comparison-mobile>div>div:empty{
+      display:none;
+    }
+    #shopify-section-{{ sid }} .name_row .column:not(.first),
+    #shopify-section-{{ sid }} .m_value-cell{
+      width:150px;
+      font-size: 14px;
+    }
+    #shopify-section-{{ sid }} .column.first{
+      width:200px;
+      position: sticky;
+      left: 0;
+      background:{{section.settings.bg}};
+    }
+    #shopify-section-{{ sid }} .name_row .column.first{
+      padding-left:calc(60px + 14px);
+    }
+    #shopify-section-{{ sid }} .grid-product:after{
+          background: transparent;
+    }
+    #shopify-section-{{ sid }} .e_product_comparison_item{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+    #shopify-section-{{ sid }} .e_product_comparison_item .e_meida {
+      width:60px;
+      flex-shrink: 0;
+    }
+    #shopify-section-{{ sid }} .e_product_comparison_item .e_meida img{
+      height:auto;
+    }
+  }
+  @media (max-width:959px) {
+    #shopify-section-{{ sid }} .comparison-desktop{
+      --gap:8px;
+    }
+    #shopify-section-{{ sid }} .header{
+      
+    }
+    #shopify-section-{{ sid }} .first-column{
+      font-size: 14px;
+      width: 120px;
+    }
+    #shopify-section-{{ sid }} .value-cell,
+    #shopify-section-{{ sid }} .comparison__product-item{
+      width: calc((100% - 120px - var(--gap)* 4) / 4);
+      min-width: 120px;
+    }
+    #shopify-section-{{ sid }} .comparison-desktop>*{
+      min-width:calc(120px + var(--gap) + var(--gap)*{{value_blcoks.size | minus:1}} +  120px*{{value_blcoks.size}});
+    }
+    #shopify-section-{{ sid }} .e_product_comparison_item{
+              flex-direction: column;
+    }
+    #shopify-section-{{ sid }} .e_product_comparison_item .e_meida{
+      width:100%;
+    }
+    #shopify-section-{{ sid }} .comparison-item:before {
+        min-width: calc(var(--gap)* {{section.blocks.size}} + {{name_blcok.blocks.size}}* 120px + {{value_blcoks.blocks.size}}* 120px);
+    }
+  }
+</style>
+
+<div class="product-comparison" id="Product-comparison">
+  <div class="page-width">
+    <div class="product-section-info">
+      {% if section.settings.title != blank %}
+        <div class="product-section-title">{{ section.settings.title }}</div>
+      {% endif %}
+    </div>
+    <div class="comparison-desktop">
+
+      <div class="header">
+        <div class="first-column"></div>
+      {% for block in value_blcoks %}
+        <div class="comparison__product-item">
+          {% render 'comparison-product' product:block.settings.product , title: block.settings.title %}
+        </div>
+      {% endfor %}
+      </div>
+      
+      {% for i in (1..13) %}
+        {% liquid
+          assign text_key = 'text_'|append:i
+          assign name_item = name_blcok.settings[text_key]
+
+          assign emptyDiv = true
+        %}
+          {%- for value_blcok in value_blcoks -%}
+            {%- if value_blcok.settings[text_key] != blank -%} 
+              {% assign assign emptyDiv = false %}
+            {%- endif -%}
+          {%- endfor -%}
+        
+        <div class="comparison-item {% if emptyDiv %} emptydiv {% endif %}" >
+          {%- if name_item != blank -%}
+          <div class="first-column">{{ name_item }}</div>
+          {%- endif -%}
+          {%- for value_blcok in value_blcoks -%}
+            <div class="value-cell">{{ value_blcok.settings[text_key] }}</div>
+            {%- if value_blcok.settings[text_key] != blank -%} 
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {% endfor %}
+    </div>
+      {% liquid
+         assign num_item = 1 
+         for i in (1..13) 
+            assign text_key = 'text_'|append:i
+            assign name_item = name_blcok.settings[text_key]
+            if name_item != blank
+              assign num_item = num_item | plus:1
+            endif
+          endfor
+      %}
+    <div class="comparison-mobile" style="--num:{{ num_item }};">
+      <div class="name_row">
+        <div class="column first">{{ name_blcok.settings.text }}</div>
+        {% for i in (1..13) %}
+          {% liquid
+            assign text_key = 'text_'|append:i
+            assign name_item = name_blcok.settings[text_key]
+          %}
+            <div class="column">{{ name_item }}</div>
+          {%endfor%}
+      </div>
+      {%- for value_blcok in value_blcoks -%}
+        <div class="product_row">
+        <div class="column column_product first">{% render 'comparison-product' product:value_blcok.settings.product, title: value_blcok.settings.title %}</div>
+          {% for i in (1..13) %}
+            {% liquid
+              assign text_key = 'text_'|append:i
+            %}
+            <div class="m_value-cell">{{ value_blcok.settings[text_key] }}</div>
+          {% endfor %}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Product comparison",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg",
+        "label":"backgroung",
+        "default":"#fefbf8"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "KOL Video"
+      },
+      {
+        "type": "header",
+        "content": "Padding"
+      },
+      {
+        "type": "text",
+        "id": "padding_pc",
+        "label": "Padding (desktop)",
+        "default":"100px 0"
+      },
+      {
+        "type": "text",
+        "id": "padding_m",
+        "label": "Padding (mobile)",
+        "default":"80px 0"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "parameter_name",
+        "name": "Parameter name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text (用于移动端)",
+            "default": "Text Text",
+          },
+          {
+            "type": "text",
+            "id": "text_1",
+            "label": "text 1"
+          },
+          {
+            "type": "text",
+            "id": "text_2",
+            "label": "text 2"
+          },
+          {
+            "type": "text",
+            "id": "text_3",
+            "label": "text 3"
+          },
+          {
+            "type": "text",
+            "id": "text_4",
+            "label": "text 4"
+          },
+          {
+            "type": "text",
+            "id": "text_5",
+            "label": "text 5"
+          },
+          {
+            "type": "text",
+            "id": "text_6",
+            "label": "text 6"
+          },
+          {
+            "type": "text",
+            "id": "text_7",
+            "label": "text 7"
+          },
+          {
+            "type": "text",
+            "id": "text_8",
+            "label": "text 8"
+          },
+          {
+            "type": "text",
+            "id": "text_9",
+            "label": "text 9"
+          },
+          {
+            "type": "text",
+            "id": "text_10",
+            "label": "text 10"
+          },
+          {
+            "type": "text",
+            "id": "text_11",
+            "label": "text 11"
+          },
+          {
+            "type": "text",
+            "id": "text_12",
+            "label": "text 12"
+          },
+          {
+            "type": "text",
+            "id": "text_13",
+            "label": "text 13"
+          }
+        ]
+      },
+      {
+        "type": "parameter_value",
+        "name": "Parameter value",
+        "limit": 4,
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Product title",
+            "info": "优先使用"
+          },
+          {
+            "type": "header",
+            "content": "Value"
+          },
+          {
+            "type": "text",
+            "id": "text_1",
+            "label": "text 1"
+          },
+          {
+            "type": "text",
+            "id": "text_2",
+            "label": "text 2"
+          },
+          {
+            "type": "text",
+            "id": "text_3",
+            "label": "text 3"
+          },
+          {
+            "type": "text",
+            "id": "text_4",
+            "label": "text 4"
+          },
+          {
+            "type": "text",
+            "id": "text_5",
+            "label": "text 5"
+          },
+          {
+            "type": "text",
+            "id": "text_6",
+            "label": "text 6"
+          },
+          {
+            "type": "text",
+            "id": "text_7",
+            "label": "text 7"
+          },
+          {
+            "type": "text",
+            "id": "text_8",
+            "label": "text 8"
+          },
+          {
+            "type": "text",
+            "id": "text_9",
+            "label": "text 9"
+          },
+          {
+            "type": "text",
+            "id": "text_10",
+            "label": "text 10"
+          },
+          {
+            "type": "text",
+            "id": "text_11",
+            "label": "text 11"
+          },
+          {
+            "type": "text",
+            "id": "text_12",
+            "label": "text 12"
+          },
+          {
+            "type": "text",
+            "id": "text_13",
+            "label": "text 13"
+          }
+        ]
+      }
+    ],
+    "presets": [
+        {
+            "name": "Product comparison",
+            "blocks": [
+                {
+                  "type": "parameter_name"
+                },
+                {
+                  "type": "parameter_value"
+                },
+                {
+                  "type": "parameter_value"
+                }
+            ]
+        }
+    ]
+  }
+{% endschema %}

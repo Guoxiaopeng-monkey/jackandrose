@@ -1,0 +1,513 @@
+{% capture icon_success %}
+  <svg class="icon icon-success" viewBox="0 0 13 13"><path fill="#428445" stroke="#fff" stroke-width=".7" d="M6.5 12.35a5.85 5.85 0 1 0 0-11.7 5.85 5.85 0 0 0 0 11.7Z"/><path stroke="#fff" d="m5.533 8.664 3.72-3.982M4.106 6.769l2.032 1.857"/></svg>
+{% endcapture %}
+{% capture icon_close %}
+  <svg xmlns="http://www.w3.org/2000/svg"  aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewbox="0 0 64 64"><path d="m19 17.61 27.12 27.13m0-27.13L19 44.74" style="stroke-miterlimit:10"></path></svg>
+{% endcapture %}
+{% if section.settings.enabled %}
+  <style>
+    .subscribe-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999999999999999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .subscribe-popup.active {
+    display: flex;
+  }
+  
+  .subscribe-popup-form__message--success {
+    margin-top: 12px;
+    font-size: 20px;
+    vertical-align: middle;
+    line-height: 24px;
+  }
+  
+  .subscribe-popup-form__message--success svg {
+    flex-shrink: 0;
+    height: 20px;
+    margin-right: 6px;
+    width: 20px;
+    vertical-align: middle;
+    margin-top: -3px;
+  }
+  
+  .subscribe-popup__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .subscribe-popup-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .subscribe-popup-box-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    color: #fff;
+    z-index: 15;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: #00000066;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+  }
+  
+  .subscribe-popup-box-close svg {
+    width: 14px;
+  }
+  
+  .subscribe-popup__img-box {
+    width: 456px;
+    height: 522px;
+    z-index: 1;
+  }
+  
+  .subscribe-popup__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px 14px 14px 0px;
+    overflow: hidden;
+  }
+  
+  .subscribe-popup__img.is-mb {
+    display: none;
+  }
+  
+  
+  .subscribe-popup__content {
+    position: relative;
+    background: #eff0f3;
+    padding: 20px;
+    border-radius: 14px 0 0 14px;
+    width: 456px;
+    height: 522px;
+    text-align: center;
+    padding: 51px 60px 0;
+    z-index: 1;
+    padding: 65px 36px 0;
+  }
+  
+  [lang=de] .subscribe-popup__content {
+    padding: 44px 21px 21px;
+  }
+  
+  .subscribe-popup__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .subscribe-popup__title {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 44px;
+    color: #1E1E1E;
+    text-align: center;
+  }
+  
+  .subscribe-popup__title .highlights {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 44px;
+    color: #1270B3;
+  }
+  
+  .subscribe-popup__desc {
+    color: #555555;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 13px;
+    text-align: center;
+  }
+  
+  .subscribe-popup__desc .highlights {
+    font-weight: bold;
+  }
+  
+  .inpBut{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 37px;
+  }
+  
+  .subscribe-popup__email {
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 14px;
+    border: 1px solid rgb(30, 30, 30, 0.2);
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    flex-shrink: 0;
+    padding-left: 15px;
+    padding-right: 14%;
+    outline:unset;
+        box-shadow: unset;
+  }
+  
+  .subscribe-popup__btn {
+    width: 40px;
+    height: 40px;
+    line-height: 48px;
+    flex-shrink: 0;
+    background: unset;
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .subscribe-popup__btn svg {
+    width: 20px;
+  }
+  .subscribe-popup__button{
+        background: #000;
+    color: #fff;
+    width: 100%;
+    border: unset;
+    font-size: 18px;
+    height: 46px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+    span.subscribe-popup_tips {
+    font-size: 12px;
+    margin-top: 12px;
+    display: block;
+    color: #949494;
+}
+    .subscribe-popup_footer>* {
+    font-size: 12px;
+    color: inherit;
+}
+    .subscribe-popup_footer a {
+    color: inherit;
+          opacity: 0.8;
+    }
+  @media screen and (max-width: 768px) {
+    .subscribe-popup-box {
+      height: 100%;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap-reverse;
+              position: relative;
+    }
+  .subscribe-popup-box-close{
+        top: 5%;
+    right: 5%;
+  }
+    .subscribe-popup__img-box {
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  
+    .subscribe-popup__img {
+      width: 100%;
+      border-radius: 1.0666666666666vw 1.0666666666666vw 0 0;
+      overflow: hidden;
+    }
+  
+    .subscribe-popup__img.is-mb {
+      display: block;
+    }
+  
+    .subscribe-popup__img.is-pc {
+      display: none;
+    }
+  
+    .subscribe-popup__content {
+      width: 100%;
+      height: auto;
+      position: relative;
+      background: #fff;
+      padding: 20px;
+      border-radius: 0 0 1.0666666666666vw 1.0666666666666vw;
+      text-align: center;
+      padding: 8vw 5.3333333333333vw 8.93333333333333vw;
+      z-index: 1;
+
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      padding-top: 18vh;
+      background: unset;
+    }
+  
+    .subscribe-popup__close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+  
+    .subscribe-popup__title {
+      font-size: 7.46666666666666vw;
+      font-weight: bold;
+      line-height: 9.33333333333333vw;
+      color: #1E1E1E;
+      text-align: center;
+    }
+  
+    .subscribe-popup__title .highlights {
+      font-size: 7.46666666666666vw;
+      font-weight: bold;
+      line-height: 9.33333333333333vw;
+      color: #1270B3;
+    }
+  
+    .subscribe-popup__desc {
+      color: #1E1E1E;
+      font-size: 3.73333333333333vw;
+      line-height: 5.33333333333333vw;
+      margin-top: 1.733333333333vw;
+    }
+  
+    .subscribe-popup__email {
+      font-size: 3.2vw;
+      border: 1px solid rgb(30, 30, 30, 0.2);
+      width: 100%;
+      height: 11.7333333333333vw;
+      line-height: 11.7333333333333vw;
+      flex-shrink: 0;
+      padding-left: 3.2vw;
+    }
+  
+    .subscribe-popup__btn {
+      width: 13%;
+      height: 78%;
+      flex-shrink: 0;
+      color: #000;
+      text-align: center;
+      font-size: 4vw;
+      font-style: normal;
+      font-weight: 800;
+      border-radius: 50px;
+      border: none;
+      outline: none;
+      right: 1.3%;
+    }
+  
+  }
+  </style>
+
+  <div class="subscribe-popup" data-delay="{{ section.settings.delay }}" data-test-mode="{{ request.design_mode }}">
+    <div class="subscribe-popup__overlay"></div>
+    <div class="subscribe-popup-box">
+        <div class="subscribe-popup-box-close">
+          {{ icon_close }}
+        </div>
+      <div class="subscribe-popup__content">
+        <div class="subscribe-popup__title">{{ section.settings.title }}</div>
+        <div class="subscribe-popup__desc">{{ section.settings.description }}</div>
+
+        {%- form 'customer', id: 'subscribePopup', class: 'subscribe-popup-form' -%}
+          {%- unless form.posted_successfully? -%}
+            <div class="inpBut">
+              <input
+                type="text"
+                name="contact[email]"
+                autocomplete="off"
+                placeholder="{{ section.settings.placeholder }}"
+                class="subscribe-popup__email"
+              >
+              <div class="subscribe-popup__btn">
+               <svg viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" class="absolute right-5 top-[18px] h-5 w-5 text-gray"><path d="M1.7 10c0-3.1 0-4.7 1-5.7s2.5-1 5.6-1h3.4c3.1 0 4.7 0 5.7 1s1 2.6 1 5.7 0 4.7-1 5.7-2.6 1-5.7 1H8.3c-3.1 0-4.7 0-5.7-1s-1-2.6-1-5.7Z" fill="none" stroke-opacity="0.3" stroke-width="1.6"></path><path d="m5 6.7 1.8 1.5Q8.8 10 10 10c1 0 1.7-.7 3.2-2L15 6.8" fill="none" stroke-opacity="0.3" stroke-width="1.6" stroke-linecap="round"></path></svg>
+              </div>
+            </div>
+            <button type="submit" class="subscribe-popup__button"> {{ section.settings.button_text | default:'Subscribe' }} </button>
+        {%- endunless -%}
+
+          {%- if form.errors -%}
+            <div class="el-form-item__error">
+              {{- form.errors.translated_fields.email | capitalize }}
+              {{ form.errors.messages.email -}}
+            </div>
+          {%- endif -%}
+          {%- if form.posted_successfully? -%}
+            <h3
+              class="subscribe-popup-form__message--success"
+              tabindex="-1"
+            >
+              {{icon_success}}
+              Thanks for subscribing
+            </h3> 
+          {%- endif -%}
+        {%- endform -%}
+        {% if section.settings.tips != blank %}
+          <span class="subscribe-popup_tips">{{ section.settings.tips }}</span>
+        {% endif %}
+        {% if section.settings.footer != blank %}
+          <div class="subscribe-popup_footer">
+            {{ section.settings.footer }}
+          </div>
+        {% endif %}
+      </div>
+      <div class="subscribe-popup__img-box">
+        <img
+          class="subscribe-popup__img is-pc"
+          src="{{ section.settings.image_pc | image_url: width: 620 }}"
+          width="310"
+          height="310"
+        >
+        <img
+          class="subscribe-popup__img is-mb"
+          src="{{ section.settings.image_mb | image_url: width: 1200 }}"
+          width="624"
+          height="624"
+        >
+      </div>
+    </div>
+  </div>
+{% endif %}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const cookieName = "subscribe-popup";
+    const cookieValue = "true";
+    const cookieDays = {{section.settings.day}};
+
+    if (!getCookie(cookieName)) {
+        const popup = document.querySelector(".subscribe-popup");
+        if (popup && !popup.classList.contains('active')) {
+            const timeout = popup.dataset.delay
+            setTimeout(function () {
+              popup.classList.add("active")
+            }, timeout)
+        }
+
+        setCookie(cookieName, cookieValue, cookieDays);
+    }
+    
+  
+  
+    document.querySelector(".subscribe-popup-box-close").addEventListener("click", function (e) {
+      const el = e.target.closest(".subscribe-popup")
+      el.classList.remove("active")
+    })
+
+  function setCookie(name, value, days) {
+      var expires = "";
+      if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + (value || "") + expires + "; path=/";
+  }
+  
+  function getCookie(name) {
+      var nameEQ = name + "=";
+      var ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) === ' ') c = c.substring(1, c.length); 
+          if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null; 
+  }
+  })
+</script>
+{% schema %}
+{
+  "name": "Subscribe Popup",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enabled",
+      "label": "Enable Subscribe Popup",
+      "default": false
+    },
+    {
+      "type": "number",
+      "id": "day",
+      "label": "*Expires (day)",
+      "default": 7
+    },
+    {
+      "type": "number",
+      "id": "delay",
+      "label": "Delay (seconds)",
+      "default": 5000
+    },
+    {
+      "type": "image_picker",
+      "id": "image_pc",
+      "label": "Image for PC"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mb",
+      "label": "Image for Mobile"
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "html",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "html",
+      "id": "button_text",
+      "label": "Button"
+    },
+    {
+      "type": "html",
+      "id": "placeholder",
+      "label": "Placeholder"
+    },
+    {
+      "type": "text",
+      "id": "tips",
+      "label": "Tips",
+      "default":"*Cannot be combined with other promo codes."
+    },
+    {
+      "type": "richtext",
+      "id": "footer",
+      "label": "Footer infomation"
+    }
+  ],
+    "presets": [
+      {
+        "name": "subscribe-popup"
+      }
+    ]
+}
+{% endschema %}

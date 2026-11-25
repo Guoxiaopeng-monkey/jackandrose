@@ -1,0 +1,44 @@
+{%- if request.page_type == 'index' -%}
+<script>
+(function(){
+  // 匹配 swiper 库文件与 bundle
+  var SWIPER_RE=/(?:^|\/)swiper(?:-bundle)?(?:\.min)?\.js(?:$|[?#])/i;
+  // 匹配内联初始化（new Swiper(...) 或 Swiper(...)）
+  var SWIPER_INLINE_RE=/\bnew\s+Swiper\b|\bSwiper\(/;
+
+  function mark(el){
+    if(!el || el.tagName!=='SCRIPT') return;
+    var src=(el.src||'')+(el.getAttribute('data-src')||'');
+    var code=el.textContent||el.innerText||'';
+    if(SWIPER_RE.test(src) || SWIPER_INLINE_RE.test(code)){
+      // 标记为已处理，避免你的延迟脚本再改它
+      el.dataset.processed='1';
+      // 如果被他人改成了 text/lazyload，恢复回可执行类型
+      if(el.type==='text/lazyload'){ el.type=el.dataset.type||'text/javascript'; }
+    }
+  }
+
+  // 1) 先扫描当前已在 DOM 里的 script
+  document.querySelectorAll('script').forEach(mark);
+
+  // 2) 再监听后续新增的节点，抢在你的 MutationObserver 前标记
+  var mo=new MutationObserver(function(muts){
+    for(var i=0;i<muts.length;i++){
+      var nodes=muts[i].addedNodes||[];
+      for(var j=0;j<nodes.length;j++){
+        var n=nodes[j];
+        if(n && n.nodeType===1){
+          if(n.tagName==='SCRIPT') mark(n);
+          if(n.querySelectorAll){
+            n.querySelectorAll('script').forEach(mark);
+          }
+        }
+      }
+    }
+  });
+  mo.observe(document.documentElement,{childList:true,subtree:true});
+})();
+</script>
+<script>eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('(e(){7.h=[];7.x=f 1s((X)=>{X.C(({Y})=>{Y.C((6)=>{5(6.1o===1){5(6.F==="1p"&&!6.o.17){5(["k/n","1k"].1l((6.d||"k/n"))){6.o.d=6.d||"k/n";6.d="k/V"}5(6.t("d")==="k/V"){7.h.1q(6)}}5(6.F==="A"&&!6.W){6.I(\'W\',\'n:;\')}5(6.F==="1w"&&6.g){6.1r.1t(\'P\');6.I(\'1b-g\',6.g);6.1d(\'g\')}}})})});7.x.1a(9.19,{18:c,1h:c,});N p=q;N T=q;e J(m){l G=m.t(\'14\')!=H;l 12=m.t(\'Z\')!=H;5(!G&&!12)s 1;5(m.Z)s 2;5(G)s 3;s 4}e D(){5(!p){1g.1i(\'p\');p=c;7.h=1O.1P(7.h).1N((10,U)=>J(10)-J(U));5(7.x){7.x.1T()}9.1Q("w.P").C((w)=>{l E=w.o.g;5(E!=H){w.g=E}});e r(){5(7.h.M===0){9.i(f j("v"));7.i(f j("v"));9.i(f j("S"));7.i(f j("S"));5(T){9.i(f j("K"));7.i(f j("K"))}s}l b=7.h.1I();l 8=9.1J("m");1K(1H a=0;a<b.O.M;a++){l u=b.O[a];5(u.13!=="d"){8.I(u.13,u.1E)}}8.14=q;8.o.17=c;8.d=b.o.d||"k/n";5(b.15){b.15.1L(8,b)}y{9.1f.1e(8)}5(b.t("g")){5(8.1u){r()}y{8.1m=8.1n=e(){r()}}}y{8.16=b.16;r()}}r()}}N R=["1v","1j","1U","1R","1S","1D","1F","1G",];R.C(e(Q){7.z(Q,e(){5(9.1z==="1y"){9.z("v",D,{B:c})}y{D()}},{11:q,B:c})});5(1x.1A!="1C 1B"){9.z("v",D,{B:c})}7.z(\'K\',e(L){5(p){5(7.h.M){L.1M();L.1c()}}},{11:q,B:c,})})()',62,119,'|||||if|node|window|newScript|document||currentScript|true|type|function|new|src|lazyScriptQueue|dispatchEvent|CustomEvent|text|const|script|javascript|dataset|script_loaded|false|sequentialLoad|return|getAttribute|attr|DOMContentLoaded|iframe|observer|else|addEventListener||once|forEach|loadJSscripts|datasrc|tagName|isAsync|null|setAttribute|getScriptPriority|load|event|length|var|attributes|lazy|eventName|activityEvents|asyncLazyLoad|page_loaded|next|lazyload|href|mutations|addedNodes|defer|first|capture|isDefer|name|async|parentNode|innerHTML|processed|childList|documentElement|observe|data|preventDefault|removeAttribute|appendChild|head|console|subtree|log|mousemove|module|includes|onload|onerror|nodeType|SCRIPT|push|classList|MutationObserver|add|noModule|mousedown|IFRAME|navigator|loading|readyState|platform|x86_64|Linux|click|value|keypress|touchmove|let|shift|createElement|for|replaceChild|stopImmediatePropagation|sort|Array|from|querySelectorAll|scroll|touchstart|disconnect|keydown'.split('|'),0,{}))</script>
+{%- endif -%}
+

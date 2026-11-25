@@ -1,0 +1,303 @@
+<style>
+  #shopify-section-{{ section.id }}.spk-slider-section {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+
+  }
+
+  #shopify-section-{{ section.id }} .spk-slider-section-title{
+    color:{{ section.settings.title_color }};
+  }
+
+  .spk-slider-section {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .spk-slider-section .spk-slider-section-title {
+    font-size: 36px;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  .spk-slider-section-title.title-left {
+    text-align: left;
+  }
+
+  .spk-slider-section-title.title-center {
+    text-align: center;
+  }
+
+  .spk-slider-tab-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .w-full {
+    width: 100%;
+  }
+
+  .spk-slider-section .spk-container {
+    max-width: 1280px;
+    width: 100%;
+  }
+
+  .spk-slider-tab-image.spk-card-rounded {
+    border-radius: 24px;
+    overflow: hidden;
+  }
+
+  .spk-slider-tab-content .swiper-wrapper {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .spk-slider-tab-card.swiper-slide {
+    width: 100%;
+    max-width: 1280px;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .spk-slider-tab-card.swiper-slide picture {
+    opacity: 0.4;
+  }
+
+  .spk-slider-tab-card.swiper-slide.swiper-slide-duplicate-active picture,
+  .spk-slider-tab-card.swiper-slide.swiper-slide-active picture {
+    opacity: 1;
+  }
+
+  .placeholder_img,
+  .spk-slider-tab-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #5b5b5b;
+  }
+
+  .spk-slider-tab-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .spk-slider-tab-content .spk-slider-tab-card-content {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+
+  .spk-tabs {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    cursor: pointer;
+    border-bottom: 0;
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+  }
+  @media(min-width: 768px) {
+    .spk-tabs {
+      width:fit-content;
+      justify-content: center;
+    }
+  }
+
+  .spk-tabs .spk-tab-btn {
+    padding: 0 0 20px 0;
+    border-bottom: 2px solid transparent;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.6);
+    transition: border-bottom 0.3s ease-in-out;
+  }
+
+  .spk-tabs .spk-tab-btn.active {
+    color: #000;
+    font-weight: 500;
+    border-bottom: 2px solid #000;
+  }
+
+  .spk-slider-tab-card-content {
+    display: none;
+  }
+
+  .spk-slider-tab-card-content.active {
+    display: block;
+  }
+</style>
+<style>
+    @media (max-width: 767.98px) {
+      #shopify-section-{{ section.id }}.spk-slider-section {
+        padding-top: {{ section.settings.padding_top | divided_by:2 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | divided_by:2 }}px;
+      }
+      .spk-slider-tab-content .spk-slider-tab-card-content {
+        margin-top: 12px;
+        padding: 0 16px;
+      }
+    }
+
+  @media (max-width: 767.98px) {
+
+    .spk-slider-section {
+      padding: 0 16px;
+    }
+    .spk-section .spk-slider-section-title,
+    .spk-slider-section .spk-slider-section-title {
+      font-size: 24px;
+      margin-bottom: 24px  !important;
+    }
+
+    .w-full {
+      width: 100%;
+    }
+
+    .spk-slider-tab-image.spk-card-rounded {
+      border-radius: 12px;
+    }
+
+    .spk-slider-tab-content .swiper-wrapper {
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .spk-slider-tab-content {
+      width: 100%;
+      margin-top: 8px;
+    }
+
+    .spk-slider-tab-card-content {
+      margin-top: 24px;
+      padding: 0;
+    }
+
+    .spk-tabs {
+      display: flex;
+      overflow-x: auto; /* 启用水平滚动 */
+      scroll-snap-type: x mandatory; /* 使滚动更平滑 */
+      gap: 60px; /* 可选：控制 tab 按钮之间的间距 */
+      -webkit-overflow-scrolling: touch; /* 增强iOS上的滚动体验 */
+      scrollbar-width: none; /* 在Firefox中隐藏滚动条 */
+      -ms-overflow-style: none; /* 在IE和Edge中隐藏滚动条 */
+      padding-bottom: 0; /* 移除底部内边距，因为不需要为滚动条留空间 */
+      border-bottom: 0;
+      box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+      justify-content: flex-start; /* 移动端靠左对齐 */      
+    }
+
+    .single-tab.spk-tabs {
+      justify-content: center;
+    }
+
+    /* 自定义滚动条样式 - 完全隐藏 */
+    .spk-tabs::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      display: none; /* 隐藏滚动条 */
+    }
+
+    .spk-tabs::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1); /* 滚动条轨道背景 */
+      border-radius: 4px;
+    }
+
+    .spk-tabs::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.3); /* 滚动条颜色 */
+      border-radius: 4px;
+    }
+
+    .spk-tab-btn {
+      white-space: nowrap;
+      scroll-snap-align: start; /* 每个 tab 项目会对齐到左侧 */
+      flex-shrink: 0; /* 防止 tab 按钮被缩小 */
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+
+    .spk-tab-btn.active {
+      font-weight: bold;
+    }
+
+
+
+  }
+</style>
+
+<spk-slider-tab class="spk-slider-tab ">
+  {% if section.settings.title %}
+    <h2 class="spk-slider-section-title page-width spk-container {{ section.settings.layout }}">
+      {{ section.settings.title }}
+    </h2>
+  {% endif %}
+
+  <div
+    class="spk-slider-tab-swiper-container"
+    slides-per-view="auto"
+    loop="{% if section.blocks.size > 1 %}true{% else %}false{% endif %}"
+    centeredSlides="true"
+  >
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+          <div class="swiper-slide spk-slider-tab-card w-full {% if forloop.first %}swiper-slide-active{% endif %} ">
+            {% if block.settings.url %} <a href="{{ block.settings.url }}" target="_blank"> {% endif %}
+            <div class="spk-slider-tab-image {% if section.settings.card_rounded %} spk-card-rounded {% endif %}">
+              {%- if block.settings.image_pc != blank -%}
+                <picture>
+                  {%- if block.settings.image_mobile != blank -%}
+                    <source
+                      media="(max-width: 699px)"
+                      srcset="{{ block.settings.image_mobile | image_url: width: '400x' }} 400w, {{ block.settings.image_mobile | image_url: width: '600x' }} 600w, {{ block.settings.image_mobile | image_url: width: '800x' }} 800w, {{ block.settings.image_mobile | image_url: width: '1000x' }} 1000w, {{ block.settings.image_mobile | image_url: width: '1200x' }} 1200w"
+                      width="{{ block.settings.image_mobile.width }}"
+                      height="{{ block.settings.image_mobile.height }}"
+                    >
+                  {%- endif -%}
+                  <img
+                    src="{{ block.settings.image_pc | image_url }}"
+                    alt="{{ block.settings.title | default: shop.name}}"
+                    width="100%"
+                    height="auto"
+                    loading="lazy"
+                  >
+                </picture>
+              {% else %}
+                {{- 'lifestyle-1' | placeholder_svg_tag: 'placeholder_img' -}}
+              {%- endif -%}
+            </div>
+            {% if block.settings.url %} </a> {% endif %}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+
+  <div class="spk-slider-tab-content">
+    <div class="spk-tabs {% if section.blocks.size == 1 %}single-tab{% endif %}">
+      {% for block in section.blocks %}
+        <div
+          slot="tabs"
+          data-tab="tab-{{ block.id }}"
+          data-tab_index="{{ forloop.index }}"
+          class="spk-tab-btn  {%  if forloop.first %}active{% endif %}"
+        >
+          {{ block.settings.title }}
+        </div>
+      {% endfor %}
+    </div>
+    {% for block in section.blocks %}
+      {% if block.settings.description %}
+        <div
+          class="spk-slider-tab-card-content {%  if forloop.first %}active{% endif %}"
+          slot="tab-{{ block.id }}"
+          data-tab-content="tab-{{ block.id }}"
+        >
+          {{ block.settings.description }}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</spk-slider-tab>
+
+

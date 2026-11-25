@@ -1,0 +1,630 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {}
+    },
+    "slideshow_E7bnkH": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_Aq4tVW": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "shopify://products/cozy-c1-dog-grooming-vacuum",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/hamptons-party_2.jpg",
+            "image_mobile": "shopify://shop_images/hamptons-party-m_2.jpg",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "hero_Aq4tVW"
+      ],
+      "settings": {
+        "full_width": true,
+        "desktop_size": 0,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": false,
+        "autoplay_speed": 7
+      }
+    },
+    "logo_list_i4fRFY": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_image_xi9GCE": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Group-1.png",
+            "link": ""
+          }
+        },
+        "logo_image_nLLwqW": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/3_7.png",
+            "link": ""
+          }
+        },
+        "logo_image_CPHEwL": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Vector.png",
+            "link": ""
+          }
+        },
+        "logo_image_AAXhLQ": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/image_316.png",
+            "link": ""
+          }
+        },
+        "logo_image_kRjmVq": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/image_318.png",
+            "link": ""
+          }
+        },
+        "logo_image_DzYpNb": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/image_315.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_image_xi9GCE",
+        "logo_image_nLLwqW",
+        "logo_image_CPHEwL",
+        "logo_image_AAXhLQ",
+        "logo_image_kRjmVq",
+        "logo_image_DzYpNb"
+      ],
+      "settings": {
+        "title": "As Seen On",
+        "heading_size": "h2",
+        "heading_position": "center",
+        "divider": false
+      }
+    },
+    "rich_text_4JCqT7": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_MWxjPb": {
+          "type": "heading",
+          "settings": {
+            "title": "Congratulations",
+            "heading_size": "h1"
+          }
+        },
+        "text_eqLdnW": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Welcome to Jill Zarin's luxurious luncheon! 🌟 To celebrate this special occasion, Oneisall is pleased to give away our <a href=\"/products/cozy-c1-dog-grooming-vacuum\" title=\"Cozy C1 - Oneisall Dog Grooming Vacuum Kit for Shedding Drying Trimming\"><strong>Cozy C1 Pet Grooming Vacuum</strong></a> to VIPs. This innovative tool combines drying, trimming, and vacuuming functions for effortless pet grooming. 🐾</p><p>Enjoy and browse Oneisall's official website for the perfect gift for your pet. 🎁</p><p>We hope this gift enhances the joy you share with your pets. 🐶💖</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MWxjPb",
+        "text_eqLdnW"
+      ],
+      "custom_css": [
+        "h2 {font-size: 36px;}"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "2",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        "h1 {text-align: center;}"
+      ],
+      "settings": {}
+    },
+    "advanced_content_FyMgUK": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_am9LBX": {
+          "type": "liquid",
+          "settings": {
+            "code": "<style type=\"text/css\">\n  #mc_embed_signup {\n    background: #fff;\n    clear: left;\n    font: 14px Helvetica, Arial, sans-serif;\n    max-width: 800px;\n    margin: 0 auto;\n    width: auto !important;\n  }\n\n  #mc_embed_signup input,\n  select {\n    padding: 8px 10px;\n    border-radius: 5px;\n    outline: none;\n    border: solid 1px #ddd;\n    width: 100%;\n  }\n\n  #mc_embed_signup .mc-address-group {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    grid-gap: 10px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n  }\n\n  #mc_embed_signup .group-head {\n    font-size: 1.2em;\n    color: #d72e34;\n    padding: 12px 0;\n  }\n\n  #mc_embed_signup .button {\n    cursor: pointer;\n    background-color: #f6c567ff;\n    color: #fff;\n    padding: 10px 0;\n  }\n</style>\n<div id=\"mc_embed_shell\">\n  <div id=\"mc_embed_signup\">\n    <form class=\"validate\" name=\"mc-embedded-subscribe-form\" id=\"mc-embedded-subscribe-form\" method=\"post\"\n      action=\"https://oneisall.us21.list-manage.com/subscribe/post?u=7edb25fd8e19b5a47c362ecca&amp;id=2168abaff7&amp;f_id=00b5f8e6f0\"\n      target=\"_blank\">\n      <div id=\"mc_embed_signup_scroll\">\n        <h2></h2>\n        <div class=\"mc-field-group\">\n          <input value=\"\" required=\"\" id=\"mce-CODE\" class=\"required text\" name=\"VIPCODE\" type=\"text\" placeholder=\"VIP Code *\">\n          <input id=\"mailchimp-email-input\" name=\"EMAIL\" type=\"hidden\">\n        </div>\n\n        <div class=\"shipping-info\">\n          <div class=\"group-head\">Shipping Information</div>\n          <div class=\"mc-field-group\">\n            <input value=\"\" id=\"mce-NAME\" class=\"text\" name=\"NAME\" type=\"text\" placeholder=\"Name *\">\n          </div>\n          <div class=\"mc-address-group\">\n            <div class=\"mc-field-group\">\n              <input value=\"\" class=\"required\" id=\"mce-ADDRESS-addr1\" name=\"ADDRESS[addr1]\" maxlength=\"70\" type=\"text\" placeholder=\"Address 1 *\">\n            </div>\n            <div class=\"mc-field-group\">\n              <input value=\"\" id=\"mce-ADDRESS-addr2\" name=\"ADDRESS[addr2]\" maxlength=\"70\" type=\"text\" placeholder=\"Address 2\">\n            </div>\n            <div class=\"mc-field-group\">\n              <input value=\"\" class=\"required\" id=\"mce-ADDRESS-city\" name=\"ADDRESS[city]\" maxlength=\"40\" type=\"text\" placeholder=\"City *\">\n            </div>\n            <div class=\"mc-field-group\">\n              <input value=\"\" class=\"required\" id=\"mceADDRESS-state\" name=\"ADDRESS[state]\" maxlength=\"20\" type=\"text\" placeholder=\"State/Province/Region\">\n            </div>\n            <div class=\"mc-field-group\">\n              <input value=\"\" class=\"required\" id=\"mce-ADDRESS-zip\" name=\"ADDRESS[zip]\" maxlength=\"10\" type=\"text\" placeholder=\"Postal / Zip Code *\">\n            </div>\n            <div class=\"mc-field-group\">\n              <select class=\"required\" id=\"mce-ADDRESS-country\" name=\"ADDRESS[country]\">\n                <option value=\"Albania\">Albania</option>\n                <option value=\"Algeria\">Algeria</option>\n                <option value=\"Andorra\">Andorra</option>\n                <option value=\"Angola\">Angola</option>\n                <option value=\"Argentina\">Argentina</option>\n                <option value=\"Armenia\">Armenia</option>\n                <option value=\"Australia\">Australia</option>\n                <option value=\"Austria\">Austria</option>\n                <option value=\"Azerbaijan\">Azerbaijan</option>\n                <option value=\"Bahamas\">Bahamas</option>\n                <option value=\"Bahrain\">Bahrain</option>\n                <option value=\"Bangladesh\">Bangladesh</option>\n                <option value=\"Barbados\">Barbados</option>\n                <option value=\"Belarus\">Belarus</option>\n                <option value=\"Belgium\">Belgium</option>\n                <option value=\"Belize\">Belize</option>\n                <option value=\"Benin\">Benin</option>\n                <option value=\"Bermuda\">Bermuda</option>\n                <option value=\"Bhutan\">Bhutan</option>\n                <option value=\"Bolivia\">Bolivia</option>\n                <option value=\"Bosnia and Herzegovina\">Bosnia and Herzegovina</option>\n                <option value=\"Botswana\">Botswana</option>\n                <option value=\"Brazil\">Brazil</option>\n                <option value=\"Bulgaria\">Bulgaria</option>\n                <option value=\"Burkina Faso\">Burkina Faso</option>\n                <option value=\"Burundi\">Burundi</option>\n                <option value=\"Cambodia\">Cambodia</option>\n                <option value=\"Cameroon\">Cameroon</option>\n                <option value=\"Canada\">Canada</option>\n                <option value=\"Cape Verde\">Cape Verde</option>\n                <option value=\"Cayman Islands\">Cayman Islands</option>\n                <option value=\"Central African Republic\">Central African Republic</option>\n                <option value=\"Chad\">Chad</option>\n                <option value=\"Chile\">Chile</option>\n                <option value=\"China\">China</option>\n                <option value=\"Colombia\">Colombia</option>\n                <option value=\"Congo\">Congo</option>\n                <option value=\"Croatia\">Croatia</option>\n                <option value=\"Cyprus\">Cyprus</option>\n                <option value=\"Czech Republic\">Czech Republic</option>\n                <option value=\"Denmark\">Denmark</option>\n                <option value=\"Djibouti\">Djibouti</option>\n                <option value=\"Ecuador\">Ecuador</option>\n                <option value=\"Egypt\">Egypt</option>\n                <option value=\"El Salvador\">El Salvador</option>\n                <option value=\"Equatorial Guinea\">Equatorial Guinea</option>\n                <option value=\"Eritrea\">Eritrea</option>\n                <option value=\"Estonia\">Estonia</option>\n                <option value=\"Ethiopia\">Ethiopia</option>\n                <option value=\"Fiji\">Fiji</option>\n                <option value=\"Finland\">Finland</option>\n                <option value=\"France\">France</option>\n                <option value=\"Gabon\">Gabon</option>\n                <option value=\"Gambia\">Gambia</option>\n                <option value=\"Georgia\">Georgia</option>\n                <option value=\"Germany\">Germany</option>\n                <option value=\"Ghana\">Ghana</option>\n                <option value=\"Greece\">Greece</option>\n                <option value=\"Guam\">Guam</option>\n                <option value=\"Guinea\">Guinea</option>\n                <option value=\"Guinea-Bissau\">Guinea-Bissau</option>\n                <option value=\"Guyana\">Guyana</option>\n                <option value=\"Honduras\">Honduras</option>\n                <option value=\"Hong Kong\">Hong Kong</option>\n                <option value=\"Hungary\">Hungary</option>\n                <option value=\"Iceland\">Iceland</option>\n                <option value=\"India\">India</option>\n                <option value=\"Indonesia\">Indonesia</option>\n                <option value=\"Ireland\">Ireland</option>\n                <option value=\"Israel\">Israel</option>\n                <option value=\"Italy\">Italy</option>\n                <option value=\"Japan\">Japan</option>\n                <option value=\"Jordan\">Jordan</option>\n                <option value=\"Kazakhstan\">Kazakhstan</option>\n                <option value=\"Kenya\">Kenya</option>\n                <option value=\"Kuwait\">Kuwait</option>\n                <option value=\"Kyrgyzstan\">Kyrgyzstan</option>\n                <option value=\"Lao People's Democratic Republic\">Lao People's Democratic Republic</option>\n                <option value=\"Latvia\">Latvia</option>\n                <option value=\"Lebanon\">Lebanon</option>\n                <option value=\"Lesotho\">Lesotho</option>\n                <option value=\"Liberia\">Liberia</option>\n                <option value=\"Liechtenstein\">Liechtenstein</option>\n                <option value=\"Lithuania\">Lithuania</option>\n                <option value=\"Luxembourg\">Luxembourg</option>\n                <option value=\"Macedonia\">Macedonia</option>\n                <option value=\"Madagascar\">Madagascar</option>\n                <option value=\"Malawi\">Malawi</option>\n                <option value=\"Malaysia\">Malaysia</option>\n                <option value=\"Maldives\">Maldives</option>\n                <option value=\"Mali\">Mali</option>\n                <option value=\"Malta\">Malta</option>\n                <option value=\"Mauritania\">Mauritania</option>\n                <option value=\"Mexico\">Mexico</option>\n                <option value=\"Moldova, Republic of\">Moldova, Republic of</option>\n                <option value=\"Monaco\">Monaco</option>\n                <option value=\"Mongolia\">Mongolia</option>\n                <option value=\"Morocco\">Morocco</option>\n                <option value=\"Mozambique\">Mozambique</option>\n                <option value=\"Namibia\">Namibia</option>\n                <option value=\"Nepal\">Nepal</option>\n                <option value=\"Netherlands\">Netherlands</option>\n                <option value=\"Netherlands Antilles\">Netherlands Antilles</option>\n                <option value=\"New Zealand\">New Zealand</option>\n                <option value=\"Nicaragua\">Nicaragua</option>\n                <option value=\"Niger\">Niger</option>\n                <option value=\"Nigeria\">Nigeria</option>\n                <option value=\"Norway\">Norway</option>\n                <option value=\"Oman\">Oman</option>\n                <option value=\"Pakistan\">Pakistan</option>\n                <option value=\"Panama\">Panama</option>\n                <option value=\"Paraguay\">Paraguay</option>\n                <option value=\"Peru\">Peru</option>\n                <option value=\"Philippines\">Philippines</option>\n                <option value=\"Poland\">Poland</option>\n                <option value=\"Portugal\">Portugal</option>\n                <option value=\"Qatar\">Qatar</option>\n                <option value=\"Reunion\">Reunion</option>\n                <option value=\"Romania\">Romania</option>\n                <option value=\"Russia\">Russia</option>\n                <option value=\"Rwanda\">Rwanda</option>\n                <option value=\"Samoa (Independent)\">Samoa (Independent)</option>\n                <option value=\"Saudi Arabia\">Saudi Arabia</option>\n                <option value=\"Senegal\">Senegal</option>\n                <option value=\"Seychelles\">Seychelles</option>\n                <option value=\"Sierra Leone\">Sierra Leone</option>\n                <option value=\"Singapore\">Singapore</option>\n                <option value=\"Slovakia\">Slovakia</option>\n                <option value=\"Slovenia\">Slovenia</option>\n                <option value=\"Somalia\">Somalia</option>\n                <option value=\"South Africa\">South Africa</option>\n                <option value=\"South Korea\">South Korea</option>\n                <option value=\"Spain\">Spain</option>\n                <option value=\"Sri Lanka\">Sri Lanka</option>\n                <option value=\"Suriname\">Suriname</option>\n                <option value=\"Swaziland\">Swaziland</option>\n                <option value=\"Sweden\">Sweden</option>\n                <option value=\"Switzerland\">Switzerland</option>\n                <option value=\"Taiwan\">Taiwan</option>\n                <option value=\"Tanzania\">Tanzania</option>\n                <option value=\"Thailand\">Thailand</option>\n                <option value=\"Togo\">Togo</option>\n                <option value=\"Tunisia\">Tunisia</option>\n                <option value=\"Turkiye\">Turkiye</option>\n                <option value=\"Turkmenistan\">Turkmenistan</option>\n                <option value=\"Uganda\">Uganda</option>\n                <option value=\"Ukraine\">Ukraine</option>\n                <option value=\"United Arab Emirates\">United Arab Emirates</option>\n                <option value=\"Uruguay\">Uruguay</option>\n                <option selected=\"selected\" value=\"USA\">USA</option>\n                <option value=\"Uzbekistan\">Uzbekistan</option>\n                <option value=\"Vatican City State (Holy See)\">Vatican City State (Holy See)</option>\n                <option value=\"Venezuela\">Venezuela</option>\n                <option value=\"Vietnam\">Vietnam</option>\n                <option value=\"Virgin Islands (British)\">Virgin Islands (British)</option>\n                <option value=\"Yemen\">Yemen</option>\n                <option value=\"Zambia\">Zambia</option>\n                <option value=\"Zimbabwe\">Zimbabwe</option>\n                <option value=\"Antigua And Barbuda\">Antigua And Barbuda</option>\n                <option value=\"Anguilla\">Anguilla</option>\n                <option value=\"American Samoa\">American Samoa</option>\n                <option value=\"Aruba\">Aruba</option>\n                <option value=\"Brunei Darussalam\">Brunei Darussalam</option>\n                <option value=\"Bouvet Island\">Bouvet Island</option>\n                <option value=\"Cook Islands\">Cook Islands</option>\n                <option value=\"Christmas Island\">Christmas Island</option>\n                <option value=\"Dominican Republic\">Dominican Republic</option>\n                <option value=\"Western Sahara\">Western Sahara</option>\n                <option value=\"Falkland Islands\">Falkland Islands</option>\n                <option value=\"Faroe Islands\">Faroe Islands</option>\n                <option value=\"Grenada\">Grenada</option>\n                <option value=\"French Guiana\">French Guiana</option>\n                <option value=\"Gibraltar\">Gibraltar</option>\n                <option value=\"Greenland\">Greenland</option>\n                <option value=\"Guadeloupe\">Guadeloupe</option>\n                <option value=\"Guatemala\">Guatemala</option>\n                <option value=\"Haiti\">Haiti</option>\n                <option value=\"Jamaica\">Jamaica</option>\n                <option value=\"Kiribati\">Kiribati</option>\n                <option value=\"Comoros\">Comoros</option>\n                <option value=\"Saint Kitts and Nevis\">Saint Kitts and Nevis</option>\n                <option value=\"Saint Lucia\">Saint Lucia</option>\n                <option value=\"Marshall Islands\">Marshall Islands</option>\n                <option value=\"Macau\">Macau</option>\n                <option value=\"Martinique\">Martinique</option>\n                <option value=\"Mauritius\">Mauritius</option>\n                <option value=\"New Caledonia\">New Caledonia</option>\n                <option value=\"Norfolk Island\">Norfolk Island</option>\n                <option value=\"Nauru\">Nauru</option>\n                <option value=\"Niue\">Niue</option>\n                <option value=\"Papua New Guinea\">Papua New Guinea</option>\n                <option value=\"Pitcairn\">Pitcairn</option>\n                <option value=\"Palau\">Palau</option>\n                <option value=\"Solomon Islands\">Solomon Islands</option>\n                <option value=\"Svalbard and Jan Mayen Islands\">Svalbard and Jan Mayen Islands</option>\n                <option value=\"San Marino\">San Marino</option>\n                <option value=\"Tonga\">Tonga</option>\n                <option value=\"Timor-Leste\">Timor-Leste</option>\n                <option value=\"Trinidad and Tobago\">Trinidad and Tobago</option>\n                <option value=\"Tuvalu\">Tuvalu</option>\n                <option value=\"Saint Vincent and the Grenadines\">Saint Vincent and the Grenadines</option>\n                <option value=\"Virgin Islands (U.S.)\">Virgin Islands (U.S.)</option>\n                <option value=\"Vanuatu\">Vanuatu</option>\n                <option value=\"Mayotte\">Mayotte</option>\n                <option value=\"Myanmar\">Myanmar</option>\n                <option value=\"Sao Tome and Principe\">Sao Tome and Principe</option>\n                <option value=\"South Georgia and the South Sandwich Islands\">South Georgia and the South Sandwich Islands</option>\n                <option value=\"Tajikistan\">Tajikistan</option>\n                <option value=\"United Kingdom\">United Kingdom</option>\n                <option value=\"Costa Rica\">Costa Rica</option>\n                <option value=\"Guernsey\">Guernsey</option>\n                <option value=\"North Korea\">North Korea</option>\n                <option value=\"Afghanistan\">Afghanistan</option>\n                <option value=\"Cote D'Ivoire\">Cote D'Ivoire</option>\n                <option value=\"Cuba\">Cuba</option>\n                <option value=\"French Polynesia\">French Polynesia</option>\n                <option value=\"Iran\">Iran</option>\n                <option value=\"Iraq\">Iraq</option>\n                <option value=\"Libya\">Libya</option>\n                <option value=\"Palestine\">Palestine</option>\n                <option value=\"Syria\">Syria</option>\n                <option value=\"Aaland Islands\">Aaland Islands</option>\n                <option value=\"Turks &amp; Caicos Islands\">Turks &amp; Caicos Islands</option>\n                <option value=\"Jersey  (Channel Islands)\">Jersey (Channel Islands)</option>\n                <option value=\"Dominica\">Dominica</option>\n                <option value=\"Montenegro\">Montenegro</option>\n                <option value=\"Sudan\">Sudan</option>\n                <option value=\"Montserrat\">Montserrat</option>\n                <option value=\"Curacao\">Curacao</option>\n                <option value=\"Sint Maarten\">Sint Maarten</option>\n                <option value=\"South Sudan\">South Sudan</option>\n                <option value=\"Republic of Kosovo\">Republic of Kosovo</option>\n                <option value=\"Congo, Democratic Republic of the\">Congo, Democratic Republic of the</option>\n                <option value=\"Isle of Man\">Isle of Man</option>\n                <option value=\"Saint Martin\">Saint Martin</option>\n                <option value=\"Bonaire, Saint Eustatius and Saba\">Bonaire, Saint Eustatius and Saba</option>\n                <option value=\"Serbia\">Serbia</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"clear foot\" id=\"mce-responses\">\n            <div style=\"display: none;\" id=\"mce-error-response\" class=\"response\"></div>\n            <div style=\"display: none;\" id=\"mce-success-response\" class=\"response\"></div>\n          </div>\n        </div>\n        <div style=\"position: absolute; left: -5000px;\" aria-hidden=\"true\">/* real people should not fill this in and\n          expect good things - do not remove this or risk form bot signups */\n          <input value=\"\" tabindex=\"-1\" name=\"b_7edb25fd8e19b5a47c362ecca_2168abaff7\" type=\"text\">\n        </div>\n        <div class=\"optionalParent\">\n          <div class=\"clear foot\">\n            <input value=\"Redeem\" class=\"button\" id=\"mc-embedded-subscribe\" name=\"subscribe\" type=\"submit\">\n            <p style=\"margin: 0px auto;\">&nbsp;</p>\n          </div>\n          <a div=\"\"> </a>\n        </div>\n        <a div=\"\"> </a>\n      </div>\n    </form>\n    <a div=\"\"> </a>\n    <script type=\"text/javascript\" src=\"//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js\"></script>\n    <script type=\"text/javascript\">\n      (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[7]='CODE';ftypes[7]='text';fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='NAME';ftypes[1]='text';fnames[3]='ADDRESS';ftypes[3]='address';}(jQuery));var $mcj = jQuery.noConflict(true);\n\n    function randomNumber(len) {\n      var randomNumber;\n      var n = '';\n\n      for (var count = 0; count < len; count++) {\n        randomNumber = Math.floor(Math.random() * 10);\n        n += randomNumber.toString();\n      }\n      return n;\n    }\n    document.getElementById(\"mailchimp-email-input\").value = randomNumber(20) + '@vipcode.com';\n    </script>\n  </div>\n  <a div=\"\"> </a>\n</div>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_am9LBX"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "settings": {}
+    },
+    "1720064211be81f357": {
+      "type": "apps",
+      "settings": {
+        "full_width": true,
+        "space_around": false
+      }
+    },
+    "rich_text_ngQyYY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_6cUpX7": {
+          "type": "heading",
+          "settings": {
+            "title": "Oneisall Gift Delivery Update",
+            "heading_size": "h1"
+          }
+        },
+        "text_kxjMTq": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>To all those who attended Jill Zarin's Luxury Luncheon Awards and stopped to spend time with Oneisall, thank you again. For those who received codes to redeem your products, we're excited to announce the delivery of your units is now scheduled.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6cUpX7",
+        "text_kxjMTq"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-size: 36px;}"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "rich_text_YxqFRD": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_HG7YP9": {
+          "type": "heading",
+          "settings": {
+            "title": "Elevate Your Pet Pampering Experience",
+            "heading_size": "h1"
+          }
+        },
+        "text_AeUWqE": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "button_yhJ4Ba": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link": "",
+            "link_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_HG7YP9",
+        "text_AeUWqE",
+        "button_yhJ4Ba"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "2",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "text_columns_WAWCan": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_UMUYx3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/CozyC1.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Cozy C1 Dog Grooming Vacuum Kit",
+            "text": "<ul><li>8-in-1 pet grooming vacuum kit</li><li>Quickly dry pet hair</li><li>Max 10000pa suction power</li><li>3 versatile nozzle shapes</li><li>Make even cuts and easy cleanup<br/></li></ul>",
+            "align_text": "left",
+            "button_label": "Learn More",
+            "button_link": "shopify://products/cozy-c1-dog-grooming-vacuum"
+          }
+        },
+        "text_block_3kXMQ3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Double_Bowl_Feeder.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "5L Automatic Food Dispenser",
+            "text": "<ul><li>5G stable Wi-Fi connection</li><li>Feed two pets at the same time</li><li>Big storage capacity, 5L capacity</li><li>Detached 304 stainless steel bowl</li><li>10s voice recorder</li></ul>",
+            "align_text": "center",
+            "button_label": "Learn More",
+            "button_link": "shopify://products/automatic-cat-food-dispenser-5l"
+          }
+        },
+        "text_block_MWWE3F": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/7L_Water_Fountain.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Dog Water Fountain 7L",
+            "text": "<ul><li>304 stainless steel material</li><li>230oz/1.8gal /7L large capacity</li><li>Red light reminder filling function</li><li>Faucet  and ultra-silent design</li><li>Easy to clean and assemble</li></ul>",
+            "align_text": "center",
+            "button_label": "Learn More",
+            "button_link": "shopify://products/dog-water-fountain-7l"
+          }
+        },
+        "text_block_LD8AD8": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/dtj002-clipper-1400.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "DTJ002 Dog Clipper",
+            "text": "<ul><li>2-in-1 dog clipper & paw trimmer set</li><li>Quick and easy blade change</li><li>4 hours of long-lasting power</li><li>Easy to clean and maintain</li><li>50db ultra quiet</li></ul>",
+            "align_text": "center",
+            "button_label": "Learn More",
+            "button_link": "shopify://products/dtj002-dog-clipper"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_UMUYx3",
+        "text_block_3kXMQ3",
+        "text_block_MWWE3F",
+        "text_block_LD8AD8"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h3",
+        "align_text": "left",
+        "divider": false,
+        "color_scheme": "2"
+      }
+    },
+    "advanced_content_tL3cXT": {
+      "type": "advanced-content",
+      "blocks": {
+        "image_nUM7cq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/jill-zarins-luxury-luncheon.png",
+            "link": "https://oneisall.com/blogs/all/meet-oneisall-at-jill-zarins-luxury-luncheon",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "liquid_VUQYTK": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2><a href=\"https://oneisall.com/blogs/all/meet-oneisall-at-jill-zarins-luxury-luncheon\">Meet Oneisall at Jill Zarin's Luxury Luncheon</a></h2><p>There is Jill Zarin, a popular star who is seen as outgoing and fun-based on her entertaining events; she is holding her Luxury Luncheon Party in the Hamptons. This lavish event is set to occur on July 20, and the culture vultures, socialites, celebrities, and influencers would be hoping to taste the best summer event ever. <a href=\"https://oneisall.com/blogs/all/meet-oneisall-at-jill-zarins-luxury-luncheon\">Read More...</a></p>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_nUM7cq",
+        "liquid_VUQYTK"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "text_and_image_LcXPyw": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/INS_97c9b6f6-c8da-4bc7-b6df-11d220badb5c.jpg",
+        "image_mask": "square",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "GIVEAWAY 🎉🎉",
+        "heading_size": "h2",
+        "text": "<p>July is the month with heat and love! Oneisall teams up with Jill Zarin for a luxury lunch event to benefit cancer. We’re proud to have been a part of such an amazing event with such a great purpose! In order to thank our customers’ support, we would like to give back to our community and show love to our pets! </p><p>Here is how to enter: <br/>1️⃣For 1 entry: 1. Follow <strong>@</strong><a href=\"https://www.instagram.com/oneisall_official/\" title=\"https://www.instagram.com/oneisall_official/\"><strong>oneisall_official</strong></a> 2. Like and tag 2 people in the comments on the giveaway post pinned to <strong>@oneisall_official</strong> instagram <br/>2️⃣For extra 2 entries: visit link in <strong>@oneisall_official</strong> and sign up for our email newsletter. <br/><br/>We will announce the first entry for 2 winners on July 31 and the extra 2 entries on August 15. Join us and don’t miss out the opportunities to get a free and the best smart grooming kit for your furry friends!</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "center",
+        "image_width": "50",
+        "layout": "right",
+        "color_scheme": "none",
+        "show_wave": false,
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "text_columns_rjwHNx": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_cEVErJ": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/3-1-oneisall-at-jill-zarins-luxury-luncheon.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_Y4a84f": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/1-oneisall-at-jill-zarins-luxury-luncheon-new.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_eRw4Qh": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/4-1-oneisall-at-jill-zarins-luxury-luncheon.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_cEVErJ",
+        "text_block_Y4a84f",
+        "text_block_eRw4Qh"
+      ],
+      "settings": {
+        "title": "Oneisall at Jill Zarin's Luxury Luncheon",
+        "heading_size": "h2",
+        "align_text": "left",
+        "divider": false,
+        "color_scheme": "none"
+      }
+    },
+    "text_columns_8R4nnc": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_TU3cDi": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/5-1-oneisall-at-jill-zarins-luxury-luncheon.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_JxeJ69": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/6-1-oneisall-at-jill-zarins-luxury-luncheon.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_XCxMJT": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/2-1-oneisall-at-jill-zarins-luxury-luncheon.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_TU3cDi",
+        "text_block_JxeJ69",
+        "text_block_XCxMJT"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h3",
+        "align_text": "left",
+        "divider": false,
+        "color_scheme": "none"
+      }
+    },
+    "text_columns_WxFTPw": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_kpGhhD": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-events.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_Fa8Pec": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-events-1.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_CrmFHk": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oneisall-events-2.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_kpGhhD",
+        "text_block_Fa8Pec",
+        "text_block_CrmFHk"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h3",
+        "align_text": "left",
+        "divider": false,
+        "color_scheme": "none"
+      }
+    },
+    "featured_video_YRatjk": {
+      "type": "featured-video",
+      "settings": {
+        "title": "",
+        "video_url": "https://youtu.be/d1ipExIDm8w?si=cIMAMUWjh-UiLOTo",
+        "divider": false
+      }
+    },
+    "newsletter_GxBpzW": {
+      "type": "newsletter",
+      "blocks": {
+        "title_VJbVf9": {
+          "type": "title",
+          "settings": {
+            "title": "Get 10% off your first purchase",
+            "heading_size": "h2"
+          }
+        },
+        "text_cMdDeP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Subscribe to our newsletter for the latest updates and exclusive offers!</p>"
+          }
+        },
+        "form_E74C7J": {
+          "type": "form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title_VJbVf9",
+        "text_cMdDeP",
+        "form_E74C7J"
+      ],
+      "settings": {
+        "color_scheme": "1",
+        "align_text": "center",
+        "image_width": "33",
+        "image_mask": "none",
+        "image_position": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "slideshow_E7bnkH",
+    "logo_list_i4fRFY",
+    "rich_text_4JCqT7",
+    "main",
+    "advanced_content_FyMgUK",
+    "shogun-optimizer",
+    "1720064211be81f357",
+    "rich_text_ngQyYY",
+    "rich_text_YxqFRD",
+    "text_columns_WAWCan",
+    "advanced_content_tL3cXT",
+    "text_and_image_LcXPyw",
+    "text_columns_rjwHNx",
+    "text_columns_8R4nnc",
+    "text_columns_WxFTPw",
+    "featured_video_YRatjk",
+    "newsletter_GxBpzW"
+  ]
+}

@@ -1,0 +1,201 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rich_text_9DLgxM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_NP9h9G": {
+          "type": "heading",
+          "settings": {
+            "title": "Contact Us",
+            "heading_size": "h0"
+          }
+        },
+        "text_qxJznY": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Our team is dedicated to assisting you , available from Monday to Friday with responses within 24 hours.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NP9h9G",
+        "text_qxJznY"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "1",
+        "section_visibility": "always",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "text_with_icons_6yqpEr": {
+      "type": "text-with-icons",
+      "blocks": {
+        "text_block_JbfrgA": {
+          "type": "text_block",
+          "settings": {
+            "icon": "store",
+            "title": "Service Hours",
+            "text": "<p>8:00 am - 5:00 pm PST</p><p>Monday - Friday</p>"
+          }
+        },
+        "text_block_yXaNnT": {
+          "type": "text_block",
+          "settings": {
+            "icon": "chat",
+            "title": "Email",
+            "text": "<p><a href=\"mailto:support@jackandrose.net\" title=\"mailto:support@jackandrose.net\">support@jackandrose.net</a></p>"
+          }
+        },
+        "text_block_yQiQm6": {
+          "type": "text_block",
+          "settings": {
+            "icon": "phone",
+            "title": "Phone",
+            "text": "<p><a href=\"tel:+1 (866) 695-7865\" title=\"tel:+1 (866) 695-7865\">+1 (866) 695-7865</a></p>"
+          }
+        },
+        "text_block_Kqa4Tx": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "icon": "sales-tag",
+            "title": "Distribution & Wholesale",
+            "text": "<p><a href=\"mailto:conniexi@oneisall.com\" title=\"mailto:conniexi@oneisall.com\">conniexi@oneisall.com</a></p>"
+          }
+        },
+        "text_block_cLqjEt": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "icon": "charity",
+            "title": "Influencer collaboration",
+            "text": "<p><a href=\"mailto:vickycc@oneisall.com\" title=\"mailto:vickycc@oneisall.com\">vickycc@oneisall.com</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_JbfrgA",
+        "text_block_yXaNnT",
+        "text_block_yQiQm6",
+        "text_block_Kqa4Tx",
+        "text_block_cLqjEt"
+      ],
+      "settings": {
+        "heading_size": "h2",
+        "heading_position": "center",
+        "title": "",
+        "desktop_columns_per_row": 3,
+        "icon_color": "#ffda93",
+        "button_label": "",
+        "button_link": "",
+        "divider": false
+      }
+    },
+    "rich_text_BpTFC4": {
+      "type": "rich-text",
+      "blocks": {
+        "text_qBKidw": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<ul><li>Please ensure to include the order number and model number for faster assistance. The Model No. can be located on the product or package. </li></ul><p></p><ul><li>For returns or exchanges within 30 days of delivery, please contact us directly for assistance with returns and exchanges.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "text_qBKidw"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "section_visibility": "always",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "slideshow_image_tGcr3D": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_nWMkNN": {
+          "type": "image",
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_nWMkNN"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "rich_text_LVhxhH": {
+      "type": "rich-text",
+      "blocks": {
+        "page_4hT4dX": {
+          "type": "page",
+          "settings": {
+            "page_text": "contact-us"
+          }
+        }
+      },
+      "block_order": [
+        "page_4hT4dX"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "none",
+        "section_visibility": "always",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "text": "",
+        "show_phone": false,
+        "narrow_column": false,
+        "color_scheme": "3"
+      }
+    }
+  },
+  "order": [
+    "rich_text_9DLgxM",
+    "text_with_icons_6yqpEr",
+    "rich_text_BpTFC4",
+    "slideshow_image_tGcr3D",
+    "rich_text_LVhxhH",
+    "main",
+    "form"
+  ]
+}

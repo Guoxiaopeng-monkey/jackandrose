@@ -1,0 +1,236 @@
+{% assign sid = section.id %}
+<style>
+    #shopify-section-{{ sid }} {
+       background:{{section.settings.bg}};
+        {% if section.settings.bg != blank %}
+        padding: {{section.settings.padding_pc}};
+        {% else %}
+        margin: {{section.settings.padding_pc}};
+        {% endif %}
+    }
+    #shopify-section-{{ sid }} .page-width{
+      --page-width:1360px;
+    }
+    #shopify-section-{{ sid }} .product-app_inner{
+      display: flex;
+      align-items: center;
+      background:#fff;
+      border-radius:48px;
+    }
+    #shopify-section-{{ sid }} .product-app_inner>div{
+        width: 50%;
+    }
+    #shopify-section-{{ sid }} .product-app_inner>div.pai-left{
+      padding:0 80px;
+    }
+    #shopify-section-{{ sid }} .product-app_inner>div.pai-left .text1{
+      color: #000;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+    #shopify-section-{{ sid }} .product-app_inner>div.pai-left .text2{
+      color: rgba(0, 0, 0, 0.80);
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.4;
+      margin-top:12px;
+    }
+    #shopify-section-{{ sid }} .product-app_inner>div.pai-left .iconsbox{
+      display: flex;
+      align-items: flex-start;
+      gap:20px;
+      margin-top:24px;
+    }
+    #shopify-section-{{ sid }} .product-app_inner>div.pai-left .iconsbox> .item{
+      max-width:120px;
+      display:inline-block;
+    }
+    #shopify-section-{{ sid }} .product-app_inner>div.pai-right img{
+      width:100%;
+    }
+  @media (max-width:959px){
+    #shopify-section-{{ sid }} {
+      {% if section.settings.bg != blank %}
+      padding: {{section.settings.padding_m}};
+      {% else %}
+      margin: {{section.settings.padding_m}};com
+      {% endif %}
+    }
+    #shopify-section-{{ sid }} .product-app_inner{
+      border-radius:24px;
+          flex-direction: column-reverse;
+    }
+     #shopify-section-{{ sid }} .product-app_inner>div{
+        width: 100%;
+    }
+    #shopify-section-{{ sid }} .product-app_inner>div.pai-left{
+      padding:24px 16px 40px;
+    }
+    #shopify-section-{{ sid }} .product-app_inner>div.pai-left .text1{
+      font-size: 20px;
+    }
+    #shopify-section-{{ sid }} .product-app_inner>div.pai-left .text2{
+      font-size: 14px;
+    }
+  }
+</style>
+
+<div class="product-app" id="Product-app">
+  <div class="page-width">
+    {% assign bs = section.settings %}
+    <div class="product-app_inner">
+        <div class="pai-left" >
+          {% if bs.title != blank %}
+          <div class="text1">{{ bs.title }}</div>
+          {% endif %}
+          {% if bs.text != blank %}
+          <div class="text2">{{ bs.text | replace: '***', '<span>' | replace: '###', '</span>' }}</div>
+          {% endif %}
+          {% if bs.icon1 != blank or bs.icon2 != blank or bs.qr_code1 != blank or bs.qr_code2 != blank %}
+            <div class="iconsbox">
+              <div class="item">
+                
+                {% if bs.qr_code1 != blank %}
+                    {{ bs.qr_code1 | image_url: width: master | image_tag  }}
+                {% endif %}
+                {% if bs.icon1 != blank %}
+                  <a href="{{ bs.link1 }}">
+                    {{ bs.icon1 | image_url: width: master | image_tag  }}
+                  </a>
+                {% endif %}
+              </div>
+              <div class="item">
+                {% if bs.qr_code2 != blank %}
+                    {{ bs.qr_code2 | image_url: width: master | image_tag  }}
+                {% endif %}
+              {% if bs.icon2 != blank %}
+                <a href="{{ bs.link2 }}">
+                  {{ bs.icon2 | image_url: width: master | image_tag  }}
+                </a>
+              {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+        <div class="pai-right">
+          {% liquid
+              assign pc_image = bs.img
+              assign mobile_image = bs.img_m
+              assign alt = bs.img.alt
+          %}
+          <picture>
+              <source srcset="{{ mobile_image | img_url: '750x' }}"
+                      media="(max-width: 375px)">
+              <source srcset="{{ mobile_image | img_url: '1536x' }}"
+                      media="(max-width: 768px)">
+              <source srcset="{{ pc_image | img_url: '2160x' }}"
+                      media="(max-width: 1080px)">
+              <source srcset="{{ pc_image | img_url: '2400x' }}"
+                      media="(max-width: 1200px)">
+              <source srcset="{{ pc_image | img_url: '3840x' }}"
+                      media="(max-width: 1920px)">
+              <img src="{{ pc_image | img_url: '3840x' }}" alt="{{ alt }}" loading="lazy" width="auto" height="100%">
+          </picture>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+<script type="module">
+</script>
+
+{% schema %}
+  {
+    "name": "Product app",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg",
+        "label":"backgroung",
+        "default":"#fefbf8"
+      },
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image (desktop)"
+      },
+      {
+        "type": "image_picker",
+        "id": "img_m",
+        "label": "Image (mobile)"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "KOL Video"
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "TExt",
+      },
+      {
+        "type": "header",
+        "content": "Link 1",
+      },
+      {
+        "type": "image_picker",
+        "id": "icon1",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "qr_code1",
+        "label": "QR code"
+      },
+      {
+        "type": "url",
+        "id": "link1",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Link 2",
+      },
+      {
+        "type": "image_picker",
+        "id": "icon2",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "qr_code2",
+        "label": "QR code"
+      },
+      {
+        "type": "url",
+        "id": "link2",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Padding"
+      },
+      {
+        "type": "text",
+        "id": "padding_pc",
+        "label": "Padding (desktop)",
+        "default":"100px 0"
+      },
+      {
+        "type": "text",
+        "id": "padding_m",
+        "label": "Padding (mobile)",
+        "default":"80px 0"
+      }
+    ],
+    "presets": [
+        {
+            "name": "Product app",
+        }
+    ]
+  }
+{% endschema %}

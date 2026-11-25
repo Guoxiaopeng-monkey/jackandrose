@@ -1,0 +1,371 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {}
+    },
+    "shogun-above": {
+      "type": "shogun-above",
+      "disabled": true,
+      "settings": {}
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "custom_Eyh9PM": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "<p><b>Black Friday Sale, Save </b> <span style=\"color:#FF6A00\n\">11 $</span>. Automatically apply discounts at checkout.</br>Offer ends on December 2nd.</p>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "quantity_selector_X9BCmX": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "description_M7JAy9": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "complementary_products_xhNrFb": {
+          "type": "complementary_products",
+          "settings": {
+            "product_complementary_heading": "Frequently Bought Together",
+            "complementary_count": 3,
+            "per_slide": 3,
+            "control_type": "dots",
+            "image_style": "default"
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "checkmark",
+            "text": "30 Days Worry-Free Returns"
+          }
+        },
+        "sales_point2": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "truck",
+            "text": "Free Shipping in The US"
+          }
+        },
+        "sales_point3": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "shield",
+            "text": "100% Secure Payments"
+          }
+        },
+        "sales_point4": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "package",
+            "text": "Ships Within 24 hours"
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "share_eTMqpL": {
+          "type": "share",
+          "settings": {}
+        },
+        "custom_TRDhrR": {
+          "type": "custom",
+          "settings": {
+            "code": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n</script>"
+          }
+        }
+      },
+      "block_order": [
+        "custom_Eyh9PM",
+        "variant_picker",
+        "quantity_selector_X9BCmX",
+        "price",
+        "buy_buttons",
+        "description_M7JAy9",
+        "complementary_products_xhNrFb",
+        "sales_point",
+        "sales_point2",
+        "sales_point3",
+        "sales_point4",
+        "inventory_status",
+        "share_eTMqpL",
+        "custom_TRDhrR"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_container_size": "medium",
+        "product_image_size": "natural",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "slideshow_image_wPJgbK": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_KE9neP": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/p2-clipper.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_KE9neP"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_T4n9Ba": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_qBpGLg": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/p2-clipper-1.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_qBpGLg"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_8PWjh7": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_ACw9kd": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/p2-clipper-2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_ACw9kd"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_8k8TEQ": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_BQy8bV": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/p2-clipper-3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_BQy8bV"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_eVA3eV": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_tEzTaD": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/p2-clipper-4.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_tEzTaD"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "featured_video_wJB8UG": {
+      "type": "featured-video",
+      "settings": {
+        "title": "",
+        "video_url": "https://www.youtube.com/watch?v=MuPASAdaWQE",
+        "divider": false
+      }
+    },
+    "171524248506ebf0c3": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "blocks": {
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": true
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "settings": {
+            "title": "Shipping information",
+            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
+            "page": ""
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+            "title": "Ask a question",
+            "phone": false
+          }
+        }
+      },
+      "block_order": [
+        "description",
+        "tab",
+        "contact"
+      ],
+      "disabled": true,
+      "settings": {
+        "max_width": false
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 5,
+        "products_per_row": 5
+      }
+    },
+    "more-products-vendor": {
+      "type": "more-products-vendor",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "more-products-collection": {
+      "type": "more-products-collection",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {}
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "2"
+      }
+    },
+    "shogun-below": {
+      "type": "shogun-below",
+      "disabled": true,
+      "settings": {}
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "shogun-above",
+    "main",
+    "slideshow_image_wPJgbK",
+    "slideshow_image_T4n9Ba",
+    "slideshow_image_8PWjh7",
+    "slideshow_image_8k8TEQ",
+    "slideshow_image_eVA3eV",
+    "featured_video_wJB8UG",
+    "171524248506ebf0c3",
+    "sub",
+    "recommendations",
+    "more-products-vendor",
+    "more-products-collection",
+    "recently-viewed",
+    "collection-return",
+    "shogun-below",
+    "shogun-optimizer"
+  ]
+}

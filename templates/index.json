@@ -1,0 +1,1139 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_aUnXBK": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_qQgaHC": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 60,
+            "subheading": "",
+            "link": "shopify://products/jack-rose-travel-steamer-for-clothes",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/Black-Friday-15OFF-Black-Gold-1920x1080.webp",
+            "image_mobile": "shopify://shop_images/Black-Friday-15OFF-Black-Gold-Mobile-1080x1920.webp",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "hero_qQgaHC"
+      ],
+      "name": "t:labels.hero_optional_slides",
+      "settings": {
+        "full_width": true,
+        "desktop_size": 0,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": false,
+        "autoplay_speed": 7
+      }
+    },
+    "promo_grid_CWVtNY": {
+      "type": "promo-grid",
+      "blocks": {
+        "advanced_qeVXEt": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Kalo Global Travel Steamer",
+            "textarea": "<p>Made for Global Travel</p>",
+            "cta_text1": "",
+            "cta_link1": "shopify://products/jack-rose-travel-steamer-for-clothes",
+            "cta_text2": "",
+            "cta_link2": "",
+            "title": "",
+            "description": "",
+            "image": "shopify://shop_images/Image_20260512_153437.png",
+            "image_mobile": "shopify://shop_images/Image_20260512_153437.png",
+            "image_url": "shopify://products/jack-rose-travel-steamer-for-clothes",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "height_mobile": 400,
+            "text_align": "vertical-center horizontal-left",
+            "color_accent": "#fff"
+          }
+        },
+        "advanced_cmFeNw": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Foldable Travel Steamer",
+            "textarea": "<p>Made for Everyday Travel</p>",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "title": "",
+            "description": "",
+            "image": "shopify://shop_images/Image_20260512_153948.png",
+            "image_mobile": "shopify://shop_images/Image_20260512_153948.png",
+            "image_url": "shopify://products/jack-rose-portable-steam-iron",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "height_mobile": 400,
+            "text_align": "vertical-center horizontal-left",
+            "color_accent": "#fff"
+          }
+        }
+      },
+      "block_order": [
+        "advanced_qeVXEt",
+        "advanced_cmFeNw"
+      ],
+      "name": "t:labels.promotional_grid",
+      "settings": {
+        "full_width": true,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": false,
+        "title_size_multiplier": 1.5,
+        "title_size_multiplier_mobile": 1.3,
+        "desp_size_multiplier": 1.5,
+        "desp_size_multiplier_mobile": 1.3,
+        "btn_size_multiplier": 1.4,
+        "btn_size_multiplier_mobile": 1.4
+      }
+    },
+    "custom_text_with_icon_3Wynnf": {
+      "type": "custom-text-with-icon",
+      "blocks": {
+        "text_block_hJUcpF": {
+          "type": "text_block",
+          "settings": {
+            "icon": "shipping",
+            "title": "Fast Shipping",
+            "button_link": ""
+          }
+        },
+        "text_block_z9YGbU": {
+          "type": "text_block",
+          "settings": {
+            "icon": "payment",
+            "title": "24-Month Warranty",
+            "button_link": ""
+          }
+        },
+        "text_block_DGmcrj": {
+          "type": "text_block",
+          "settings": {
+            "icon": "return",
+            "title": "30 Day Money Back",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_hJUcpF",
+        "text_block_z9YGbU",
+        "text_block_DGmcrj"
+      ],
+      "name": "custom columns with icon",
+      "settings": {
+        "class": "",
+        "color_scheme": "none",
+        "align_text": "center",
+        "desktop_columns_per_row": 3,
+        "space_mobile": 1,
+        "icon_color": "#000",
+        "divider": false
+      }
+    },
+    "hero_video_zR6Gy9": {
+      "type": "hero-video",
+      "name": "t:labels.video_hero",
+      "settings": {
+        "full_width": true,
+        "section_visibility": "always",
+        "title": "",
+        "title_size": 70,
+        "subheading": "",
+        "link_text": "",
+        "link": "",
+        "color_accent": "#fff",
+        "text_align": "vertical-center horizontal-center",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/660dc7473e054d0c8bc6cfbd6ac048cf.mp4",
+        "overlay_opacity": 0,
+        "height": 650,
+        "height_mobile": 300
+      }
+    },
+    "slider_YbzWYP": {
+      "type": "slider",
+      "blocks": {
+        "video_FRqUMc": {
+          "type": "video",
+          "settings": {
+            "video_pc": "https://cdn.shopify.com/videos/c/o/v/c231a764954a47ef84968f5615dcefdf.mp4",
+            "video_mobile": "https://cdn.shopify.com/videos/c/o/v/c231a764954a47ef84968f5615dcefdf.mp4",
+            "position": "center",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_FRqUMc"
+      ],
+      "disabled": true,
+      "name": "Media Slider",
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_arrows": false,
+        "margin_bottom": 0
+      }
+    },
+    "spk_media_grid_3yEqAJ": {
+      "type": "spk-media-grid",
+      "blocks": {
+        "image_text_jaMHaf": {
+          "type": "imageText",
+          "settings": {
+            "image_pc": "shopify://shop_images/4_2x_445f2117-83ee-4739-988b-07d0b3619ab1.jpg",
+            "image_mobile": "shopify://shop_images/4_2x_445f2117-83ee-4739-988b-07d0b3619ab1.jpg",
+            "handle": "",
+            "content": "",
+            "color": "#fff",
+            "text_alignment": "center",
+            "horizontal_grid": 3,
+            "vertical_grid": 1,
+            "horizontal_grid_mb": 12,
+            "vertical_grid_mb": 1
+          }
+        },
+        "image_text_dFngH8": {
+          "type": "imageText",
+          "settings": {
+            "image_pc": "shopify://shop_images/1_2x_3028ecb3-f50f-44d7-9ee6-2557d11365eb.jpg",
+            "image_mobile": "shopify://shop_images/1_2x_3028ecb3-f50f-44d7-9ee6-2557d11365eb.jpg",
+            "handle": "",
+            "content": "",
+            "color": "#fff",
+            "text_alignment": "center",
+            "horizontal_grid": 3,
+            "vertical_grid": 1,
+            "horizontal_grid_mb": 12,
+            "vertical_grid_mb": 1
+          }
+        },
+        "image_text_MLhFrY": {
+          "type": "imageText",
+          "settings": {
+            "image_pc": "shopify://shop_images/2_2x_91de9f70-c3a6-481c-b006-ed72586210be.jpg",
+            "image_mobile": "shopify://shop_images/2_2x_91de9f70-c3a6-481c-b006-ed72586210be.jpg",
+            "handle": "",
+            "content": "",
+            "color": "#fff",
+            "text_alignment": "center",
+            "horizontal_grid": 3,
+            "vertical_grid": 1,
+            "horizontal_grid_mb": 12,
+            "vertical_grid_mb": 1
+          }
+        },
+        "image_text_NNyPVt": {
+          "type": "imageText",
+          "settings": {
+            "image_pc": "shopify://shop_images/3_2x_00e4bd15-1955-426d-ac25-65653af7ba21.jpg",
+            "image_mobile": "shopify://shop_images/3_2x_00e4bd15-1955-426d-ac25-65653af7ba21.jpg",
+            "handle": "",
+            "content": "",
+            "color": "#fff",
+            "text_alignment": "center",
+            "horizontal_grid": 3,
+            "vertical_grid": 1,
+            "horizontal_grid_mb": 12,
+            "vertical_grid_mb": 1
+          }
+        }
+      },
+      "block_order": [
+        "image_text_jaMHaf",
+        "image_text_dFngH8",
+        "image_text_MLhFrY",
+        "image_text_NNyPVt"
+      ],
+      "name": "SPK Image Grid",
+      "settings": {
+        "target_id": "",
+        "title": "Travel Made Effortless",
+        "layout": "title-center",
+        "title_color": "#291906",
+        "block_back": "#dddddd",
+        "text_position": "overlay",
+        "block_rounded": 20,
+        "gap_distance": 20,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "spk_media_grid_4KfRjL": {
+      "type": "spk-media-grid",
+      "blocks": {
+        "image_text_cBjKM3": {
+          "type": "imageText",
+          "disabled": true,
+          "settings": {
+            "image_pc": "shopify://shop_images/369610.jpg",
+            "image_mobile": "shopify://shop_images/369610.jpg",
+            "handle": "From Wrinkled to Ready.",
+            "content": "",
+            "color": "#ffffff",
+            "text_alignment": "left",
+            "horizontal_grid": 6,
+            "vertical_grid": 1,
+            "horizontal_grid_mb": 12,
+            "vertical_grid_mb": 1
+          }
+        },
+        "image_text_UUVQME": {
+          "type": "imageText",
+          "settings": {
+            "image_pc": "shopify://shop_images/36803_2x_0612a394-7216-4a3d-9668-3ade7e35dcb9.png",
+            "image_mobile": "shopify://shop_images/36803_2x_0612a394-7216-4a3d-9668-3ade7e35dcb9.png",
+            "handle": "",
+            "content": "",
+            "color": "#ffffff",
+            "text_alignment": "left",
+            "horizontal_grid": 6,
+            "vertical_grid": 1,
+            "horizontal_grid_mb": 12,
+            "vertical_grid_mb": 1
+          }
+        },
+        "image_text_rzWMbr": {
+          "type": "imageText",
+          "settings": {
+            "image_pc": "shopify://shop_images/36961_2x_5670f901-1a42-448c-8bb7-08ab9d8461ba.jpg",
+            "image_mobile": "shopify://shop_images/36961_2x_5670f901-1a42-448c-8bb7-08ab9d8461ba.jpg",
+            "handle": "",
+            "content": "",
+            "color": "#000000",
+            "text_alignment": "left",
+            "horizontal_grid": 6,
+            "vertical_grid": 1,
+            "horizontal_grid_mb": 12,
+            "vertical_grid_mb": 1
+          }
+        }
+      },
+      "block_order": [
+        "image_text_cBjKM3",
+        "image_text_UUVQME",
+        "image_text_rzWMbr"
+      ],
+      "name": "SPK Image Grid",
+      "settings": {
+        "target_id": "",
+        "title": "See it In Action",
+        "layout": "title-center",
+        "title_color": "#291906",
+        "block_back": "#dddddd",
+        "text_position": "overlay",
+        "block_rounded": 20,
+        "gap_distance": 20,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "spk_media_grid_yKdmng": {
+      "type": "spk-media-grid",
+      "blocks": {
+        "image_text_X3WAFL": {
+          "type": "imageText",
+          "settings": {
+            "image_pc": "shopify://shop_images/37269_451cf3f6-3c30-421f-ab9e-8ca4a053010b.jpg",
+            "image_mobile": "shopify://shop_images/20260521-181414.jpg",
+            "handle": "",
+            "content": "",
+            "color": "#000000",
+            "text_alignment": "left",
+            "horizontal_grid": 12,
+            "vertical_grid": 1,
+            "horizontal_grid_mb": 12,
+            "vertical_grid_mb": 1
+          }
+        }
+      },
+      "block_order": [
+        "image_text_X3WAFL"
+      ],
+      "name": "SPK Image Grid",
+      "settings": {
+        "target_id": "",
+        "title": "",
+        "layout": "title-left",
+        "title_color": "#f47c20",
+        "block_back": "#dddddd",
+        "text_position": "overlay",
+        "block_rounded": 20,
+        "gap_distance": 20,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "1766389539b99d5b74": {
+      "type": "apps",
+      "blocks": {
+        "vizup_videos_videos_block_HAXwjt": {
+          "type": "shopify://apps/vizup-videos/blocks/videos-block/eaecaa7b-ab6b-40ae-8ddf-50daa867f3eb",
+          "settings": {
+            "videoc_widget_id": "",
+            "custom_css": ""
+          }
+        }
+      },
+      "block_order": [
+        "vizup_videos_videos_block_HAXwjt"
+      ],
+      "settings": {
+        "full_width": true,
+        "space_around": true
+      }
+    },
+    "testimonials_4d4L9m": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_kACq3R": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Exactly as described, works very well. Dual voltage means this steamer works around the world. Compact, fast starting, multiple settings (dry, low steam, high steam) for every type of material. Highly recommend. Had a small issue with the water tank on my first unit after several weeks of use, Jaina with Jack & Rose customer service was very responsive and took care of replacement less than 24 hours after reaching out to customer service.</p>",
+            "author": "A. Miller",
+            "author_info": ""
+          }
+        },
+        "testimonial_G8hiGz": {
+          "type": "testimonial",
+          "disabled": true,
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Best steamer hands down! I use this daily and got all my friends on it. There were so many clothes I never wore because I was too lazy to iron them lol, but this makes it so easy. I just run the steamer over my hanging clothes and they’re wrinkle free in about a minute. I originally purchased it for the dual voltage since I was getting married in Greece and needed it for my wedding dress (worked great!), but now I use it for all my everyday clothes. Mine just stopped working after 2 years, and the company immediately sent me a free replacement - amazing customer service!<br/><br/></p>",
+            "author": "AAA",
+            "author_info": ""
+          }
+        },
+        "testimonial_k7YRrm": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>I have used many different steamers & irons over the years, and most perform average at best. BUT THIS ONE?!?! Amazing!! It took out wrinkles in my clothes in one pass! The water capacity is decent & it didn’t use an excessive amount while steaming my items. It’s got a little weight to it, but to me that aides in the smooth ironing/steaming process. It easy to grip and comfortable to manage & glides smoothly along various materials. This definitely worth the purchase for travel or quick touchups at home. Oh…and it heats up super fast!</p>",
+            "author": "NikkiD",
+            "author_info": ""
+          }
+        },
+        "testimonial_9wEzBX": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Love this little steamer! I bought new curtains and couldn’t stand the look of the wrinkles on them and I also have tons of clothes with a satin like material that this will be super good for where wrinkles a just a pain. The water runs down quite fast if you’re doing 2 sets of curtains like me but for clothes this is perfect. It’s easy to use, and it gets pretty dang hot, the cord is not a bad length for something that will not take too long and lucky for me my windows both sit over an outlet so it’s a win win!</p>",
+            "author": "Kayla",
+            "author_info": ""
+          }
+        },
+        "testimonial_qjbkE6": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Exactly what I needed! I have 100% cotton duvets and even though I pull them out of the dryer immediately, they are still wrinkled. I steamed the entire duvet in about 15min or less and it’s now wrinkle free. The photo shows the right side steamed and the left side not steamed yet to show you how well it works. Highly recommend!</p>",
+            "author": "Jennifer N",
+            "author_info": ""
+          }
+        },
+        "testimonial_NMqdRM": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Just got it. I love it! The iron doesn't get that hot but still works good on lighter material. Haven't tried it on anything heavy. Love love love the colors.</p>",
+            "author": "Nico Smith",
+            "author_info": ""
+          }
+        },
+        "testimonial_GpadJa": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Have used just once but very impressed. Heats up fast. Do not change the ceramic plate when heated up! I attempted to change position and it was scalding hot. Water reservoir is small. I steamed 4 items and had to fill tank 3Xs. “Pop open” the water reservoir.</p>",
+            "author": "Exceeds standards",
+            "author_info": ""
+          }
+        },
+        "testimonial_tkib9p": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Excelente compra! Los materiales son de primera y realmente deja las prendas impecables y en muy poco tiempo. La uso casi siempre antes de ir a trabajar y no me tengo que preocupar por pensar que me voy a poner con mucha anticipación. Si algo está arrugado en el menos de 5 minutos lo tengo solucionado!</p>",
+            "author": "Sabri C",
+            "author_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_kACq3R",
+        "testimonial_G8hiGz",
+        "testimonial_k7YRrm",
+        "testimonial_9wEzBX",
+        "testimonial_qjbkE6",
+        "testimonial_NMqdRM",
+        "testimonial_GpadJa",
+        "testimonial_tkib9p"
+      ],
+      "name": "t:labels.testimonials",
+      "settings": {
+        "title": "From Our Customers",
+        "align_text": "center",
+        "round_images": true,
+        "color_scheme": "none"
+      }
+    },
+    "spk_single_image_banner_6MXgUJ": {
+      "type": "spk-single-image-banner",
+      "name": "SPK Image with Content",
+      "settings": {
+        "image_pc": "shopify://shop_images/37270.jpg",
+        "image_mobile": "shopify://shop_images/20260521-181424.jpg",
+        "content_position": "middle_center",
+        "content_position_mb": "md:bottom_left",
+        "title": "",
+        "description": "",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "slider_eBfaGC": {
+      "type": "slider",
+      "blocks": {
+        "video_qVJKmE": {
+          "type": "video",
+          "settings": {
+            "video_pc": "",
+            "video_mobile": "",
+            "position": "center",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_qVJKmE"
+      ],
+      "name": "Media Slider",
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_arrows": true,
+        "margin_bottom": 0
+      }
+    },
+    "icons_3XVa9c": {
+      "type": "icons",
+      "blocks": {
+        "icon_jECKYU": {
+          "type": "icon",
+          "settings": {
+            "liquid": "1",
+            "title": "Fast & Free Shipping",
+            "text": "Price includes shipping, free"
+          }
+        },
+        "icon_UKAHJm": {
+          "type": "icon",
+          "settings": {
+            "liquid": "1",
+            "title": "Fast & Free Shipping",
+            "text": "Price includes shipping, free"
+          }
+        },
+        "icon_yhECxf": {
+          "type": "icon",
+          "settings": {
+            "liquid": "1",
+            "title": "Fast & Free Shipping",
+            "text": "Price includes shipping, free"
+          }
+        }
+      },
+      "block_order": [
+        "icon_jECKYU",
+        "icon_UKAHJm",
+        "icon_yhECxf"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "Icons",
+      "settings": {
+        "padding_pc": "20px 0",
+        "padding_m": "20px 0"
+      }
+    },
+    "video_slideshow_RXepwa": {
+      "type": "video-slideshow",
+      "blocks": {
+        "text_block_QAiYbB": {
+          "type": "text_block",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/ee58c0f104704f62b40e5506dcbb4e66.mp4",
+            "mobile_video_url": "",
+            "subtitle": "",
+            "title": "<p>Cozy C1 Smart Grooming Vacuum</p>",
+            "title_size_multiplier": 2.3,
+            "title_size_multiplier_mobile": 1.2,
+            "desp_text": "<p>Groom, Clean, and Shine</p>",
+            "desp_size_multiplier": 2,
+            "desp_size_multiplier_mobile": 1.2,
+            "url": "shopify://products/cozy-c1-dog-grooming-vacuum",
+            "btn_size_multiplier": 1.2,
+            "btn_size_multiplier_mobile": 1,
+            "label": "Learn More",
+            "enable_overlay": true,
+            "overlay": 40
+          }
+        },
+        "text_block_JXzVTa": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/6ef22e13a4324efdaf424bee4431bde4.mp4",
+            "mobile_video_url": "",
+            "subtitle": "<p>intro</p>",
+            "title": "<p>Name.No1</p>",
+            "title_size_multiplier": 2.5,
+            "title_size_multiplier_mobile": 1.5,
+            "desp_text": "<p>Bright Spot</p>",
+            "desp_size_multiplier": 2.5,
+            "desp_size_multiplier_mobile": 1.5,
+            "url": "",
+            "btn_size_multiplier": 1.4,
+            "btn_size_multiplier_mobile": 1.2,
+            "label": "Shop This",
+            "enable_overlay": true,
+            "overlay": 40
+          }
+        },
+        "text_block_xUMhDb": {
+          "type": "text_block",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/646287ac1ec04f1e96e0c2196a1d65e1.mp4",
+            "mobile_video_url": "",
+            "subtitle": "",
+            "title": "<p>Smart 7L Water Fountain</p>",
+            "title_size_multiplier": 2.3,
+            "title_size_multiplier_mobile": 1.2,
+            "desp_text": "<p>Clean Water, Healthier Pets</p>",
+            "desp_size_multiplier": 2,
+            "desp_size_multiplier_mobile": 1.2,
+            "url": "shopify://products/dog-water-fountain-7l",
+            "btn_size_multiplier": 1.2,
+            "btn_size_multiplier_mobile": 1,
+            "label": "Learn More",
+            "enable_overlay": true,
+            "overlay": 40
+          }
+        },
+        "text_block_wg8kMU": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/2c074bdd9a5d4a2abc83d5f3ea2909f4.mp4",
+            "mobile_video_url": "",
+            "subtitle": "<p>lntro</p>",
+            "title": "<p>Name.N01</p>",
+            "title_size_multiplier": 2.5,
+            "title_size_multiplier_mobile": 2,
+            "desp_text": "<p>Bright Spot</p>",
+            "desp_size_multiplier": 2.5,
+            "desp_size_multiplier_mobile": 2,
+            "url": "",
+            "btn_size_multiplier": 1.4,
+            "btn_size_multiplier_mobile": 1.4,
+            "label": "Shop This",
+            "enable_overlay": true,
+            "overlay": 40
+          }
+        }
+      },
+      "block_order": [
+        "text_block_QAiYbB",
+        "text_block_JXzVTa",
+        "text_block_xUMhDb",
+        "text_block_wg8kMU"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "p {line-height: 1;}"
+      ],
+      "settings": {}
+    },
+    "custom_detail_image_slider_YtmVFV": {
+      "type": "custom-detail-image-slider",
+      "blocks": {
+        "text_block_a9qKnQ": {
+          "type": "text_block",
+          "settings": {
+            "title": "OneIsAll at Superzoo",
+            "desp": "<p>Mandalay Bay Convention Center, Las Vegas, Aug. 13-15, 2025</p>",
+            "url": "https://oneisall.com/pages/2025-superzoo"
+          }
+        },
+        "text_block_TfVDkD": {
+          "type": "text_block",
+          "settings": {
+            "title": "OneIsAll at Catcon",
+            "desp": "<p>Pasadena, California, Aug. 2-3, 2025</p>",
+            "url": "https://oneisall.com/pages/catcon-2025"
+          }
+        },
+        "text_block_QzCzrx": {
+          "type": "text_block",
+          "settings": {
+            "title": "Oneisall at Pet Palooza",
+            "desp": "<p>Truist Field, Charlotte, April 12, 2025</p>",
+            "url": ""
+          }
+        },
+        "text_block_qUQFzt": {
+          "type": "text_block",
+          "settings": {
+            "title": "Oneisall at South by Southwest",
+            "desp": "<p>Austin, Texas, Mar. 9-12, 2025</p>",
+            "url": "https://oneisall.com/pages/2025-sxswexpo"
+          }
+        },
+        "text_block_mFakKK": {
+          "type": "text_block",
+          "settings": {
+            "title": "Oneisall at Jill Zarin's luxurious luncheon",
+            "desp": "<p>Hamptons, New York, Jul 20, 2024</p>",
+            "url": "shopify://pages/hamptons-vip"
+          }
+        },
+        "text_block_RJEVKz": {
+          "type": "text_block",
+          "settings": {
+            "title": "Oneisall at The 66th GRAMMY Awards® Gift Lounge",
+            "desp": "<p>Los Angeles, Feb 4, 2024</p>",
+            "url": "shopify://pages/vip"
+          }
+        },
+        "text_block_8cJDJL": {
+          "type": "text_block",
+          "settings": {
+            "title": "Oneisall at Dog of the Day",
+            "desp": "<p>San Diego, Oct 13, 2024</p>",
+            "url": "shopify://pages/dog-of-the-day"
+          }
+        },
+        "text_block_H3DgLY": {
+          "type": "text_block",
+          "settings": {
+            "title": "Oneisall at The National Dog Show",
+            "desp": "<p>Philadelphia, Nov. 16-17, 2024</p>",
+            "url": "shopify://pages/national-dog-show"
+          }
+        },
+        "text_block_c9BDiJ": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "title": "test",
+            "desp": "<p>test</p>",
+            "url": "shopify://pages/affiliate-program"
+          }
+        },
+        "text_block_8pNc77": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "title": "test",
+            "desp": "<p>test</p>",
+            "url": "shopify://pages/affiliate-program"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_a9qKnQ",
+        "text_block_TfVDkD",
+        "text_block_QzCzrx",
+        "text_block_qUQFzt",
+        "text_block_mFakKK",
+        "text_block_RJEVKz",
+        "text_block_8cJDJL",
+        "text_block_H3DgLY",
+        "text_block_c9BDiJ",
+        "text_block_8pNc77"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "colors": "light",
+        "title": "Oneisall's Events",
+        "content": "",
+        "align_text": "center",
+        "button_label": "Learn More",
+        "title_size_multiplier": 1.3,
+        "title_size_multiplier_mobile": 0.7,
+        "desp_size_multiplier": 1.5,
+        "desp_size_multiplier_mobile": 1,
+        "btn_size_multiplier": 1.2,
+        "btn_size_multiplier_mobile": 1
+      }
+    },
+    "featured-collections-2": {
+      "type": "featured-collections",
+      "blocks": {
+        "featured-collections-2-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "pet-grooming-vacuum",
+            "title": ""
+          }
+        },
+        "collection_dwczXB": {
+          "type": "collection",
+          "settings": {
+            "collection": "pet-clippers",
+            "title": ""
+          }
+        },
+        "featured-collections-2-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "feeder",
+            "title": ""
+          }
+        },
+        "featured-collections-2-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "water-fountain",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured-collections-2-0",
+        "collection_dwczXB",
+        "featured-collections-2-1",
+        "featured-collections-2-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Shop By Categories",
+        "heading_size": "h0",
+        "heading_position": "center",
+        "divider": false
+      }
+    },
+    "newsletter_ghw3FC": {
+      "type": "newsletter",
+      "blocks": {
+        "title_zaqT9q": {
+          "type": "title",
+          "settings": {
+            "title": "",
+            "heading_size": "h2"
+          }
+        },
+        "text_3tKg3U": {
+          "type": "text",
+          "settings": {
+            "text": "<p> </p>"
+          }
+        }
+      },
+      "block_order": [
+        "title_zaqT9q",
+        "text_3tKg3U"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "none",
+        "align_text": "center",
+        "image_width": "33",
+        "image_mask": "none",
+        "image_position": "right",
+        "divider": false,
+        "top_padding": false,
+        "bottom_padding": true
+      }
+    },
+    "blog-posts-0": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "title": "Blog, News and Events",
+        "heading_size": "h0",
+        "heading_position": "center",
+        "blog": "all",
+        "blog_show_tags": false,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "blog_show_excerpt": false,
+        "blog_image_size": "natural",
+        "divider": false
+      }
+    },
+    "rich_text_jn7Jda": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_3MAwWN": {
+          "type": "heading",
+          "settings": {
+            "title": "Your Furrever Friend",
+            "heading_size": "h0"
+          }
+        },
+        "text_HaRYr8": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Tag @oneisall_official on social media</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3MAwWN",
+        "text_HaRYr8"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "none",
+        "section_visibility": "always",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "promo_grid_nVPDyf": {
+      "type": "promo-grid",
+      "blocks": {
+        "advanced_LkCT4a": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Transform How You Pet",
+            "textarea": "<p>Building meaningful relationships and enriching lives for pets and their owners.</p>",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "title": "",
+            "description": "",
+            "image_url": "shopify://pages/about-us",
+            "video_url": "",
+            "width": "100",
+            "height": 500,
+            "height_mobile": 400,
+            "text_align": "vertical-center horizontal-center",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "advanced_LkCT4a"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".flex-grid__item {padding: 0 15px;}",
+        "@media (min-width: 768px) {.promo-grid__content {width: 100%; box-sizing: border-box; }}",
+        "@media (max-width: 768px) {img {min-height: 70vh; } .promo-grid__content {justify-content: flex-end !important; }}",
+        "p {line-height: 1.2;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "gutter_size": 0,
+        "space_above": false,
+        "space_below": false,
+        "title_size_multiplier": 1.4,
+        "title_size_multiplier_mobile": 1.2,
+        "desp_size_multiplier": 1.2,
+        "desp_size_multiplier_mobile": 1,
+        "btn_size_multiplier": 1.4,
+        "btn_size_multiplier_mobile": 1.4
+      }
+    },
+    "custom_image_slider_6py6LN": {
+      "type": "custom-image-slider",
+      "blocks": {
+        "image_8Rr9xd": {
+          "type": "image",
+          "settings": {
+            "title": "@dycederottweiler",
+            "url": "https://www.instagram.com/p/C_IeJN4iEaZ/"
+          }
+        },
+        "image_JwaRK4": {
+          "type": "image",
+          "settings": {
+            "title": "@filippo_capriotti",
+            "url": "https://www.instagram.com/p/CxxZhJ2o2BD/"
+          }
+        },
+        "image_9dRWyA": {
+          "type": "image",
+          "settings": {
+            "title": "@ilya_mnyakin",
+            "url": "https://www.instagram.com/p/C9dBNqQvJLB/"
+          }
+        },
+        "image_FpaBjR": {
+          "type": "image",
+          "settings": {
+            "title": "@koda.toy.aussie",
+            "url": "https://www.instagram.com/p/C7hExHLxo_I/"
+          }
+        },
+        "image_f7YGVb": {
+          "type": "image",
+          "settings": {
+            "title": "@leika.malinois",
+            "url": "https://www.instagram.com/p/CzWkQU5tCGA/"
+          }
+        },
+        "image_BPMDDc": {
+          "type": "image",
+          "settings": {
+            "title": "@michelleandmonica",
+            "url": "https://www.instagram.com/p/C7rSqEfsD0w/"
+          }
+        }
+      },
+      "block_order": [
+        "image_8Rr9xd",
+        "image_JwaRK4",
+        "image_9dRWyA",
+        "image_FpaBjR",
+        "image_f7YGVb",
+        "image_BPMDDc"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media (max-width: 768px) {.index-section {margin: 0 0 20px 0; }}"
+      ],
+      "settings": {
+        "title": "Your Fur-ever Friends",
+        "white_bg": true,
+        "button_label": "Learn more"
+      }
+    },
+    "newsletter_ykYa4e": {
+      "type": "newsletter",
+      "blocks": {
+        "title_bedzMK": {
+          "type": "title",
+          "settings": {
+            "title": "Get 10% off your first purchase",
+            "heading_size": "h2"
+          }
+        },
+        "text_DiHnUR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Subscribe to our newsletter for the latest updates and exclusive offers!</p>"
+          }
+        },
+        "form_gKFEfU": {
+          "type": "form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title_bedzMK",
+        "text_DiHnUR",
+        "form_gKFEfU"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "none",
+        "align_text": "center",
+        "image_width": "33",
+        "image_mask": "none",
+        "image_position": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "rich_text_wN7wHX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ed9hJ7": {
+          "type": "heading",
+          "settings": {
+            "title": "Rich text",
+            "heading_size": "h2"
+          }
+        },
+        "text_9tERc7": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ed9hJ7",
+        "text_9tERc7"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "1",
+        "section_visibility": "always",
+        "divider": false,
+        "show_wave": false
+      }
+    }
+  },
+  "order": [
+    "slideshow_aUnXBK",
+    "promo_grid_CWVtNY",
+    "custom_text_with_icon_3Wynnf",
+    "hero_video_zR6Gy9",
+    "slider_YbzWYP",
+    "spk_media_grid_3yEqAJ",
+    "spk_media_grid_4KfRjL",
+    "spk_media_grid_yKdmng",
+    "1766389539b99d5b74",
+    "testimonials_4d4L9m",
+    "spk_single_image_banner_6MXgUJ",
+    "slider_eBfaGC",
+    "icons_3XVa9c",
+    "video_slideshow_RXepwa",
+    "custom_detail_image_slider_YtmVFV",
+    "featured-collections-2",
+    "newsletter_ghw3FC",
+    "blog-posts-0",
+    "rich_text_jn7Jda",
+    "promo_grid_nVPDyf",
+    "custom_image_slider_6py6LN",
+    "newsletter_ykYa4e",
+    "rich_text_wN7wHX"
+  ]
+}

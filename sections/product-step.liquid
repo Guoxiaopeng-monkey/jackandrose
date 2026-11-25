@@ -1,0 +1,392 @@
+{% assign sid = section.id %}
+<style>
+    #shopify-section-{{ sid }} {
+      margin: {{section.settings.padding_pc}};
+    }
+    #shopify-section-{{ sid }} #Product-step{
+      
+    }
+    #shopify-section-{{ sid }} .page-width{
+      --page-width:1360px;
+      
+    }
+    #shopify-section-{{ sid }} .product-section-info{
+      max-width:800px;
+      margin-bottom:100px;
+    }
+    #shopify-section-{{ sid }} .product-section-title{
+      /* background: linear-gradient(90deg, #F47C20 0%, #FFEF75 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; */
+      color: #F47C20;
+      
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    #shopify-section-{{ sid }} .product-step-inner{
+      display:flex;
+      justify-content:center;
+      position:relative;
+      
+    }
+    #shopify-section-{{ sid }} .cneter{
+      display: block;
+      width: 400px;
+    }
+    #shopify-section-{{ sid }} .step{
+      position:absolute;
+      width: 44%;
+      z-index:1;
+    }
+    #shopify-section-{{ sid }} .step .img{
+      
+    }
+    #shopify-section-{{ sid }} .step.step1 .img img{
+      width:100%;
+      display:block;
+      max-width: 300px;
+      margin-right: auto;
+      margin-left: 0;
+      margin-top: 12px;
+    }
+    #shopify-section-{{ sid }} .step.step2 .img img{
+      width:100%;
+      display:block;
+      max-width: 300px;
+      margin-right: 0;
+      margin-left: auto;
+      margin-top: 12px;
+      
+    }
+    #shopify-section-{{ sid }} .step .text1{
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 1.4;
+      position:relative;
+      background: linear-gradient(90deg, #00B1D2 0%, #FFEF75 95.45%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      padding-bottom:20px;
+    }
+    #shopify-section-{{ sid }} .step .text1:after{
+      content:"";
+      width:100%;
+      bottom:0;
+      left:0;
+      height:1px;
+      position:absolute;
+      background: linear-gradient(90deg, #F47C20 0%, #FFEF75 100%);
+    }
+    #shopify-section-{{ sid }} .step .text2{
+      margin-top:20px;
+      color: rgba(0, 0, 0, 0.80);
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+    #shopify-section-{{ sid }} .step .text2>span{
+      color: #000;
+    }
+    #shopify-section-{{ sid }} .step.step1{
+          left: 0;
+      clip-path: inset(0rem 0% 0rem 100%);
+    }
+    #shopify-section-{{ sid }} .step.step1>div{
+      padding-right:22%;
+    }
+    #shopify-section-{{ sid }} .step.step2{
+      right:0;
+      text-align:right;
+      align-self: flex-end;
+      clip-path: inset(0rem 100% 0rem 0%);
+    }
+    #shopify-section-{{ sid }} .step.step2>div{
+        padding-left:22%;
+      }
+  #shopify-section-{{ sid }} .step.step2 .text1:after{
+    right:0;
+    left:unset;
+  }
+  @media (min-width:960px){
+    #shopify-section-{{ sid }} #Product-step{
+          /* min-height: calc(100vh - var(--header-height) - var(--nav_header-height)); */
+    }
+  }
+  @media (max-width:959px){
+    #shopify-section-{{ sid }} {
+      margin: {{section.settings.padding_m}};
+    }
+    #shopify-section-{{ sid }} .product-section-info{
+      margin-bottom:24px;
+    }
+    #shopify-section-{{ sid }} .product-section-title{
+      font-size: 20px;
+    }
+    #shopify-section-{{ sid }} .product-step-inner{
+      flex-direction: column;
+    }
+    #shopify-section-{{ sid }} .step{
+      position:unset;
+      clip-path:unset!important;
+      padding-bottom: 24px;
+      border-bottom:1px solid linear-gradient(90deg, #F47C20 0%, #FFEF75 100%);
+      position: relative;
+    }
+    #shopify-section-{{ sid }} .step:after{
+      content:"";
+      width:100%;
+      bottom:0;
+      left:0;
+      height:1px;
+      position:absolute;
+      background: linear-gradient(90deg, #F47C20 0%, #FFEF75 100%);
+    }
+    #shopify-section-{{ sid }} .step.step1{
+      order: 1;
+      width:100%;
+    }
+    #shopify-section-{{ sid }} .cneter{
+      width:100%;
+          order: 0;
+      margin-bottom:40px;
+    }
+    #shopify-section-{{ sid }} .step.step2{
+          order: 2;
+      width:100%;
+      text-align: left;
+      margin-top:24px;
+    }
+    #shopify-section-{{ sid }} .step.step1>div{
+      padding-right:0%;
+      padding-bottom:0;
+    }
+    #shopify-section-{{ sid }} .step.step2>div{
+        padding-left:0%;
+      padding-bottom:0;
+      }
+    #shopify-section-{{ sid }} .step .text1{
+      font-size: 18px;
+    }
+    #shopify-section-{{ sid }} .step .text1:after{
+      display:none;
+    }
+    #shopify-section-{{ sid }} .step .text2{
+      margin-top:12px;
+      font-size: 16px;
+    }
+    #shopify-section-{{ sid }} .step.step1 .img img,
+    #shopify-section-{{ sid }} .step.step2 .img img{
+      width:100%;
+      max-width:100%;
+      margin:10px auto 0;
+    }
+  }
+</style>
+
+<div class="product-step" id="Product-step">
+  <div class="page-width">
+    <div class="product-section-info">
+      {% if section.settings.title != blank %}
+        <div class="product-section-title">{{ section.settings.title }}</div>
+      {% endif %}
+      {% if section.settings.text != blank %}
+        <div class="product-section-text">{{ section.settings.text }}</div>
+      {% endif %}
+    </div>
+    <div class="product-step-inner">
+      {% liquid
+          assign bs = section.settings
+          assign pc_image = bs.img
+          assign mobile_image = bs.img_m
+          assign alt = bs.img.alt
+      %}
+      <div class="step step1">
+        <div class="text1">{{ bs.title1 }}</div>
+        <div class="text2">{{ bs.text1 }}</div>
+        {% if bs.img1 != blank %}
+          <div class="img">{{ bs.img1 | image_url: width: master | image_tag  }}</div>
+        {% endif %}
+      </div>
+      <picture class="cneter" >
+          <source srcset="{{ mobile_image | img_url: '750x' }}"
+                  media="(max-width: 375px)">
+          <source srcset="{{ mobile_image | img_url: '1536x' }}"
+                  media="(max-width: 768px)">
+          <source srcset="{{ pc_image | img_url: '2160x' }}"
+                  media="(max-width: 1080px)">
+          <source srcset="{{ pc_image | img_url: '2400x' }}"
+                  media="(max-width: 1200px)">
+          <source srcset="{{ pc_image | img_url: '3840x' }}"
+                  media="(max-width: 1920px)">
+          <img src="{{ pc_image | img_url: '3840x' }}" alt="{{ alt }}" loading="lazy" width="auto" height="100%">
+      </picture>
+      <div class="step step2">
+        <div class="text1">{{ bs.title2 }}</div>
+        <div class="text2">{{ bs.text2 }}</div>
+        {% if bs.img2 != blank %}
+          <div class="img">{{ bs.img2 | image_url: width: master | image_tag  }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  document.addEventListener('DOMContentLoaded', function () {
+    gsap.registerPlugin(ScrollTrigger);
+    let t1;
+    const container = $('#shopify-section-{{ sid }} .product-step');
+    const step = $('#shopify-section-{{ sid }} .step');
+    const endPoint = window.innerHeight*1;
+    const width = window.innerWidth;
+    const startPoint = $(".nav_bar-container").height() + $('#HeaderWrapper').height();
+
+    handleScroll();
+    function handleScroll(){
+      ScrollTrigger.matchMedia({
+        "(min-width: 960px)": function () {
+            if(t1) t1.revert();
+            t1 = gsap.timeline({
+              scrollTrigger:{
+                trigger: container,
+                start: 'center 35%',
+                // start: `top ${startPoint}`,
+                end: ()=>`+=${endPoint}`,
+                pin: true,
+                scrub: 0.8,
+                snap: {
+                  // snapTo: 1 / (step.length - 1),
+                  snapTo: [0,0.5,1],
+                  duration: 0.3,
+                  delay: 0.1,
+                  inertia: false,
+                  // directional: false,
+                  // ease: "power4.inOut",
+                },
+                // markers:true,
+                invalidateOnRefresh: true,
+              }
+            });
+            step.each((index,el)=> {
+              t1.addLabel(`step${index}`).to(el,{
+                "clip-path":"inset(0rem 0% 0rem 0%)",
+              })
+            })
+          }
+      })
+    };
+
+    $(window).resize(function() {
+      if(t1) {
+        t1.revert();
+        t1.clear();
+      }
+      handleScroll();
+    });
+    
+ });
+</script>
+
+{% schema %}
+  {
+    "name": "Product Step",
+    "settings": [
+      {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Adjustable Flow Speed and Temperature"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default":"Lorem ipsum dolor sit amet consectetur. Nulla dictumst massa natoque pulvinar pellentesque. In enim volutpat tristique facilisis quis consectetur in  "
+          },
+      {
+        "type": "header",
+        "content": "动画内容",
+      },
+      {
+            "type": "image_picker",
+            "id": "img",
+            "label": "image (desktop)"
+          },
+          {
+            "type": "image_picker",
+            "id": "img_m",
+            "label": "image (mobile)"
+          },
+      {
+        "type": "header",
+        "content": "第一屏"
+      },
+      {
+            "type": "html",
+            "id": "title1",
+            "label": "Heading",
+            "default": "Step 1<br>Adjustable Flow Speed",
+            "info": "  换行符号:<br>"
+          },
+          {
+            "type": "html",
+            "id": "text1",
+            "label": "Text",
+            "default":"<span>3 Levels of air flow</span><br>Low wind speed<br>medium wind speed<br>high wind speed",
+            "info": "高亮:<span>高亮文本</span>   换行符号:<br>"
+          },
+      {
+            "type": "image_picker",
+            "id": "img1",
+            "label": "image "
+          },
+      {
+        "type": "header",
+        "content": "第二屏"
+      },
+      {
+            "type": "html",
+            "id": "title2",
+            "label": "Heading",
+            "default": "Step 2<br>Adjustable Flow Speed",
+            "info": "  换行符号:<br>"
+          },
+          {
+            "type": "html",
+            "id": "text2",
+            "label": "Text",
+            "default":"<span>3 Levels of air flow</span><br>Low wind speed<br>medium wind speed<br>high wind speed",
+            "info": "高亮:<span>高亮文本</span>   换行符号:<br>"
+          },
+      {
+            "type": "image_picker",
+            "id": "img2",
+            "label": "image "
+          },
+       {
+        "type": "header",
+        "content": "Padding"
+      },
+      {
+        "type": "text",
+        "id": "padding_pc",
+        "label": "Padding (desktop)",
+        "default":"100px 0"
+      },
+      {
+            "type": "text",
+            "id": "padding_m",
+            "label": "Padding (mobile)",
+            "default":"80px 0"
+          }
+    ],
+    "presets": [
+        {
+            "name": "Product Step",
+        }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,243 @@
+<div class="hi_imagerow">
+  {%- if section.settings.title != blank -%}
+    <div class="section-header text-{{ section.settings.align_text }}">
+      <h2 class="wow fadeInUp animated">{{ section.settings.title }}</h2>
+    </div>
+  {%- endif -%}
+  <div class="tab_list wow fadeInUp animated"> 
+    <ul>
+      <li class="active">test</li>
+      <li>test2</li>
+    </ul>
+  </div>
+  <div class="image_tab wow fadeInUp animated">
+    
+    <div class="tp_one tabSpan">
+      {% if section.settings.image_1 != blank %}
+      <div class="tbl_image">
+        <a href="{{ section.settings.link_1 }}">
+          <img src="{{ section.settings.image_1 | img_url : 'master' }}">
+        </a>
+      </div>
+      {% endif %}
+      <div class="swiper-container">
+      <div class="swiper-wrapper">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+
+          {%- when 'explore_8' -%}
+            <div class="image_slider swiper-slide">
+              <div>
+                <img src="{{ block.settings.image | img_url : 'master' }}">
+              </div>
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+      </div>
+      </div>
+    </div>
+    <div class="tp_two tabSpan">
+      {% if section.settings.image_2 != blank %}
+      <div class="tbl_image">
+        <a href="{{ section.settings.link_2 }}">
+          <img src="{{ section.settings.image_2 | img_url : 'master' }}">
+        </a>
+      </div> 
+      {% endif %}
+      <div class="swiper-container">
+      <div class="swiper-wrapper">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+
+          {%- when 'wolf_11' -%}
+            <div class="image_slider swiper-slide">
+              <div>
+                <img src="{{ block.settings.image | img_url : 'master' }}">
+              </div>
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="{{ 'swiper.min.js' | asset_url }}"></script>
+<script>
+  var swiper = new Swiper(".tabSpan .swiper-container", {
+        spaceBetween: 40,
+        slidesPerView: 5.5,
+        autoplay: true,
+        observer:true,
+        observeParents:true,
+        speed:10000,
+        loop:true,
+        autoplay: {
+		delay: 0,
+		disableOnInteraction: false
+	},
+    breakpoints: { 
+          320: {  //当屏幕宽度大于等于320
+            slidesPerView: 2,
+            spaceBetween: 10
+          },
+          480: {  //当屏幕宽度大于等于320
+            slidesPerView: 3,
+            spaceBetween: 20
+          },
+          768: {  //当屏幕宽度大于等于768 
+            slidesPerView: 4,
+            spaceBetween: 20
+          },
+          1024: {  //当屏幕宽度大于等于1280
+            slidesPerView: 5.5,
+            spaceBetween: 30
+          }
+        }
+      });
+  $('.tab_list li').click(function() {
+    $('.tabSpan').css('display', 'none');
+    $('.tab_list li').removeClass('active');
+    $('.tabSpan').eq($(this).index()).css('display', 'block');
+    $(this).addClass('active');
+   var swiper = new Swiper(".tabSpan .swiper-container", {
+        spaceBetween: 40,
+        slidesPerView: 5.5,
+        autoplay: true,
+        observer:true,
+        observeParents:true,
+        speed:10000,
+        loop:true,
+        autoplay: {
+		delay: 0,
+		disableOnInteraction: false
+	},
+     breakpoints: { 
+          320: {  //当屏幕宽度大于等于320
+            slidesPerView: 2,
+            spaceBetween: 10,
+            autoplay: {
+		delay: 0,
+		disableOnInteraction: false
+	}
+          },
+          480: {  //当屏幕宽度大于等于320
+            slidesPerView: 3,
+            autoplay: {
+		delay: 0,
+		disableOnInteraction: false
+	},
+            spaceBetween: 20
+          },
+          768: {  //当屏幕宽度大于等于768 
+            slidesPerView: 4,
+            autoplay: {
+		delay: 0,
+		disableOnInteraction: false
+	},
+            spaceBetween: 20
+          },
+          1024: {  //当屏幕宽度大于等于1280
+            slidesPerView: 5.5,
+            spaceBetween: 30
+          }
+        }
+      });
+  });
+  
+</script>
+{% schema %}
+  {
+    "name": "Image slider",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "select",
+        "id": "align_text",
+        "label": "Alignment",
+        "default": "center",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Centered"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },{
+            "type": "image_picker",
+            "id": "image_1",
+            "label": "Image"
+          },
+      {
+            "type": "image_picker",
+            "id": "image_2",
+            "label": "Image"
+          },
+          {
+            "type": "url",
+            "id": "link_1",
+            "label": "Link"
+          },
+          {
+            "type": "url",
+            "id": "link_2",
+            "label": "Link"
+          },
+      {
+        "type": "checkbox",
+        "id": "divider",
+        "label": "Show section divider",
+        "default": false
+      }
+    ],
+    "blocks": [
+      {
+        "type": "explore_8",
+        "name": "test1",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "type": "wolf_11",
+        "name": "test2",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image slider",
+        "blocks": [
+          {
+            "type": "explore_8"
+          },
+          {
+            "type": "wolf_11"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

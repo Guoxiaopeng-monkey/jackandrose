@@ -1,0 +1,540 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner_z7rirW": {
+      "type": "banner",
+      "settings": {
+        "img": "shopify://shop_images/2_68d24d97-1c29-457a-80d7-0b8fdf5e3912.png",
+        "img_m": "shopify://shop_images/Desktop1_cryptomatte_15_73bcb9df-5be4-440a-a3a4-a859b85a1ccb.jpg",
+        "hide": false,
+        "overlayer": 1,
+        "title": "Pet Water Fountain",
+        "text": "Keep hydration fresh and clean with less effort",
+        "btn": "",
+        "link": "",
+        "btn_style": "main"
+      }
+    },
+    "spk_nav_image_yXdJyH": {
+      "type": "spk-nav-image",
+      "blocks": {
+        "item_7UYndt": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Cordless_Smart_Pet_Water_Fountain_with_3PCS_Filters.jpg",
+            "title": "Medium & Small Capacity",
+            "link": "M"
+          }
+        },
+        "item_VFHKzG": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/lQDPKdBTiX1597nNBDjNBDiwojD2R4xR66EIMit5F1YfAg_1080_1080.jpg",
+            "title": "Large Capacity",
+            "link": "L"
+          }
+        },
+        "item_DUWWpq": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/7L_Pet_Water_Fountain_with_Visual_Water_Level_11_PCS_Filters.jpg",
+            "title": "Stay Fresh Longer",
+            "link": "S"
+          }
+        },
+        "item_WLQYKd": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/oneisall-2l-cat-water-fountain-8pcs-carbon-filters-replacement-493594.png",
+            "title": "Fountain Accessories",
+            "link": "A"
+          }
+        },
+        "item_kWrrX6": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/oneisall-35l-cat-feeder-with-app-35l-cordless-water-fountain-set-221917.png",
+            "title": "Value Packs",
+            "link": "F"
+          }
+        }
+      },
+      "block_order": [
+        "item_7UYndt",
+        "item_VFHKzG",
+        "item_DUWWpq",
+        "item_WLQYKd",
+        "item_kWrrX6"
+      ],
+      "name": "SPX Nav Image",
+      "settings": {
+        "text_color": "#000000"
+      }
+    },
+    "advanced_content_HPcMcd": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_w47nYN": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div style=\"background: linear-gradient(90deg, #3CC49F 0%, #F8B43D 100%); color: #000; padding: 28px 16px; border-radius: 16px; margin-bottom: 24px; font-family: 'Segoe UI', 'Arial', sans-serif; text-align: center; max-width: 1200px; margin-left: auto; margin-right: auto;\">\n    <div style=\"max-width: 900px; margin: 0 auto;\">\n      <h2 style=\"font-size: 26px; font-weight: 700; margin-bottom: 10px;\">\n         CatCon Special\n      </h2>\n      <p style=\"font-size: 18px; line-height: 1.5; margin-bottom: 10px;\">\n        Buy any 2 Feeders or Fountains, Get <strong>15% Off</strong> — No code needed!\n      </p>\n      <p style=\"font-size: 14px; opacity: 0.9; margin: 0;\">\n        *Filter sets not included.\n      </p>\n    </div>\n  </div>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_w47nYN"
+      ],
+      "disabled": true,
+      "name": "t:labels.custom_content",
+      "settings": {
+        "full_width": true,
+        "space_around": true
+      }
+    },
+    "custom_image_slider_k9hBUW": {
+      "type": "custom-image-slider",
+      "blocks": {
+        "image_mBwYcD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/7L_50dc553b-3b4e-41f7-9c97-5dab68ea7976.gif",
+            "title": "",
+            "url": ""
+          }
+        },
+        "image_RURn33": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/oneisall-35l-cordless-smart-pet-water-fountain-white-with-3pcs-filters-377803.png",
+            "title": "",
+            "url": ""
+          }
+        },
+        "image_LdzhPf": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "url": ""
+          }
+        },
+        "image_HF7MhF": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_mBwYcD",
+        "image_RURn33",
+        "image_LdzhPf",
+        "image_HF7MhF"
+      ],
+      "disabled": true,
+      "name": "Custom event slider",
+      "settings": {
+        "title": "",
+        "white_bg": true,
+        "button_label": ""
+      }
+    },
+    "dealpage_two_38TUdQ": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_b8ztnw": {
+          "type": "collection",
+          "settings": {
+            "collection": "samll-dogs-cats-fountain",
+            "text": "",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_b8ztnw"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Medium & Small Capacity",
+        "subtitle": "",
+        "target_id": "M",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "collection",
+        "display_special_attr": true,
+        "padding_pc": "80px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "dealpage_two_7pWYfj": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_QtPDhG": {
+          "type": "collection",
+          "settings": {
+            "collection": "large-dog-fountain",
+            "text": "",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_QtPDhG"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Large Capacity",
+        "subtitle": "",
+        "target_id": "L",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "collection",
+        "display_special_attr": true,
+        "padding_pc": "80px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "dealpage_two_cLkqe4": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_M8hUKc": {
+          "type": "collection",
+          "settings": {
+            "collection": "hydrate-longer-with-8-extra-filters",
+            "text": "",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_M8hUKc"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Stay Fresh Longer",
+        "subtitle": "Up to 6 months of fresh water",
+        "target_id": "S",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "collection",
+        "display_special_attr": true,
+        "padding_pc": "80px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "dealpage_two_mz88qT": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_xFLXLG": {
+          "type": "collection",
+          "settings": {
+            "collection": "fountain-accessories-3-5l",
+            "text": "3.5L",
+            "subtitle": ""
+          }
+        },
+        "collection_WhznKC": {
+          "type": "collection",
+          "settings": {
+            "collection": "fountain-accessories-7l",
+            "text": "7L",
+            "subtitle": ""
+          }
+        },
+        "collection_9XWxWL": {
+          "type": "collection",
+          "settings": {
+            "collection": "fountain-accessories-10l",
+            "text": "10L",
+            "subtitle": ""
+          }
+        },
+        "collection_3nGf8a": {
+          "type": "collection",
+          "settings": {
+            "collection": "fountain-accessories-2l",
+            "text": "2L",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_xFLXLG",
+        "collection_WhznKC",
+        "collection_9XWxWL",
+        "collection_3nGf8a"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Fountain Accessories",
+        "subtitle": "",
+        "target_id": "A",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "collection",
+        "display_special_attr": true,
+        "padding_pc": "80px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "dealpage_two_AimY7A": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_JdDBTb": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundle-save-feeding-hydration-set",
+            "text": "",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_JdDBTb"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Value Packs",
+        "subtitle": "",
+        "target_id": "F",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "collection",
+        "display_special_attr": true,
+        "padding_pc": "80px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "page_collecitons_4dDpNR": {
+      "type": "page-collecitons",
+      "blocks": {
+        "collection_DfcXDp": {
+          "type": "collection",
+          "settings": {
+            "collection": "large-dog-fountain",
+            "title": "Large Capacity"
+          }
+        },
+        "collection_GNbRiq": {
+          "type": "collection",
+          "settings": {
+            "collection": "samll-dogs-cats-fountain",
+            "title": "Medium & Small Capacity"
+          }
+        },
+        "collection_6ddYD3": {
+          "type": "collection",
+          "settings": {
+            "collection": "hydrate-longer-with-8-extra-filters",
+            "title": "Stay Fresh Longer"
+          }
+        },
+        "collection_AXCrx4": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundle-save-feeding-hydration-set",
+            "title": "Feeding & Hydration Sets"
+          }
+        },
+        "collection_bPdxFL": {
+          "type": "collection",
+          "settings": {
+            "collection": "fountain-accessories",
+            "title": "Fountain Accessories"
+          }
+        }
+      },
+      "block_order": [
+        "collection_DfcXDp",
+        "collection_GNbRiq",
+        "collection_6ddYD3",
+        "collection_AXCrx4",
+        "collection_bPdxFL"
+      ],
+      "disabled": true,
+      "settings": {
+        "display_title_type": "collection",
+        "display_special_attr": true
+      }
+    },
+    "dealpage_two_p4tVtK": {
+      "type": "dealpage-two",
+      "blocks": {
+        "collection_Xeazxj": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "text": "",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_Xeazxj"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Loved in their lives",
+        "subtitle": "",
+        "target_id": "",
+        "text_alignment": "left",
+        "block_title_alignment": "flex-start",
+        "display_title_type": "default",
+        "display_special_attr": false,
+        "padding_pc": "0px 0",
+        "padding_m": "0px 0"
+      }
+    },
+    "175377558310b77b82": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "faqs_ijrNcG": {
+      "type": "faqs",
+      "blocks": {
+        "tab_content_JmK8jh": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Can I Use Tap Water In My Dog Water Fountain?",
+            "text": "<p>Yes, you can use tap water in a dog water fountain, but it's advisable to use filtered or purified water if possible to reduce mineral deposits and impurities. If you're using tap water, ensure the fountain has a reliable filter to keep the water clean and safe for your dog. Regular cleaning is also essential to prevent build-up from minerals or bacteria.</p>"
+          }
+        },
+        "tab_content_c6HcW7": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Is The Pet Water Fountain Easy To Assemble?",
+            "text": "<p>Yes. Most pet water fountains are easy to assemble and designed to be user-friendly. The process usually involves a few simple steps and can be done in minutes. </p><p>Here's a basic outline of what to expect:</p><ul><li>Put filter cotton into the filter box</li><li>Assemble the pump</li><li>Fill the tank with water</li><li>Put on the cover drinking tray and insert the faucet</li></ul><p>Most pet water fountains come with an instruction manual that includes a step-by-step guide. Following this ensures that all parts are properly installed and the fountain functions correctly.</p>"
+          }
+        },
+        "tab_content_JPgzEA": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Does A Pet Drinking Fountain Need A Filter?",
+            "text": "<p>Yes, a pet drinking fountain needs a filter.</p><p> Filters help remove impurities, hair, food particles, and other debris from the water, keeping it clean and safe for your pet. Many filters also have activated charcoal to help reduce odor and improve the taste of the water, which can encourage your pet to drink more. </p><p>It is recommended to purchase the set containing a filter. About four filters need to be replaced in a month. Be sure to regularly check and replace the filter as the manufacturer recommends.</p>"
+          }
+        },
+        "tab_content_Rpa4Mk": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Can I Use A Cat Water Fountain For Both Cats And Dogs?",
+            "text": "<p>Yes, many cat water fountains are designed to accommodate both cats and dogs. Choose a cat water fountain for your pet's size and breed. Larger dogs may require a pet drinking fountain with a higher water capacity.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_JmK8jh",
+        "tab_content_c6HcW7",
+        "tab_content_JPgzEA",
+        "tab_content_Rpa4Mk"
+      ],
+      "settings": {
+        "id": "faqs",
+        "title": "FAQs",
+        "align": "left",
+        "align_m": "left",
+        "padding_pc": "50px 0",
+        "padding_m": "40px 0"
+      }
+    },
+    "advanced_accordion_Vj4xre": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "html_block_UQnjX4": {
+          "type": "html_block",
+          "settings": {
+            "html": "<p><strong>• Constant Freshness:</strong> Ensure your pet has access to clean and fresh water at all times.</p>\n<p><strong>• Hydration Boost:</strong> Encourage your pet to drink more water, promoting overall health.</p>\n<p><strong>• Low Maintenance:</strong> Reduce the hassle of frequent refills with a larger water capacity.</p>\n<p><strong>• Convenience:</strong> Perfect for busy pet owners, as it requires less monitoring and filling.</p>\n<p>Upgrade your pet's hydration routine with the convenience and health benefits of a pet water fountain.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "html_block_UQnjX4"
+      ],
+      "name": "Advanced accordion",
+      "settings": {
+        "title": "Advanced Accordion",
+        "per_row": 1,
+        "two_per_row_mobile": false,
+        "opened": true,
+        "disabled": false
+      }
+    },
+    "icons_fRC7QE": {
+      "type": "icons",
+      "blocks": {
+        "icon_RXgQdm": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Fast & Free Shipping",
+            "text": ""
+          }
+        },
+        "icon_3tpCEf": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "Hassle-Free Warranty",
+            "text": ""
+          }
+        },
+        "icon_DDAWJJ": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "24-Month Warranty",
+            "text": ""
+          }
+        },
+        "icon_6gJPeq": {
+          "type": "icon",
+          "settings": {
+            "liquid": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22 7L12 2L2 7V17L12 22L22 17V7Z\" stroke=\"black\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/>\n<path d=\"M2 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 22V12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M12 12L2.5 7L12.5 2L21 7L12 12Z\" fill=\"black\" fill-opacity=\"0.1\"/>\n<path d=\"M22 7L12 12\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M17 4.5L7 9.5\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+            "title": "30-Day Money Back",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_RXgQdm",
+        "icon_3tpCEf",
+        "icon_DDAWJJ",
+        "icon_6gJPeq"
+      ],
+      "settings": {
+        "padding_pc": "100px 0",
+        "padding_m": "80px 0"
+      }
+    }
+  },
+  "order": [
+    "banner_z7rirW",
+    "spk_nav_image_yXdJyH",
+    "advanced_content_HPcMcd",
+    "custom_image_slider_k9hBUW",
+    "dealpage_two_38TUdQ",
+    "dealpage_two_7pWYfj",
+    "dealpage_two_cLkqe4",
+    "dealpage_two_mz88qT",
+    "dealpage_two_AimY7A",
+    "page_collecitons_4dDpNR",
+    "dealpage_two_p4tVtK",
+    "175377558310b77b82",
+    "faqs_ijrNcG",
+    "advanced_accordion_Vj4xre",
+    "icons_fRC7QE"
+  ]
+}

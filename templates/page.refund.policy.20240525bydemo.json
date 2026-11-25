@@ -1,0 +1,107 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {}
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        "h1 {text-align: center;}"
+      ],
+      "settings": {}
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "settings": {}
+    },
+    "rich_text_yWtD8a": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_erpjBX": {
+          "type": "heading",
+          "settings": {
+            "title": "Return & Refund Policy",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_erpjBX"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "1",
+        "section_visibility": "always",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "rich_text_TVdr3f": {
+      "type": "rich-text",
+      "blocks": {
+        "text_jQrMYL": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h2>30-Day Money Back Guarantee </h2><ul><li>Returns must include original packaging, accessories, user manual, quick start guide, etc.</li><li>For non-quality related warranty claims, the buyer is responsible for shipping costs, and we refund the paid price of the product.</li><li>Refund requests for non-quality issues cannot be processed for items beyond the 30-day window.</li><li>Orders are processed within 1–3 business days. You may cancel your order within 24 hours or anytime before it ships — whichever comes first. For return instructions and the return address, please contact our support team.</li><li>If a cancellation request is submitted before the order is shipped and within the allowed cancellation period set by the website, the order can be successfully canceled.</li><li>Return Address：13971 Norton Ave，Chino，CA，91710</li></ul><p>    Phone: 562-387-7764</p><p><strong>Refund Method & Processing Time</strong></p><p>Refunds will be issued to the original payment method used at checkout. For payments made by <strong>credit card, Klarna, or similar providers</strong>, refunds typically take <strong>5–14 business days</strong> to appear in your account. The exact timing depends on the processing speed of <strong>Klarna and your issuing bank</strong>.</p><p>If you would like to check the status of your refund, we recommend contacting your <strong>issuing bank or Klarna customer support</strong> directly for the most up-to-date information.</p><p><strong>Refund Method & Processing Time</strong></p><p>Refunds will be issued to the original payment method used at checkout, including credit cards, Klarna, or other supported payment providers. Once a refund is processed, it typically takes 5–14 business days for the funds to appear in your account. The exact timing depends on the processing speed of Klarna and your issuing bank.</p><p>If you would like to check the status of your refund, we recommend contacting your issuing bank or Klarna customer support for the most accurate and up-to-date information.</p><p>Unauthorized returns without prior approval will not be accepted，Please contact our customer service before returning any items.</p>"
+          }
+        },
+        "text_gUUbMf": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>*Please note: For a quick resolution, if you need to return the product within 30 days of delivery, please contact our customer service at<strong> </strong><a href=\"mailto:support@jackandrose.net\" target=\"_blank\">support@jackandrose.net</a></p>"
+          }
+        },
+        "text_YTKQdi": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<h2>Claim Your Warranty Easily</h2><ul><li>Ensure your product is within the 2-year warranty period.</li><li>Have proof of purchase (order number or order screenshot) ready.</li><li>Keep the product in original condition and do not dispose of it before confirming the solution with customer service.</li><li>Contact our customer support team at <a href=\"mailto:support@jackandrose.net\" target=\"_blank\">support@jackandrose.net</a> and follow the instructions provided by our customer support team to file a warranty claim or return the product.</li><li>Our 2-year warranty policy also covers purchases made on Amazon, TikTok. Simply provide proof of purchase to enjoy hassle-free coverage.</li></ul><h2>Warranty Benefits</h2><p>During the warranty period, Jack&rose will provide one of the following solutions:</p><ul><li>A full or partial refund based on the situation.</li><li>Repair any defects in material or workmanship.</li><li>Replace the product with another of equal value.</li></ul><h2>Warranty Benefits for Retail Items</h2><ul><li>For Jack&rose &nbsp;products purchased from authorized retailers listed on our official website, if a performance failure occurs during the warranty period under proper use, you can contact Jack&rose &nbsp;customer support for warranty service.</li><li>For refunds or returns, please contact the retailer from whom the item was purchased.</li></ul>"
+          }
+        },
+        "text_jKPte4": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h2>*Special Note</h2><p>Jack&rose reserves the right to determine if the product is defective. Please get return authurization from our customer service before returning the item(s), or we cannot process your return request.</p><p>If the return is caused by the consumer, consumer should be responsible for the shipping fee. The specific fee should be based on the express company you choose.</p><p>If due to our reasons, the goods received are damaged or not correct, and the consumer is not required to bear the shipping fee for this reason.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_jQrMYL",
+        "text_gUUbMf",
+        "text_YTKQdi",
+        "text_jKPte4"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "section_visibility": "always",
+        "divider": false,
+        "show_wave": false
+      }
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "main",
+    "shogun-optimizer",
+    "rich_text_yWtD8a",
+    "rich_text_TVdr3f"
+  ]
+}

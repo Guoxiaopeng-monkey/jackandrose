@@ -1,0 +1,159 @@
+<div class="content-navigation homepage-sections-wrapper--{{ section.settings.colors }}" >
+  <div class="page-width wrapper-padding">
+    <ul>
+      <li class="active filter" >
+        <a href="#overview">Overview</a>  
+      </li>
+      <li class="filter" >
+       <a href="#product-spec"> Specs</a>  
+      </li>
+      <li class="filter" >
+        <a href="#faqs">Faqs</a>  
+        </li>
+      <li class="filter" >
+        <a href="#am-reviews-carousel-shadow-container-production">Reviews</a>  
+        
+        </li>
+    </ul>
+  </div>
+</div>
+ 
+<style>
+  .content-navigation{
+     margin-bottom:70px;
+  }
+  .content-navigation ul { 
+    display: flex;
+    list-style: none;
+    padding: 30px 20px 10px;
+    max-width:1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    font-size: 20px;
+  }
+  
+  .content-navigation ul li {
+    padding: 6px 0;
+    font-weight: 600;
+    margin: 0;
+    cursor: pointer;
+  }
+   .content-navigation.fixed ul{
+     padding-bottom:0px; padding-top:9px;  
+   }
+   .content-navigation.fixed li{
+     padding:11px 0; 
+   }
+   .content-navigation  li a{color:#7B7B80; text-transform:uppercase;}
+   .content-navigation  .active{
+    color:#FF6A00; border-bottom:3px solid #FF6A00;
+  }
+  .content-navigation  .active a{  color:#FF6A00!important;}
+  .content-navigation .active a, .content-navigation  a:hover{
+      color:#FF6A00;
+    }
+  .fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+  }
+  @media(max-width:768px){
+   .content-navigation{
+     margin-bottom:30px;
+   }
+    .content-navigation ul { 
+        padding: 10px 10px 10px; 
+     }
+       .content-navigation  li a{
+         font-size:16px;
+ 
+       }
+  }
+</style>
+ 
+ <script>
+$(document).ready(function() {
+  var navTop = $('.content-navigation').offset().top;
+
+  $(window).on('load', function() {
+    navTop = $('.content-navigation').offset().top;
+  });
+
+  $(window).scroll(function() {
+    var scrollPos = $(window).scrollTop();
+
+    if (scrollPos >= navTop) {
+      $('.content-navigation').addClass('fixed');
+    } else {
+      $('.content-navigation').removeClass('fixed');
+    }
+
+    $('section').each(function() {
+      var secTop = $(this).offset().top - 10;
+      var secBottom = secTop + $(this).outerHeight();
+      var hash = '#' + $(this).attr('id');
+
+      if (scrollPos >= secTop && scrollPos <= secBottom) {
+        $('.content-navigation a').each(function() {
+          if ($(this).attr('href') === hash) {
+            $('.content-navigation li').removeClass('active');
+            $(this).parent().addClass('active');
+          }
+        });
+      }
+    });
+  });
+
+  $('.content-navigation a').click(function(e) {
+    e.preventDefault();
+    var targetId = $(this).attr('href');
+ 
+    $('html, body').animate({
+      scrollTop: $(targetId).offset().top - 60
+    }, 600);
+
+    $('.content-navigation li').removeClass('active');
+    $(this).parent().addClass('active');
+  });
+});
+</script>
+
+
+ 
+ 
+{% schema %}
+  {
+    "name": "custom content navigation",
+    "class": "sticky-content-navigation",
+    "settings": [
+      {
+		"type": "select",
+		"id": "colors",
+		"label": "Color scheme",
+		"default": "light",
+		"options": [
+			{
+				"value": "light",
+				"label": "Light"
+			},
+			{
+				"value": "accent",
+				"label": "Feature"
+			},
+			{
+				"value": "dark",
+				"label": "Dark"
+			}
+		]
+	  }
+    
+    ],
+    "presets": [
+      {
+        "name": "Custom content navigation"
+      }
+    ]
+  }
+{% endschema %}

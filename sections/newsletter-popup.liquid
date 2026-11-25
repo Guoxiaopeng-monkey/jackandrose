@@ -1,0 +1,476 @@
+{% assign sid = section.id %}
+<style>
+    #shopify-section-{{ sid }} newsletter-popup {
+      z-index:100;
+    }
+    #shopify-section-{{ sid }} .modal__inner:not(.modal__inner--bg-image) .modal__centered-content--padded{
+      padding:0;
+    }
+    #shopify-section-{{ sid }} .modal__inner:not(.modal__inner--bg-image) .newsletter-popup__content{
+              height: 100%!important;
+    }
+    #shopify-section-{{ sid }} .modal-open .modal:before{
+          background-color: #000000;
+    }
+    #shopify-section-{{ sid }} .newsletter-popup__content{
+      background: #FFF;
+    }
+    #shopify-section-{{ sid }} .contact-form input[type="email"]{
+      border-radius: 24px;
+      border: 1px solid rgba(0, 0, 0, 0.10);
+      background: #FFF;
+      width: 100%;
+      margin-top: 16px;
+      font-size: 12px!important;
+      padding: 8px 14px;
+      
+    }
+    #shopify-section-{{ sid }} .contact-form .type_heading{
+      color: rgba(0, 0, 0, 0.80);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-top: 16px;
+    }
+    #shopify-section-{{ sid }} .contact-form .type_selectbox>.active{
+      border-radius: 24px;
+      border: 1px solid rgba(0, 0, 0, 0.10);
+      background: #FFF;
+      width: 100%;
+      margin-top: 16px;
+      font-size: 12px;
+      padding: 8px 14px;
+          display: flex;
+    align-items: center;
+    justify-content: space-between;
+      cursor:pointer;
+    }
+    #shopify-section-{{ sid }} .contact-form .type_selectbox>.active svg{
+          width: 14px;
+      height: 14px;
+    }
+    #shopify-section-{{ sid }} .contact-form .type_selectbox>.active.open svg{
+      transform: rotate(180deg);
+    }
+    #shopify-section-{{ sid }} .contact-form .type_selectbox>.active svg path{
+      stroke-width: 1px;
+    }
+    #shopify-section-{{ sid }} .contact-form button[type="submit"]{
+          margin-top: 16px;
+      width: 100%;
+      border-radius: 24px;
+      background: linear-gradient(90deg, #00B1D2 0%, #FFEF75 100%);
+      border:0;
+      
+    } 
+    #shopify-section-{{ sid }} .contact-form button[type="submit"] .form__submit--large{
+          display: block;
+          font-size: 14px;
+    font-weight: 500;
+    }
+    #shopify-section-{{ sid }} .contact-form button[type="submit"] .form__submit--small{
+          display: none;
+    }
+    #shopify-section-{{ sid }} .newsletter-popup .rte {
+      margin-top: 16px;
+    }
+    #shopify-section-{{ sid }} .newsletter-popup .rte .enlarge-text{
+      color: rgba(0, 0, 0, 0.80);
+      font-size: 11px;
+      font-weight: 300;
+      line-height: normal;
+    }
+    #shopify-section-{{ sid }} .type_selectbox{
+      position:relative;
+    }
+    #shopify-section-{{ sid }} .type_select_inner{
+      position: absolute;
+      z-index: 2;
+      background: #fff;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      box-shadow: 1px 4px 5px #eee;
+      /* padding: 10px; */
+      font-size: 12px;
+    }
+    #shopify-section-{{ sid }} .type_select_inner>div{
+          padding: 10px 16px;
+      cursor:pointer;
+    }
+    #shopify-section-{{ sid }} .type_select_inner>div.selected{
+      background:#e8fdff;
+    }
+    #shopify-section-{{ sid }} .note.note--success{
+      margin-top:16px;
+    }
+    #shopify-section-{{ sid }} .modal__close{
+      position: absolute;
+          right: 30px;
+      top: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      padding: 0;
+      border: 1px solid transparent;
+      background: transparent;
+      color: #000000;
+    }
+    #shopify-section-{{ sid }} .modal__close svg{
+      margin: auto;
+      border: 1px solid #e6e6e6;
+      border-radius: 50%;
+    }
+    #shopify-section-{{ sid }} .modal__close:hover{
+      border: 1px solid #ff7500;
+      
+    }
+  @media (min-width:769px){
+    #shopify-section-{{ sid }} .modal__inner.modal__inner--bg-image{
+      border-radius: 48px;
+      overflow: hidden;
+    }
+    #shopify-section-{{ sid }} .modal--square .modal__centered-content{
+      min-height: 383px;
+    }
+    #shopify-section-{{ sid }} .newsletter-popup{
+      width:700px;
+      height: 383px;
+    }
+    #shopify-section-{{ sid }} .newsletter-popup__content {
+      padding: 30px;
+      text-align: left;
+    }
+    #shopify-section-{{ sid }} .newsletter-popup__content .subtitle{
+     color: rgba(0, 0, 0, 0.80);
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.4;
+      margin-bottom:4px;
+    }
+    #shopify-section-{{ sid }} .newsletter-popup__content .h2{
+      font-size:20px;
+    }
+    #shopify-section-{{ sid }} .newsletter-popup__image.mobile {
+      display:none;
+    }
+  }
+  @media (max-width:768px){
+    #shopify-section-{{ sid }} newsletter-popup:before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      background: #00000096;
+      display: block;
+      z-index:-1
+    }
+    #shopify-section-{{ sid }} .newsletter-popup__image.desktop {
+      display:none;
+    }
+    #shopify-section-{{ sid }} newsletter-popup {
+      bottom:0;
+      top:0;
+      width:86%;
+      max-width:480px;
+      margin:0 auto;
+    }
+    #shopify-section-{{ sid }} .modal__inner{
+      max-width:100%;
+              border-radius: 24px;
+        overflow: hidden;
+    }
+    #shopify-section-{{ sid }} .newsletter-popup {
+      flex-direction: column;
+    }
+    #shopify-section-{{ sid }} .newsletter-popup__image-wrapper{
+      display: block;
+      width: 100%;
+    }
+    #shopify-section-{{ sid }} .newsletter-popup__image-wrapper img.newsletter-popup__image{
+      position: relative;
+    }
+    #shopify-section-{{ sid }} .newsletter-popup__content{
+      padding:16px;
+      text-align: left;
+    }
+    #shopify-section-{{ sid }} .newsletter-popup__content .subtitle{
+      font-size:12px;
+      margin-bottom: 4px;
+    }
+    #shopify-section-{{ sid }} .newsletter-popup__content .h2{
+      font-size:18px;
+    }
+    #shopify-section-{{ sid }} .contact-form input[type="email"]{
+      margin-top: 12px;
+    }
+    #shopify-section-{{ sid }} .contact-form .type_selectbox>.active{
+      margin-top: 8px;
+    }
+    #shopify-section-{{ sid }} .contact-form button[type="submit"]{
+      padding:10px;
+      border:0;
+    }
+    #shopify-section-{{ sid }} .modal__close{
+      border: 2px solid #ff7500;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+    #shopify-section-{{ sid }} .modal__close .icon {
+        width: 22px;
+        height: 22px;
+    }
+  }
+</style>
+
+{%- render 'section-newsletter-popup',
+    section: section,
+    customer: customer,
+    disable_for_account_holders: section.settings.disable_for_account_holders,
+    has_reminder: false,
+    popup_days: section.settings.popup_days,
+    request: request,
+    popup_seconds: section.settings.popup_seconds,
+    popup_image: section.settings.popup_image,
+    popup_image_m: section.settings.popup_image_m,
+    color_scheme: section.settings.color_scheme,
+    image_position: section.settings.image_position,
+    popup_title: section.settings.popup_title,
+    popup_text: section.settings.popup_text,
+    enable_newsletter: section.settings.enable_newsletter,
+    context: 'popup',
+    button_label: section.settings.button_label,
+    button_link: section.settings.button_link,
+    show_social_icons: section.settings.show_social_icons,
+    social_instagram_link: settings.social_instagram_link,
+    social_facebook_link: settings.social_facebook_link,
+    social_twitter_link: settings.social_twitter_link,
+    social_youtube_link: settings.social_youtube_link,
+    social_pinterest_link: settings.social_pinterest_link,
+    social_linkedin_link: settings.social_linkedin_link,
+    social_snapchat_link: settings.social_snapchat_link,
+    social_vimeo_link: settings.social_vimeo_link,
+    social_tiktok_link: settings.social_tiktok_link,
+    social_tumblr_link: settings.social_tumblr_link,
+    hydration: 'on:idle'
+-%}
+
+{% schema %}
+{
+  "name": "t:labels.popup",
+  "max_blocks": 1,
+  "class": "index-section--hidden",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "disable_for_account_holders",
+      "label": "t:actions.disable_for_accounts",
+      "default": true,
+      "info": "t:info.not_shown_to_customers_with_accounts"
+    },
+    {
+      "type": "range",
+      "id": "popup_seconds",
+      "label": "t:labels.delay",
+      "default": 30,
+      "min": 5,
+      "max": 60,
+      "step": 1,
+      "unit": "sec",
+      "info": "t:info.values_below_10_not_recommended"
+    },
+    {
+      "type": "range",
+      "id": "popup_days",
+      "label": "t:labels.frequency",
+      "default": 30,
+      "info": "t:info.number_of_days_popup_reappears",
+      "min": 2,
+      "max": 30,
+      "step": 1,
+      "unit": "day"
+    },
+    {
+      "type": "image_picker",
+      "id": "popup_image",
+      "label": "t:labels.image",
+      "info": "t:info.does_not_appear_on_mobile"
+    },
+    {
+      "type": "image_picker",
+      "id": "popup_image_m",
+      "label": "Image (mobile)",
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "t:labels.image_position",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:labels.alignments.left"
+        },
+        {
+          "value": "right",
+          "label": "t:labels.alignments.right"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:labels.content"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default":"MYSTERY DISCOUNT"
+    },
+    {
+      "type": "text",
+      "id": "popup_title",
+      "label": "t:labels.heading",
+      "default": "Sign up and save"
+    },
+    {
+      "type": "header",
+      "content":"TYPE"
+    },
+    {
+      "type": "text",
+      "id": "type_title",
+      "label": "type_title",
+      "default":"What kind of pet(s) do you have?"
+    },
+    {
+      "type": "textarea",
+      "id": "type",
+      "label": "Type",
+      "default":"Cat,Dog"
+    },
+    {
+      "type": "text",
+      "id": "subscribe",
+      "label": "Subscribe"
+    },
+    {
+      "type": "richtext",
+      "id": "popup_text",
+      "label": "t:labels.text",
+      "default": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers. Include an image for extra impact.</p>"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "t:labels.color_scheme",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:labels.none"
+        },
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social_icons",
+      "label": "Show social icons",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:labels.newsletter"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:info.sign_up_creates_customer"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_newsletter",
+      "label": "t:actions.enable_newsletter",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:labels.button"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "t:labels.button_label",
+      "default": "Optional button"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:labels.button_link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "header",
+      "name": "t:labels.sticky_reminder",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "reminder_label",
+          "label": "t:labels.reminder_label",
+          "default": "Get 10% off",
+          "info": "t:info.appears_when_newsletter_popup_closed"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "settings": {},
+    "blocks": [
+      {
+        "type": "header",
+        "settings": {}
+      }
+    ]
+  },
+  "disabled_on": {
+    "groups": ["footer", "header"]
+  }
+}
+{% endschema %}
+
+<script>
+  $(function(){
+    $('#shopify-section-{{ sid }} .contact-form .type_selectbox>.active').on('click',function(){
+      let el = $(this);
+      el.toggleClass('open');
+      el.next().slideToggle();
+    });
+    $('#shopify-section-{{ sid }} .contact-form .type_selectbox>.type_select_inner>div').on('click',function(){
+      let el = $(this);
+      let value = el.html();
+      el.addClass('selected').siblings().removeClass('selected');
+      $('#shopify-section-{{ sid }} .contact-form input[name="contact[tags]"]').val(value);
+      $('#shopify-section-{{ sid }} .contact-form .type_selectbox>.active span').html(value);
+      $('#shopify-section-{{ sid }} .contact-form .type_selectbox>.active').removeClass('open');
+      el.parent().slideUp();
+    })
+  })
+</script>

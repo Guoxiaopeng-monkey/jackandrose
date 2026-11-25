@@ -1,0 +1,573 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_hipB83": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_dp4hRV": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "https://oneisall.com/collections/sale",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/labor-day-sale_bfea2766-89f7-4475-b781-f9944ff02e9a.png",
+            "image_mobile": "shopify://shop_images/labor-day-sale-m_82b18a02-a781-4487-a18a-ed25ef63d051.png",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "hero_dp4hRV"
+      ],
+      "settings": {
+        "full_width": true,
+        "desktop_size": 0,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "main": {
+      "type": "main-page-full-width",
+      "disabled": true,
+      "settings": {}
+    },
+    "rich_text_qFW3Ht": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_NkpyAi": {
+          "type": "heading",
+          "settings": {
+            "title": "Enjoy a Fur-Free Labor Day",
+            "heading_size": "h0"
+          }
+        },
+        "text_HzLNAA": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Limited-time Offer! Extra <strong>$30 Off</strong> on Cozy C1 with code: <strong>LD30</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NkpyAi",
+        "text_HzLNAA"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "featured_product_LkncJF": {
+      "type": "featured-product",
+      "blocks": {
+        "price_M6fmdx": {
+          "type": "price",
+          "settings": {}
+        },
+        "description_exx9Vx": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "variant_picker_yqaehd": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "buy_buttons_Mg8m9N": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        }
+      },
+      "block_order": [
+        "price_M6fmdx",
+        "description_exx9Vx",
+        "variant_picker_yqaehd",
+        "buy_buttons_Mg8m9N"
+      ],
+      "settings": {
+        "featured_product": "cozy-c1-dog-grooming-vacuum",
+        "divider": false,
+        "sku_enable": false,
+        "image_position": "left",
+        "image_container_size": "medium",
+        "product_image_size": "square",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "rich_text_JiALnJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QmxMBK": {
+          "type": "heading",
+          "settings": {
+            "title": "Labor Day Bundle Deals!",
+            "heading_size": "h0"
+          }
+        },
+        "text_PDzeDN": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Top Feeder & Water Dispenser Sets at Great Prices!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QmxMBK",
+        "text_PDzeDN"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "featured_product_DKeNhd": {
+      "type": "featured-product",
+      "blocks": {
+        "price_etAfwc": {
+          "type": "price",
+          "settings": {}
+        },
+        "description_mtGGLC": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "variant_picker_Yz9nDP": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "buy_buttons_WaPXwE": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        }
+      },
+      "block_order": [
+        "price_etAfwc",
+        "description_mtGGLC",
+        "variant_picker_Yz9nDP",
+        "buy_buttons_WaPXwE"
+      ],
+      "settings": {
+        "featured_product": "automatic-pet-feeder-and-2l-cat-water-fountain",
+        "divider": false,
+        "sku_enable": false,
+        "image_position": "right",
+        "image_container_size": "medium",
+        "product_image_size": "square",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "rich_text_9FRDV6": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cY6cdb": {
+          "type": "heading",
+          "settings": {
+            "title": "Unlock More Labor Day Deals",
+            "heading_size": "h0"
+          }
+        },
+        "text_Rafc7M": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p><strong>$15 Off</strong> on Purchases of $100 or More! <strong>Automatic Discount</strong> at Checkout!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cY6cdb",
+        "text_Rafc7M"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "featured_collection_a8TBeh": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "heading_position": "right",
+        "home_featured_products": "sale",
+        "count": 6,
+        "products_per_row": 3,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "rich_text_V3tptV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KcWxnY": {
+          "type": "heading",
+          "settings": {
+            "title": "As Seen On",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_KcWxnY"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "divider": false,
+        "show_wave": false
+      }
+    },
+    "custom_logo_slider_rnXh6X": {
+      "type": "custom-logo-slider",
+      "blocks": {
+        "image_RmcftV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/FOX_NEWS_c8c12c5b-350a-48af-9534-5c375fe8edcf.png",
+            "title": ""
+          }
+        },
+        "image_Nc9ARn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/yahoo_f23062cb-fbb1-4adb-b1a1-4f8dcf57321b.png",
+            "title": ""
+          }
+        },
+        "image_a6zdBe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/People_95caa458-2c82-42fc-8be2-c28c11b09184.png",
+            "title": ""
+          }
+        },
+        "image_hMLbQU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LIFE-Style.png",
+            "title": ""
+          }
+        },
+        "image_U7jKii": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/NEW-YORK-POST.png",
+            "title": ""
+          }
+        },
+        "image_gd6km8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ET_8930cebf-077d-4f4e-bd16-a89fd6c358df.png",
+            "title": ""
+          }
+        },
+        "image_JbBNPE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Daily_f71f6731-4861-46cf-92fb-08e9b6fcef9c.png",
+            "title": ""
+          }
+        },
+        "image_8hgenb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DAILY-NEWS.png",
+            "title": ""
+          }
+        },
+        "image_r3C9HG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/AP_4f393673-0321-4604-8a2a-81fd6f73992e.png",
+            "title": ""
+          }
+        },
+        "image_fbbzh4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OK_30629e3c-ad90-4b6f-8dd0-96ae55a0c67b.png",
+            "title": ""
+          }
+        },
+        "image_9NH8hQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/PageSix_2ca59fa9-1566-4090-a474-0bc424a7bf74.png",
+            "title": ""
+          }
+        },
+        "image_TcCcPX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Us_8a7d4f67-fc01-48c8-a011-bdc596bd85ff.png",
+            "title": ""
+          }
+        },
+        "image_Pie7Vg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/trumb.png",
+            "title": ""
+          }
+        },
+        "image_iW6eMJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/TIME-stamped.png",
+            "title": ""
+          }
+        },
+        "image_NtR733": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/XOXO_b26e4db0-e4d0-45a0-9828-3ad6cc315251.png",
+            "title": ""
+          }
+        },
+        "image_mbVbRp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Aol_d3539e1d-8e84-4b7d-bd5b-b34e37063d03.png",
+            "title": ""
+          }
+        },
+        "image_jz6iew": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ilovecat.png",
+            "title": ""
+          }
+        },
+        "image_4QQBiW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DogTime_e154c81d-7fe5-4fea-bcf6-42096314eae0.png",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_RmcftV",
+        "image_Nc9ARn",
+        "image_a6zdBe",
+        "image_hMLbQU",
+        "image_U7jKii",
+        "image_gd6km8",
+        "image_JbBNPE",
+        "image_8hgenb",
+        "image_r3C9HG",
+        "image_fbbzh4",
+        "image_9NH8hQ",
+        "image_TcCcPX",
+        "image_Pie7Vg",
+        "image_iW6eMJ",
+        "image_NtR733",
+        "image_mbVbRp",
+        "image_jz6iew",
+        "image_4QQBiW"
+      ],
+      "settings": {
+        "title": "",
+        "white_bg": false
+      }
+    },
+    "testimonials_q38HUg": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_EDNhhe": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>I didn’t know I needed this until I received and used it. Home grooming GAME CHANGER! </p>",
+            "author": "Best purchase ever!!",
+            "author_info": "A***e"
+          }
+        },
+        "testimonial_YwUmNF": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>I didn’t think that I would want or need a vacuum groomer but I got this tool so I thought I would try it out. It is amazing! </p>",
+            "author": "I love this thing!",
+            "author_info": "K***M"
+          }
+        },
+        "testimonial_qaTYVD": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>This is so convenient to hair for those who own pets. It makes cleans ups so easy with the variety if attachments. </p>",
+            "author": "Excellent for pet owners",
+            "author_info": "T***h"
+          }
+        },
+        "testimonial_gVV3Ut": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>The size of this device is perfect and it is very easy to clean. No more mess with hair flying around. I use it a few times a week and every time </p>",
+            "author": "Must have for me and my dog",
+            "author_info": "O***i"
+          }
+        },
+        "testimonial_gtrwTr": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>I’m a DIY groomer of my border collie. I wanted n affordable cordless trimmer and I found it!!</p>",
+            "author": "Quiet, cuts great, lightweight, easy to use",
+            "author_info": "w***5"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_EDNhhe",
+        "testimonial_YwUmNF",
+        "testimonial_qaTYVD",
+        "testimonial_gVV3Ut",
+        "testimonial_gtrwTr"
+      ],
+      "settings": {
+        "title": "Trusted by 10,000,000 Pet Owners",
+        "align_text": "center",
+        "round_images": true,
+        "color_scheme": "none"
+      }
+    },
+    "text_columns_6UH64D": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_QNQbrN": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Frame_3645_123419b2-f152-4155-8609-dfbaab05b954.png",
+            "image_mask": "none",
+            "image_width": 70,
+            "title": "Fast & Free Shipping",
+            "text": "<p>Price includes shipping, free shipping in the US.</p>",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ENJbTw": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Frame_3646_7f75c86e-3c39-4277-8234-bb5aab0fe563.png",
+            "image_mask": "none",
+            "image_width": 70,
+            "title": "Extended 2-Year Warranty",
+            "text": "<p>Become member to enjoy extra warranty services.</p>",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_dPtt9d": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Frame_3644_df76bda5-f8c6-42fc-96ae-6a4432d8c286.png",
+            "image_mask": "none",
+            "image_width": 70,
+            "title": "30 Day Hassle-Free Return",
+            "text": "<p>Free returns guaranteed if not satisfied.</p>",
+            "align_text": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_QNQbrN",
+        "text_block_ENJbTw",
+        "text_block_dPtt9d"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "align_text": "left",
+        "divider": false,
+        "color_scheme": "3"
+      }
+    }
+  },
+  "order": [
+    "slideshow_hipB83",
+    "main",
+    "rich_text_qFW3Ht",
+    "featured_product_LkncJF",
+    "rich_text_JiALnJ",
+    "featured_product_DKeNhd",
+    "rich_text_9FRDV6",
+    "featured_collection_a8TBeh",
+    "rich_text_V3tptV",
+    "custom_logo_slider_rnXh6X",
+    "testimonials_q38HUg",
+    "text_columns_6UH64D"
+  ]
+}

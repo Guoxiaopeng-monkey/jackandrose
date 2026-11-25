@@ -1,0 +1,178 @@
+<style>
+  #shopify-section-{{ section.id }} .page-width{
+      --page-width:1360px;
+  }
+  .template-index .page-width{
+    max-width: 1360px;
+  }
+  .home-icons {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .home-icons .custom-icon-swiper{
+    border-radius: 109.5px;
+    background: rgba(255, 148, 67, 0.10);
+    padding: 44px 60px;
+  }
+  .home-icons .custom-icon-swiper .item{
+    text-align: center;
+  }
+  .home-icons .custom-icon-swiper .item-title{
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.4px;
+    margin-bottom: 0;
+  }
+  .home-icons .custom-icon-swiper .item-text{
+    color: rgba(0, 0, 0, 0.80);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    text-transform: capitalize;
+    margin-bottom: 0px;
+  }
+  .home-icons .custom-icon-swiper .item-url svg{
+    display: block;
+  }
+  .home-icons .custom-icon-swiper .swiper-pagination{
+    position: static;
+    margin-top: 24px;
+    display: none;
+  }
+  .home-icons .custom-icon-swiper .swiper-pagination-bullet{
+    width: 40px;
+    height: 4px;
+    border-radius: 4px;
+    background: #000;
+    opacity: .1;
+  }
+  .home-icons .custom-icon-swiper .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    opacity: 1;
+  }
+   @media (max-width: 990px){
+     .home-icons{
+       padding-top: 40px;
+       padding-bottom: 40px;
+     }
+     .home-icons .custom-icon-swiper .item-title{
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .home-icons .custom-icon-swiper .item-text{
+      font-size: 12px;
+      line-height: 16px;
+    }
+     .home-icons .custom-icon-swiper{
+      border-radius: 200px;
+      padding: 40px 72px;
+    }
+     .home-icons .custom-icon-swiper .swiper-pagination{
+       display: block;
+     }
+  }
+</style>
+
+
+<div class="page-width">
+  <div class="swiper-container custom-icon-swiper">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="item swiper-slide">
+          {% if block.settings.icon != blank %}
+            <div class="item-icon">{{ block.settings.icon }}</div>
+          {% endif %}
+          {% if block.settings.title != blank %}
+            <h2 class="item-title">{{ block.settings.title }}</h2>
+          {% endif %}
+          {% if block.settings.text != blank %}
+            <!-- <p class="item-text">{{ block.settings.text }}</p> -->
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<script>
+          let icon_swiper = null;
+          document.addEventListener("DOMContentLoaded", (event) => {
+            initCardSwiper();
+            $(window).resize(function(){
+                initCardSwiper();
+            })
+          });
+              
+          function initCardSwiper(){
+              if (icon_swiper) {
+                icon_swiper.destroy(true, true); // 销毁并清除DOM
+                icon_swiper = null;
+              }
+              icon_swiper = new Swiper('.custom-icon-swiper', {
+                  slidesPerView : 1,
+                  loop: true,
+                  spaceBetween : 60,
+                  pagination: {
+                    el: '.custom-icon-swiper .swiper-pagination',
+                  },
+                  breakpoints: { 
+                    591: {  //当屏幕宽度大于等于590
+                      slidesPerView: 2,
+                      spaceBetween: 30
+                    },
+                    990: {  
+                      loop: false,
+                      slidesPerView: 4,
+                      spaceBetween: 20
+                    },
+                  }
+                })
+              }
+</script>
+
+{% schema %}
+  {
+    "name": "Home icons",
+    "class": "home-icons",
+    "max_blocks": 4,
+    "limit": 1,
+    "tag": "section",
+    "disabled_on": {
+      "groups": ["footer","header"]
+    },
+    "settings": [
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+          {
+            "type": "html",
+            "id": "icon",
+            "label": "Icon svg code"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Fast & Free Shipping"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text",
+            "default": "Price includes shipping, free"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Home icons"
+      }
+    ]
+  }
+{% endschema %}

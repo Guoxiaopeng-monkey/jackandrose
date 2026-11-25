@@ -1,0 +1,68 @@
+<div class="sticky-bottom-bar" >
+  <div class="page-width">
+<form method="post" action="/checkout">
+  <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+  <button type="submit" class="buy-now-button">Buy Now</button>
+</form>
+  </div>
+</div>
+ 
+<style>
+ .sticky-bottom-bar{
+   position:fixed; left:0; bottom:0px; height:40px; width:120px; border-radius:10px; z-index:99999999!important;
+ }
+.buy-now-button {
+  display: inline-block;
+  width:120px;
+  padding: 10px 10px;
+  text-align:center;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+ 
+
+.buy-now-button {
+  background-color: #ff4500;
+  color: #fff;
+}
+
+.buy-now-button:hover {
+  background-color: #e03e00;
+}
+</style>
+ 
+ <script>
+document.querySelector('.buy-now-button').addEventListener('click', function(e) {
+  e.preventDefault();
+
+  const productId = document.querySelector('[name="id"]').value;
+
+  fetch('/cart/add.js', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ id: productId, quantity: 1 })
+  })
+    .then(response => response.json())
+    .then(() => {
+      window.location.href = '/checkout';
+    })
+    .catch(error => console.error('Error:', error));
+});
+
+</script>
+
+
+ 
+ 
+{% schema %}
+  {
+    "name": "custom sticky bar",
+    "class": "sticky-content-navigation",
+    "settings": [
+  
+    ] 
+  }
+{% endschema %}

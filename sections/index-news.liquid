@@ -1,0 +1,345 @@
+<style>
+  #shopify-section-{{ section.id }} .page-width{
+      --page-width:1360px;
+  }
+  .template-index .page-width{
+    max-width: 1360px;
+  }
+  .home-news {
+    padding-top: 0px;
+    padding-bottom: 80px;
+    overflow: hidden;
+  }
+  .home-news .section_title{
+    color: #000;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.4;
+    text-transform: capitalize;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  .home-news .wrapper-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    border-radius: 100px;
+    background: #D9D9D9;
+    padding: 27px 40px;
+    margin-top: 40px;
+  }
+  .home-news .wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 48px;
+    background: #E6E6E6;
+    overflow: hidden;
+  }
+  .home-news .wrapper .left-box{
+    width: 50%;
+    background: url(https://cdn.shopify.com/s/files/1/0655/6716/2614/files/Group_1000006924_1.png?v=1736850464) repeat;
+    background-position: center;
+    background-size: 100% 100%;
+  }
+  .home-news .wrapper .left-box .box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    padding: 16px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all .5s;
+  }
+  .home-news .wrapper .left-box .active .box{
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all .8s;
+  }
+  .home-news .wrapper .left-box .box .item-title{
+    color: #FFF;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 39.2px;
+    text-transform: capitalize;
+    max-width: 80%;
+  }
+  .home-news .wrapper .right-box{
+    width: 50%;
+  }
+  .home-news .wrapper-bottom .item{
+  cursor:pointer;
+}
+   .home-news .wrapper-bottom .item:not(.active) .item_piture_active{
+       display:none;
+     }
+     .home-news .wrapper-bottom .item.active .item_piture{
+       display:none;
+     }
+   @media (max-width: 990px){
+     .home-news{
+       padding-top: 0px;
+       padding-bottom: 40px;
+     }
+     .home-news .section_title{
+        font-size: 20px;
+        text-align: left;
+        margin-bottom: 24px;
+      }
+     .home-news .wrapper-bottom{
+       gap: 16px;
+        padding: 16px;
+     }
+     .home-news .wrapper-bottom .item{
+       max-width: 70px;
+     }
+     .home-news .wrapper-bottom .item img{
+       width: 100%;
+      height: 100%;
+      object-fit: contain;
+     }
+     .home-news .wrapper{
+        flex-direction: column-reverse;
+     }
+     .home-news .wrapper .left-box,.home-news .wrapper .right-box{
+       width: 100%;
+     }
+     .home-news .wrapper .left-box .box .item-title{
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 25.2px;
+        text-transform: capitalize;
+     }
+     .home-news .wrapper .left-box .box{
+       gap: 20px;
+       padding: 78px 16px;
+     }
+     .home-news .wrapper-bottom{
+       margin-top: 24px;
+     }
+  }
+</style>
+
+
+<div class="page-width">
+  {% if section.settings.title != blank %}
+    <h2 class="section_title">{{ section.settings.title }}</h2>
+  {% endif %}
+  <div class="wrapper">
+    <div class="left-box news-left swiper-container">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="item swiper-slide">
+            <div class="box">
+              {% if block.settings.img != blank %}
+                <picture>
+                  <source
+                    srcset="{{ block.settings.icon | img_url:'180x' }}"
+                    media="(max-width: 990px)"
+                  >
+                  <img
+                    src="{{ block.settings.icon | img_url:'master' }}"
+                    alt=""
+                    loading="lazy"
+                    width="100%"
+                    height="auto"
+                  >
+                </picture>  
+              {% endif %}
+              {% if block.settings.text != blank %}
+                <div class="item-title">{{ block.settings.text }}</div>  
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="right-box news-right swiper-container">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="item swiper-slide">
+            {% if block.settings.img != blank %}
+              <picture>
+                <source
+                  srcset="{{ block.settings.img_m | img_url:'master' }}"
+                  media="(max-width: 990px)"
+                >
+                <img
+                  src="{{ block.settings.img | img_url:'master' }}"
+                  alt=""
+                  loading="lazy"
+                  width="100%"
+                  height="auto"
+                >
+              </picture>  
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="wrapper-bottom">
+    {% for block in section.blocks %}
+      <div class="item">
+            {% if block.settings.icon_m != blank %}
+              <picture class="item_piture">
+                <source
+                  srcset="{{ block.settings.icon_m | img_url:'master' }}"
+                  media="(max-width: 990px)"
+                >
+                <img
+                  src="{{ block.settings.icon_m | img_url:'master' }}"
+                  alt=""
+                  loading="lazy"
+                  width="100%"
+                  height="auto"
+                >
+              </picture>  
+            {% endif %}
+            {% if block.settings.icon_m != blank %}
+              <picture class="item_piture_active">
+                <source
+                  srcset="{{ block.settings.icon_active_m | img_url:'master' }}"
+                  media="(max-width: 990px)"
+                >
+                <img
+                  src="{{ block.settings.icon_active_m | img_url:'master' }}"
+                  alt=""
+                  loading="lazy"
+                  width="100%"
+                  height="auto"
+                >
+              </picture>  
+            {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+      let bottom_list = $('.home-news .wrapper-bottom .item'); 
+      let news_left = null;
+      let news_right = null;
+      initNewSwiper();
+      $(window).resize(function(){
+          initNewSwiper();
+      })              
+      function initNewSwiper(){
+              if (news_left) {
+                news_left.destroy(true, true); 
+                news_right.destroy(true, true); 
+                news_left = null;
+                news_right = null;
+              }
+              news_left = new Swiper('.home-news .news-left', {
+                  slidesPerView : 1,
+                  loop: true,
+                  on: {
+                    slideChangeTransitionEnd: function(){
+                      $('.home-news .news-left .swiper-slide').removeClass('active');
+                      $('.home-news .news-left .swiper-slide').eq(this.activeIndex).addClass('active');
+                    },
+                    slideChange: function(){
+                      console.log('改变了，activeIndex为'+this.activeIndex ,this.realIndex);
+                      bottom_list.eq(this.realIndex).addClass('active').siblings().removeClass('active');
+                    },
+                  },
+              })
+              news_right = new Swiper('.home-news .news-right', {
+                  slidesPerView : 1,
+                  loop: true,
+                  autoplay: {
+                    delay: 4500,
+                    stopOnLastSlide: false,
+                    disableOnInteraction: false,
+                  },
+                  controller: {
+                    control: news_left, //控制Swiper1
+                  },
+              })
+              news_left.controller.control = news_right;
+              news_right.controller.control = news_left;
+
+            bottom_list.on('click',function(){
+              let el = $(this);
+              let index = el.index();
+              console.log(index);
+              news_left.slideToLoop(index)
+            })
+      }
+    });  
+</script>
+
+{% schema %}
+  {
+    "name": "Home news center",
+    "class": "home-news",
+    "max_blocks": 6,
+    "limit": 1,
+    "tag": "section",
+    "disabled_on": {
+      "groups": ["footer","header"]
+    },
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default":"News Center"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Image(desktop)"
+          },
+          {
+            "type": "image_picker",
+            "id": "img_m",
+            "label": "Image(mobile)"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon(main)"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_m",
+            "label": "Icon(bottom)"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_active_m",
+            "label": "Icon(bottom 高亮)"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text",
+            "default": "Oneisall Dog Hair Vacuum & Grooming Kit Review: Is It Worth It? Lorem ipsum dolor sit amet consectetur. Nulla dictumst massa natoque pulvinar pellentesque. In enim volutpat"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Home news center"
+      }
+    ]
+  }
+{% endschema %}

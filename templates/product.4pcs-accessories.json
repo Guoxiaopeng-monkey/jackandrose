@@ -1,0 +1,420 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {}
+    },
+    "shogun-above": {
+      "type": "shogun-above",
+      "disabled": true,
+      "settings": {}
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description_M7JAy9": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "quantity_selector_8VCpNq": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "complementary_products_xhNrFb": {
+          "type": "complementary_products",
+          "settings": {
+            "product_complementary_heading": "Frequently Bought Together",
+            "complementary_count": 3,
+            "per_slide": 3,
+            "control_type": "dots",
+            "image_style": "default"
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "checkmark",
+            "text": "30 Days Worry-Free Returns"
+          }
+        },
+        "sales_point2": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "truck",
+            "text": "Free Shipping in The US"
+          }
+        },
+        "sales_point3": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "shield",
+            "text": "100% Secure Payments"
+          }
+        },
+        "sales_point4": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "package",
+            "text": "Ships Within 24 hours"
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "share_eTMqpL": {
+          "type": "share",
+          "settings": {}
+        },
+        "custom_3GraEE": {
+          "type": "custom",
+          "settings": {
+            "code": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n</script>"
+          }
+        }
+      },
+      "block_order": [
+        "price",
+        "description_M7JAy9",
+        "variant_picker",
+        "quantity_selector_8VCpNq",
+        "buy_buttons",
+        "complementary_products_xhNrFb",
+        "sales_point",
+        "sales_point2",
+        "sales_point3",
+        "sales_point4",
+        "inventory_status",
+        "share_eTMqpL",
+        "custom_3GraEE"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_container_size": "medium",
+        "product_image_size": "natural",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "slideshow_image_8PWjh7": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_n6D8cc": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/4pcs-accessories.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_n6D8cc"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_PrHPzk": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_7LQgAb": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/4pcs-accessories-1.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_7LQgAb"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_TLHXgJ": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_GJ6QHw": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/4pcs-accessories-2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_GJ6QHw"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_RdadxH": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_YDkpEq": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/4pcs-accessories-3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_YDkpEq"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_fUipDP": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_Qph3QD": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/4pcs-accessories-4.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_Qph3QD"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_937dRJ": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_JiCpLT": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/4pcs-accessories-5.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_JiCpLT"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_mTKFHF": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_zdefpF": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/4pcs-accessories-6.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_zdefpF"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "slideshow_image_rNdxjt": {
+      "type": "slideshow-image",
+      "blocks": {
+        "image_Jd3xfp": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/4pcs-accessories-7.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_Jd3xfp"
+      ],
+      "settings": {
+        "full_width": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "171524248506ebf0c3": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "blocks": {
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": true
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "settings": {
+            "title": "Shipping information",
+            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
+            "page": ""
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+            "title": "Ask a question",
+            "phone": false
+          }
+        }
+      },
+      "block_order": [
+        "description",
+        "tab",
+        "contact"
+      ],
+      "disabled": true,
+      "settings": {
+        "max_width": false
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 5,
+        "products_per_row": 5
+      }
+    },
+    "more-products-vendor": {
+      "type": "more-products-vendor",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "more-products-collection": {
+      "type": "more-products-collection",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {}
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "2"
+      }
+    },
+    "shogun-below": {
+      "type": "shogun-below",
+      "disabled": true,
+      "settings": {}
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "shogun-above",
+    "main",
+    "slideshow_image_8PWjh7",
+    "slideshow_image_PrHPzk",
+    "slideshow_image_TLHXgJ",
+    "slideshow_image_RdadxH",
+    "slideshow_image_fUipDP",
+    "slideshow_image_937dRJ",
+    "slideshow_image_mTKFHF",
+    "slideshow_image_rNdxjt",
+    "171524248506ebf0c3",
+    "sub",
+    "recommendations",
+    "more-products-vendor",
+    "more-products-collection",
+    "recently-viewed",
+    "collection-return",
+    "shogun-below",
+    "shogun-optimizer"
+  ]
+}

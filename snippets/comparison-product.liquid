@@ -1,0 +1,213 @@
+{% liquid
+    assign on_sale = false
+    if product.compare_at_price > product.price
+      assign on_sale = true
+    endif
+%}
+<div class="grid-product">
+  <div class=" e_product_comparison_item" data-product-handle="{{ product.handle }}" data-product-id="{{ product.id }}" data-product-grid-item>
+      <div class="e_meida">
+        <a href="{{ product.url }}">
+        {{ product.images[0] | image_url: width: '500x' | image_tag: class:"first" }}
+        </a>
+      </div>
+      <div class="e_info">
+        <h3>{{ title| default: product.title }}</h3>
+        <div class="grid-product__price">
+          
+          {%- if product.price_varies -%}
+            <span class="grid-product__price--current">
+              {%- render 'price-varies',
+                price: product.price_min,
+                shop: shop,
+                superscript_decimals: superscript_decimals,
+              -%}
+            </span>
+          {%- else -%}
+            {%- if on_sale -%}
+              <span class="visually-hidden">{{ 'labels.sale_price' | t }}</span>
+            {%- endif -%}
+            <span class="grid-product__price--current">
+              {%- render 'price',
+                price: product.price,
+                shop: shop,
+                superscript_decimals: superscript_decimals,
+              -%}
+            </span>
+          {%- endif -%}
+          {%- if on_sale -%}
+            <span class="visually-hidden">{{ 'labels.regular_price' | t }}</span>
+            <span class="grid-product__price--original">
+              {%- render 'price',
+                price: product.compare_at_price,
+                shop: shop,
+                superscript_decimals: superscript_decimals,
+              -%}
+            </span>
+          {%- endif -%}
+  
+          {%- assign product_variant = product.selected_or_first_available_variant -%}
+          {%- if product_variant.unit_price_measurement -%}
+            <div class="product__unit-price">
+              {%- capture unit_price_base_unit -%}
+                {%- if product_variant.unit_price_measurement -%}
+                  {%- if product_variant.unit_price_measurement.reference_value != 1 -%}
+                    {{ product_variant.unit_price_measurement.reference_value }}
+                  {%- endif -%}
+                  {{ product_variant.unit_price_measurement.reference_unit }}
+                {%- endif -%}
+              {%- endcapture -%}
+  
+              {{ product_variant.unit_price | money }}/{{ unit_price_base_unit }}
+            </div>
+          {%- endif -%}
+        </div>
+        <a class="lm_btn" href="{{ product.url }}">Learn more</a>
+        {% comment %}
+        {%- if product.available -%}
+          {%- if product.variants.size > 1 -%}
+            {%- capture quickAddButton %}
+              <button type="button" class=" quick-add-btn js-quick-add-form js-modal-open-quick-add" title="{{ 'actions.add_to_cart' | t }}">
+                <span class="btn btn--circle btn--icon">
+                  {{ 'actions.add_to_cart' | t }}
+                  <span class="icon__fallback-text visually-hidden">{{ 'actions.add_to_cart' | t }}</span>
+                </span>
+              </button>
+            {%- endcapture -%}
+            {%- capture content -%}
+              {% render 'tool-tip-trigger',
+                button: quickAddButton,
+                context: 'QuickAdd',
+                tool-tip-classes: 'quick-add-modal',
+              %}
+            {%- endcapture -%}
+            {% render 'quick-add', content: content %}
+          {%- else -%}
+            {%- capture content -%}
+              <button
+                type="button" class=" quick-add-btn"
+                title="{{ 'actions.add_to_cart' | t }}"
+                data-id="{{ product.selected_or_first_available_variant.id }}"
+                data-single-variant-quick-add
+              >
+                <span class="btn btn--circle btn--icon">
+                  {{ 'actions.add_to_cart' | t }}
+                  <span class="icon__fallback-text visually-hidden">{{ 'actions.add_to_cart' | t }}</span>
+                </span>
+              </button>
+            {%- endcapture -%}
+            {% render 'quick-add', content: content %}
+          {%- endif -%}
+        {%- endif -%}          
+        {% endcomment %}
+      </div>
+  </div>
+</div>
+
+<style>
+  .e_product_comparison_item{
+    max-width:400px;
+  }
+  .e_product_comparison_item .e_meida{
+    position:relative;
+        overflow: hidden;
+  }
+  .e_product_comparison_item .e_meida img{
+    width:100%;
+    height:100%;
+    border-radius: 8px;
+    overflow: hidden;
+    object-fit:cover;
+    display:block;
+    background:#fff;
+    aspect-ratio: 1;
+  }
+  .e_product_comparison_item .lm_btn,
+  .e_product_comparison_item .quick-add-btn {
+    padding:0;
+    margin-top:16px;
+  }
+  
+  .e_product_comparison_item .lm_btn,
+  .e_product_comparison_item .quick-add-btn span.btn{
+    background:transparent;
+    padding:8px 20px;
+    border-radius: 8px;
+    border: 1.5px solid ;
+    font-size:16px;
+    width:100%;
+    max-width: 100%;
+    color:#000;
+    display:inline-block;
+  }
+  .e_product_comparison_item .lm_btn{
+    width:auto!important;
+    
+  }
+    
+  .e_product_comparison_item .lm_btn:hover,
+  .e_product_comparison_item .quick-add-btn:hover span.btn{
+    background:#f47c20;
+    color:#fff;
+    
+  }
+  .e_product_comparison_item .e_info h3{
+    color: #000;
+    font-weight: 500;
+    margin:8px 0; 
+    font-size:16px; 
+    line-height: 1.4;
+    min-height:calc(16px*1.4*2);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .e_product_comparison_item .e_info .grid-product__price--current{
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .e_product_comparison_item .e_info span.grid-product__price--original{
+    color: #000;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-decoration-line: strikethrough;
+  }
+  .e_product_comparison_item .e_info .grid-product__price--current span.grid-product__price--from>span{
+    display:none;
+  }
+  @media (max-width:959px){
+    .e_product_comparison_item .e_info h3{
+      font-size:14px; 
+      margin:0 0 8px;
+      min-height:unset;
+          -webkit-line-clamp: 3;
+    }
+    .e_product_comparison_item .e_info .grid-product__price--current{
+      font-size:14px; 
+    }
+    .e_product_comparison_item .e_info span.grid-product__price--original{
+      font-size:12px; 
+    }
+    .e_product_comparison_item .lm_btn,
+    .e_product_comparison_item .quick-add-btn{
+      margin-top: 5px;
+    }
+    .e_product_comparison_item .lm_btn,
+    .e_product_comparison_item .quick-add-btn span.btn{
+      background:#f47c20;
+      font-size:12px; 
+      color:#fff;
+       padding:4px 12px;
+      border-radius: 24px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+</style>
